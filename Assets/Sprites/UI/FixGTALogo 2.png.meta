@@ -1,0 +1,845 @@
+fileFormatVersion: 2
+guid: c8dd8bb6cce0cae42ac8bcaa0de1804d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2349220542503598664
+    second: FixGTALogo 2_0
+  - first:
+      213: -2430767454827964907
+    second: FixGTALogo 2_1
+  - first:
+      213: 1983399769054627196
+    second: FixGTALogo 2_2
+  - first:
+      213: 264771031353950988
+    second: FixGTALogo 2_3
+  - first:
+      213: -4203717571775221236
+    second: FixGTALogo 2_4
+  - first:
+      213: 6872400462243668418
+    second: FixGTALogo 2_5
+  - first:
+      213: -2671071928970758094
+    second: FixGTALogo 2_6
+  - first:
+      213: -614913571593973520
+    second: FixGTALogo 2_7
+  - first:
+      213: -1116998928075697069
+    second: FixGTALogo 2_8
+  - first:
+      213: 1160779568400052683
+    second: FixGTALogo 2_9
+  - first:
+      213: 4627680075396450612
+    second: FixGTALogo 2_10
+  - first:
+      213: 7888644552733988393
+    second: FixGTALogo 2_11
+  - first:
+      213: -2496076053589049933
+    second: FixGTALogo 2_12
+  - first:
+      213: -6298746014056745011
+    second: FixGTALogo 2_13
+  - first:
+      213: -7052304726658281014
+    second: FixGTALogo 2_14
+  - first:
+      213: -1447589904238395601
+    second: FixGTALogo 2_15
+  - first:
+      213: 4593139799821620835
+    second: FixGTALogo 2_16
+  - first:
+      213: -2759728563936756813
+    second: FixGTALogo 2_17
+  - first:
+      213: -7887943150692657306
+    second: FixGTALogo 2_18
+  - first:
+      213: -1786195460757254217
+    second: FixGTALogo 2_19
+  - first:
+      213: -1034199042086375845
+    second: FixGTALogo 2_20
+  - first:
+      213: 139436285133005338
+    second: FixGTALogo 2_21
+  - first:
+      213: 209948440253639880
+    second: FixGTALogo 2_22
+  - first:
+      213: -5117036709737718314
+    second: FixGTALogo 2_23
+  - first:
+      213: 2905717189997724450
+    second: FixGTALogo 2_24
+  - first:
+      213: -129507041523269306
+    second: FixGTALogo 2_25
+  - first:
+      213: 6475053577236419711
+    second: FixGTALogo 2_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FixGTALogo 2_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 122
+        width: 62
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b5c5010d54e56fd0800000000000000
+      internalID: -2349220542503598664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 99
+        width: 81
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516166be0ed244ed0800000000000000
+      internalID: -2430767454827964907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 122
+        width: 62
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c75c71ad493768b10800000000000000
+      internalID: 1983399769054627196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_3
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 70
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c038aa6a9d7aca300800000000000000
+      internalID: 264771031353950988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_4
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 70
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c023546042569a5c0800000000000000
+      internalID: -4203717571775221236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 90
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c1a3421fcbaf5f50800000000000000
+      internalID: 6872400462243668418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_6
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 90
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2383e288b327eead0800000000000000
+      internalID: -2671071928970758094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_7
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 70
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f013955d536777f0800000000000000
+      internalID: -614913571593973520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_8
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 69
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3545e8d946f9f70f0800000000000000
+      internalID: -1116998928075697069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_9
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 70
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1340d0edaeb1010800000000000000
+      internalID: 1160779568400052683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_10
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 69
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43988249282d83040800000000000000
+      internalID: 4627680075396450612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_11
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 69
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9269705cc681a7d60800000000000000
+      internalID: 7888644552733988393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_12
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 70
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bd3775dd082c5dd0800000000000000
+      internalID: -2496076053589049933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_13
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 69
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc77db55fdb5698a0800000000000000
+      internalID: -6298746014056745011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_14
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 69
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac199bf373e212e90800000000000000
+      internalID: -7052304726658281014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_15
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 42
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2fbd69d6a029ebe0800000000000000
+      internalID: -1447589904238395601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_16
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 41
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 366931cff4c1ebf30800000000000000
+      internalID: 4593139799821620835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_17
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 41
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bbfc062e7973b9d0800000000000000
+      internalID: -2759728563936756813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_18
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 42
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6671d7e1f75688290800000000000000
+      internalID: -7887943150692657306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_19
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 42
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf062e21b82637e0800000000000000
+      internalID: -1786195460757254217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_20
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 41
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e646d5379c5a1f0800000000000000
+      internalID: -1034199042086375845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_21
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 42
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a12272400906fe100800000000000000
+      internalID: 139436285133005338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_22
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 41
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc277a7ef2e9e200800000000000000
+      internalID: 209948440253639880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_23
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 40
+        width: 39
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd13754932acf8b0800000000000000
+      internalID: -5117036709737718314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_24
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 42
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2238f8f936e235820800000000000000
+      internalID: 2905717189997724450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_25
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 41
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641081a2806e33ef0800000000000000
+      internalID: -129507041523269306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FixGTALogo 2_26
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 241
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f749cc41ce20cd950800000000000000
+      internalID: 6475053577236419711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FixGTALogo 2_0: -2349220542503598664
+      FixGTALogo 2_1: -2430767454827964907
+      FixGTALogo 2_10: 4627680075396450612
+      FixGTALogo 2_11: 7888644552733988393
+      FixGTALogo 2_12: -2496076053589049933
+      FixGTALogo 2_13: -6298746014056745011
+      FixGTALogo 2_14: -7052304726658281014
+      FixGTALogo 2_15: -1447589904238395601
+      FixGTALogo 2_16: 4593139799821620835
+      FixGTALogo 2_17: -2759728563936756813
+      FixGTALogo 2_18: -7887943150692657306
+      FixGTALogo 2_19: -1786195460757254217
+      FixGTALogo 2_2: 1983399769054627196
+      FixGTALogo 2_20: -1034199042086375845
+      FixGTALogo 2_21: 139436285133005338
+      FixGTALogo 2_22: 209948440253639880
+      FixGTALogo 2_23: -5117036709737718314
+      FixGTALogo 2_24: 2905717189997724450
+      FixGTALogo 2_25: -129507041523269306
+      FixGTALogo 2_26: 6475053577236419711
+      FixGTALogo 2_3: 264771031353950988
+      FixGTALogo 2_4: -4203717571775221236
+      FixGTALogo 2_5: 6872400462243668418
+      FixGTALogo 2_6: -2671071928970758094
+      FixGTALogo 2_7: -614913571593973520
+      FixGTALogo 2_8: -1116998928075697069
+      FixGTALogo 2_9: 1160779568400052683
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
