@@ -455,6 +455,58 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &315051412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 315051413}
+  - component: {fileID: 315051414}
+  m_Layer: 5
+  m_Name: LiquidPanelFather
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &315051413
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315051412}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1303286602}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &315051414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315051412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c22885731b05747b5dba8b38d5fc60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LiquidLevelPanel
+  levelBar: {fileID: 2091190134}
+  levelText: {fileID: 315593457}
+  panelObject: {fileID: 1907577933}
+  currentTask: {fileID: 0}
 --- !u!1 &315593455
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +655,6 @@ GameObject:
   - component: {fileID: 345997346}
   - component: {fileID: 345997349}
   - component: {fileID: 345997348}
-  - component: {fileID: 345997347}
   m_Layer: 0
   m_Name: EngineCollider
   m_TagString: Untagged
@@ -620,25 +671,12 @@ Transform:
   m_GameObject: {fileID: 345997345}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.34, y: 3.58, z: 0}
+  m_LocalPosition: {x: -2.11, y: -5.64, z: 0}
   m_LocalScale: {x: 4.0623636, y: 4.0623636, z: 4.0623636}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 526615600}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &345997347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345997345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 037193e685e7ec6489ac4b8725c13940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LiquidInspectionTask
-  vehiclePart: 
 --- !u!58 &345997348
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -725,7 +763,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.50980395}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -824,9 +862,8 @@ GameObject:
   - component: {fileID: 398262484}
   - component: {fileID: 398262487}
   - component: {fileID: 398262486}
-  - component: {fileID: 398262485}
   m_Layer: 0
-  m_Name: EngineCollider (1)
+  m_Name: CoolerCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -841,25 +878,12 @@ Transform:
   m_GameObject: {fileID: 398262483}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.34, y: 3.58, z: 0}
+  m_LocalPosition: {x: 15.92, y: 6.2, z: 0}
   m_LocalScale: {x: 4.0623636, y: 4.0623636, z: 4.0623636}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1333297661}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &398262485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 398262483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 037193e685e7ec6489ac4b8725c13940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LiquidInspectionTask
-  vehiclePart: 
 --- !u!58 &398262486
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -946,7 +970,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.50980395}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1109,7 +1133,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3279408825245939347, guid: be6505d33817df944b92b5092b537371, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1374,6 +1398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 526615600}
+  - component: {fileID: 526615601}
   m_Layer: 0
   m_Name: Oil
   m_TagString: Untagged
@@ -1397,6 +1422,20 @@ Transform:
   - {fileID: 345997346}
   m_Father: {fileID: 424113570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &526615601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526615599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037193e685e7ec6489ac4b8725c13940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LiquidInspectionTask
+  vehiclePart: Oil
+  taskCollider: {fileID: 345997348}
 --- !u!1 &569327190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,9 +1912,8 @@ GameObject:
   - component: {fileID: 1225990400}
   - component: {fileID: 1225990403}
   - component: {fileID: 1225990402}
-  - component: {fileID: 1225990401}
   m_Layer: 0
-  m_Name: EngineCollider (1)
+  m_Name: DirectionCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1890,25 +1928,12 @@ Transform:
   m_GameObject: {fileID: 1225990399}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.34, y: 3.58, z: 0}
+  m_LocalPosition: {x: -17.28, y: -2.46, z: 0}
   m_LocalScale: {x: 4.0623636, y: 4.0623636, z: 4.0623636}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1801174530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1225990401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225990399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 037193e685e7ec6489ac4b8725c13940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LiquidInspectionTask
-  vehiclePart: 
 --- !u!58 &1225990402
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1995,7 +2020,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.50980395}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2213,9 +2238,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbecd2c4f4446444be84eb64e3b1d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LiquidInspectionManager
-  tasks: []
-  hightlight: {fileID: 0}
-  instructionsUI: {fileID: 0}
+  tasks:
+  - {fileID: 2033864617}
+  - {fileID: 526615601}
+  - {fileID: 1801174531}
+  - {fileID: 1333297662}
+  hightlight: {fileID: 1736469279}
+  instructionsUI: {fileID: 1635136334}
+  panelLiquid: {fileID: 1907577937}
 --- !u!1 &1303286601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2248,6 +2278,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1635136333}
+  - {fileID: 315051413}
   - {fileID: 1907577934}
   m_Father: {fileID: 1233022824}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2328,6 +2359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1333297661}
+  - component: {fileID: 1333297662}
   m_Layer: 0
   m_Name: Coolant liquid
   m_TagString: Untagged
@@ -2351,6 +2383,20 @@ Transform:
   - {fileID: 398262484}
   m_Father: {fileID: 424113570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1333297662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333297660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037193e685e7ec6489ac4b8725c13940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LiquidInspectionTask
+  vehiclePart: Coolant
+  taskCollider: {fileID: 398262486}
 --- !u!1 &1336364004
 GameObject:
   m_ObjectHideFlags: 0
@@ -2362,9 +2408,8 @@ GameObject:
   - component: {fileID: 1336364005}
   - component: {fileID: 1336364008}
   - component: {fileID: 1336364007}
-  - component: {fileID: 1336364006}
   m_Layer: 0
-  m_Name: EngineCollider (1)
+  m_Name: BrakesCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2385,19 +2430,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2033864616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1336364006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336364004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 037193e685e7ec6489ac4b8725c13940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LiquidInspectionTask
-  vehiclePart: 
 --- !u!58 &1336364007
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2484,7 +2516,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.50980395}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2853,6 +2885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1801174530}
+  - component: {fileID: 1801174531}
   m_Layer: 0
   m_Name: Direction
   m_TagString: Untagged
@@ -2876,6 +2909,20 @@ Transform:
   - {fileID: 1225990400}
   m_Father: {fileID: 424113570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1801174531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801174529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037193e685e7ec6489ac4b8725c13940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LiquidInspectionTask
+  vehiclePart: Direction
+  taskCollider: {fileID: 1225990402}
 --- !u!1 &1840590804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2933,7 +2980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1907577934
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2941,7 +2988,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907577933}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3004,8 +3051,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c22885731b05747b5dba8b38d5fc60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LiquidLevelPanel
-  levelBar: {fileID: 0}
-  levelText: {fileID: 0}
+  levelBar: {fileID: 2091190134}
+  levelText: {fileID: 315593457}
+  panelObject: {fileID: 1907577933}
+  currentTask: {fileID: 0}
 --- !u!1 &2033864615
 GameObject:
   m_ObjectHideFlags: 0
@@ -3015,6 +3064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2033864616}
+  - component: {fileID: 2033864617}
   m_Layer: 0
   m_Name: Brakes
   m_TagString: Untagged
@@ -3038,6 +3088,20 @@ Transform:
   - {fileID: 1336364005}
   m_Father: {fileID: 424113570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2033864617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033864615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037193e685e7ec6489ac4b8725c13940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LiquidInspectionTask
+  vehiclePart: Brakes
+  taskCollider: {fileID: 1336364007}
 --- !u!1 &2091190132
 GameObject:
   m_ObjectHideFlags: 0
@@ -3100,7 +3164,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 1
+  m_FillAmount: 0.5
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0

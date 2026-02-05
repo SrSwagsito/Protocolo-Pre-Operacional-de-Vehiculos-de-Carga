@@ -17,7 +17,7 @@ public class InstructionsUI : MonoBehaviour
     public void ShowInstruction(string text)
     {
         instructionText.text = text;
-        verificationPanel.SetActive(false);
+        //verificationPanel.SetActive(false);
     }
 
     public void ShowVerification(LiquidInspectionTask task, Action<LiquidInspectionTask, bool> onDecision)
@@ -31,7 +31,7 @@ public class InstructionsUI : MonoBehaviour
         wrongButton.onClick.RemoveAllListeners();
 
         correctButton.onClick.AddListener(() => Decide(true));
-        wrongButton.onClick.AddListener(() => Decide(true));
+        wrongButton.onClick.AddListener(() => Decide(false));
     }
 
     private void Decide(bool playerChoice)
