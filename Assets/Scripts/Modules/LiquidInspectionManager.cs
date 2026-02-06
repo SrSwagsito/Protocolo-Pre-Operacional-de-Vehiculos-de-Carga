@@ -1,126 +1,126 @@
-using NUnit.Framework;
-using UnityEngine;
 using System.Collections.Generic;
-using Mono.Cecil.Cil;
-using UnityEngine.SocialPlatforms.Impl;
-using System.Runtime.CompilerServices;
+using UnityEngine;
+
 
 public class LiquidInspectionManager : MonoBehaviour
 {
     [SerializeField] private List<LiquidInspectionTask> tasks;
-    [SerializeField] private HightlightController hightlight;
+    [SerializeField] private HightlightController highlight;
     [SerializeField] private InstructionsUI instructionsUI;
     [SerializeField] private LiquidLevelPanel panelLiquid;
 
-    private int currentTaskIndex = 0;
+
     private int score = 0;
 
-    private HashSet<LiquidInspectionTask> completedTask = new();
 
-    public void OnEnable()
+    private HashSet<LiquidInspectionTask> completedTasks = new();
+
+
+    private void OnEnable()
     {
         LiquidInspectionTask.OnTaskSelected += HandleTaskSelected;
+        panelLiquid.OnPlayerDecision += OnLiquidPanelDecision;
     }
 
-    public void OnDisable()
+
+    private void OnDisable()
     {
         LiquidInspectionTask.OnTaskSelected -= HandleTaskSelected;
+        panelLiquid.OnPlayerDecision -= OnLiquidPanelDecision;
     }
+
 
     private void Start()
     {
-
         panelLiquid.HidePanel();
+
 
         foreach (var task in tasks)
         {
             task.Initialize(this, panelLiquid);
         }
-        panelLiquid.OnPlayerDecision += OnLiquidPanelDecision;
 
-        StartTask();
+
+        instructionsUI.ShowInstruction("Selecciona un líquido para verificar.");
+        UpdateHighlights();
     }
 
-    private void StartTask()
+
+    private void HandleTaskSelected(LiquidInspectionTask task)
     {
-        if (currentTaskIndex >= tasks.Count)
+        if (completedTasks.Contains(task))
+        {
+            instructionsUI.ShowInstruction("Este líquido ya fue verificado.");
+            return;
+        }
+
+
+        ShowVerification(task);
+    }
+
+
+    private void ShowVerification(LiquidInspectionTask task)
+    {
+        highlight.HideHighlight();
+        panelLiquid.ShowPanel(task);
+    }
+
+
+    private void OnLiquidPanelDecision(bool success)
+    {
+        var task = panelLiquid.CurrentTask;
+
+
+        if (success)
+            score += 25;
+
+
+        completedTasks.Add(task);
+
+
+        panelLiquid.HidePanel();
+
+
+        if (completedTasks.Count >= tasks.Count)
         {
             FinishModule();
             return;
         }
 
-        LiquidInspectionTask task = tasks[currentTaskIndex];
 
-        hightlight.ShowHighlight(task.transform);
-
-        instructionsUI.ShowInstruction("Revisa el nivel de " + task.vehiclePart);
+        instructionsUI.ShowInstruction("Selecciona otro líquido para verificar.");
+        UpdateHighlights();
     }
 
-    private void HandleTaskSelected(LiquidInspectionTask task)
+
+    private void UpdateHighlights()
     {
-        if (completedTask.Contains(task)) return;
-        ShowVerification(task);
-    }
-
-    private void ShowVerification(LiquidInspectionTask task)
-    {
-        hightlight.HideHighlight();
-        panelLiquid.ShowPanel(task);
-        //instructionsUI.ShowVerification(task, OnPlayerDecision  );
-    }
-
-    private void OnPlayerDecision(LiquidInspectionTask task, bool playerSaysCorrect)
-    {
-        Debug.Log($"Decisión en UI: {playerSaysCorrect} para {task.vehiclePart}");
-
-        panelLiquid.OnPlayerDecision(playerSaysCorrect);
-    }
-
-    public void OnLiquidPanelDecision(bool success)
-    {
-
-        if (success)
+        foreach (var task in tasks)
         {
-            score += 25;
-        }
-
-        //completedTask.Add(panelLiquid.
-
-        panelLiquid.HidePanel();
-
-        currentTaskIndex++;
-    }
-
-    public void OnTaskCompleted(LiquidInspectionTask task, bool success)
-    {
-
-        currentTaskIndex++;
-
-        if (currentTaskIndex >= tasks.Count)
-        {
-            // Este método ahora se llama desde otro lugar
-            Debug.Log("Tarea completada: " + task.vehiclePart + " - " + (success ? "Correcto" : "Incorrecto"));
+            if (!completedTasks.Contains(task))
+                highlight.ShowHighlight(task.transform);
         }
     }
+
 
     private void FinishModule()
     {
         SendResult();
     }
 
+
     private void SendResult()
     {
         ModuleResult result = new ModuleResult
         {
-            moduleName = "Inspeccion de liquidos",
+            moduleName = "Inspección de líquidos",
             approved = score >= 70,
             score = score,
-            missedDamages = tasks.Count - completedTask.Count,
-            message = "Resultado del modulo"
+            missedDamages = tasks.Count - completedTasks.Count,
+            message = "Resultado del módulo"
         };
+
 
         GameManager.Instance.RegisterModuleResult(result);
     }
 }
-
-
