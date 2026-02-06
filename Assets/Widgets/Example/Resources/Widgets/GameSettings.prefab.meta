@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4c18775a622faf14cbf94536218485f0
+timeCreated: 1457036771
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Resources/Widgets/GameSettings.prefab
+  uploadId: 748548

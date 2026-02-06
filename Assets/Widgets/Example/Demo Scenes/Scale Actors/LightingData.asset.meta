@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d23aad111393c154982c31565f55ef06
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Demo Scenes/Scale Actors/LightingData.asset
+  uploadId: 748548

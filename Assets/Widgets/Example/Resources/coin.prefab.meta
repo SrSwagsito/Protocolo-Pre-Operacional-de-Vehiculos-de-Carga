@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4fb0694a68b0e83478de717990601ec8
+timeCreated: 1460492166
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Resources/coin.prefab
+  uploadId: 748548

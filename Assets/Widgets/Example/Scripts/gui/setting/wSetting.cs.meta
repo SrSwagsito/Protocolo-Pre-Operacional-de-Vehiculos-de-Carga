@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 855db409acb2e0b47af85580441f6dda
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Scripts/gui/setting/wSetting.cs
+  uploadId: 748548

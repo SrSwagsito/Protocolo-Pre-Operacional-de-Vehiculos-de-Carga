@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 8c4db2052641eba4897bb70787c3482c
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Demo Scenes/Widget Basic.unity
+  uploadId: 748548

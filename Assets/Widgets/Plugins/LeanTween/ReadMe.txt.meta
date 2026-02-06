@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d2e6830e212052f46901167987f845fe
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Plugins/LeanTween/ReadMe.txt
+  uploadId: 748548

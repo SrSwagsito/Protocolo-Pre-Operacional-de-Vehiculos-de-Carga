@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e18d7c284504b3449b64f68cacc5328d
+labels:
+- UIManager
+timeCreated: 1457463362
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/read me.txt
+  uploadId: 748548

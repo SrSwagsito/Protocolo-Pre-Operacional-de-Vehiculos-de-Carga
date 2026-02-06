@@ -25,8 +25,14 @@ public class ExternalInspectionManager : MonoBehaviour
 
     public void Start()
     {
-        bar.Initialize(100); // puntaje máximo
-    }
+        if (bar == null)
+        {
+            return;
+        }
+
+        else {
+            bar.Initialize(100); }// puntaje máximo
+        }
 
     public void RegisterRealDamage(DamagedZone damage)
     {

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9245e09d994138a41b4af38304cf6a10
+timeCreated: 1459804761
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Demo Scenes/Scale Actors.unity
+  uploadId: 748548

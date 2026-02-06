@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bbdf8c2caddd75343ab310b277ae33c9
+timeCreated: 1457039480
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Resources/Widgets/MainMenu.prefab
+  uploadId: 748548

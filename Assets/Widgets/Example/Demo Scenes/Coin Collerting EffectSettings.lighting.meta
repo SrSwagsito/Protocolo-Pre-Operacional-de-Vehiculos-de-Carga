@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 45b410526f987a345a5673feaab41b2c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Demo Scenes/Coin Collerting EffectSettings.lighting
+  uploadId: 748548

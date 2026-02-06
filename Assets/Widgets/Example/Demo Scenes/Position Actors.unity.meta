@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c27e05562cc4e074abdaafd0c47f920b
+timeCreated: 1459801510
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Demo Scenes/Position Actors.unity
+  uploadId: 748548

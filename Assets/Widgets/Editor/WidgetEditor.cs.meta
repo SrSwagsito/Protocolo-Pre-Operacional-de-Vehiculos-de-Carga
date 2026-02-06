@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 2cc155884d149194282386d53c913ce0
+timeCreated: 1455648069
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Editor/WidgetEditor.cs
+  uploadId: 748548

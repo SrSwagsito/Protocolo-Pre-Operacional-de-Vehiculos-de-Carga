@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5885d523d7e2de04e9fe69929d1cd5e6
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Scripts/gui/wMainMenu.cs
+  uploadId: 748548

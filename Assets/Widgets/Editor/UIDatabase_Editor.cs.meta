@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 8efe224949543d44fbead616b01610ad
+timeCreated: 1456817116
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Editor/UIDatabase_Editor.cs
+  uploadId: 748548

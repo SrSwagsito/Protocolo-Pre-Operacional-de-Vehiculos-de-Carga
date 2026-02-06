@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 96f8cd86ee6610b498b42047f53b7a5a
+timeCreated: 1460496007
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Setup Guide.pdf
+  uploadId: 748548

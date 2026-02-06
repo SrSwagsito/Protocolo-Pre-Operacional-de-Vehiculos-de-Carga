@@ -25,8 +25,11 @@ public class ModuleResultPanel : BaseUIPanel
     void ShowResult(ModuleResult result)
     {
         panelContainer.SetActive(true);
-        FindAnyObjectByType<ClicHandler>().GetComponent<ClicHandler>().enabled = false;
-
+        ClicHandler clicHandler = FindAnyObjectByType<ClicHandler>();
+        if (clicHandler != null)
+        {
+            clicHandler.enabled = false;
+        }
         titleText.text = result.moduleName;
         scoreText.text = "TIenes una seguridad de: " + result.score + "/100";
 

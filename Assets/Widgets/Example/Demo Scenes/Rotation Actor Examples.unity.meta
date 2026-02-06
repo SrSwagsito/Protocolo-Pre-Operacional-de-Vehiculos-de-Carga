@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5267dabcc70faef42a3d8a6b402bb842
+timeCreated: 1460213394
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Demo Scenes/Rotation Actor Examples.unity
+  uploadId: 748548

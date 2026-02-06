@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 28f1e88ecafc47344a7aed494b7a5250
+timeCreated: 1457038209
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Resources/Widgets/MiniGame.prefab
+  uploadId: 748548

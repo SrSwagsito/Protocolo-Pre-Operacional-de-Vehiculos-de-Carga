@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d2a4e565276285d409ef50690c6bbc11
+timeCreated: 1456818696
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Source Code/database/Resources/WidgetDatabase.asset
+  uploadId: 748548

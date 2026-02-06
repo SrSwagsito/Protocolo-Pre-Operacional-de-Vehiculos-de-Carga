@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c320df9b33333f348a83c094544d9b05
+timeCreated: 1457036683
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Resources/Widgets/AudioSettings.prefab
+  uploadId: 748548

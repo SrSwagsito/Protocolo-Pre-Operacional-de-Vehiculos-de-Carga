@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 89da01274d08a694c831b704a1ad6a67
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Scripts/gui/wPopUp.cs
+  uploadId: 748548

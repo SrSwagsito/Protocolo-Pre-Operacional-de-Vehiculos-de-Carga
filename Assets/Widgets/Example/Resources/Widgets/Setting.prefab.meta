@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7aaa4888d1d3fae499cd0227b8785f57
+timeCreated: 1457037469
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Example/Resources/Widgets/Setting.prefab
+  uploadId: 748548

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c239ee8dbab1a99478e5fce370319112
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57802
+  packageName: UI (Widget) Manager
+  packageVersion: 1.2.0
+  assetPath: Assets/Widgets/Plugins/LeanTween/License.txt
+  uploadId: 748548

@@ -46,37 +46,6 @@ public class GameManager : MonoBehaviour
     private void HandleState()
     {
         Debug.Log("Estado actual: " + CurrentState);
-
-        //switch (CurrentState)
-        //{
-        //    case GameState.InitialMenu:
-        //        SceneLoader.LoadScene("InitialMenu");
-        //        break;
-        //    case GameState.IntroductionScene:
-        //        SceneLoader.Instance.LoadScene("IntroductionScene");
-        //        break;
-        //    case GameState.Module1:
-        //        SceneLoader.Instance.LoadScene("Module1");
-        //        break;
-        //    case GameState.Results1:
-        //        SceneLoader.Instance.LoadScene("Results1");
-        //        break;
-        //    case GameState.Module2:
-        //        SceneLoader.Instance.LoadScene("Module2");
-        //        break;
-        //    case GameState.Results2:
-        //        SceneLoader.Instance.LoadScene("Results2");
-        //        break;
-        //    case GameState.Module3:
-        //        SceneLoader.Instance.LoadScene("Module3");
-        //        break;
-        //    case GameState.Results3:
-        //        SceneLoader.Instance.LoadScene("Results3");
-        //        break;
-        //    case GameState.FinalResults:
-        //        SceneLoader.Instance.LoadScene("FinalResults");
-        //        break;
-        //}
     }
 
     public void StartEvaluation()
