@@ -566,6 +566,7 @@ GameObject:
   - component: {fileID: 446235495}
   - component: {fileID: 446235497}
   - component: {fileID: 446235496}
+  - component: {fileID: 446235498}
   m_Layer: 5
   m_Name: ProyectTitle
   m_TagString: Untagged
@@ -692,6 +693,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446235494}
   m_CullTransparentMesh: 1
+--- !u!114 &446235498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446235494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9840f87219df84505803024c796e739d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: EasyTextEffects::EasyTextEffects.TextEffect
+  text: {fileID: 446235496}
+  usePreset: 1
+  preset: {fileID: 11400000, guid: ea10dbb33366c464089cc4a6b070df12, type: 2}
+  tagEffects: []
+  globalEffects:
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: 7730eb8f339e4944097509d808734f81, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+    overrideTagEffects: 0
+  updatesPerSecond: 32
 --- !u!1 &558638681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,7 +1365,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb668090b2f04b4f97b0d0aba85b4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  sourceSFX: {fileID: 0}
+  musicMixer: {fileID: 0}
+  sfxMixer: {fileID: 0}
+  minimalSFXSources: 10
+  maxSFXSources: 25
   sounds: []
 --- !u!4 &1854300479
 Transform:

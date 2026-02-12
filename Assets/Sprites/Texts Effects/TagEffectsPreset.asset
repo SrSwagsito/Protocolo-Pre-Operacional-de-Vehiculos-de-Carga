@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bcc54b9eb6e4693b413fe1c691a7241, type: 3}
+  m_Name: TagEffectsPreset
+  m_EditorClassIdentifier: EasyTextEffects::EasyTextEffects.TagEffectsPreset
+  tagEffects:
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: eb33a2f140aa0cf47912481614eeb289, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: 7730eb8f339e4944097509d808734f81, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: 62c53a5a3a01e5e49abba31bb3e055d1, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: adb5952c722ab0d46ab92ad0075b6ab1, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: f58a635becdd9e341923f034fcb7b5f6, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: 7546723dd71e2a3449b5fac44fafc324, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []

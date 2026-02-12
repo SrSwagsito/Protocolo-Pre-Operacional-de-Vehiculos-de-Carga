@@ -2870,7 +2870,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 57.45
+  m_fontSize: 57.65
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2939,7 +2939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &960207850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2947,7 +2947,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960207849}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b626ffc36afe98849b51158aef02e258, type: 3}
   m_Name: 
@@ -5082,7 +5082,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Mocule3
+          m_StringArgument: Module3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1738988446
