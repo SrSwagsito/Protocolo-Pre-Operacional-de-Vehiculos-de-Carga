@@ -11,7 +11,7 @@ public class LiquidInspectionManager : MonoBehaviour
     [SerializeField] private ProgressCounter progressCounter;
 
     private int score = 0;
-    private int correctAnswers = 0; // NUEVO: Contar respuestas correctas
+    private int correctAnswers = 0;
     private HashSet<LiquidInspectionTask> completedTasks = new();
     private bool tutorialShown = false;
 
