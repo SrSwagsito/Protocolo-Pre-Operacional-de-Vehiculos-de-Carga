@@ -13,7 +13,7 @@ public class HightlightController : MonoBehaviour
     }
 
 
-    public void HideHighlight()
+    public void HideHighlight()     
     {
         highlightEffect.SetActive(false);
     }

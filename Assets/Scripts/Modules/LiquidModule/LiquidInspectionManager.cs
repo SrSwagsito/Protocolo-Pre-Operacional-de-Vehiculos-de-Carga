@@ -119,7 +119,7 @@ public class LiquidInspectionManager : MonoBehaviour
         }
     }
 
-    private void FinishModule()
+    public void FinishModule()
     {
         // NUEVO: Ocultar elementos de inspección
         if (highlight != null)
@@ -163,7 +163,7 @@ public class LiquidInspectionManager : MonoBehaviour
         }
         else
         {
-            message += $"Tuviste {incorrect} error(es). Revisa los procedimientos de verificación nuevamete.";
+            message += $"Tuviste {incorrect} error(es). Revisa los procedimientos de verificación nuevamente.";
         }
 
         return message;

@@ -1,8 +1,16 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
 using System.Collections;
+
+public enum LiquidState
+{
+    Correct,        // Nivel apropiado 
+    BelowLevel,     // Nivel por debajo
+    AboveLevel,     // Nivel por encima
+    Contaminated    // Líquido contaminado
+}
 
 public class LiquidLevelPanel : MonoBehaviour
 {
@@ -11,14 +19,16 @@ public class LiquidLevelPanel : MonoBehaviour
     [SerializeField] private TMP_Text levelText;
     [SerializeField] private GameObject panelObject;
 
-    [Header("Feedback Visual")] // NUEVO
+    [Header("Feedback Visual")]
     [SerializeField] private GameObject feedbackPanel;
     [SerializeField] private GameObject correctGO;
     [SerializeField] private GameObject incorrectGO;
     [SerializeField] private float feedbackDuration = 2f;
 
-    private bool isCorrectLevel;
+    // Estado real generado aleatoriamente
+    private LiquidState trueState;
     private LiquidInspectionTask currentTask;
+
     public Action<bool> OnPlayerDecision;
     public LiquidInspectionTask CurrentTask => currentTask;
 
@@ -29,7 +39,6 @@ public class LiquidLevelPanel : MonoBehaviour
         else
             gameObject.SetActive(false);
 
-        // NUEVO: Ocultar feedback al inicio
         if (feedbackPanel != null)
             feedbackPanel.SetActive(false);
     }
@@ -39,11 +48,10 @@ public class LiquidLevelPanel : MonoBehaviour
         currentTask = task;
         gameObject.SetActive(true);
 
-        // NUEVO: Asegurar que el feedback est� oculto
         if (feedbackPanel != null)
             feedbackPanel.SetActive(false);
 
-        GenerateRandomLevel();
+        GenerateRandomState();
     }
 
     public void HidePanel()
@@ -51,44 +59,63 @@ public class LiquidLevelPanel : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private void GenerateRandomLevel()
+    private void GenerateRandomState()
     {
-        float randomLevel = UnityEngine.Random.Range(0f, 1f);
-        levelBar.fillAmount = randomLevel;
-        isCorrectLevel = randomLevel >= 0.5f && randomLevel <= 0.9f;
+        // 25% de probabilidad para cada estado
+        int roll = UnityEngine.Random.Range(0, 4);
+        trueState = (LiquidState)roll;
 
-        if (isCorrectLevel)
-            levelText.text = "�Es el nivel adecuado?";
-        else
-            levelText.text = "�Es el nivel adecuado?";
+        // Ajustar la barra visual según el estado real
+        switch (trueState)
+        {
+            case LiquidState.Correct:
+                levelBar.fillAmount = UnityEngine.Random.Range(0.46f, 0.85f);
+                //levelBar.color = Color.green;
+                break;
+            case LiquidState.BelowLevel:
+                levelBar.fillAmount = UnityEngine.Random.Range(0.45f, 0.35f);
+                //levelBar.color = Color.yellow;
+                break;
+            case LiquidState.AboveLevel:
+                levelBar.fillAmount = UnityEngine.Random.Range(0.86f, 1f);
+                //levelBar.color = Color.yellow;
+                break;
+            case LiquidState.Contaminated:
+                // Nivel puede parecer correcto pero el color delata contaminación
+                levelBar.fillAmount = UnityEngine.Random.Range(0.46f, 0.85f);
+                levelBar.color = new Color(0.4f, 0.2f, 0f); // Café/oscuro
+                break;
+        }
+
+        levelText.text = "¿Cuál es el estado de este líquido?";
     }
 
-    public void PlayerAnswer(bool playerSaysCorrect)
-    {
-        bool success = playerSaysCorrect == isCorrectLevel;
+    // ── Métodos públicos para cada botón ──────────────────────────────────────
 
-        // NUEVO: Mostrar feedback visual antes de cerrar
-        StartCoroutine(ShowFeedbackAndClose(success, playerSaysCorrect));
+    public void OnButtonApropiado() => EvaluateAnswer(LiquidState.Correct);
+
+    //public void OnButtonNoApropiado() => EvaluateAnswer(LiquidState.BelowLevel); // Ver nota abajo*
+    public void OnButtonNivelAbajo() => EvaluateAnswer(LiquidState.BelowLevel);
+    public void OnButtonNivelArriba() => EvaluateAnswer(LiquidState.AboveLevel);
+    public void OnButtonContaminado() => EvaluateAnswer(LiquidState.Contaminated);
+
+    private void EvaluateAnswer(LiquidState playerAnswer)
+    {
+        bool success = playerAnswer == trueState;
+        StartCoroutine(ShowFeedbackAndClose(success));
     }
 
-    // NUEVO: Corrutina para mostrar feedback
-    private IEnumerator ShowFeedbackAndClose(bool success, bool playerSaysCorrect)
+    private IEnumerator ShowFeedbackAndClose(bool success)
     {
         if (feedbackPanel != null)
         {
             feedbackPanel.SetActive(true);
 
-            // Configurar el feedback seg�n si acert� o no
             if (success)
-            {
                 correctGO.SetActive(true);
-            }
             else
-            {
                 incorrectGO.SetActive(true);
-            }
 
-            // Esperar para que el usuario lea el feedback
             yield return new WaitForSeconds(feedbackDuration);
 
             correctGO.SetActive(false);
@@ -96,7 +123,6 @@ public class LiquidLevelPanel : MonoBehaviour
             feedbackPanel.SetActive(false);
         }
 
-        // Notificar al manager despu�s del feedback
         OnPlayerDecision?.Invoke(success);
         HidePanel();
     }
