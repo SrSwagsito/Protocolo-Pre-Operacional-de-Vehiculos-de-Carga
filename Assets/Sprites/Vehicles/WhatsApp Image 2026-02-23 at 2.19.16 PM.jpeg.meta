@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 1d6392655ce70494da1ea4bb622f4a4c
+guid: 80f189fabd256cd4796ec896d67e0fb2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3813661555810276933
-    second: Car Dipstick_0
-  - first:
-      213: 2597613308477307272
-    second: Car Dipstick_1
+      213: -8215617704840786147
+    second: WhatsApp Image 2026-02-23 at 2.19.16 PM_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,19 +97,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -129,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Car Dipstick_0
+      name: WhatsApp Image 2026-02-23 at 2.19.16 PM_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 56
-        height: 906
+        width: 1600
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb96d584507231bc0800000000000000
-      internalID: -3813661555810276933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Car Dipstick_1
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 0
-        width: 56
-        height: 747
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 889fd939a839c0420800000000000000
-      internalID: 2597613308477307272
+      spriteID: d1f0e84c9334cfd80800000000000000
+      internalID: -8215617704840786147
       vertices: []
       indices: 
       edges: []
@@ -186,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Car Dipstick_0: -3813661555810276933
-      Car Dipstick_1: 2597613308477307272
+      WhatsApp Image 2026-02-23 at 2.19.16 PM_0: -8215617704840786147
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

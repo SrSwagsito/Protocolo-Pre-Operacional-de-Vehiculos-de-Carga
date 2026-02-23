@@ -19,6 +19,11 @@ public class LiquidLevelPanel : MonoBehaviour
     [SerializeField] private TMP_Text levelText;
     [SerializeField] private GameObject panelObject;
 
+    [Header("Botones de Respuesta")]
+    // Asigna aquí el GameObject padre que agrupe los 4 botones
+    // Se oculta al inicio y aparece cuando termina la animación
+    [SerializeField] private GameObject botonesPanel;
+
     [Header("Feedback Visual")]
     [SerializeField] private GameObject feedbackPanel;
     [SerializeField] private GameObject correctGO;
@@ -41,6 +46,10 @@ public class LiquidLevelPanel : MonoBehaviour
 
         if (feedbackPanel != null)
             feedbackPanel.SetActive(false);
+
+        // Los botones siempre ocultos al arrancar
+        if (botonesPanel != null)
+            botonesPanel.SetActive(false);
     }
 
     public void ShowPanel(LiquidInspectionTask task)
@@ -51,6 +60,11 @@ public class LiquidLevelPanel : MonoBehaviour
         if (feedbackPanel != null)
             feedbackPanel.SetActive(false);
 
+        // Asegurarse de que los botones estén ocultos
+        // mientras corre la animación de la varilla
+        if (botonesPanel != null)
+            botonesPanel.SetActive(false);
+
         GenerateRandomState();
     }
 
@@ -59,30 +73,43 @@ public class LiquidLevelPanel : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    // ─────────────────────────────────────────────────────────────────────────
+    // ANIMATION EVENT
+    // Llama este método desde el Animation Event al final del clip de la varilla.
+    // Pasos en Unity:
+    //   1. Abre el clip de animación en la ventana Animation
+    //   2. Mueve el playhead al último frame
+    //   3. Haz clic en "Add Event" (ícono de bandera)
+    //   4. En el Inspector del evento, selecciona esta función: MostrarOpciones
+    // ─────────────────────────────────────────────────────────────────────────
+    public void MostrarOpciones()
+    {
+        if (botonesPanel != null)
+            botonesPanel.SetActive(true);
+    }
+
     private void GenerateRandomState()
     {
         // 25% de probabilidad para cada estado
         int roll = UnityEngine.Random.Range(0, 4);
+        levelBar.color = Color.white; // Reset color por si se contaminó antes
         trueState = (LiquidState)roll;
 
         // Ajustar la barra visual según el estado real
         switch (trueState)
         {
             case LiquidState.Correct:
-                levelBar.fillAmount = UnityEngine.Random.Range(0.46f, 0.85f);
-                //levelBar.color = Color.green;
+                levelBar.fillAmount = UnityEngine.Random.Range(0.2f, 0.85f);
                 break;
             case LiquidState.BelowLevel:
-                levelBar.fillAmount = UnityEngine.Random.Range(0.45f, 0.35f);
-                //levelBar.color = Color.yellow;
+                levelBar.fillAmount = UnityEngine.Random.Range(0.05f, 0.19f);
                 break;
             case LiquidState.AboveLevel:
                 levelBar.fillAmount = UnityEngine.Random.Range(0.86f, 1f);
-                //levelBar.color = Color.yellow;
                 break;
             case LiquidState.Contaminated:
                 // Nivel puede parecer correcto pero el color delata contaminación
-                levelBar.fillAmount = UnityEngine.Random.Range(0.46f, 0.85f);
+                levelBar.fillAmount = UnityEngine.Random.Range(0.4f, 0.85f);
                 levelBar.color = new Color(0.4f, 0.2f, 0f); // Café/oscuro
                 break;
         }
@@ -90,17 +117,19 @@ public class LiquidLevelPanel : MonoBehaviour
         levelText.text = "¿Cuál es el estado de este líquido?";
     }
 
-    // ── Métodos públicos para cada botón ──────────────────────────────────────
+    // ── Métodos públicos para cada botón ─────────────────────────────────────
 
     public void OnButtonApropiado() => EvaluateAnswer(LiquidState.Correct);
-
-    //public void OnButtonNoApropiado() => EvaluateAnswer(LiquidState.BelowLevel); // Ver nota abajo*
     public void OnButtonNivelAbajo() => EvaluateAnswer(LiquidState.BelowLevel);
     public void OnButtonNivelArriba() => EvaluateAnswer(LiquidState.AboveLevel);
     public void OnButtonContaminado() => EvaluateAnswer(LiquidState.Contaminated);
 
     private void EvaluateAnswer(LiquidState playerAnswer)
     {
+        // Ocultar botones inmediatamente para evitar doble respuesta
+        if (botonesPanel != null)
+            botonesPanel.SetActive(false);
+
         bool success = playerAnswer == trueState;
         StartCoroutine(ShowFeedbackAndClose(success));
     }
