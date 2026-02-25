@@ -20,8 +20,6 @@ public class LiquidLevelPanel : MonoBehaviour
     [SerializeField] private GameObject panelObject;
 
     [Header("Botones de Respuesta")]
-    // Asigna aquí el GameObject padre que agrupe los 4 botones
-    // Se oculta al inicio y aparece cuando termina la animación
     [SerializeField] private GameObject botonesPanel;
 
     [Header("Feedback Visual")]
@@ -30,7 +28,6 @@ public class LiquidLevelPanel : MonoBehaviour
     [SerializeField] private GameObject incorrectGO;
     [SerializeField] private float feedbackDuration = 2f;
 
-    // Estado real generado aleatoriamente
     private LiquidState trueState;
     private LiquidInspectionTask currentTask;
 
@@ -39,63 +36,75 @@ public class LiquidLevelPanel : MonoBehaviour
 
     private void Awake()
     {
-        if (panelObject != null)
-            panelObject.SetActive(false);
-        else
-            gameObject.SetActive(false);
+        // CORREGIDO: Usar GetPanelToActivate() para consistencia
+        GetPanelToActivate().SetActive(false);
 
         if (feedbackPanel != null)
             feedbackPanel.SetActive(false);
 
-        // Los botones siempre ocultos al arrancar
         if (botonesPanel != null)
             botonesPanel.SetActive(false);
     }
 
     public void ShowPanel(LiquidInspectionTask task)
     {
+        Debug.Log($"[ShowPanel INICIO] Task: {task.vehiclePart}");
+
         currentTask = task;
-        gameObject.SetActive(true);
+
+        // CORREGIDO: Activar el panel correcto de forma consistente
+        GameObject panelToActivate = GetPanelToActivate();
+        panelToActivate.SetActive(true);
+
+        Debug.Log($"[ShowPanel] Panel activado: {panelToActivate.name}, Active: {panelToActivate.activeSelf}");
 
         if (feedbackPanel != null)
             feedbackPanel.SetActive(false);
 
-        // Asegurarse de que los botones estén ocultos
-        // mientras corre la animación de la varilla
         if (botonesPanel != null)
             botonesPanel.SetActive(false);
 
         GenerateRandomState();
+
+        Debug.Log($"[ShowPanel FIN] Panel sigue activo: {panelToActivate.activeSelf}");
     }
 
     public void HidePanel()
     {
-        gameObject.SetActive(false);
+        GetPanelToActivate().SetActive(false);
+    }
+
+    // NUEVO: Método helper para obtener el panel correcto consistentemente
+    private GameObject GetPanelToActivate()
+    {
+        return panelObject != null ? panelObject : gameObject;
     }
 
     // ─────────────────────────────────────────────────────────────────────────
     // ANIMATION EVENT
-    // Llama este método desde el Animation Event al final del clip de la varilla.
-    // Pasos en Unity:
-    //   1. Abre el clip de animación en la ventana Animation
-    //   2. Mueve el playhead al último frame
-    //   3. Haz clic en "Add Event" (ícono de bandera)
-    //   4. En el Inspector del evento, selecciona esta función: MostrarOpciones
+    // Llama este método desde el Animation Event al final del clip de la varilla
     // ─────────────────────────────────────────────────────────────────────────
     public void MostrarOpciones()
     {
+        Debug.Log("[MostrarOpciones] Mostrando botones");
+
         if (botonesPanel != null)
+        {
             botonesPanel.SetActive(true);
+            Debug.Log($"[MostrarOpciones] Botones activados: {botonesPanel.activeSelf}");
+        }
+        else
+        {
+            Debug.LogWarning("[MostrarOpciones] botonesPanel es NULL!");
+        }
     }
 
     private void GenerateRandomState()
     {
-        // 25% de probabilidad para cada estado
         int roll = UnityEngine.Random.Range(0, 4);
-        levelBar.color = Color.white; // Reset color por si se contaminó antes
+        levelBar.color = Color.white;
         trueState = (LiquidState)roll;
 
-        // Ajustar la barra visual según el estado real
         switch (trueState)
         {
             case LiquidState.Correct:
@@ -108,13 +117,14 @@ public class LiquidLevelPanel : MonoBehaviour
                 levelBar.fillAmount = UnityEngine.Random.Range(0.86f, 1f);
                 break;
             case LiquidState.Contaminated:
-                // Nivel puede parecer correcto pero el color delata contaminación
                 levelBar.fillAmount = UnityEngine.Random.Range(0.4f, 0.85f);
-                levelBar.color = new Color(0.4f, 0.2f, 0f); // Café/oscuro
+                levelBar.color = new Color(0.4f, 0.2f, 0f);
                 break;
         }
 
         levelText.text = "¿Cuál es el estado de este líquido?";
+
+        Debug.Log($"[GenerateRandomState] Estado generado: {trueState}, Fill: {levelBar.fillAmount}");
     }
 
     // ── Métodos públicos para cada botón ─────────────────────────────────────
@@ -126,7 +136,9 @@ public class LiquidLevelPanel : MonoBehaviour
 
     private void EvaluateAnswer(LiquidState playerAnswer)
     {
-        // Ocultar botones inmediatamente para evitar doble respuesta
+        Debug.Log($"[EvaluateAnswer] Jugador eligió: {playerAnswer}, Correcto era: {trueState}");
+
+        // Ocultar botones inmediatamente
         if (botonesPanel != null)
             botonesPanel.SetActive(false);
 
@@ -140,15 +152,20 @@ public class LiquidLevelPanel : MonoBehaviour
         {
             feedbackPanel.SetActive(true);
 
-            if (success)
-                correctGO.SetActive(true);
-            else
-                incorrectGO.SetActive(true);
+            if (correctGO != null)
+                correctGO.SetActive(success);
+
+            if (incorrectGO != null)
+                incorrectGO.SetActive(!success);
 
             yield return new WaitForSeconds(feedbackDuration);
 
-            correctGO.SetActive(false);
-            incorrectGO.SetActive(false);
+            if (correctGO != null)
+                correctGO.SetActive(false);
+
+            if (incorrectGO != null)
+                incorrectGO.SetActive(false);
+
             feedbackPanel.SetActive(false);
         }
 

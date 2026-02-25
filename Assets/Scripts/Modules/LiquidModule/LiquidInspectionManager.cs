@@ -6,7 +6,7 @@ public class LiquidInspectionManager : MonoBehaviour
     [SerializeField] private List<LiquidInspectionTask> tasks;
     [SerializeField] private InstructionsUI instructionsUI;
     [SerializeField] private LiquidLevelPanel panelLiquid;
-    [SerializeField] private TutorialPanel tutorialPopup;
+    [SerializeField] private TutorialPanel tutorialPopup; // Asegúrate que coincida con el nombre de tu script
     [SerializeField] private ProgressCounter progressCounter;
 
     private int score = 0;
@@ -34,6 +34,10 @@ public class LiquidInspectionManager : MonoBehaviour
 
     private void Start()
     {
+        // Deshabilitar clics al inicio
+        LiquidInspectionTask.DisableClicks();
+        Debug.Log("LiquidInspectionManager: Clics deshabilitados al inicio");
+
         panelLiquid.HidePanel();
 
         foreach (var task in tasks)
@@ -43,26 +47,39 @@ public class LiquidInspectionManager : MonoBehaviour
 
         if (tutorialPopup != null && !tutorialShown)
         {
+            Debug.Log("LiquidInspectionManager: Mostrando tutorial");
             tutorialPopup.ShowTutorial();
             tutorialShown = true;
         }
         else
         {
+            Debug.Log("LiquidInspectionManager: No hay tutorial, iniciando directo");
             StartInspection();
         }
     }
 
     private void StartInspection()
     {
-        instructionsUI.ShowInstruction("Selecciona un líquido para verificar.");
+        Debug.Log("LiquidInspectionManager: StartInspection llamado");
+
+        if (instructionsUI != null)
+            instructionsUI.ShowInstruction("Selecciona un liquido para verificar.");
+
         UpdateProgressCounter();
+
+        // Habilitar clics después del tutorial
+        LiquidInspectionTask.EnableClicks();
+        Debug.Log("LiquidInspectionManager: EnableClicks llamado");
     }
 
     private void HandleTaskSelected(LiquidInspectionTask task)
     {
+        Debug.Log($"LiquidInspectionManager: Tarea seleccionada - {task.vehiclePart}");
+
         if (completedTasks.Contains(task))
         {
-            instructionsUI.ShowInstruction("Este líquido ya fue verificado.");
+            if (instructionsUI != null)
+                instructionsUI.ShowInstruction("Este liquido ya fue verificado.");
             return;
         }
 
@@ -77,6 +94,11 @@ public class LiquidInspectionManager : MonoBehaviour
         {
             score += 25;
             correctAnswers++;
+            Debug.Log($"Respuesta correcta. Score: {score}");
+        }
+        else
+        {
+            Debug.Log($"Respuesta incorrecta. Score: {score}");
         }
 
         completedTasks.Add(task);
@@ -90,17 +112,25 @@ public class LiquidInspectionManager : MonoBehaviour
             return;
         }
 
-        instructionsUI.ShowInstruction("Selecciona otro líquido para verificar.");
+        if (instructionsUI != null)
+            instructionsUI.ShowInstruction("Selecciona otro liquido para verificar.");
     }
 
     private void UpdateProgressCounter()
     {
         if (progressCounter != null)
+        {
             progressCounter.UpdateProgress(completedTasks.Count, tasks.Count);
+        }
     }
 
-    public void FinishModule()
+    private void FinishModule()
     {
+        Debug.Log("LiquidInspectionManager: Finalizando modulo");
+
+        // Deshabilitar clics al terminar
+        LiquidInspectionTask.DisableClicks();
+
         if (instructionsUI != null)
             instructionsUI.gameObject.SetActive(false);
 
@@ -113,13 +143,14 @@ public class LiquidInspectionManager : MonoBehaviour
 
         ModuleResult result = new ModuleResult
         {
-            moduleName = "Inspección de Líquidos",
+            moduleName = "Inspeccion de Liquidos",
             approved = score >= 75,
             score = score,
             missedDamages = tasks.Count - correctAnswers,
             message = detailMessage
         };
 
+        Debug.Log($"Enviando resultado - Score: {score}, Aprobado: {result.approved}");
         GameManager.Instance.RegisterModuleResult(result);
     }
 
@@ -128,12 +159,16 @@ public class LiquidInspectionManager : MonoBehaviour
         int totalLiquids = tasks.Count;
         int incorrect = totalLiquids - correctAnswers;
 
-        string message = $"Verificaste {correctAnswers} de {totalLiquids} líquidos correctamente. ";
+        string message = $"Verificaste {correctAnswers} de {totalLiquids} liquidos correctamente.\n";
 
         if (score >= 75)
-            message += "¡Buen trabajo! Continúa al siguiente módulo.";
+        {
+            message += "\nBuen trabajo! Has demostrado competencia en la inspeccion de liquidos.";
+        }
         else
-            message += $"Tuviste {incorrect} error(es). Revisa los procedimientos de verificación nuevamente.";
+        {
+            message += $"\nTuviste {incorrect} error(es). Revisa los procedimientos de verificacion de niveles.";
+        }
 
         return message;
     }
