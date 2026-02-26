@@ -19,22 +19,62 @@ public class LiquidInspectionTask : MonoBehaviour
     private static bool allowClicks = false;
     private static float clickEnableTime = 0f;
     private Vector3 originalScale;
+    private Color originalColor;
     private bool isCompleted = false;
     private bool isHovering = false;
+
+    // NUEVO: Para guardar el sprite original
+    private Sprite originalSprite;
 
     public void Initialize(LiquidInspectionManager manager, LiquidLevelPanel panel)
     {
         liquidManager = manager;
         liquidPanel = panel;
-        image = GetComponentInChildren<SpriteRenderer>();
+
+        if (image == null)
+            image = GetComponentInChildren<SpriteRenderer>();
 
         if (image != null)
         {
             originalScale = image.transform.localScale;
+            originalColor = image.color;
+            originalSprite = image.sprite; // NUEVO: Guardar sprite original
+
+            // NUEVO: Resetear estado visual
+            ResetVisuals();
 
             // Iniciar animación de pulso suave al inicio
             StartIdlePulse();
         }
+    }
+
+    // NUEVO: Resetear visuales al reiniciar nivel
+    private void ResetVisuals()
+    {
+        if (image == null)
+            return;
+
+        // Cancelar todas las animaciones
+        LeanTween.cancel(image.gameObject);
+
+        // Restaurar valores originales
+        image.gameObject.SetActive(true);
+        image.sprite = originalSprite;
+        image.transform.localScale = originalScale;
+        image.color = originalColor;
+
+        // Resetear estados
+        isCompleted = false;
+        isHovering = false;
+
+        Debug.Log($"[{vehiclePart}] Visuales reseteados");
+    }
+
+    // NUEVO: Método público para resetear desde el manager
+    public void ResetTask()
+    {
+        ResetVisuals();
+        StartIdlePulse();
     }
 
     public static void EnableClicks()
@@ -50,7 +90,6 @@ public class LiquidInspectionTask : MonoBehaviour
 
     private void Update()
     {
-        // Verificar si ya pasó el tiempo de espera
         if (!allowClicks && Time.time >= clickEnableTime && clickEnableTime > 0)
         {
             allowClicks = true;
@@ -86,11 +125,9 @@ public class LiquidInspectionTask : MonoBehaviour
             }
         }
 
-        // Detectar hover con el mouse
         DetectHover();
     }
 
-    // NUEVO: Detectar cuando el mouse está sobre la tarea
     private void DetectHover()
     {
         if (isCompleted || !allowClicks)
@@ -103,17 +140,14 @@ public class LiquidInspectionTask : MonoBehaviour
 
         if (isMouseOver && !isHovering)
         {
-            // Mouse entra
             OnHoverEnter();
         }
         else if (!isMouseOver && isHovering)
         {
-            // Mouse sale
             OnHoverExit();
         }
     }
 
-    // NUEVO: Animación al entrar el mouse
     private void OnHoverEnter()
     {
         if (image == null || isCompleted)
@@ -121,20 +155,16 @@ public class LiquidInspectionTask : MonoBehaviour
 
         isHovering = true;
 
-        // Cancelar animaciones previas
         LeanTween.cancel(image.gameObject);
 
-        // Escalar y elevar ligeramente
         LeanTween.scale(image.gameObject, originalScale * hoverScale, hoverDuration)
             .setEase(LeanTweenType.easeOutBack);
 
-        // Pequeño movimiento hacia arriba
         Vector3 currentPos = image.transform.localPosition;
         LeanTween.moveLocalY(image.gameObject, currentPos.y + 0.1f, hoverDuration)
             .setEase(LeanTweenType.easeOutQuad);
     }
 
-    // NUEVO: Animación al salir el mouse
     private void OnHoverExit()
     {
         if (image == null || isCompleted)
@@ -142,19 +172,15 @@ public class LiquidInspectionTask : MonoBehaviour
 
         isHovering = false;
 
-        // Cancelar animaciones previas
         LeanTween.cancel(image.gameObject);
 
-        // Volver a escala original
         LeanTween.scale(image.gameObject, originalScale, hoverDuration)
             .setEase(LeanTweenType.easeInOutQuad);
 
-        // Volver a posición original
         Vector3 currentPos = image.transform.localPosition;
         LeanTween.moveLocalY(image.gameObject, currentPos.y - 0.1f, hoverDuration)
             .setEase(LeanTweenType.easeInOutQuad);
 
-        // Reiniciar pulso idle si no está completado
         if (!isCompleted)
         {
             LeanTween.delayedCall(hoverDuration, () => {
@@ -164,52 +190,43 @@ public class LiquidInspectionTask : MonoBehaviour
         }
     }
 
-    // NUEVO: Animación al hacer clic
     private void OnClickAnimation()
     {
         if (image == null)
             return;
 
-        // Cancelar animaciones previas
         LeanTween.cancel(image.gameObject);
         isHovering = false;
 
-        // Animación de "presionar"
         LeanTween.scale(image.gameObject, originalScale * 0.9f, 0.1f)
             .setEase(LeanTweenType.easeInQuad)
             .setOnComplete(() => {
-                // Rebotar de vuelta
                 LeanTween.scale(image.gameObject, originalScale, 0.2f)
                     .setEase(LeanTweenType.easeOutBack);
             });
 
-        // Flash de color (opcional)
         if (image is SpriteRenderer sprite)
         {
-            Color originalColor = sprite.color;
+            Color currentColor = sprite.color;
             LeanTween.value(image.gameObject, 0f, 1f, 0.3f)
                 .setOnUpdate((float val) => {
-                    sprite.color = Color.Lerp(Color.white, originalColor, val);
+                    sprite.color = Color.Lerp(Color.white, currentColor, val);
                 });
         }
     }
 
-    // NUEVO: Pulso suave cuando está idle (esperando ser clickeado)
     private void StartIdlePulse()
     {
         if (image == null || isCompleted || isHovering)
             return;
 
-        // Cancelar animaciones previas
         LeanTween.cancel(image.gameObject);
 
-        // Pulso suave y lento
         LeanTween.scale(image.gameObject, originalScale * pulseScale, pulseDuration)
             .setEase(LeanTweenType.easeInOutSine)
             .setLoopPingPong();
     }
 
-    // NUEVO: Marcar como completado con animación
     public void MarkAsCompleted()
     {
         if (image == null || isCompleted)
@@ -217,14 +234,11 @@ public class LiquidInspectionTask : MonoBehaviour
 
         isCompleted = true;
 
-        // Cancelar todas las animaciones
         LeanTween.cancel(image.gameObject);
 
-        // Animación de desaparición suave
         LeanTween.scale(image.gameObject, Vector3.zero, 0.5f)
             .setEase(LeanTweenType.easeInBack);
 
-        // Fade out
         if (image is SpriteRenderer sprite)
         {
             LeanTween.value(image.gameObject, sprite.color.a, 0f, 0.5f)
@@ -235,23 +249,19 @@ public class LiquidInspectionTask : MonoBehaviour
                 });
         }
 
-        // Desactivar después de la animación
         LeanTween.delayedCall(0.5f, () => {
             if (image != null)
                 image.gameObject.SetActive(false);
         });
     }
 
-    // NUEVO: Animación de error/rechazo
     public void ShowErrorAnimation()
     {
         if (image == null)
             return;
 
-        // Cancelar animaciones previas
         LeanTween.cancel(image.gameObject);
 
-        // Shake horizontal
         Vector3 originalPos = image.transform.localPosition;
 
         LeanTween.moveLocalX(image.gameObject, originalPos.x + 0.1f, 0.05f)
@@ -259,28 +269,24 @@ public class LiquidInspectionTask : MonoBehaviour
             .setLoopPingPong()
             .setRepeat(4)
             .setOnComplete(() => {
-                // Volver a posición original
                 image.transform.localPosition = originalPos;
 
-                // Reiniciar pulso si no está completado
                 if (!isCompleted)
                     StartIdlePulse();
             });
 
-        // Flash rojo
         if (image is SpriteRenderer sprite)
         {
-            Color originalColor = sprite.color;
+            Color currentColor = sprite.color;
             LeanTween.value(image.gameObject, 0f, 1f, 0.5f)
                 .setOnUpdate((float val) => {
-                    sprite.color = Color.Lerp(Color.red, originalColor, val);
+                    sprite.color = Color.Lerp(Color.red, currentColor, val);
                 });
         }
     }
 
     private void OnDisable()
     {
-        // Cancelar todas las animaciones al desactivar
         if (image != null)
             LeanTween.cancel(image.gameObject);
 
@@ -290,7 +296,6 @@ public class LiquidInspectionTask : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Cancelar animaciones al destruir
         if (image != null)
             LeanTween.cancel(image.gameObject);
     }

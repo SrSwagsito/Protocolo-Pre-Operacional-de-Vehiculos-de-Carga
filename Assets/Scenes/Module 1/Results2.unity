@@ -897,7 +897,7 @@ GameObject:
   - component: {fileID: 207644923}
   - component: {fileID: 207644922}
   m_Layer: 5
-  m_Name: OilBarGoodExample (1)
+  m_Name: OilBarBadExample (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -919,7 +919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.75588715, y: 0.13520417}
   m_AnchorMax: {x: 0.7858871, y: 0.4002663}
-  m_AnchoredPosition: {x: 0, y: 3}
+  m_AnchoredPosition: {x: 0, y: -22}
   m_SizeDelta: {x: -13.402008, y: -1.8699951}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &207644922
@@ -935,7 +935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4, g: 0.2, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2688,7 +2688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000011444092, y: -345}
+  m_AnchoredPosition: {x: 138, y: -158}
   m_SizeDelta: {x: 758.956, y: 305.86}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &533019431
@@ -2711,17 +2711,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "Identifique los contenedores de l\xEDquidos con simbolo (!), con esto
+    desplazara la barra medidora con la cual podra verificar el color y nivel del
+    liquido."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 09ae851d2852ef149948a19ba7219a0b, type: 2}
+  m_sharedMaterial: {fileID: -4274819159087118707, guid: 09ae851d2852ef149948a19ba7219a0b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4293059309
+  m_fontColor: {r: 0.9308176, g: 0.88691103, b: 0.88691103, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2738,7 +2740,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 45.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2777,7 +2779,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -39.21045, y: 0, z: -120.24509, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5172,7 +5174,9 @@ MonoBehaviour:
   instructionText: {fileID: 533019431}
   closeButton: {fileID: 1109407955}
   tutorialTitle: "Instrucciones de Inspecci\xF3n"
-  tutorialInstructions: 
+  tutorialInstructions: "Identifique los contenedores de l\xEDquidos con simbolo
+    (!), con esto desplazara la barra medidora con la cual podra verificar el color
+    y nivel del liquido."
 --- !u!114 &1014767143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6498,7 +6502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.54355645, y: 0.13520417}
   m_AnchorMax: {x: 0.5724436, y: 0.4002663}
-  m_AnchoredPosition: {x: -1.500061, y: 3}
+  m_AnchoredPosition: {x: -1.500061, y: -22}
   m_SizeDelta: {x: -11.402008, y: -1.8699951}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1176738769
