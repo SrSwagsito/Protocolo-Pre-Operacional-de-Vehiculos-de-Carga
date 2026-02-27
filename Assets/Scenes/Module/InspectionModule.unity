@@ -812,6 +812,7 @@ GameObject:
   - component: {fileID: 64903801}
   - component: {fileID: 64903800}
   - component: {fileID: 64903799}
+  - component: {fileID: 64903802}
   m_Layer: 5
   m_Name: NextLevelButton
   m_TagString: Untagged
@@ -883,10 +884,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1901746829}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 64903802}
+        m_TargetAssemblyTypeName: SceneButton, Assembly-CSharp
+        m_MethodName: OnButtonPressed
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -933,6 +934,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64903797}
   m_CullTransparentMesh: 1
+--- !u!114 &64903802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64903797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3640a2cccade714388b6a33002292f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneButton
+  sceneName: Results2
+  reloadCurrent: 0
 --- !u!1 &78727678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,6 +2425,7 @@ GameObject:
   - component: {fileID: 627317901}
   - component: {fileID: 627317900}
   - component: {fileID: 627317899}
+  - component: {fileID: 627317902}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -2481,9 +2497,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1901746829}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: ReloadCurrentScene
+      - m_Target: {fileID: 627317902}
+        m_TargetAssemblyTypeName: SceneButton, Assembly-CSharp
+        m_MethodName: OnButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2531,6 +2547,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627317897}
   m_CullTransparentMesh: 1
+--- !u!114 &627317902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627317897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3640a2cccade714388b6a33002292f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneButton
+  sceneName: Results2
+  reloadCurrent: 1
 --- !u!1 &702563850
 GameObject:
   m_ObjectHideFlags: 0
