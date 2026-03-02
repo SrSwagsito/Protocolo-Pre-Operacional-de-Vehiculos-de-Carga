@@ -2158,9 +2158,10 @@ MonoBehaviour:
   - text: "\xA1Perfecto!. Ahora que hemos realizado nuestro protocolo, estamos listos
       para realizar nuestro recorrido."
     voiceClip: {fileID: 1836028488}
-  - text: 
+  - text: 'Lleva el camion hasta su destino evitando los obstaculos y acumulando
+      la mayor cantidad de puntos. '
     voiceClip: {fileID: 517930947}
-  - text: "Cada revisi\xF3n ayuda a prevenir fallas y mejorar tu seguridad."
+  - text: "\xA1Diviertete!"
     voiceClip: {fileID: 1748575106}
   loopeable: 0
   waitForAudioToFinish: 1
