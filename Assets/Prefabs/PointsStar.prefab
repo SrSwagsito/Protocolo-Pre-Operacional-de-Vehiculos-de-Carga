@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7199903401128212955}
   - component: {fileID: 8180266258707647079}
   - component: {fileID: 8988252045722075312}
+  - component: {fileID: 1825630254341017186}
   m_Layer: 0
   m_Name: PointsStar
   m_TagString: Collectible
@@ -151,3 +152,15 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.575
+--- !u!114 &1825630254341017186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5701312804131388091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6a9ad046240164bb9b89c94a0fd9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveLeft

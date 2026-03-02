@@ -41,16 +41,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void Start()
     {
-
-        StartDriving();
-        //if (tutorial != null)
-        //{
-        //    tutorial.ShowTutorial();
-        //}
-        //else
-        //{
-        //    StartDriving();
-        //}
+        if (tutorial != null)
+        {
+            tutorial.ShowTutorial();
+        }
+        else
+        {
+            StartDriving();
+        }
     }
 
     private void StartDriving()

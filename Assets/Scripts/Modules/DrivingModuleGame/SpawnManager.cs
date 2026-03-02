@@ -36,7 +36,7 @@ public class SpawnManager : MonoBehaviour
 
         GameObject prefabToSpawn = Random.value > 0.3f ? collectibleGO : obstacleGO;
 
-        prefabToSpawn.AddComponent<MoveLeft>().Initialize(moveSpeed);
+        GameObject spawnedObject = Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
     }
 
     public void SetDifficulty(bool challenge)
