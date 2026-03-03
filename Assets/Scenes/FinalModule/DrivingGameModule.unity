@@ -344,8 +344,8 @@ MonoBehaviour:
   progressCounter: {fileID: 1751220718}
   tutorial: {fileID: 78610112}
   instructionsUI: {fileID: 78610114}
-  levelDuration: 30
-  isChallengeMode: 0
+  levelDuration: 6
+  isChallengeMode: 1
 --- !u!4 &468595995
 Transform:
   m_ObjectHideFlags: 0
@@ -786,8 +786,8 @@ MonoBehaviour:
   spawnInterval: 2
   moveSpeed: 10
   spawnX: 12
-  minY: -7
-  maxY: 7
+  minY: -2
+  maxY: 2
 --- !u!4 &817699360
 Transform:
   m_ObjectHideFlags: 0

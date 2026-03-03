@@ -34,9 +34,14 @@ public class SpawnManager : MonoBehaviour
         float ramdomY = Random.Range(minY, maxY);
         Vector3 spawnPos = new Vector3(spawnX, ramdomY, 0);
 
-        GameObject prefabToSpawn = Random.value > 0.3f ? collectibleGO : obstacleGO;
+        GameObject prefabToSpawn = Random.value > 0.4f ? collectibleGO : obstacleGO;
 
         GameObject spawnedObject = Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
+
+        if(spawnedObject.TryGetComponent<MoveLeft>(out var speed))
+        {
+            speed.Initialize(moveSpeed);
+        }
     }
 
     public void SetDifficulty(bool challenge)
