@@ -940,6 +940,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833876903}
   m_CullTransparentMesh: 1
+--- !u!1 &949070326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 949070327}
+  m_Layer: 0
+  m_Name: LeftBoundarie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &949070327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949070326}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1507926432}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1071278662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,6 +1290,13 @@ MonoBehaviour:
   scrollSpeed: 2
   resetPosition: -18
   startPosition: 18
+  curvesActive: 1
+  curveChanceInterval: 1
+  maxCurveOffset: 4
+  curveSpeed: 2
+  leftBoundary: {fileID: 0}
+  rightBoundary: {fileID: 0}
+  laneWitdth: 3
 --- !u!1 &1460680827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1404,46 @@ MonoBehaviour:
   scrollSpeed: 2
   resetPosition: -18
   startPosition: 18
+  curvesActive: 1
+  curveChanceInterval: 1
+  maxCurveOffset: 4
+  curveSpeed: 2
+  leftBoundary: {fileID: 0}
+  rightBoundary: {fileID: 0}
+  laneWitdth: 3
+--- !u!1 &1507926431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1507926432}
+  m_Layer: 0
+  m_Name: LaneBoundaries
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1507926432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507926431}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.20556, y: -2.29041, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 949070327}
+  - {fileID: 2106230805}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1645451579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +1839,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TruckContorller
   moveSpeed: 6
   verticalLimit: 3
+  roadScroller: {fileID: 1401619344}
+  outOfLanePenalty: 0
+  penaltyInterval: 0
+  truckSprite: {fileID: 1812054085}
 --- !u!61 &1812054083
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1987,6 +2069,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934480827}
   m_CullTransparentMesh: 1
+--- !u!1 &2106230804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2106230805}
+  - component: {fileID: 2106230806}
+  m_Layer: 0
+  m_Name: RightBoundarie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2106230805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106230804}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1507926432}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2106230806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106230804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a228dcb2549e14e9816ddf924e8c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaneSystem
+  isLeftBoundary: 1
+  spriteRenderer: {fileID: 0}
+  lineRenderer: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2001,3 +2130,4 @@ SceneRoots:
   - {fileID: 468595995}
   - {fileID: 482130903}
   - {fileID: 1751220719}
+  - {fileID: 1507926432}

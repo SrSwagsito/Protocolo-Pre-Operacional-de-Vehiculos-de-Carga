@@ -1,8 +1,10 @@
+using System;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
+
     [SerializeField] private TruckContorller truck;
     [SerializeField] private SpawnManager spawnManager;
     [SerializeField] private ProgressCounter progressCounter;
@@ -21,6 +23,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void OnEnable()
     {
+        truck.OnOutOfLane += OnLanePenalty;
        truck.OnCollectibleHit += AddPoints;
         truck.OnObstacleHit += RestPoints;
         if ((tutorial != null))
@@ -31,6 +34,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void OnDisable()
     {
+
+        truck.OnOutOfLane -= OnLanePenalty;
         truck.OnCollectibleHit -= AddPoints;
         truck.OnObstacleHit -= RestPoints;
         if ((tutorial != null))
@@ -90,6 +95,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
         progressCounter.UpdateProgress(score, 1000);
     }
 
+    private void OnLanePenalty(int penalty)
+    {
+        score -= penalty;
+        if (penalty >= 0)
+        {
+            penalty = 0;
+        }
+    }
     public void FinishModule()
     {
         moduleFinished = true;
