@@ -7,6 +7,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     [SerializeField] private TruckContorller truck;
     [SerializeField] private SpawnManager spawnManager;
+    [SerializeField] private RoadScroller roadScroller;
     [SerializeField] private ProgressCounter progressCounter;
     [SerializeField] private TutorialPanel tutorial;
     [SerializeField] private InstructionsUI instructionsUI;
@@ -18,6 +19,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     
     private int score = 0;
     private int obstacleHits = 0;
+    private int laneHits = 0;
     private float timer;
     bool moduleFinished = false;
 
@@ -59,7 +61,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private void StartDriving()
     {
         instructionsUI.ShowInstruction("Conduce el camión y evita los obstáculos. ¡Recoge los objetos para ganar puntos!");
+        
         spawnManager.SetDifficulty(isChallengeMode);
+
+        if (roadScroller != null)
+        {
+            roadScroller.SetDifficult(isChallengeMode);
+        }
+
         spawnManager.StartSpawning();
         timer = levelDuration;
     }
@@ -87,7 +96,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         obstacleHits++;
         score -= points;
 
-        if (points >= 0)
+        if (points <= 0)
         {
             points = 0;
         }
@@ -97,8 +106,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void OnLanePenalty(int penalty)
     {
+        laneHits++;
         score -= penalty;
-        if (penalty >= 0)
+        if (penalty <= 0)
         {
             penalty = 0;
         }
@@ -117,7 +127,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
             moduleName = "Recorrido",
             approved = score >= 1000,
             score = score,
-            missedDamages = obstacleHits,
+            missedDamages = obstacleHits + laneHits,
             message = GenerateFinalMessage()
         };
 
@@ -128,6 +138,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         string message = $"Puntuación final: {score}\n";
         message += $"Obstáculos golpeados: {obstacleHits}\n\n";
+        message += $"Salidas de carril: {laneHits}\n\n";
         if (score >= 1000)
         {
             message += "¡Excelente trabajo! Has completado el recorrido con éxito.";

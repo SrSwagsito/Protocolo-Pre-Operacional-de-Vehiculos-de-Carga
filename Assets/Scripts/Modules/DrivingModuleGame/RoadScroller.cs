@@ -15,9 +15,11 @@ public class RoadScroller : MonoBehaviour
     [SerializeField] private float curveSpeed;
 
     [Header("Lane Boundaries")]
-    [SerializeField] private Transform leftBoundary;
-    [SerializeField] private Transform rightBoundary;
+    //[SerializeField] private Transform leftBoundary;
+    //[SerializeField] private Transform rightBoundary;
+
     [SerializeField] private float laneWitdth = 3f;
+    [SerializeField] float toleranceHB;
 
     float currentCurveOffset = 0f;
     float targetCurveOffset = 0f;
@@ -28,7 +30,6 @@ public class RoadScroller : MonoBehaviour
     private void Start()
     {
         nextCuurveChangeTime = Time.time * curveChanceInterval;
-        //UpdateBoundaryPositions();
     }
     private void Update()
     {
@@ -38,42 +39,33 @@ public class RoadScroller : MonoBehaviour
         {
             transform.position = new Vector3(startPosition, transform.position.y, transform.position.z);
         }
+
+        if (curvesActive)
+        {
+            UpdateCurves();
+        }
     }
 
     private void UpdateCurves()
     {
         if (!curvesActive) return;
+
         if (Time.time >= nextCuurveChangeTime)
         {
             targetCurveOffset = Random.Range(-maxCurveOffset, maxCurveOffset);
             nextCuurveChangeTime = Time.time + curveChanceInterval;
         }
         currentCurveOffset = Mathf.Lerp(currentCurveOffset, targetCurveOffset, Time.deltaTime * curveSpeed);
-        UpdateBoundaryPositions();
-    }
-
-    private void UpdateBoundaryPositions()
-    {
-        if (leftBoundary != null)
-        {
-            Vector3 pos = leftBoundary.position;
-            pos.y = currentCurveOffset - (laneWitdth / 2f);
-            leftBoundary.position = pos;
-        }
-
-        if (rightBoundary != null)
-        {
-            Vector3 pos = rightBoundary.position;
-            pos.x = currentCurveOffset + (laneWitdth / 2f);
-            leftBoundary.position = pos;
-        }
     }
 
     public bool IsInLane(float truckY)
     {
         float laneMin = currentCurveOffset - (laneWitdth / 2f);
         float laneMax = currentCurveOffset + (laneWitdth / 2f);
-        return truckY >= laneMin && truckY <= laneMax;
+
+        float tolerance = toleranceHB;
+
+        return truckY >= (laneMin + tolerance) && truckY <= (laneMax - tolerance);
     }
 
     public float GetLaneCenter()
@@ -95,13 +87,13 @@ public class RoadScroller : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        if (leftBoundary != null)
-        {
-            Gizmos.DrawLine(new Vector3(transform.position.x, leftBoundary.position.y, 0), new Vector3(transform.position.x + 20f, leftBoundary.position.y, 0));
-        }
-        if (rightBoundary != null)
-        {
-            Gizmos.DrawLine(new Vector3(transform.position.x, rightBoundary.position.y, 0), new Vector3(transform.position.x + 20f, rightBoundary.position.y, 0));
-        }
+        Gizmos.DrawLine( new Vector3(-10, currentCurveOffset,0), new Vector3(10, currentCurveOffset, 0));
+
+        Gizmos.color = Color.red;
+        float halfWidth = laneWitdth / 2f;
+        Gizmos.DrawLine(new Vector3(-10, currentCurveOffset - halfWidth, 0), new Vector3(10, currentCurveOffset - halfWidth, 0));
+        Gizmos.DrawLine(new Vector3(-10, currentCurveOffset + halfWidth, 0), new Vector3(10, currentCurveOffset + halfWidth, 0));
+
+
     }
 }
