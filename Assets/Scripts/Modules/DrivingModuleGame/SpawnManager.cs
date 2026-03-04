@@ -13,11 +13,11 @@ public class SpawnManager : MonoBehaviour
 
     private bool spawning;
 
-    
+
 
     public void StartSpawning()
     {
-               spawning = true;
+        spawning = true;
         InvokeRepeating(nameof(SpawnObject), 1f, spawnInterval);
     }
 
@@ -38,7 +38,7 @@ public class SpawnManager : MonoBehaviour
 
         GameObject spawnedObject = Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
 
-        if(spawnedObject.TryGetComponent<MoveLeft>(out var speed))
+        if (spawnedObject.TryGetComponent<MoveLeft>(out var speed))
         {
             speed.Initialize(moveSpeed);
         }

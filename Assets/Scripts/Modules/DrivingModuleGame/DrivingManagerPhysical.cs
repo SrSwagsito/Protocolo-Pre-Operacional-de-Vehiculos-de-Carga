@@ -1,46 +1,46 @@
-using System;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+/// <summary>
+/// Manager actualizado para el sistema de pivotes físicos
+/// </summary>
+public class DrivingModuleManagerPhysical : MonoBehaviour
 {
-
-    [SerializeField] private TruckContorller truck;
+    [SerializeField] private TruckPhysicalController truck;
     [SerializeField] private SpawnManager spawnManager;
-    [SerializeField] private RoadScroller roadScroller;
+    [SerializeField] private RoadPivotSystem roadSystem;
     [SerializeField] private ProgressCounter progressCounter;
     [SerializeField] private TutorialPanel tutorial;
     [SerializeField] private InstructionsUI instructionsUI;
 
     [Header("Configuration")]
-
-    [SerializeField] float levelDuration;
-    [SerializeField] bool isChallengeMode = false;
+    [SerializeField] private float levelDuration = 60f;
+    [SerializeField] private bool isChallengeMode = false;
     
     private int score = 0;
     private int obstacleHits = 0;
-    private int laneHits = 0;
+    private int boundaryHits = 0;
     private float timer;
-    bool moduleFinished = false;
+    private bool moduleFinished = false;
 
     private void OnEnable()
     {
-        truck.OnOutOfLane += OnLanePenalty;
-       truck.OnCollectibleHit += AddPoints;
-        truck.OnObstacleHit += RestPoints;
-        if ((tutorial != null))
+        truck.OnCollectibleHit += AddPoints;
+        truck.OnObstacleHit += SubtractPoints;
+        truck.OnBoundaryPenalty += OnBoundaryHit;
+        
+        if (tutorial != null)
         {
-            tutorial.OnTutorialClosed += StartDriving;   
+            tutorial.OnTutorialClosed += StartDriving;
         }
     }
 
     private void OnDisable()
     {
-
-        truck.OnOutOfLane -= OnLanePenalty;
         truck.OnCollectibleHit -= AddPoints;
-        truck.OnObstacleHit -= RestPoints;
-        if ((tutorial != null))
+        truck.OnObstacleHit -= SubtractPoints;
+        truck.OnBoundaryPenalty -= OnBoundaryHit;
+        
+        if (tutorial != null)
         {
             tutorial.OnTutorialClosed -= StartDriving;
         }
@@ -60,15 +60,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void StartDriving()
     {
-        instructionsUI.ShowInstruction("Conduce el camión y evita los obstáculos. ¡Recoge los objetos para ganar puntos!");
+        instructionsUI.ShowInstruction("¡Evita tocar los bordes del carril y recoge objetos!");
         
         spawnManager.SetDifficulty(isChallengeMode);
-
-        if (roadScroller != null)
-        {
-            roadScroller.SetDifficult(isChallengeMode);
-        }
-
+        roadSystem.SetDifficulty(isChallengeMode);
+        
         spawnManager.StartSpawning();
         timer = levelDuration;
     }
@@ -91,28 +87,24 @@ public class NewMonoBehaviourScript : MonoBehaviour
         progressCounter.UpdateProgress(score, 1000);
     }
 
-    private void RestPoints(int points)
+    private void SubtractPoints(int points)
     {
         obstacleHits++;
         score -= points;
-
-        if (points <= 0)
-        {
-            points = 0;
-        }
-
+        if (score < 0) score = 0;
         progressCounter.UpdateProgress(score, 1000);
     }
 
-    private void OnLanePenalty(int penalty)
+    private void OnBoundaryHit(int penalty)
     {
-        laneHits++;
+        boundaryHits++;
         score -= penalty;
-        if (penalty <= 0)
-        {
-            penalty = 0;
-        }
+        if (score < 0) score = 0;
+        progressCounter.UpdateProgress(score, 1000);
+        
+        Debug.Log($"Toca borde! Penalización: -{penalty}. Score: {score}");
     }
+
     public void FinishModule()
     {
         moduleFinished = true;
@@ -127,26 +119,28 @@ public class NewMonoBehaviourScript : MonoBehaviour
             moduleName = "Recorrido",
             approved = score >= 1000,
             score = score,
-            missedDamages = obstacleHits + laneHits,
+            missedDamages = obstacleHits + boundaryHits,
             message = GenerateFinalMessage()
         };
 
         GameManager.Instance.RegisterModuleResult(result);
     }
 
-   private string GenerateFinalMessage()
+    private string GenerateFinalMessage()
     {
         string message = $"Puntuación final: {score}\n";
-        message += $"Obstáculos golpeados: {obstacleHits}\n\n";
-        message += $"Salidas de carril: {laneHits}\n\n";
+        message += $"Obstáculos golpeados: {obstacleHits}\n";
+        message += $"Toques en bordes: {boundaryHits}\n\n";
+        
         if (score >= 1000)
         {
             message += "¡Excelente trabajo! Has completado el recorrido con éxito.";
         }
         else
         {
-            message += "No alcanzaste la puntuación necesaria. Intenta evitar más obstáculos y recoger más objetos la próxima vez.";
+            message += "No alcanzaste la puntuación necesaria. Intenta evitar más obstáculos, recoger más objetos y no tocar los bordes.";
         }
+        
         return message;
     }
 }
