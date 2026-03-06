@@ -1623,10 +1623,14 @@ MonoBehaviour:
   leftLaneLine: {fileID: 229359132}
   rightLaneLine: {fileID: 753117643}
   roadSurface: {fileID: 182531633}
-  laneWidth: 4
+  laneWidth: 5
+  minYPosition: -3
+  maxYPosition: -1.75
+  useAutomaticLimits: 0
+  screenCoverageBottom: 0.75
   pivots: []
-  pivotCount: 3
-  pivotSpacing: 8
+  pivotCount: 5
+  pivotSpacing: 6
   maxCurveOffset: 1.5
   curveChangeInterval: 7
   curveSpeed: 7
@@ -2424,7 +2428,7 @@ Transform:
   m_GameObject: {fileID: 1812054081}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: -2.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

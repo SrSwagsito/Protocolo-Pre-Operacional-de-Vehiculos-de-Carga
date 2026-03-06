@@ -2,8 +2,8 @@ using UnityEngine;
 using System.Collections.Generic;
 
 /// <summary>
-/// Sistema de carretera mejorado con interpolación suave entre pivotes
-/// y superficie visual de carretera.
+/// Sistema de carretera con rango limitado en Y.
+/// Las curvas solo se mueven dentro de un área definida (ej: mitad inferior de la pantalla)
 /// </summary>
 public class RoadPivotSystem : MonoBehaviour
 {
@@ -11,46 +11,38 @@ public class RoadPivotSystem : MonoBehaviour
     [SerializeField] private float scrollSpeed = 3f;
 
     [Header("Lane Lines (Physical Boundaries)")]
-    [Tooltip("Contenedor con ambas líneas y la carretera visual")]
     [SerializeField] private Transform roadContainer;
-
-    [Tooltip("Línea izquierda del carril")]
     [SerializeField] private Transform leftLaneLine;
-
-    [Tooltip("Línea derecha del carril")]
     [SerializeField] private Transform rightLaneLine;
-
-    [Tooltip("Sprite de la carretera (entre las líneas)")]
     [SerializeField] private SpriteRenderer roadSurface;
-
-    [Tooltip("Ancho del carril")]
     [SerializeField] private float laneWidth = 3f;
 
+    [Header("Y Position Limits - NUEVO")]
+    [Tooltip("Posición Y mínima del centro de la carretera")]
+    [SerializeField] private float minYPosition = -3f;
+
+    [Tooltip("Posición Y máxima del centro de la carretera")]
+    [SerializeField] private float maxYPosition = -1f;
+
+    [Tooltip("Usar límites automáticos basados en la cámara")]
+    [SerializeField] private bool useAutomaticLimits = true;
+
+    [Tooltip("Si es automático: 0.5 = mitad inferior, 0.75 = cuarto inferior")]
+    [Range(0.25f, 1f)]
+    [SerializeField] private float screenCoverageBottom = 0.5f;
+
     [Header("Pivot System")]
-    [Tooltip("Lista de pivotes")]
     [SerializeField] private List<RoadPivot> pivots = new List<RoadPivot>();
-
-    [Tooltip("Cuántos pivotes crear")]
     [SerializeField] private int pivotCount = 15;
-
-    [Tooltip("Distancia entre pivotes")]
     [SerializeField] private float pivotSpacing = 3f;
 
     [Header("Curve Settings")]
-    [Tooltip("Qué tan pronunciadas son las curvas")]
-    [SerializeField] private float maxCurveOffset = 2f;
-
-    [Tooltip("Cada cuánto cambia la curva")]
+    [SerializeField] private float maxCurveOffset = 1f; // Reducido para que quepa en el rango
     [SerializeField] private float curveChangeInterval = 3f;
-
-    [Tooltip("Velocidad de transición entre curvas")]
     [SerializeField] private float curveSpeed = 2f;
 
     [Header("Smooth Interpolation")]
-    [Tooltip("Número de puntos para interpolar entre pivotes")]
     [SerializeField] private int interpolationPoints = 20;
-
-    [Tooltip("Suavizado adicional (0-1)")]
     [Range(0f, 1f)]
     [SerializeField] private float smoothness = 0.5f;
 
@@ -58,9 +50,11 @@ public class RoadPivotSystem : MonoBehaviour
     private float nextCurveChangeTime;
     private float targetCurveOffset = 0f;
     private List<Vector2> smoothPath = new List<Vector2>();
+    private float centerYPosition; // Posición central del rango permitido
 
     private void Start()
     {
+        CalculateYLimits();
         CreatePivots();
         nextCurveChangeTime = Time.time + curveChangeInterval;
         UpdateRoadVisuals();
@@ -74,7 +68,35 @@ public class RoadPivotSystem : MonoBehaviour
     }
 
     /// <summary>
-    /// Crea pivotes automáticamente
+    /// Calcula los límites Y automáticamente basándose en la cámara
+    /// </summary>
+    private void CalculateYLimits()
+    {
+        if (useAutomaticLimits)
+        {
+            Camera cam = Camera.main;
+            if (cam != null)
+            {
+                float cameraHeight = cam.orthographicSize * 2f;
+                float cameraBottom = -cam.orthographicSize;
+
+                // Calcular rango basado en screenCoverageBottom
+                // 0.5 = mitad inferior, 0.75 = tres cuartos inferiores, etc.
+                float rangeHeight = cameraHeight * screenCoverageBottom;
+
+                minYPosition = cameraBottom;
+                maxYPosition = cameraBottom + rangeHeight;
+
+                Debug.Log($"Límites automáticos: Min={minYPosition:F2}, Max={maxYPosition:F2}");
+            }
+        }
+
+        // Calcular centro del rango
+        centerYPosition = (minYPosition + maxYPosition) / 2f;
+    }
+
+    /// <summary>
+    /// Crea pivotes dentro del rango permitido
     /// </summary>
     private void CreatePivots()
     {
@@ -85,53 +107,52 @@ public class RoadPivotSystem : MonoBehaviour
             GameObject pivotGO = new GameObject($"Pivot_{i}");
             pivotGO.transform.parent = transform;
 
-            // Posición inicial
             float xPos = i * pivotSpacing;
             pivotGO.transform.position = new Vector3(xPos, 0, 0);
 
             RoadPivot pivot = pivotGO.AddComponent<RoadPivot>();
-            pivot.offset = 0f;
+            pivot.offset = centerYPosition; // Empezar en el centro del rango
 
             pivots.Add(pivot);
         }
     }
 
     /// <summary>
-    /// Actualiza las curvas de forma gradual
+    /// Actualiza las curvas respetando los límites Y
     /// </summary>
     private void UpdateCurves()
     {
-        // Cambiar objetivo cada intervalo
         if (Time.time >= nextCurveChangeTime)
         {
-            targetCurveOffset = Random.Range(-maxCurveOffset, maxCurveOffset);
+            // Generar offset DENTRO del rango permitido
+            float rangeSize = maxYPosition - minYPosition;
+            float halfRange = rangeSize / 2f;
+
+            // El offset ahora es relativo al centro, pero limitado
+            float maxOffset = Mathf.Min(maxCurveOffset, halfRange);
+            targetCurveOffset = Random.Range(-maxOffset, maxOffset);
+
             nextCurveChangeTime = Time.time + curveChangeInterval;
         }
 
-        // Actualizar cada pivote gradualmente hacia el objetivo
+        // Actualizar pivotes
         for (int i = 0; i < pivots.Count; i++)
         {
             if (pivots[i] == null) continue;
 
-            // Los pivotes más adelante cambian primero
-            float distanceFromFront = GetFrontPivotX() - pivots[i].transform.position.x;
-            float delay = distanceFromFront * 0.1f; // Más atrás = más delay
-
-            // Interpolar hacia el objetivo con delay
-            float targetForThisPivot = i == pivots.Count - 1 ? targetCurveOffset : pivots[i].offset;
-
             if (i == pivots.Count - 1)
             {
-                // El último pivote (más adelante) sigue el target
+                // Último pivote sigue el target
+                float targetY = centerYPosition + targetCurveOffset;
                 pivots[i].offset = Mathf.Lerp(
                     pivots[i].offset,
-                    targetCurveOffset,
+                    targetY,
                     Time.deltaTime * curveSpeed
                 );
             }
             else
             {
-                // Los demás siguen al que está adelante
+                // Los demás siguen al siguiente
                 if (i < pivots.Count - 1)
                 {
                     float nextOffset = pivots[i + 1].offset;
@@ -142,12 +163,12 @@ public class RoadPivotSystem : MonoBehaviour
                     );
                 }
             }
+
+            // CLAMP: Asegurar que el pivote está dentro del rango
+            pivots[i].offset = Mathf.Clamp(pivots[i].offset, minYPosition, maxYPosition);
         }
     }
 
-    /// <summary>
-    /// Mueve los pivotes (scroll)
-    /// </summary>
     private void ScrollPivots()
     {
         foreach (var pivot in pivots)
@@ -156,7 +177,6 @@ public class RoadPivotSystem : MonoBehaviour
 
             pivot.transform.Translate(Vector3.left * scrollSpeed * Time.deltaTime);
 
-            // Reciclar si sale de pantalla
             if (pivot.transform.position.x < -pivotSpacing * 2)
             {
                 RecyclePivot(pivot);
@@ -164,42 +184,38 @@ public class RoadPivotSystem : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Recicla un pivote al frente
-    /// </summary>
     private void RecyclePivot(RoadPivot pivot)
     {
         float frontX = GetFrontPivotX();
         pivot.transform.position = new Vector3(frontX + pivotSpacing, 0, 0);
 
-        // Heredar offset del pivote anterior para continuidad
         RoadPivot nearestPivot = GetNearestPivotTo(frontX);
         if (nearestPivot != null)
         {
             pivot.offset = nearestPivot.offset;
+
+            // Asegurar que está en rango
+            pivot.offset = Mathf.Clamp(pivot.offset, minYPosition, maxYPosition);
         }
     }
 
-    /// <summary>
-    /// Actualiza visuales de la carretera con interpolación suave
-    /// </summary>
     private void UpdateRoadVisuals()
     {
         if (roadContainer == null) return;
 
-        // Calcular path suave interpolando entre pivotes
         CalculateSmoothPath();
 
-        // Obtener offset en la posición del camión (centro de pantalla)
-        float truckX = 0f; // Asumiendo que el camión está en X=0
+        float truckX = 0f;
         float roadOffset = GetOffsetAtX(truckX);
 
-        // Mover el contenedor de la carretera
+        // CLAMP: Asegurar que la carretera está en el rango
+        roadOffset = Mathf.Clamp(roadOffset, minYPosition, maxYPosition);
+
         Vector3 containerPos = roadContainer.position;
         containerPos.y = roadOffset;
         roadContainer.position = containerPos;
 
-        // Actualizar líneas laterales
+        // Actualizar líneas (posiciones locales relativas al container)
         if (leftLaneLine != null)
         {
             Vector3 leftPos = leftLaneLine.localPosition;
@@ -214,40 +230,33 @@ public class RoadPivotSystem : MonoBehaviour
             rightLaneLine.localPosition = rightPos;
         }
 
-        // Actualizar tamaño de la superficie de carretera
+        // Actualizar superficie
         if (roadSurface != null)
         {
             Vector3 scale = roadSurface.transform.localScale;
             scale.y = laneWidth;
             roadSurface.transform.localScale = scale;
 
-            // Centrar
             Vector3 surfacePos = roadSurface.transform.localPosition;
             surfacePos.y = 0f;
             roadSurface.transform.localPosition = surfacePos;
         }
     }
 
-    /// <summary>
-    /// Calcula un path suave interpolando entre pivotes
-    /// </summary>
     private void CalculateSmoothPath()
     {
         smoothPath.Clear();
 
         if (pivots.Count < 2) return;
 
-        // Ordenar pivotes por posición X
         List<RoadPivot> sortedPivots = new List<RoadPivot>(pivots);
         sortedPivots.Sort((a, b) => a.transform.position.x.CompareTo(b.transform.position.x));
 
-        // Interpolar entre cada par de pivotes
         for (int i = 0; i < sortedPivots.Count - 1; i++)
         {
             Vector2 p0 = new Vector2(sortedPivots[i].transform.position.x, sortedPivots[i].offset);
             Vector2 p1 = new Vector2(sortedPivots[i + 1].transform.position.x, sortedPivots[i + 1].offset);
 
-            // Puntos de control para curva suave (Catmull-Rom)
             Vector2 p_1 = i > 0 ?
                 new Vector2(sortedPivots[i - 1].transform.position.x, sortedPivots[i - 1].offset) :
                 p0;
@@ -256,19 +265,19 @@ public class RoadPivotSystem : MonoBehaviour
                 new Vector2(sortedPivots[i + 2].transform.position.x, sortedPivots[i + 2].offset) :
                 p1;
 
-            // Interpolar puntos
             for (int j = 0; j < interpolationPoints; j++)
             {
                 float t = j / (float)interpolationPoints;
                 Vector2 point = CatmullRomInterpolate(p_1, p0, p1, p2, t);
+
+                // CLAMP: Asegurar que el punto interpolado está en rango
+                point.y = Mathf.Clamp(point.y, minYPosition, maxYPosition);
+
                 smoothPath.Add(point);
             }
         }
     }
 
-    /// <summary>
-    /// Interpolación Catmull-Rom para curvas suaves
-    /// </summary>
     private Vector2 CatmullRomInterpolate(Vector2 p0, Vector2 p1, Vector2 p2, Vector2 p3, float t)
     {
         float t2 = t * t;
@@ -281,22 +290,17 @@ public class RoadPivotSystem : MonoBehaviour
             (-p0 + 3f * p1 - 3f * p2 + p3) * t3
         );
 
-        // Aplicar smoothness
         result.y = Mathf.Lerp(p1.y, result.y, smoothness);
 
         return result;
     }
 
-    /// <summary>
-    /// Obtiene el offset de la carretera en una posición X específica
-    /// </summary>
     public float GetOffsetAtX(float x)
     {
-        if (smoothPath.Count == 0) return 0f;
+        if (smoothPath.Count == 0) return centerYPosition;
 
-        // Encontrar el punto más cercano en el path
         float closestDistance = float.MaxValue;
-        float closestOffset = 0f;
+        float closestOffset = centerYPosition;
 
         foreach (var point in smoothPath)
         {
@@ -311,9 +315,6 @@ public class RoadPivotSystem : MonoBehaviour
         return closestOffset;
     }
 
-    /// <summary>
-    /// Obtiene la posición X del pivote más adelante
-    /// </summary>
     private float GetFrontPivotX()
     {
         float maxX = float.MinValue;
@@ -327,9 +328,6 @@ public class RoadPivotSystem : MonoBehaviour
         return maxX;
     }
 
-    /// <summary>
-    /// Obtiene el pivote más cercano a una posición X
-    /// </summary>
     private RoadPivot GetNearestPivotTo(float x)
     {
         RoadPivot nearest = null;
@@ -354,17 +352,30 @@ public class RoadPivotSystem : MonoBehaviour
     {
         if (challengeMode)
         {
-            maxCurveOffset *= 1.5f;
+            // Mantener dentro del rango
+            float rangeSize = maxYPosition - minYPosition;
+            maxCurveOffset = Mathf.Min(maxCurveOffset * 1.5f, rangeSize / 2f);
+
             curveChangeInterval *= 0.7f;
             scrollSpeed *= 1.2f;
         }
     }
 
     /// <summary>
-    /// Debug: Dibuja el path suave
+    /// Dibuja los límites del área de la carretera
     /// </summary>
     private void OnDrawGizmos()
     {
+        // Dibujar límites del rango Y
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(new Vector3(-10, minYPosition, 0), new Vector3(10, minYPosition, 0));
+        Gizmos.DrawLine(new Vector3(-10, maxYPosition, 0), new Vector3(10, maxYPosition, 0));
+
+        // Dibujar centro
+        Gizmos.color = Color.yellow;
+        float center = (minYPosition + maxYPosition) / 2f;
+        Gizmos.DrawLine(new Vector3(-10, center, 0), new Vector3(10, center, 0));
+
         // Dibujar pivotes
         if (pivots != null)
         {
