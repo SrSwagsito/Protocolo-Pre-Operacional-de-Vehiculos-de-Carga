@@ -50,8 +50,8 @@ public class SpawnManager : MonoBehaviour
 
         Vector3 spawnPos = new Vector3(spawnX, spawnY, 0);
 
-        // Decidir qué spawear (60% coleccionable, 40% obstáculo)
-        GameObject prefabToSpawn = Random.value > 0.4f ? collectibleGO : obstacleGO;
+        // Decidir qué spawear (70% coleccionable, 30% obstáculo)
+        GameObject prefabToSpawn = Random.value > 0.3f ? collectibleGO : obstacleGO;
 
         GameObject spawnedObject = Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
 

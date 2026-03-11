@@ -462,8 +462,8 @@ public class DrivingModuleManagerPhysical : MonoBehaviour
 
         string message = $"Ruta {difficulty} completada\n\n";
         message += $"Puntuación final: {score}\n";
-        message += $"Obstáculos golpeados: {obstacleHits}\n";
-        message += $"Toques en bordes: {boundaryHits}\n\n";
+        //message += $"Obstáculos golpeados: {obstacleHits}\n";
+        //message += $"Toques en bordes: {boundaryHits}\n\n";
 
         if (score >= 0)
         {

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using JetBrains.Annotations;
 
 public class GameManager : MonoBehaviour
 {
@@ -51,5 +52,50 @@ public class GameManager : MonoBehaviour
     public void StartEvaluation()
     {
         ChangeState(GameState.IntroductionScene);    
-    }   
+    }
+
+    public List<ModuleResult> GetAllModuleResults()
+    {
+        return new List<ModuleResult>(results);
+    }
+
+    public void ClearAllRounds()
+    {
+        results.Clear();
+    }
+
+    public int GetAllScore()
+    {
+        int total = 0;
+        foreach (var moduleResults in results)
+        {
+            total += moduleResults.score;
+        }
+
+        return total;
+    }
+
+    public int GetApprovedModulesCount()
+    {
+        int count = 0;
+        foreach (var moduleResults in results)
+        {
+            if (moduleResults.approved)
+                count++;
+        }
+        return count;
+    }
+
+    public bool AllModulesApproved()
+    {
+        if (results.Count == 0)
+            return false;
+
+        foreach (var moduleResult in results)
+        {
+            if (!moduleResult.approved)
+                return false;
+        }
+        return true;
+    }
 }
