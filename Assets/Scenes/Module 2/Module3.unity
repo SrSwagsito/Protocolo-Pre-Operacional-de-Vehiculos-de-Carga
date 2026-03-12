@@ -2398,7 +2398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3640a2cccade714388b6a33002292f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  sceneName: Module3
+  sceneName: PreGameModuleInstructions
   reloadCurrent: 0
 --- !u!1 &313764503
 GameObject:
@@ -10509,7 +10509,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71.4
+  m_fontSize: 71.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3640a2cccade714388b6a33002292f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  sceneName: InspectionModule
+  sceneName: DrivingGameModule
   reloadCurrent: 0
 --- !u!1 &390039844
 GameObject:
@@ -2157,12 +2157,12 @@ MonoBehaviour:
   dialogueLines:
   - text: "\xA1Perfecto!. Ahora que hemos realizado nuestro protocolo, estamos listos
       para realizar nuestro recorrido."
-    voiceClip: {fileID: 1836028488}
+    voiceClip: {fileID: 0}
   - text: 'Lleva el camion hasta su destino evitando los obstaculos y acumulando
       la mayor cantidad de puntos. '
-    voiceClip: {fileID: 517930947}
+    voiceClip: {fileID: 0}
   - text: "\xA1Diviertete!"
-    voiceClip: {fileID: 1748575106}
+    voiceClip: {fileID: 0}
   loopeable: 0
   waitForAudioToFinish: 1
   skipIndicator: {fileID: 741358141}

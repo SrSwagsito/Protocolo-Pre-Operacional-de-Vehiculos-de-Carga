@@ -21,9 +21,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Module 2/Module3.unity
     guid: 4e080e53e3e859048a01a483f51ce7f0
   - enabled: 1
+    path: Assets/Scenes/FinalModule/PreGameModuleInstructions.unity
+    guid: d765e6d84fdf72a43907659691ec65a1
+  - enabled: 1
+    path: Assets/Scenes/FinalModule/DrivingGameModule.unity
+    guid: 2a080c87a2e17244d99cbbf665eb7039
+  - enabled: 1
+    path: Assets/Scenes/FinalModule/FinalScreen.unity
+    guid: 57d2ebc833c9a234f815c73a8c9696f6
+  - enabled: 0
     path: Assets/Scenes/FinalResults.unity
     guid: 58bd61424e41b7c4fadb71b2a75ab36e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Module 1/Module2.unity
     guid: 576d53de606455d4fbf8d60acfb4b3cc
   m_configObjects:

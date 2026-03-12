@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         return new List<ModuleResult>(results);
     }
 
-    public void ClearAllRounds()
+    public void ClearAllResults()
     {
         results.Clear();
     }
