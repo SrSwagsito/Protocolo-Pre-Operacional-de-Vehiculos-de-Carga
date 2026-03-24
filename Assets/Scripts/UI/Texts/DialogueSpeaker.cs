@@ -3,7 +3,12 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
+/// <summary>
+/// DialogueSpeaker adaptado al nuevo Input System.
+/// Soporta clic/touch en PC y móvil.
+/// </summary>
 public class DialogueSpeaker : MonoBehaviour
 {
     [System.Serializable]
@@ -30,7 +35,7 @@ public class DialogueSpeaker : MonoBehaviour
     private int lineIndex;
     public float typingTime;
 
-    // NUEVO: Control de estado del audio
+    // Control de estado del audio
     private bool isAudioPlaying = false;
     private bool isTyping = false;
 
@@ -44,7 +49,8 @@ public class DialogueSpeaker : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        // Detectar input unificado (PC y móvil)
+        if (WasInputDetected())
         {
             if (!didDialogueStart)
             {
@@ -68,6 +74,42 @@ public class DialogueSpeaker : MonoBehaviour
         }
 
         UpdateAudioState();
+    }
+
+    /// <summary>
+    /// Detecta input tanto de mouse (PC) como de touch (móvil)
+    /// </summary>
+    private bool WasInputDetected()
+    {
+        // Mouse/Click (PC)
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            return true;
+        }
+
+        // Touch (Móvil)
+        if (Touchscreen.current != null)
+        {
+            for (int i = 0; i < Touchscreen.current.touches.Count; i++)
+            {
+                if (Touchscreen.current.touches[i].press.wasPressedThisFrame)
+                {
+                    return true;
+                }
+            }
+        }
+
+        // Teclado alternativo (Espacio o Enter)
+        if (Keyboard.current != null)
+        {
+            if (Keyboard.current.spaceKey.wasPressedThisFrame ||
+                Keyboard.current.enterKey.wasPressedThisFrame)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void StartDialogue()
@@ -137,7 +179,6 @@ public class DialogueSpeaker : MonoBehaviour
         UpdateSkipIndicator();
     }
 
-    // NUEVO: Verificar si se puede avanzar al siguiente diálogo
     private bool CanSkipToNext()
     {
         // Si el texto no está completo, no se puede avanzar
@@ -151,7 +192,6 @@ public class DialogueSpeaker : MonoBehaviour
         return true;
     }
 
-    // NUEVO: Actualizar el estado del audio
     private void UpdateAudioState()
     {
         if (isAudioPlaying && lineIndex < dialogueLines.Count)
@@ -166,7 +206,6 @@ public class DialogueSpeaker : MonoBehaviour
         }
     }
 
-    // NUEVO: Mostrar/ocultar indicador de skip
     private void UpdateSkipIndicator()
     {
         if (skipIndicator == null)

@@ -2210,6 +2210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 409129673}
   - component: {fileID: 409129674}
+  - component: {fileID: 409129675}
   m_Layer: 0
   m_Name: MotorImage
   m_TagString: Untagged
@@ -2227,7 +2228,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.8856, y: 0, z: 0}
-  m_LocalScale: {x: 2.1565259, y: 2.1565259, z: 2.1565259}
+  m_LocalScale: {x: 3.2353785, y: 2.020726, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 569327191}
@@ -2291,6 +2292,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &409129675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409129672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c478e51093d844997302fddc3d7325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundScaler
 --- !u!1 &409675901
 GameObject:
   m_ObjectHideFlags: 0
@@ -7188,7 +7201,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -7227,6 +7240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1317686599}
   - component: {fileID: 1317686600}
+  - component: {fileID: 1317686601}
   m_Layer: 0
   m_Name: MotorImage (1)
   m_TagString: Untagged
@@ -7244,7 +7258,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.6856, y: 0, z: 0}
-  m_LocalScale: {x: 2.1565259, y: 2.1565259, z: 2.1565259}
+  m_LocalScale: {x: 3.2353785, y: 2.020726, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 569327191}
@@ -7308,6 +7322,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1317686601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317686598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c478e51093d844997302fddc3d7325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundScaler
 --- !u!1 &1319715713
 GameObject:
   m_ObjectHideFlags: 0
