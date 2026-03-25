@@ -139,8 +139,8 @@ public class DrivingModuleManagerPhysical : MonoBehaviour
     {
         if (buttonsMobilePanel == null) return;
 
-        #if Unity_ANDROID || UNITY_IOS
-        buttornsMobilePanel.SetActive(true);
+        #if UNITY_ANDROID || UNITY_IOS
+        buttonsMobilePanel.SetActive(true);
         #else
         buttonsMobilePanel.SetActive(false);
         #endif

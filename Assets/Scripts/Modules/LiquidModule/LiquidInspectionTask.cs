@@ -1,7 +1,12 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
+/// <summary>
+/// LiquidInspectionTask adaptado al nuevo Input System.
+/// Soporta mouse (PC) y touch (móvil).
+/// </summary>
 public class LiquidInspectionTask : MonoBehaviour
 {
     public string vehiclePart;
@@ -23,7 +28,7 @@ public class LiquidInspectionTask : MonoBehaviour
     private bool isCompleted = false;
     private bool isHovering = false;
 
-    // NUEVO: Para guardar el sprite original
+    // Guardar el sprite original
     private Sprite originalSprite;
 
     public void Initialize(LiquidInspectionManager manager, LiquidLevelPanel panel)
@@ -38,39 +43,31 @@ public class LiquidInspectionTask : MonoBehaviour
         {
             originalScale = image.transform.localScale;
             originalColor = image.color;
-            originalSprite = image.sprite; // NUEVO: Guardar sprite original
+            originalSprite = image.sprite;
 
-            // NUEVO: Resetear estado visual
             ResetVisuals();
-
-            // Iniciar animación de pulso suave al inicio
             StartIdlePulse();
         }
     }
 
-    // NUEVO: Resetear visuales al reiniciar nivel
     private void ResetVisuals()
     {
         if (image == null)
             return;
 
-        // Cancelar todas las animaciones
         LeanTween.cancel(image.gameObject);
 
-        // Restaurar valores originales
         image.gameObject.SetActive(true);
         image.sprite = originalSprite;
         image.transform.localScale = originalScale;
         image.color = originalColor;
 
-        // Resetear estados
         isCompleted = false;
         isHovering = false;
 
         Debug.Log($"[{vehiclePart}] Visuales reseteados");
     }
 
-    // NUEVO: Método público para resetear desde el manager
     public void ResetTask()
     {
         ResetVisuals();
@@ -99,42 +96,114 @@ public class LiquidInspectionTask : MonoBehaviour
         if (!allowClicks)
             return;
 
-        if (Input.GetMouseButtonDown(0))
+        // Detectar input (mouse o touch)
+        if (WasInputDetected(out Vector2 inputPosition))
         {
-            if (EventSystem.current.IsPointerOverGameObject())
-            {
-                return;
-            }
-
-            if (liquidPanel != null && liquidPanel.gameObject.activeSelf)
-            {
-                return;
-            }
-
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
-
-            if (hit.collider != null)
-            {
-                LiquidInspectionTask task = hit.transform.GetComponentInParent<LiquidInspectionTask>();
-                if (task == this && !isCompleted)
-                {
-                    OnTaskSelected?.Invoke(this);
-                    OnClickAnimation();
-                }
-            }
+            ProcessClick(inputPosition);
         }
 
         DetectHover();
     }
 
+    /// <summary>
+    /// Detecta si hubo input (mouse o touch) y devuelve la posición
+    /// </summary>
+    private bool WasInputDetected(out Vector2 position)
+    {
+        position = Vector2.zero;
+
+        // Mouse (PC)
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            position = Mouse.current.position.ReadValue();
+            return true;
+        }
+
+        // Touch (Móvil)
+        if (Touchscreen.current != null)
+        {
+            for (int i = 0; i < Touchscreen.current.touches.Count; i++)
+            {
+                var touch = Touchscreen.current.touches[i];
+                if (touch.press.wasPressedThisFrame)
+                {
+                    position = touch.position.ReadValue();
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Procesa el clic/touch en la posición dada
+    /// </summary>
+    private void ProcessClick(Vector2 screenPosition)
+    {
+        // Verificar si está sobre UI
+        if (IsPointerOverUI(screenPosition))
+            return;
+
+        // Si el panel está activo, ignorar
+        if (liquidPanel != null && liquidPanel.gameObject.activeSelf)
+            return;
+
+        // Convertir a posición en el mundo
+        Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+        RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
+
+        if (hit.collider != null)
+        {
+            LiquidInspectionTask task = hit.transform.GetComponentInParent<LiquidInspectionTask>();
+            if (task == this && !isCompleted)
+            {
+                OnTaskSelected?.Invoke(this);
+                OnClickAnimation();
+            }
+        }
+    }
+
+    /// <summary>
+    /// Verifica si el pointer está sobre UI (compatible con nuevo Input System)
+    /// </summary>
+    private bool IsPointerOverUI(Vector2 screenPosition)
+    {
+        // Para mouse
+        if (Mouse.current != null)
+        {
+            return EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
+        }
+
+        // Para touch
+        if (Touchscreen.current != null)
+        {
+            // Verificar cada touch activo
+            for (int i = 0; i < Touchscreen.current.touches.Count; i++)
+            {
+                if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject(i))
+                    return true;
+            }
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Detecta hover (solo para mouse en PC)
+    /// </summary>
     private void DetectHover()
     {
         if (isCompleted || !allowClicks)
             return;
 
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+        // Hover solo tiene sentido en PC con mouse
+        if (Mouse.current == null)
+            return;
+
+        Vector2 mousePosition = Mouse.current.position.ReadValue();
+        Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
 
         bool isMouseOver = hit.collider != null && hit.transform.GetComponentInParent<LiquidInspectionTask>() == this;
 
