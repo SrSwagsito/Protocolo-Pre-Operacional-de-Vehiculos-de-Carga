@@ -224,8 +224,10 @@ public class ExternalInspectionManager : MonoBehaviour
     {
         if (!reportedDamages.Contains(damage))
         {
+
             reportedDamages.Add(damage);
             score += 10;
+            AudioManager.Instance.Play("UI simple button");
             Debug.Log("Daño informado correctamente");
             OnScoreAdded?.Invoke(10);
 
@@ -262,6 +264,7 @@ public class ExternalInspectionManager : MonoBehaviour
 
     public void Dispatch()
     {
+        AudioManager.Instance.Play("UI simple button");
         EvaluateResult();
     }
 
@@ -293,6 +296,7 @@ public class ExternalInspectionManager : MonoBehaviour
     private void ApprovedModule(int missedReports)
     {
         moduleApproved = true;
+        AudioManager.Instance.Play("Great choose check");
         if (missedReports > 0)
         {
             resultMessage = "Has aprobado, sin embargo, has pasado por alto " + missedReports + " observaciónes. Recuerda que tu seguridad es primero, procura que siempre tus probabilidades de sufrir un accidente sean cero.";
@@ -305,6 +309,7 @@ public class ExternalInspectionManager : MonoBehaviour
 
     private void FailedModule(int missedReports)
     {
+        AudioManager.Instance.Play("Wrong choose check");
         moduleApproved = false;
         resultMessage = "El vehículo es demasiado peligroso para estar operativo. No has realizado la inspección correctamente.";
     }

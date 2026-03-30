@@ -142,6 +142,7 @@ public class DialogueSpeaker : MonoBehaviour
     public void EndDialogue()
     {
         Debug.Log("Diálogo terminado.");
+        AudioManager.Instance.FadeMusic(0.65f,1f);
         didDialogueComplete = true;
         dialoguePanel.SetActive(false);
         didDialogueStart = false;
@@ -161,6 +162,7 @@ public class DialogueSpeaker : MonoBehaviour
         // Reproducir el audio al inicio del diálogo
         if (currentLine.voiceClip != null)
         {
+            AudioManager.Instance.FadeMusic(0.15f, 1f);
             currentLine.voiceClip.Play();
             isAudioPlaying = true;
             Debug.Log("Playing voice clip.");

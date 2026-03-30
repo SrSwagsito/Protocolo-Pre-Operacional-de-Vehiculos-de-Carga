@@ -139,6 +139,7 @@ public class LiquidLevelPanel : MonoBehaviour
         Debug.Log($"[EvaluateAnswer] Jugador eligió: {playerAnswer}, Correcto era: {trueState}");
 
         // Ocultar botones inmediatamente
+        AudioManager.Instance.Play("UI simple button");
         if (botonesPanel != null)
             botonesPanel.SetActive(false);
 
@@ -153,9 +154,11 @@ public class LiquidLevelPanel : MonoBehaviour
             feedbackPanel.SetActive(true);
 
             if (correctGO != null)
+                AudioManager.Instance.Play("Great choose check");
                 correctGO.SetActive(success);
 
             if (incorrectGO != null)
+                AudioManager.Instance.Play("Wrong choose check");
                 incorrectGO.SetActive(!success);
 
             yield return new WaitForSeconds(feedbackDuration);

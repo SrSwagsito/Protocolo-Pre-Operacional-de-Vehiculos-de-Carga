@@ -1463,11 +1463,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb668090b2f04b4f97b0d0aba85b4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  musicMixer: {fileID: 0}
-  sfxMixer: {fileID: 0}
-  minimalSFXSources: 10
-  maxSFXSources: 25
-  sounds: []
+  musicMixer: {fileID: 4132163795105279708, guid: c328adc738f7ba041b8ad9e743597707, type: 2}
+  sfxMixer: {fileID: 2825067487837159613, guid: c328adc738f7ba041b8ad9e743597707, type: 2}
+  minimalSFXSources: 5
+  maxSFXSources: 12
+  sounds:
+  - name: Musica modulo
+    clips:
+    - {fileID: 8300000, guid: 5431fb5d82dbea040ab13887aa86f9a7, type: 3}
+    volume: 0.7
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 1
+    isMusic: 1
+    cooldown: 0
+    priority: 5
+  - name: UI button
+    clips:
+    - {fileID: 8300000, guid: 3d1b1a45a05502e45ab51c63f5eb9809, type: 3}
+    - {fileID: 8300000, guid: 93b310d1661b18648b51fe86656fed6e, type: 3}
+    - {fileID: 8300000, guid: 1a57ed7a1bfcaa348b041b36597262ed, type: 3}
+    - {fileID: 8300000, guid: 91c6059d9754a5541b7e63615dde9d53, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 0
+    priority: 5
+  - name: UI simple button
+    clips:
+    - {fileID: 8300000, guid: 5ff7a8b2f12aaf7478146ad048dc051a, type: 3}
+    - {fileID: 8300000, guid: 43deb8ffaf3899b4ab83844f3ffb54a8, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 0
+    priority: 5
+  - name: Wrong choose check
+    clips:
+    - {fileID: 8300000, guid: 9f83f891507b4c042893ecc297186415, type: 3}
+    - {fileID: 8300000, guid: e52e56d989abcb84c931e835385017e8, type: 3}
+    - {fileID: 8300000, guid: 9838a4dfd64431c42a66235550986f2e, type: 3}
+    - {fileID: 8300000, guid: 79b17407ebe38ad428cf558a8099c212, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 0
+    priority: 5
+  - name: Great choose check
+    clips:
+    - {fileID: 8300000, guid: 09b1e50da01513d4c9c36c0166624f4f, type: 3}
+    - {fileID: 8300000, guid: bbfad3f07ba86584fb2a3f53c5f8ee61, type: 3}
+    - {fileID: 8300000, guid: 41ccc723a55fde44daf611baf31cf8f4, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 0
+    priority: 5
 --- !u!4 &1854300479
 Transform:
   m_ObjectHideFlags: 0

@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.Instance.PlayMusic("Musica modulo");
         ChangeState(GameState.InitialMenu);
     }
 

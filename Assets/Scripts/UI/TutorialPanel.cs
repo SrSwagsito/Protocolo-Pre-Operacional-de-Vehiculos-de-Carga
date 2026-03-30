@@ -56,6 +56,7 @@ public class TutorialPanel : MonoBehaviour
 
         if (popupPanel != null)
             popupPanel.SetActive(false);
+        AudioManager.Instance.Play("UI simple button");
 
         // IMPORTANTE: Invocar DESPUÉS de ocultar el panel
         // para dar tiempo a que el clic se procese

@@ -26,6 +26,7 @@ public class SceneLoader : MonoBehaviour
     {
         if (Instance != null)
         {
+            AudioManager.Instance.Play("UI button");
             Instance.LoadScene(sceneName);
         }
         else
@@ -61,6 +62,8 @@ public class SceneLoader : MonoBehaviour
     {
         Debug.Log($"SceneLoader: Iniciando carga de {sceneName}");
 
+        AudioManager.Instance.Play("UI button");
+        AudioManager.Instance.FadeMusic(0.1f,1f);
         // 1. Fade Out (oscurecer pantalla)
         yield return ScreenFader.Instance.FadeOut(1f);
 
@@ -83,6 +86,7 @@ public class SceneLoader : MonoBehaviour
 
         // 5. Fade In (aclarar pantalla)
         yield return ScreenFader.Instance.FadeIn(1f);
+        AudioManager.Instance.FadeMusic(0.5f, 1f);
 
         Debug.Log($"SceneLoader: Fade in completo. Transición terminada.");
     }

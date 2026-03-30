@@ -166,38 +166,6 @@ public class AudioManager : MonoBehaviour
         src.PlayOneShot(clip, sound.volume);
     }
 
-    // Play 3D Sound
-    public void Play3D(string name, Vector3 position)
-    {
-        Sound sound = GetSound(name);
-        if (sound == null)
-        {
-            Debug.LogWarning($"Sound '{name}' not found.");
-            return;
-        }
-
-        if (!CheckCooldown(sound)) return;
-
-        AudioSource src = GetAvailableSource();
-
-        src.spatialBlend = 1f; // 1 = 3D
-        src.transform.position = position;
-
-        src.rolloffMode = AudioRolloffMode.Linear;
-        src.minDistance = 3f;
-        src.maxDistance = 25f;
-
-        float pitch = sound.pitch;
-        pitch += UnityEngine.Random.Range(-sound.randomPitchVariation, sound.randomPitchVariation);
-        src.pitch = pitch;
-
-        AudioClip clip = sound.clips.Length == 1
-            ? sound.clips[0]
-            : sound.clips[UnityEngine.Random.Range(0, sound.clips.Length)];
-
-        src.PlayOneShot(clip, sound.volume);
-    }
-
     // MUSIC
 
     public void PlayMusic(string name)
