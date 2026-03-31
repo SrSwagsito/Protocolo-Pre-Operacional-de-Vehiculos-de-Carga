@@ -44,6 +44,7 @@ public class DialogueSpeaker : MonoBehaviour
         if (skipIndicator != null)
             skipIndicator.SetActive(false);
 
+        
         StartDialogue();
     }
 
@@ -114,6 +115,7 @@ public class DialogueSpeaker : MonoBehaviour
 
     public void StartDialogue()
     {
+        AudioManager.Instance.FadeMusic(0.15f, 1f);
         if (didDialogueComplete && !loopeable) return;
 
         didDialogueStart = true;
@@ -142,7 +144,7 @@ public class DialogueSpeaker : MonoBehaviour
     public void EndDialogue()
     {
         Debug.Log("Diálogo terminado.");
-        AudioManager.Instance.FadeMusic(0.65f,1f);
+        AudioManager.Instance.FadeMusic(0.55f,1f);
         didDialogueComplete = true;
         dialoguePanel.SetActive(false);
         didDialogueStart = false;

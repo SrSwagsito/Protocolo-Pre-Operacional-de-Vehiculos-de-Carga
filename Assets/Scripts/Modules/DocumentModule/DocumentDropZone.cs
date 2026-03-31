@@ -88,6 +88,7 @@ public class DocumentDropZone : MonoBehaviour, IDropHandler, IPointerEnterHandle
         AnimateDocumentEnter(document);
 
         // Notificar al manager después de la animación
+        AudioManager.Instance.Play("Document Drop");
         OnDocumentDropped?.Invoke(document);
     }
 

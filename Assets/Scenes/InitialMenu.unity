@@ -1527,6 +1527,68 @@ MonoBehaviour:
     isMusic: 0
     cooldown: 0
     priority: 5
+  - name: Deepstick sound
+    clips:
+    - {fileID: 8300000, guid: 7fb4fa9cdb44c1145a931bee23292ab8, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 0
+    priority: 5
+  - name: Document Drag
+    clips:
+    - {fileID: 8300000, guid: 3eb4fdf9913539540b170b2b51737e34, type: 3}
+    - {fileID: 8300000, guid: 9524b8813b816014ebdf51a58ef94e9a, type: 3}
+    - {fileID: 8300000, guid: afd099bc9120cf545923c380ed67988a, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 0.4
+    priority: 5
+  - name: Document regret
+    clips:
+    - {fileID: 8300000, guid: 8e09c52526121524e90b3817f628367b, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 0.4
+    priority: 5
+  - name: Document Drop
+    clips:
+    - {fileID: 8300000, guid: 770a20f27f25ac64d90e564a2d399b03, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 0.4
+    priority: 5
+  - name: Count normal
+    clips:
+    - {fileID: 8300000, guid: 208d1e39bfb6e0a4f924ada0e6d54aad, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 0.4
+    priority: 5
+  - name: Count final
+    clips:
+    - {fileID: 8300000, guid: 0cbd3489ec25dad43b4cf9499f4ece16, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 0.4
+    priority: 5
 --- !u!4 &1854300479
 Transform:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Controlador del camión con:
@@ -107,10 +108,22 @@ public class TruckPhysicalController : MonoBehaviour
 
     private void HandleInput()
     {
-        float inputY = Input.GetAxis("Vertical");
+        float inputY = 0;
+
+        if (Keyboard.current != null) 
+        {
+            if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed)
+            {
+                inputY = 1f;
+            }
+            else if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed)
+            {
+                inputY = -1f;
+            }
+        }
 
         // Control táctil (arrastrar)
-#if UNITY_ANDROID || UNITY_IOS || UNITY_EDITOR
+#if UNITY_ANDROID || UNITY_IOS
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);

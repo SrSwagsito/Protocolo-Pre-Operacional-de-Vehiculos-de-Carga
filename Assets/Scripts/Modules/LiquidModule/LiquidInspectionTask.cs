@@ -159,6 +159,7 @@ public class LiquidInspectionTask : MonoBehaviour
             if (task == this && !isCompleted)
             {
                 OnTaskSelected?.Invoke(this);
+                AudioManager.Instance.Play("Deepstick sound");
                 OnClickAnimation();
             }
         }

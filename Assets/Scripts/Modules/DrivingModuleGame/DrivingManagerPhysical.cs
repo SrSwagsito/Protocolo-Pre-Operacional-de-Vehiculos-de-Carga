@@ -274,6 +274,8 @@ public class DrivingModuleManagerPhysical : MonoBehaviour
         for (int i = (int)countdownTime; i > 0; i--)
         {
             if (countdownText != null)
+
+                AudioManager.Instance.Play("Count normal");
                 countdownText.text = i.ToString();
 
             yield return new WaitForSeconds(1f);
@@ -281,7 +283,8 @@ public class DrivingModuleManagerPhysical : MonoBehaviour
 
         // ¡GO!
         if (countdownText != null)
-            countdownText.text = "¡Vamos!";
+            AudioManager.Instance.Play("Count final");
+        countdownText.text = "¡Vamos!";
 
         yield return new WaitForSeconds(0.5f);
 

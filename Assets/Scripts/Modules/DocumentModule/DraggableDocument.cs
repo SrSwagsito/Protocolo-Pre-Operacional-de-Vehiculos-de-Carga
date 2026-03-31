@@ -73,7 +73,7 @@ public class DraggableDocument : MonoBehaviour, IDragHandler, IBeginDragHandler,
     }   
     public void OnBeginDrag(PointerEventData eventData)
     {
-
+        AudioManager.Instance.Play("Document Drag");
         isDraggin = true;
 
         originalPosition = rectTransform.position;
@@ -93,6 +93,7 @@ public class DraggableDocument : MonoBehaviour, IDragHandler, IBeginDragHandler,
 
     public void OnDrag(PointerEventData eventData)
     {
+        
         rectTransform.position = eventData.position;
     }
 
@@ -118,6 +119,8 @@ public class DraggableDocument : MonoBehaviour, IDragHandler, IBeginDragHandler,
 
         if(!droppedZone)
         {
+
+            AudioManager.Instance.Play("Document regret");
             transform.SetParent(originalParent);
             rectTransform.position = originalPosition;
 
