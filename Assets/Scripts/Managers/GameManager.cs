@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
-using JetBrains.Annotations;
 
 public class GameManager : MonoBehaviour
 {

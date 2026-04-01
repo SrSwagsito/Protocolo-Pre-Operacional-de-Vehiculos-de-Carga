@@ -113,6 +113,7 @@ public class DrivingModuleManagerPhysical : MonoBehaviour
         if (!isPlaying || moduleFinished) return;
 
         // Actualizar timer
+    AudioManager.Instance.Play("Truck running");
         timer -= Time.deltaTime;
         UpdateProgressUI();
 
@@ -307,6 +308,7 @@ public class DrivingModuleManagerPhysical : MonoBehaviour
 
         // ACTIVAR TODOS LOS SISTEMAS
         ResumeAllSystems();
+        AudioManager.Instance.Play("Truck beginning");
 
         // Marcar como jugando
         isPlaying = true;
@@ -382,6 +384,7 @@ public class DrivingModuleManagerPhysical : MonoBehaviour
             instructionsUI.ShowInstruction("¡Llegando al destino!");
 
         // Slowdown gradual
+        AudioManager.Instance.Play("Truck stopping");
         float elapsed = 0f;
         float originalTimeScale = Time.timeScale;
 

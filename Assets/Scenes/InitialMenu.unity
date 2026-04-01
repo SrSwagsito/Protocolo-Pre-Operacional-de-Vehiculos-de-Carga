@@ -1589,6 +1589,56 @@ MonoBehaviour:
     isMusic: 0
     cooldown: 0.4
     priority: 5
+  - name: Truck running
+    clips:
+    - {fileID: 8300000, guid: 895b1f002e37ea3428c256dc221abfb9, type: 3}
+    volume: 0.6
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 1.2
+    priority: 5
+  - name: Truck beginning
+    clips:
+    - {fileID: 8300000, guid: c799e160b316bfc468e650c60b0c6627, type: 3}
+    volume: 0.6
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 1.5
+    priority: 5
+  - name: Truck stopping
+    clips:
+    - {fileID: 8300000, guid: 677375866d809824aa78cb0c2d04a71c, type: 3}
+    volume: 0.6
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 1.5
+    priority: 5
+  - name: Truck hit
+    clips:
+    - {fileID: 8300000, guid: de5ab450396bf4c41ae1c0d1cbd2b65e, type: 3}
+    volume: 0.7
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 0.3
+    priority: 7
+  - name: Truck collect
+    clips:
+    - {fileID: 8300000, guid: 3a9ec259203fbcf4c91bc77afa51f8f9, type: 3}
+    volume: 0.7
+    pitch: 1
+    randomPitchVariation: 0
+    loop: 0
+    isMusic: 0
+    cooldown: 0.3
+    priority: 7
 --- !u!4 &1854300479
 Transform:
   m_ObjectHideFlags: 0

@@ -31,6 +31,7 @@ public class TruckPhysicalController : MonoBehaviour
     [SerializeField] private Color normalColor = Color.white;
     [SerializeField] private Color warningColor = Color.yellow;
 
+
     [Header("Mobile Button Control - NUEVO")]
     [Tooltip("Fuerza aplicada al presionar botones móviles")]
     [SerializeField] private float buttonMoveForce = 300f;
@@ -239,6 +240,7 @@ public class TruckPhysicalController : MonoBehaviour
         {
             OnCollectibleHit?.Invoke(10);
             Destroy(collision.gameObject);
+            AudioManager.Instance.Play("Truck collect");
 
             if (truckSprite != null)
             {
@@ -249,6 +251,7 @@ public class TruckPhysicalController : MonoBehaviour
         {
             OnObstacleHit?.Invoke(5);
             Destroy(collision.gameObject);
+            AudioManager.Instance.Play("Truck hit");
 
             if (truckSprite != null)
             {
