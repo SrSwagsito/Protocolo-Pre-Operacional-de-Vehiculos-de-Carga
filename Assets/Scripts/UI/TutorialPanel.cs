@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using System.Collections;
 
 public class TutorialPanel : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class TutorialPanel : MonoBehaviour
     [SerializeField] private TMP_Text titleText;
     [SerializeField] private TMP_Text instructionText;
     [SerializeField] private Button closeButton;
+
+    [Header("Animation")]
+    [SerializeField] private Animator panelAnimator;
+    [SerializeField] string animationTitle;
 
     [Header("Content")]
     [TextArea(3, 6)]
@@ -24,6 +29,8 @@ public class TutorialPanel : MonoBehaviour
         "• Completa la inspeccion de todos los liquidos";
 
     public Action OnTutorialClosed;
+
+    bool isAnimating = false;
 
     private void Awake()
     {
@@ -42,16 +49,33 @@ public class TutorialPanel : MonoBehaviour
         {
             popupPanel.SetActive(true);
 
+
             if (titleText != null)
                 titleText.text = tutorialTitle;
 
             if (instructionText != null)
                 instructionText.text = tutorialInstructions;
+            if (panelAnimator != null)
+            { StartCoroutine(PlayAnimation()); }
         }
     }
 
+    private IEnumerator PlayAnimation()
+    {
+        isAnimating = true;
+        panelAnimator.Play(animationTitle);
+        yield return null;
+
+        float animationLength = panelAnimator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(animationLength);
+        isAnimating = false;
+    }
+
+
+
     public void CloseTutorial()
     {
+        if (isAnimating) return;
         Debug.Log("TutorialPanel: CloseTutorial llamado");
 
         if (popupPanel != null)
