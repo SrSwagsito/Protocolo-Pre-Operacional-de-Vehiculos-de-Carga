@@ -1,8 +1,9 @@
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 using System;
 using System.Collections;
+using TMPro;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class TutorialPanel : MonoBehaviour
 {
@@ -67,6 +68,25 @@ public class TutorialPanel : MonoBehaviour
         yield return null;
 
         float animationLength = panelAnimator.GetCurrentAnimatorStateInfo(0).length;
+
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            isAnimating = false;
+            yield return null;
+        }
+
+        if (Touchscreen.current != null)
+        {
+            for (int i = 0; i < Touchscreen.current.touches.Count; i++)
+            {
+                if (Touchscreen.current.touches[i].press.wasPressedThisFrame)
+                {
+                    isAnimating = false;
+                    yield return null;
+                }
+            }
+        }
+
         yield return new WaitForSeconds(animationLength);
         isAnimating = false;
     }

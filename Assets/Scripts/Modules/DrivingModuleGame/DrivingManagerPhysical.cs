@@ -120,6 +120,7 @@ public class DrivingModuleManagerPhysical : MonoBehaviour
         // Verificar fin
         if (timer <= 0f)
         {
+            timer = 0f;
             StartCoroutine(FinishModuleCinematic());
         }
     }
@@ -140,7 +141,7 @@ public class DrivingModuleManagerPhysical : MonoBehaviour
     {
         if (buttonsMobilePanel == null) return;
 
-        #if UNITY_ANDROID || UNITY_IOS
+        #if UNITY_ANDROID || UNITY_IOS || UNITY_WEBGL
         buttonsMobilePanel.SetActive(true);
         #else
         buttonsMobilePanel.SetActive(false);
@@ -335,6 +336,13 @@ public class DrivingModuleManagerPhysical : MonoBehaviour
         {
             int minutes = Mathf.FloorToInt(timer / 60f);
             int seconds = Mathf.FloorToInt(timer % 60f);
+
+            if (timer <= 0)
+            {
+                minutes = 0;
+                seconds = 0;
+
+            }
             timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
 
