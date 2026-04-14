@@ -1471,7 +1471,7 @@ MonoBehaviour:
   - name: Musica modulo
     clips:
     - {fileID: 8300000, guid: 5431fb5d82dbea040ab13887aa86f9a7, type: 3}
-    volume: 0.7
+    volume: 0.5
     pitch: 1
     randomPitchVariation: 0
     loop: 1

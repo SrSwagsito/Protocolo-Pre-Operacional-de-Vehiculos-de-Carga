@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1334260175526167429, guid: b64a5c1eaa238154ca04caef95016ad6, type: 3}
+  m_Sprite: {fileID: -3448273273102524927, guid: d56aed1d5c81a1a4382510c8a4caf684, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,13 +131,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.47, y: 0.3}
+    oldSize: {x: 0.43, y: 0.28}
     newSize: {x: 0.47, y: 0.3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.4362152, y: 0.32}
   m_EdgeRadius: 0
 --- !u!114 &8303755401519133021
 MonoBehaviour:
@@ -151,4 +151,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1515a999b651fdc43bd355306a4e70a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamagedZone
-  isDamaged: 0
+  isDamaged: 1

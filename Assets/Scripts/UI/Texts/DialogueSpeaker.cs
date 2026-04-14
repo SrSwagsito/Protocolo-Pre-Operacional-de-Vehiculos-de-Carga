@@ -144,7 +144,7 @@ public class DialogueSpeaker : MonoBehaviour
     public void EndDialogue()
     {
         Debug.Log("Diálogo terminado.");
-        AudioManager.Instance.FadeMusic(0.55f,1f);
+        AudioManager.Instance.FadeMusic(0.3f,1f);
         didDialogueComplete = true;
         dialoguePanel.SetActive(false);
         didDialogueStart = false;
