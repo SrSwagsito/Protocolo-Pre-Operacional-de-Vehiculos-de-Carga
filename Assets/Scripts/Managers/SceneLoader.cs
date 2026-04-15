@@ -58,7 +58,7 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadSceneCoroutine(SceneManager.GetActiveScene().name));
     }
 
-    private IEnumerator LoadSceneCoroutine(string sceneName)
+    public IEnumerator LoadSceneCoroutine(string sceneName)
     {
         Debug.Log($"SceneLoader: Iniciando carga de {sceneName}");
 

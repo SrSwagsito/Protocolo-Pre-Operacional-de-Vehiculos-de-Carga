@@ -206,7 +206,7 @@ public class FinalCertificationScreen : MonoBehaviour
 
         if (modulesApproved == totalModules && totalScore >= 3000)
         {
-            message = "¡EXCELENTE DESEMPEÑO!\n¡Certificación con Honores!";
+            message = "¡EXCELENTE DESEMPEÑO!\n¡Has completado tu capacitación!";
         }
         else if (modulesApproved == totalModules)
         {
@@ -214,11 +214,11 @@ public class FinalCertificationScreen : MonoBehaviour
         }
         else if (approvalRate >= 0.5f)
         {
-            message = "¡BUEN TRABAJO!\nCapacitación completada";
+            message = "¡BUEN TRABAJO!\n¡Has completado tu capacitación!";
         }
         else
         {
-            message = "CAPACITACIÓN COMPLETADA\nSigue practicando para mejorar";
+            message = "CAPACITACIÓN COMPLETADA\n¡Has completado tu capacitación!";
         }
 
         congratsText.text = message;
@@ -231,12 +231,15 @@ public class FinalCertificationScreen : MonoBehaviour
     {
         if (summaryText == null) return;
 
+        string name = GameManager.Instance.UserName;
+        string id = GameManager.Instance.UserID;
+
         string summary = "";
-        summary += $"<b>Resumen General</b>\n\n";
-        summary += $"Módulos Completados: {totalModules}\n";
-        summary += $"Módulos Aprobados: {modulesApproved}/{totalModules}\n";
-        summary += $"Puntuación Total: {totalScore}\n";
-        summary += $"Promedio: {(totalScore / totalModules):F0} puntos\n";
+        summary += $"<color=#FFE000><b>{name.ToUpper()}</b></color>\n";
+        summary += $"C.C. {id}\n\n";
+
+        summary += $"Módulos Aprobados: {modulesApproved}\n";
+        summary += $"Puntuación Total: {totalScore} pts\n";
 
         summaryText.text = summary;
     }

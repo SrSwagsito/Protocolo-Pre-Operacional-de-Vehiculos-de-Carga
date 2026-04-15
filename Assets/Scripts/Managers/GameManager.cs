@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
 
     private List<ModuleResult> results = new()  ;
 
+    public string UserName { get; private set; }
+    public string UserID { get; private set; }
+
     private void Awake()
     {
         if (Instance == null)
@@ -50,7 +53,9 @@ public class GameManager : MonoBehaviour
 
     public void StartEvaluation()
     {
-        ChangeState(GameState.IntroductionScene);    
+        ChangeState(GameState.IntroductionScene);
+
+        StartCoroutine(SceneLoader.Instance.LoadSceneCoroutine("IntroductionScene"));
     }
 
     public List<ModuleResult> GetAllModuleResults()
@@ -97,4 +102,12 @@ public class GameManager : MonoBehaviour
         }
         return true;
     }
+
+    public void SetUserData(string name, string id)
+    {
+        UserName = name;
+        UserID = id;
+        Debug.Log($"Usuario registrado: {UserName} - ID: {UserID}");
+    }
+
 }

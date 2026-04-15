@@ -1903,6 +1903,7 @@ GameObject:
   - component: {fileID: 158954296}
   - component: {fileID: 158954295}
   - component: {fileID: 158954298}
+  - component: {fileID: 158954299}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -1949,7 +1950,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2036,8 +2037,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3640a2cccade714388b6a33002292f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  sceneName: 
+  sceneName: Module3
   reloadCurrent: 1
+--- !u!95 &158954299
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158954293}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e62a67f2073e6044f90766f3a7959a37, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &204229075
 GameObject:
   m_ObjectHideFlags: 0
@@ -2374,6 +2397,7 @@ GameObject:
   - component: {fileID: 309919201}
   - component: {fileID: 309919200}
   - component: {fileID: 309919203}
+  - component: {fileID: 309919204}
   m_Layer: 5
   m_Name: NextLevelButton
   m_TagString: Untagged
@@ -2420,7 +2444,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2509,6 +2533,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
   sceneName: PreGameModuleInstructions
   reloadCurrent: 0
+--- !u!95 &309919204
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309919198}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf8861167e009a042acfdbba0f3b6397, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &313764503
 GameObject:
   m_ObjectHideFlags: 0
@@ -4297,7 +4343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &631787517
 RectTransform:
   m_ObjectHideFlags: 0
