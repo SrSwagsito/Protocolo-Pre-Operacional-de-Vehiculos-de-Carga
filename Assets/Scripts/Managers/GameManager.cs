@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameState CurrentState { get; private set; }
 
     private List<ModuleResult> results = new()  ;
+
+    //public string levelName;
 
     public string UserName { get; private set; }
     public string UserID { get; private set; }
@@ -51,11 +54,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("Estado actual: " + CurrentState);
     }
 
-    public void StartEvaluation()
+    public void StartEvaluation(string levelName)
     {
         ChangeState(GameState.IntroductionScene);
 
-        StartCoroutine(SceneLoader.Instance.LoadSceneCoroutine("IntroductionScene"));
+        StartCoroutine(SceneLoader.Instance.LoadSceneCoroutine(levelName));
     }
 
     public List<ModuleResult> GetAllModuleResults()

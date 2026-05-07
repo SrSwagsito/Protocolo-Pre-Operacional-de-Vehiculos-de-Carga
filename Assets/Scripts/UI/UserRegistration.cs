@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class UserRegistration : MonoBehaviour
 {
+    [Header("Level Name")] 
+    [SerializeField] string levelName;
+
     [Header("UI References")]
     [SerializeField] private TMP_InputField nameInputField;
     [SerializeField] private TMP_InputField idInputField;
@@ -74,6 +77,6 @@ public class UserRegistration : MonoBehaviour
 
         GameManager.Instance.SetUserData(name, id);
         registrationPanel.SetActive(false);
-        GameManager.Instance.StartEvaluation();
+        GameManager.Instance.StartEvaluation(levelName);
     }
 }   

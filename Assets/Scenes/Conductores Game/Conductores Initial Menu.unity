@@ -1076,6 +1076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895ea7b99c3205247916eafc9d5e5df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UserRegistration
+  levelName: IntroductionSceneCamiones
   nameInputField: {fileID: 1447530504}
   idInputField: {fileID: 1330070330}
   startButton: {fileID: 423167100}
