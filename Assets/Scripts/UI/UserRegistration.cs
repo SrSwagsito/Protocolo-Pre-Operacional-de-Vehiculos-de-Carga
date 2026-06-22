@@ -7,6 +7,15 @@ public class UserRegistration : MonoBehaviour
     [Header("Level Name")] 
     [SerializeField] string levelName;
 
+    [Header("Avatar Selection")]
+    [SerializeField] Image avatarDisplay;
+    [SerializeField] private Sprite avatarOption1;
+    [SerializeField] private Sprite avatarOption2;
+    [SerializeField] private Button selectAvatar1Button;
+    [SerializeField] private Button selectAvatar2Button;
+
+    Sprite selectedAvatar;
+
     [Header("UI References")]
     [SerializeField] private TMP_InputField nameInputField;
     [SerializeField] private TMP_InputField idInputField;
@@ -18,6 +27,21 @@ public class UserRegistration : MonoBehaviour
     {
         if (errorMessageText != null) errorMessageText.text = "";
         startButton.onClick.AddListener(SaveAndStart);
+
+        if (selectAvatar1Button != null)
+        { selectAvatar1Button.onClick.AddListener(() => SelectAvatar(avatarOption1)); }
+        if (selectAvatar2Button != null)
+        { selectAvatar1Button.onClick.AddListener(() => SelectAvatar(avatarOption2)); }
+    }
+
+    public void SelectAvatar(Sprite avatar)
+    {
+        selectedAvatar = avatar;
+        if(avatarDisplay != null)
+        {
+            avatarDisplay.sprite = avatar;
+            avatarDisplay.gameObject.SetActive(true);
+        }
     }
 
     public void SaveAndStart()
@@ -75,7 +99,7 @@ public class UserRegistration : MonoBehaviour
     {
         if (errorMessageText != null) errorMessageText.text = "";
 
-        GameManager.Instance.SetUserData(name, id);
+        GameManager.Instance.SetUserData(name, id, selectedAvatar);
         registrationPanel.SetActive(false);
         GameManager.Instance.StartEvaluation(levelName);
     }

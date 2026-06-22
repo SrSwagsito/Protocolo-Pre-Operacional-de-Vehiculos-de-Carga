@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Initial Menu game.unity
+    guid: a34bdb7eb0435fe4d9f039aa0c206e8c
+  - enabled: 1
     path: Assets/Scenes/Conductores Game/Conductores Initial Menu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Alturas Module/Alturas Initial Menu.unity
+    guid: f04359c4a4bbac342ab5660ea11d8a84
   - enabled: 1
     path: Assets/Scenes/Conductores Game/IntroductionSceneCamiones.unity
     guid: a151de2b100983946aa8f45b6e918690
@@ -29,12 +35,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Conductores Game/FinalModule/FinalScreen.unity
     guid: 57d2ebc833c9a234f815c73a8c9696f6
-  - enabled: 0
-    path: Assets/Scenes/Conductores Game/FinalResults.unity
-    guid: 58bd61424e41b7c4fadb71b2a75ab36e
-  - enabled: 0
-    path: Assets/Scenes/Module 1/Module2.unity
-    guid: 576d53de606455d4fbf8d60acfb4b3cc
+  - enabled: 1
+    path: Assets/Scenes/Alturas Module/IntroductionSceneAlturas.unity
+    guid: ffe4b86db56f3b24cbcb9249608c4225
+  - enabled: 1
+    path: Assets/Scenes/Alturas Module/Module1EPPS.unity
+    guid: 6e1af64d66b89a84a810f11e0e8ca6d2
+  - enabled: 1
+    path: Assets/Scenes/Alturas Module/Module2WordSearch.unity
+    guid: 64d7baa7cfe0afb4da1e0039526e4fc1
+  - enabled: 1
+    path: Assets/Scenes/Alturas Module/Module3Machinarie.unity
+    guid: 5630ba3e0321fac44821f0b078edb5e8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     public string UserName { get; private set; }
     public string UserID { get; private set; }
+    public Sprite UserAvatar { get; private set;}
 
     private void Awake()
     {
@@ -106,10 +107,11 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-    public void SetUserData(string name, string id)
+    public void SetUserData(string name, string id, Sprite avatar = null)
     {
         UserName = name;
         UserID = id;
+        UserAvatar = avatar;
         Debug.Log($"Usuario registrado: {UserName} - ID: {UserID}");
     }
 

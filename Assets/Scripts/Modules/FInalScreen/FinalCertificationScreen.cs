@@ -20,6 +20,10 @@ public class FinalCertificationScreen : MonoBehaviour
     [SerializeField] private GameObject moduleResultsContainer;
     [SerializeField] private GameObject moduleResultPrefab;
 
+    [Header("Avatar Image")]
+    [SerializeField] private Image avatarImageUI;
+    
+
     [Header("Trophy/Medal Sprites")]
     [SerializeField] private Sprite goldTrophy;
     [SerializeField] private Sprite silverTrophy;
@@ -233,6 +237,7 @@ public class FinalCertificationScreen : MonoBehaviour
 
         string name = GameManager.Instance.UserName;
         string id = GameManager.Instance.UserID;
+        Sprite avatar = GameManager.Instance.UserAvatar;
 
         string summary = "";
         summary += $"<color=#FFE000><b>{name.ToUpper()}</b></color>\n";
@@ -242,6 +247,16 @@ public class FinalCertificationScreen : MonoBehaviour
         summary += $"Puntuación Total: {totalScore} pts\n";
 
         summaryText.text = summary;
+
+        if (avatar != null && avatarImageUI != null)
+        {
+            avatarImageUI.sprite = avatar;
+            avatarImageUI.gameObject.SetActive(true);
+        }
+        else if (avatarImageUI != null)
+        {
+            avatarImageUI.gameObject.SetActive(false);
+        }
     }
 
     /// <summary>
