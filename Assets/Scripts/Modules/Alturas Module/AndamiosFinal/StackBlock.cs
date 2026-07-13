@@ -1,65 +1,29 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class StackBlock : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    private Rigidbody2D _rb;
 
-    private Transform hook;
+    private void Awake() => _rb = GetComponent<Rigidbody2D>();
 
-    private bool followingHook;
-
-    public bool IsLocked { get; private set; }
-
-    private void Awake()
+    public void AttachToHook(Transform hook)
     {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
-    private void FixedUpdate()
-    {
-        if (!followingHook)
-            return;
-
-        transform.position = hook.position;
-    }
-
-    public void Hold(Transform hookTransform)
-    {
-        hook = hookTransform;
-
-        followingHook = true;
-
-        IsLocked = false;
-
-        rb.linearVelocity = Vector2.zero;
-        rb.angularVelocity = 0;
-
-        rb.isKinematic = true;
+        _rb.bodyType = RigidbodyType2D.Kinematic;
+        transform.SetParent(hook);
+        transform.localPosition = Vector2.zero;
     }
 
     public void Release()
     {
-        if (!followingHook)
-            return;
-
-        followingHook = false;
-
-        rb.bodyType = RigidbodyType2D.Dynamic;
-
-        rb.simulated = true;
+        transform.SetParent(null);
+        _rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
-    public void Lock()
+    public void Freeze()
     {
-        followingHook = false;
-
-        IsLocked = true;
-
-        rb.linearVelocity = Vector2.zero;
-
-        rb.angularVelocity = 0;
-
-        rb.bodyType = RigidbodyType2D.Kinematic;
+        _rb.linearVelocity = Vector2.zero;
+        _rb.angularVelocity = 0f;
+        _rb.bodyType = RigidbodyType2D.Kinematic;
     }
 }

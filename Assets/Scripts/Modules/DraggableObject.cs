@@ -1,120 +1,104 @@
-using TMPro;
-using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DraggableObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
+public class DraggableObject : MonoBehaviour,
+    IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [Header("UI")]
+    [SerializeField] private Canvas canvas;
+    [SerializeField] private CanvasGroup canvasGroup;
 
-    [Header("UI References")]
-    [SerializeField] private Image spriteOBJ;
+    private RectTransform rectTransform;
 
-    [Header("Settings")]
-    [SerializeField] private float transparencyAmount = 0.6f;
+    // POSICIONES CLAVE
+    private Vector2 startAnchoredPosition;
+    private Transform startParent;
 
-    [Header("Config Animations")]
-    float hoverScale = 1.1f;
-    float hoverDuration = 0.2f;
+    // SLOT ACTUAL
+    private ClothSlot currentSlot;
 
-    RectTransform rectTransform;
-    Vector2 originalPosition;
-    Vector3 originalScale;
-    Transform originalParent;
-    Canvas canvas;
-    bool isDraggin;
-
+    private bool isDragging;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
-          
-        originalScale = transform.localScale;
-        canvas = GetComponentInParent<Canvas>();
-
-        if (spriteOBJ == null) spriteOBJ = GetComponent<Image>();
     }
 
-    public void Initialize()
+    private void Start()
     {
-        originalPosition = rectTransform.anchoredPosition;
-        originalParent = transform.parent;
+        // Guardamos posición inicial REAL del layout
+        startParent = transform.parent;
+        startAnchoredPosition = rectTransform.anchoredPosition;
     }
 
-
-    //Dar Feedback de que me pueden arrastrar
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        if (!isDraggin)
-        {
-            LeanTween.cancel(gameObject);
-
-            LeanTween.scale(gameObject, originalScale * hoverScale, hoverDuration).setEase(LeanTweenType.easeOutBack);
-        }
-    }
-
-    //Dar Feedback de que me pueden arrastrar
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        if (!isDraggin)
-        {
-            LeanTween.cancel(gameObject);
-            LeanTween.scale(gameObject, originalScale, hoverDuration).setEase(LeanTweenType.easeOutBack);
-        }
-    }
-
+    // -------------------------
+    // DRAG START
+    // -------------------------
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // Sonido de arrastrar
-        //AudioManager.Instance.Play("Document Drag");
-        isDraggin = true;
+        isDragging = true;
 
-        originalPosition = rectTransform.position;
-        originalParent = transform.parent;
+        canvasGroup.blocksRaycasts = false;
 
-        LeanTween.cancel(gameObject);
+        // Si estaba en un slot → lo liberamos
+        if (currentSlot != null)
+        {
+            currentSlot.RemoveCloth();
+            currentSlot = null;
+        }
 
-        transform.localScale = originalScale;
-
-        SetImageAlpha(transparencyAmount);
-        spriteOBJ.raycastTarget = false;
-
-        if(canvas != null) transform.SetParent(canvas.transform);
+        transform.SetParent(canvas.transform, true);
     }
 
+    // -------------------------
+    // DRAG
+    // -------------------------
     public void OnDrag(PointerEventData eventData)
     {
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+    canvas.transform as RectTransform,
+    eventData.position,
+    eventData.pressEventCamera,
+    out Vector2 localPoint);
 
-        rectTransform.position = eventData.position;
+        rectTransform.localPosition = localPoint;
     }
 
-
-
+    // -------------------------
+    // DRAG END
+    // -------------------------
     public void OnEndDrag(PointerEventData eventData)
     {
-        isDraggin = false;
-        SetImageAlpha(1f);
-        spriteOBJ.raycastTarget = true;
-    }
+        isDragging = false;
 
-    private void SetImageAlpha(float alpha)
-    {
-        if (spriteOBJ != null)
+        canvasGroup.blocksRaycasts = true;
+
+        // Si no fue aceptado → volver a inventario
+        if (currentSlot == null)
         {
-            Color color = spriteOBJ.color;
-            color.a = alpha;
-            spriteOBJ.color = color;
+            ReturnToStart();
         }
     }
 
-    public void ReturnToOriginalPosition()
+    // -------------------------
+    // SLOT ACCEPTANCE
+    // -------------------------
+    public void SetInSlot(ClothSlot slot)
     {
-        transform.SetParent(originalParent, false);
-        // rectTransform.anchoredPosition = originalPosition;
+        currentSlot = slot;
+    }
 
-        LeanTween.cancel(gameObject);
+    public void ClearSlot()
+    {
+        currentSlot = null;
+    }
 
-        LeanTween.move(rectTransform, originalPosition, 0.3f).setEase(LeanTweenType.easeOutBack);
-
-        LeanTween.rotateZ(gameObject, 0f, 0.3f).setEase(LeanTweenType.easeOutBack);
+    // -------------------------
+    // RETURN TO INVENTORY
+    // -------------------------
+    public void ReturnToStart()
+    {
+        transform.SetParent(startParent, false);
+        rectTransform.anchoredPosition = startAnchoredPosition;
     }
 }

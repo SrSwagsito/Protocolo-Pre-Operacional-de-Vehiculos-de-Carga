@@ -16,17 +16,51 @@ public class PedestrianController : MonoBehaviour
     [SerializeField] private DoorController selectedDoor;
     [SerializeField] private Button stopButton;
 
+    private bool levelStarted;
+
     public event Action PedestrianToLeaving;
 
     public bool waitingForStop;
 
     private PedestrianState currentState;
 
-    private void Start()
+    [SerializeField] private WindowsCleanManager manager;
+
+    private Coroutine safetyRoutine;
+
+    private void OnEnable()
     {
+        manager.OnLevelStarted += StartLevel;
+    }
+
+    private void OnDisable()
+    {
+        manager.OnLevelStarted -= StartLevel;
+    }
+
+    private void Start()
+
+
+    {   
+    }
+
+    public void StartLevel()
+    {
+        levelStarted = true;
+
         currentState = PedestrianState.Walking;
 
-        StartCoroutine(SafetyRoutine());
+        if (safetyRoutine == null)
+            safetyRoutine = StartCoroutine(SafetyRoutine());
+    }
+
+    public void StopLevel()
+    {
+        if (safetyRoutine != null)
+        {
+            StopCoroutine(safetyRoutine);
+            safetyRoutine = null;
+        }
     }
     private IEnumerator SafetyRoutine()
     {
@@ -57,7 +91,7 @@ public class PedestrianController : MonoBehaviour
     {
 
         Debug.Log("Contando para cruzar");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(8f);
 
         if (currentState ==
             PedestrianState.Waiting)

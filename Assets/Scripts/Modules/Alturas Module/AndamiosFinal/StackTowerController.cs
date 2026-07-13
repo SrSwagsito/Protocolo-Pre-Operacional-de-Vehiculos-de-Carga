@@ -1,104 +1,121 @@
-using System;
 using UnityEngine;
+using System;
+using System.Collections;
 
 public class StackTowerController : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private HookSwing hook;
+    public HookSwingController hookController;
+    public StackInputController inputController;
+    public GameObject blockPrefab;
+    public Transform spawnParent;
 
-    [SerializeField] private StackLandingZone landingZone;
-
-    [SerializeField] private GameObject blockPrefab;
-
-    [SerializeField] private Transform blockParent;
-
-    [SerializeField] private float failOffset = 1.1f;
-    [SerializeField] private float perfectOffset = 0.25f;
-    [SerializeField] private float snapDistance = 0.45f;
-
-    private StackBlock lastPlacedBlock;
-
-    [Header("Gameplay")]
-    [SerializeField] private int blocksRequired = 5;
-
-    public float FailOffset => failOffset;
-    public float PerfectOffset => perfectOffset;
-    public float SnapDistance => snapDistance;
-
-    public StackBlock LastPlacedBlock => lastPlacedBlock;
+    [Header("Tower Config")]
+    public int blocksRequired = 5;
+    public float landTolerance = 0.6f;
+    public float snapStrength = 0.4f;
+    public float perfectOffset = 0.15f;
+    public float failOffset = 1.2f;
 
     public event Action<bool> OnBlockPlaced;
-
     public event Action OnCompleted;
-
     public event Action OnFail;
 
-    private StackBlock currentBlock;
+    private StackBlock _currentBlock;
+    private Vector3 _nextSpawnPosition;
+    private int _placedCount;
+    private bool _active;
 
-    private int placedBlocks;
-
-    private bool finished;
-
-    private void Start()
+    private void Awake()
     {
+        _nextSpawnPosition = spawnParent.position;
+    }
+
+    public void StartPhase()
+    {
+        _active = true;
+        inputController.OnDropInput += DropBlock;
+        inputController.SetActive(true);
+        hookController.SetActive(true);
         SpawnBlock();
     }
 
-    void SpawnBlock()
+    public void StopPhase()
     {
-        if (finished)
-            return;
-
-        GameObject obj =
-            Instantiate(
-                blockPrefab,
-                hook.Hook.position,
-                Quaternion.identity,
-                blockParent);
-
-        currentBlock =
-            obj.GetComponent<StackBlock>();
-
-        currentBlock.Hold(hook.Hook);
-
-        landingZone.Initialize(this);
+        _active = false;
+        inputController.OnDropInput -= DropBlock;
+        inputController.SetActive(false);
+        hookController.SetActive(false);
     }
 
-    public void DropCurrentBlock()
+    private void SpawnBlock()
     {
-        if (finished)
-            return;
-
-        if (currentBlock == null)
-            return;
-
-        currentBlock.Release();
+        var go = Instantiate(blockPrefab);
+        _currentBlock = go.GetComponent<StackBlock>();
+        _currentBlock.AttachToHook(hookController.transform);
     }
 
-    public void NotifyPlaced(StackBlock block, bool perfect)
+    public void DropBlock()
     {
-        lastPlacedBlock = block;
+        if (_currentBlock == null || !_active) return;
+        _currentBlock.Release();
+        StartCoroutine(WaitForLanding(_currentBlock));
+        _currentBlock = null;
+    }
 
-        placedBlocks++;
+    private IEnumerator WaitForLanding(StackBlock block)
+    {
+        inputController.SetActive(false);
+        yield return new WaitForSeconds(0.2f);
 
-        OnBlockPlaced?.Invoke(perfect);
-
-        if (placedBlocks >= blocksRequired)
+        // Wait until block settles
+        var rb = block.GetComponent<Rigidbody2D>();
+        float timeout = 3f;
+        while (rb.linearVelocity.magnitude > 0.05f && timeout > 0f)
         {
-            finished = true;
+            timeout -= Time.deltaTime;
+            yield return null;
+        }
 
-            OnCompleted?.Invoke();
+        EvaluateLanding(block);
+    }
 
+    private void EvaluateLanding(StackBlock block)
+    {
+        float offset = Mathf.Abs(block.transform.position.x - _nextSpawnPosition.x);
+
+        if (offset > failOffset)
+        {
+            block.Freeze();
+            OnFail?.Invoke();
             return;
         }
-            
-        Invoke(nameof(SpawnBlock), 0.4f);
-    }
 
-    public void NotifyFail()
-    {
-        finished = true;
+        // Snap assist
+        if (offset < landTolerance)
+        {
+            var pos = block.transform.position;
+            pos.x = Mathf.Lerp(pos.x, _nextSpawnPosition.x, snapStrength);
+            block.transform.position = pos;
+        }
 
-        OnFail?.Invoke();
+        block.Freeze();
+
+        bool perfect = offset <= perfectOffset;
+        OnBlockPlaced?.Invoke(perfect);
+
+        _nextSpawnPosition = block.transform.position + Vector3.up * blockPrefab.transform.localScale.y;
+        _placedCount++;
+
+        if (_placedCount >= blocksRequired)
+        {
+            StopPhase();
+            OnCompleted?.Invoke();
+        }
+        else
+        {
+            inputController.SetActive(true);
+            SpawnBlock();
+        }
     }
 }

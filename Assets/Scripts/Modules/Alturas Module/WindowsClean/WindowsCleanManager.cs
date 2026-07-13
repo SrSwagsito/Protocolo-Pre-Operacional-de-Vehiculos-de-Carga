@@ -10,17 +10,22 @@ public class WindowsCleanManager : MonoBehaviour
     [SerializeField] private InstructionsUI instructionsUI;
 
     [Header("Level variables")]
+    [SerializeField] private Animator animator;
     [SerializeField] private PlatformMovement movement;
     [SerializeField] private LifeSystem lifeSystem;
     [SerializeField] private CleaningTargetController windowsTarget;
     [SerializeField] private PedestrianController pedestrianController;
 
+
     private bool moduleFinished;
 
     public event Action<int, int> OnProgressChanged;
     public event Action OnAllTargetsCleaned;
+    public event Action OnLevelStarted;
 
-
+    private void Awake()
+    {
+    }
 
 
     private void OnEnable()
@@ -49,15 +54,19 @@ public class WindowsCleanManager : MonoBehaviour
     {
         if (tutorial != null)
             tutorial.ShowTutorial();
+
         else
             StartCleaning();
     }
 
     private void StartCleaning()
     {
+
         instructionsUI.ShowInstruction("Limpia todas las ventanas para terminar tu turno");
 
         progressCounter.UpdateProgress(windowsTarget.CleanedCount, windowsTarget.TotalTargets);
+
+        OnLevelStarted?.Invoke();
     }
 
     private void HandlePedestrianAccident()
@@ -72,12 +81,14 @@ public class WindowsCleanManager : MonoBehaviour
 
     private void HandleGameOver()
     {
+        animator.SetTrigger("Lose");
         if (moduleFinished)
             return;
 
         moduleFinished = true;
 
         SendResult(false);
+
     }
 
     private void HandleVictory()

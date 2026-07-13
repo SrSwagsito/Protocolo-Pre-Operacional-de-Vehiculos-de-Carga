@@ -6,7 +6,7 @@ public class PlayerHealth : LifeSystem
 {
 
     [SerializeField] LifeSystem lifeSys;
-    // [SerializeField] Animator anim;
+    [SerializeField] Animator anim;
     [SerializeField] Button button;
 
     [Header("Config")]
@@ -32,7 +32,7 @@ public class PlayerHealth : LifeSystem
     {
         if (currentWindow == null) return;
 
-       // anim.SetTrigger("Clean");
+        anim.SetTrigger("Clean");
 
         StartCoroutine(CleanRoutine());
 
@@ -77,6 +77,8 @@ public class PlayerHealth : LifeSystem
         yield return new WaitForSeconds(cleanTime);
 
         currentWindow.Clean();
+
+        anim.SetTrigger("Idle");
     }
 
 }

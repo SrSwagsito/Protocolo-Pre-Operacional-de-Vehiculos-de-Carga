@@ -1,0 +1,1011 @@
+fileFormatVersion: 2
+guid: e7517e7603bc82b48914f4703ce8ee77
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3542766983412992249
+    second: WomanInteraseo assets_0
+  - first:
+      213: 4932851220920467604
+    second: WomanInteraseo assets_1
+  - first:
+      213: 3519819223472274494
+    second: WomanInteraseo assets_2
+  - first:
+      213: 6786897047262903449
+    second: WomanInteraseo assets_3
+  - first:
+      213: -2094307871703891350
+    second: WomanInteraseo assets_4
+  - first:
+      213: -7012541730757208059
+    second: WomanInteraseo assets_5
+  - first:
+      213: 4779737358505843340
+    second: WomanInteraseo assets_6
+  - first:
+      213: -7409131793052767627
+    second: WomanInteraseo assets_7
+  - first:
+      213: 8104065091922709097
+    second: WomanInteraseo assets_8
+  - first:
+      213: -5254989182905324025
+    second: WomanInteraseo assets_9
+  - first:
+      213: 8396531779078784758
+    second: WomanInteraseo assets_10
+  - first:
+      213: 437753763449755639
+    second: WomanInteraseo assets_11
+  - first:
+      213: 4835386671760830143
+    second: WomanInteraseo assets_12
+  - first:
+      213: 4664075203414041771
+    second: WomanInteraseo assets_13
+  - first:
+      213: -2679100529177754518
+    second: WomanInteraseo assets_14
+  - first:
+      213: 3610172174815469445
+    second: WomanInteraseo assets_15
+  - first:
+      213: -663544395346191367
+    second: WomanInteraseo assets_16
+  - first:
+      213: 5471038484603758521
+    second: WomanInteraseo assets_17
+  - first:
+      213: 854226996654793219
+    second: WomanInteraseo assets_18
+  - first:
+      213: 1304447071158241880
+    second: WomanInteraseo assets_19
+  - first:
+      213: 5983481982450553573
+    second: WomanInteraseo assets_20
+  - first:
+      213: -5100478140867967343
+    second: WomanInteraseo assets_21
+  - first:
+      213: 2085972004839040779
+    second: WomanInteraseo assets_22
+  - first:
+      213: 6460714522167781222
+    second: WomanInteraseo assets_23
+  - first:
+      213: -5509882869503036655
+    second: WomanInteraseo assets_24
+  - first:
+      213: 4703324869065291956
+    second: WomanInteraseo assets_25
+  - first:
+      213: 1736668141887719561
+    second: WomanInteraseo assets_26
+  - first:
+      213: -1126853725724297544
+    second: WomanInteraseo assets_27
+  - first:
+      213: -3962070075476024519
+    second: WomanInteraseo assets_28
+  - first:
+      213: -2470544162142438494
+    second: WomanInteraseo assets_29
+  - first:
+      213: -6781805322789295095
+    second: WomanInteraseo assets_30
+  - first:
+      213: 5687018400459604794
+    second: WomanInteraseo assets_31
+  - first:
+      213: -772932906422383629
+    second: WomanInteraseo assets_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WomanInteraseo assets_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 106
+        width: 244
+        height: 617
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 707bfafe23095dec0800000000000000
+      internalID: -3542766983412992249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_1
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 551
+        width: 99
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49001d0dc02057440800000000000000
+      internalID: 4932851220920467604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_2
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 551
+        width: 99
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3cf7a85fe8e8d030800000000000000
+      internalID: 3519819223472274494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_3
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 551
+        width: 99
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99cb04de7e6ef2e50800000000000000
+      internalID: 6786897047262903449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_4
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 551
+        width: 99
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6209c836168fe2e0800000000000000
+      internalID: -2094307871703891350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_5
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 551
+        width: 99
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5081d9d23727eae90800000000000000
+      internalID: -7012541730757208059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_6
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 422
+        width: 103
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8a976dadc9055240800000000000000
+      internalID: 4779737358505843340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_7
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 415
+        width: 80
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a6905b3e97d2990800000000000000
+      internalID: -7409131793052767627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_8
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 421
+        width: 104
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a42b0934c677070800000000000000
+      internalID: 8104065091922709097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_9
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 394
+        width: 91
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e68662e278217b0800000000000000
+      internalID: -5254989182905324025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_10
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 394
+        width: 100
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f605459a29768470800000000000000
+      internalID: 8396531779078784758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_11
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 388
+        width: 66
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f753818ab6331600800000000000000
+      internalID: 437753763449755639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_12
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 388
+        width: 56
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe66f91f8eba1340800000000000000
+      internalID: 4835386671760830143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_13
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 389
+        width: 23
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba4a339afaf1ab040800000000000000
+      internalID: 4664075203414041771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_14
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 389
+        width: 22
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a648cc0634ce1dad0800000000000000
+      internalID: -2679100529177754518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_15
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 253
+        width: 46
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f10e92778e91230800000000000000
+      internalID: 3610172174815469445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_16
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 253
+        width: 46
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fb50b653ed9ac6f0800000000000000
+      internalID: -663544395346191367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_17
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 253
+        width: 89
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b76c43d3880deb40800000000000000
+      internalID: 5471038484603758521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_18
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 247
+        width: 65
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30268257de2dadb00800000000000000
+      internalID: 854226996654793219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_19
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 250
+        width: 75
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85a8fa033b35a1210800000000000000
+      internalID: 1304447071158241880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_20
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 247
+        width: 53
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e25ae34929990350800000000000000
+      internalID: 5983481982450553573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_21
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 259
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1968be487267739b0800000000000000
+      internalID: -5100478140867967343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_22
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 259
+        width: 74
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0727d78c7cd2fc10800000000000000
+      internalID: 2085972004839040779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_23
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 0
+        width: 62
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 667a409a0a119a950800000000000000
+      internalID: 6460714522167781222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_24
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 0
+        width: 74
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 113f24909b6f883b0800000000000000
+      internalID: -5509882869503036655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_25
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 75
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8b5e39c01954140800000000000000
+      internalID: 4703324869065291956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_26
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 0
+        width: 91
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98884f94972e91810800000000000000
+      internalID: 1736668141887719561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_27
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 0
+        width: 91
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6b06cb18c9c50f0800000000000000
+      internalID: -1126853725724297544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_28
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 0
+        width: 73
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 933eb002246e309c0800000000000000
+      internalID: -3962070075476024519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_29
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 140
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2abb59d8c2dd6bdd0800000000000000
+      internalID: -2470544162142438494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_30
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 140
+        width: 75
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c6a4f8dff22e1a0800000000000000
+      internalID: -6781805322789295095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_31
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 18
+        width: 76
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a334186aa195cee40800000000000000
+      internalID: 5687018400459604794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_32
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 18
+        width: 75
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fbcb75ed9df545f0800000000000000
+      internalID: -772932906422383629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WomanInteraseo assets_33
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 253
+        width: 92
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3069dfe94f2bfcd459898de26d8a8b06
+      internalID: -1009126292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c9e697dc72cabdb43ab9d37f025e6e7c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WomanInteraseo assets_0: -3542766983412992249
+      WomanInteraseo assets_1: 4932851220920467604
+      WomanInteraseo assets_10: 8396531779078784758
+      WomanInteraseo assets_11: 437753763449755639
+      WomanInteraseo assets_12: 4835386671760830143
+      WomanInteraseo assets_13: 4664075203414041771
+      WomanInteraseo assets_14: -2679100529177754518
+      WomanInteraseo assets_15: 3610172174815469445
+      WomanInteraseo assets_16: -663544395346191367
+      WomanInteraseo assets_17: 5471038484603758521
+      WomanInteraseo assets_18: 854226996654793219
+      WomanInteraseo assets_19: 1304447071158241880
+      WomanInteraseo assets_2: 3519819223472274494
+      WomanInteraseo assets_20: 5983481982450553573
+      WomanInteraseo assets_21: -5100478140867967343
+      WomanInteraseo assets_22: 2085972004839040779
+      WomanInteraseo assets_23: 6460714522167781222
+      WomanInteraseo assets_24: -5509882869503036655
+      WomanInteraseo assets_25: 4703324869065291956
+      WomanInteraseo assets_26: 1736668141887719561
+      WomanInteraseo assets_27: -1126853725724297544
+      WomanInteraseo assets_28: -3962070075476024519
+      WomanInteraseo assets_29: -2470544162142438494
+      WomanInteraseo assets_3: 6786897047262903449
+      WomanInteraseo assets_30: -6781805322789295095
+      WomanInteraseo assets_31: 5687018400459604794
+      WomanInteraseo assets_32: -772932906422383629
+      WomanInteraseo assets_33: -1009126292
+      WomanInteraseo assets_4: -2094307871703891350
+      WomanInteraseo assets_5: -7012541730757208059
+      WomanInteraseo assets_6: 4779737358505843340
+      WomanInteraseo assets_7: -7409131793052767627
+      WomanInteraseo assets_8: 8104065091922709097
+      WomanInteraseo assets_9: -5254989182905324025
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

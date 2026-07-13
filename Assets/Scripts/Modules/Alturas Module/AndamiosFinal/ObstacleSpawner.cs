@@ -1,53 +1,32 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    [SerializeField] private FallingObstacle obstaclePrefab;
+    public GameObject[] obstaclePrefabs;
+    public Transform[] spawnPoints;
+    public float minInterval = 1.5f;
+    public float maxInterval = 3.5f;
 
-    [SerializeField] private Transform leftLimit;
-    [SerializeField] private Transform rightLimit;
-
-    [SerializeField] private float spawnDelay = 2f;
-
-    private bool spawning;
+    private bool _spawning;
 
     public void StartSpawning()
     {
-        if (spawning)
-            return;
-
-        spawning = true;
-
-        StartCoroutine(SpawnRoutine());
+        _spawning = true;
+        StartCoroutine(SpawnLoop());
     }
 
-    public void StopSpawning()
-    {
-        spawning = false;
-    }
+    public void StopSpawning() => _spawning = false;
 
-    private IEnumerator SpawnRoutine()
+    private IEnumerator SpawnLoop()
     {
-        while (spawning)
+        while (_spawning)
         {
-            float randomX =
-                Random.Range(
-                    leftLimit.position.x,
-                    rightLimit.position.x);
-
-            Vector3 spawnPos =
-                new Vector3(
-                    randomX,
-                    transform.position.y,
-                    0);
-
-            Instantiate(
-                obstaclePrefab,
-                spawnPos,
-                Quaternion.identity);
-
-            yield return new WaitForSeconds(spawnDelay);
+            yield return new WaitForSeconds(Random.Range(minInterval, maxInterval));
+            if (!_spawning) break;
+            var prefab = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
+            var point = spawnPoints[Random.Range(0, spawnPoints.Length)];
+            Instantiate(prefab, point.position, Quaternion.identity);
         }
     }
 }

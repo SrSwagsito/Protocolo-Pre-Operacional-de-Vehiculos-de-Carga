@@ -15,5 +15,7 @@ public class WindowSpot : MonoBehaviour, ICleanable
         cleaned = true;
 
         controller.RegisterCleaned(this);
+
+        gameObject.SetActive(false);
     }
 }

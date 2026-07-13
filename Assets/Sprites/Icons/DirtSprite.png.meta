@@ -1,0 +1,560 @@
+fileFormatVersion: 2
+guid: d4a0e9fa93ab49341ba261deb3df91e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1269470416343198404
+    second: DirtSprite_0
+  - first:
+      213: -190329106660430624
+    second: DirtSprite_1
+  - first:
+      213: -354935517032328853
+    second: DirtSprite_2
+  - first:
+      213: -7304113299800125765
+    second: DirtSprite_3
+  - first:
+      213: -6711526050168976377
+    second: DirtSprite_4
+  - first:
+      213: 8434637011187615703
+    second: DirtSprite_5
+  - first:
+      213: 5863117383326259097
+    second: DirtSprite_6
+  - first:
+      213: -4980606911862137230
+    second: DirtSprite_7
+  - first:
+      213: -653949796900478799
+    second: DirtSprite_8
+  - first:
+      213: -2669894859884475979
+    second: DirtSprite_9
+  - first:
+      213: 28164711431716839
+    second: DirtSprite_10
+  - first:
+      213: 2461622191494554869
+    second: DirtSprite_11
+  - first:
+      213: -6515436266756797320
+    second: DirtSprite_12
+  - first:
+      213: 4446004642941803938
+    second: DirtSprite_13
+  - first:
+      213: -2954534671319371534
+    second: DirtSprite_14
+  - first:
+      213: 4166855340354620586
+    second: DirtSprite_15
+  - first:
+      213: -9169906266741567531
+    second: DirtSprite_16
+  - first:
+      213: -2069164872605803182
+    second: DirtSprite_17
+  - first:
+      213: 857542702340161928
+    second: DirtSprite_18
+  - first:
+      213: 8048426897433650845
+    second: DirtSprite_19
+  - first:
+      213: -1654453905436071877
+    second: DirtSprite_20
+  - first:
+      213: -5122426804282394140
+    second: DirtSprite_21
+  - first:
+      213: 6285469062632150159
+    second: DirtSprite_22
+  - first:
+      213: -3327057111717605156
+    second: DirtSprite_23
+  - first:
+      213: 1656046328603902457
+    second: DirtSprite_24
+  - first:
+      213: -5290990361253817924
+    second: DirtSprite_25
+  - first:
+      213: 8514338449133956630
+    second: DirtSprite_26
+  - first:
+      213: 1980980857196505001
+    second: DirtSprite_27
+  - first:
+      213: -2130884590859561013
+    second: DirtSprite_28
+  - first:
+      213: 3930929838656070962
+    second: DirtSprite_29
+  - first:
+      213: 2346825258280570485
+    second: DirtSprite_30
+  - first:
+      213: -2926025519636366539
+    second: DirtSprite_31
+  - first:
+      213: 3216306452818878709
+    second: DirtSprite_32
+  - first:
+      213: 8819219048917614242
+    second: DirtSprite_33
+  - first:
+      213: -2031810690792430020
+    second: DirtSprite_34
+  - first:
+      213: 7433702130354979106
+    second: DirtSprite_35
+  - first:
+      213: 5104939936425437014
+    second: DirtSprite_36
+  - first:
+      213: -472731755186057540
+    second: DirtSprite_37
+  - first:
+      213: -2902350663146073645
+    second: DirtSprite_38
+  - first:
+      213: 7583124161219931928
+    second: DirtSprite_39
+  - first:
+      213: -714803256982272479
+    second: DirtSprite_40
+  - first:
+      213: 993618518017980838
+    second: DirtSprite_41
+  - first:
+      213: 304710608000649268
+    second: DirtSprite_42
+  - first:
+      213: -8331271037215462668
+    second: DirtSprite_43
+  - first:
+      213: -5984726187691823369
+    second: DirtSprite_44
+  - first:
+      213: 2368828254673308046
+    second: DirtSprite_45
+  - first:
+      213: -8561049573903366964
+    second: DirtSprite_46
+  - first:
+      213: -7720104700282439778
+    second: DirtSprite_47
+  - first:
+      213: -5008949055526609765
+    second: DirtSprite_48
+  - first:
+      213: -5827669700179873015
+    second: DirtSprite_49
+  - first:
+      213: 944735184520058471
+    second: DirtSprite_50
+  - first:
+      213: 7708521526582925517
+    second: DirtSprite_51
+  - first:
+      213: 8486202102649356044
+    second: DirtSprite_52
+  - first:
+      213: 7273141246436006939
+    second: DirtSprite_53
+  - first:
+      213: 7755843714335804665
+    second: DirtSprite_54
+  - first:
+      213: 211198167679873239
+    second: DirtSprite_55
+  - first:
+      213: 9218343953170152603
+    second: DirtSprite_56
+  - first:
+      213: -726201270328997072
+    second: DirtSprite_57
+  - first:
+      213: -1227243814217531933
+    second: DirtSprite_58
+  - first:
+      213: 3388189028008288980
+    second: DirtSprite_59
+  - first:
+      213: -3275966440234773826
+    second: DirtSprite_60
+  - first:
+      213: -1496881991182337860
+    second: DirtSprite_61
+  - first:
+      213: 1767077146606665949
+    second: DirtSprite_62
+  - first:
+      213: -3995800457290877278
+    second: DirtSprite_63
+  - first:
+      213: -6459431852921981192
+    second: DirtSprite_64
+  - first:
+      213: 7520343959060249139
+    second: DirtSprite_65
+  - first:
+      213: -2680795454737011618
+    second: DirtSprite_66
+  - first:
+      213: -3906449414865212653
+    second: DirtSprite_67
+  - first:
+      213: -7467342319438029757
+    second: DirtSprite_68
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DirtSprite_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 438
+        width: 353
+        height: 324
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997549d223afd5150800000000000000
+      internalID: 5863117383326259097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DirtSprite_7
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 458
+        width: 310
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e1a9ce66451eab0800000000000000
+      internalID: -4980606911862137230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DirtSprite_11
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 463
+        width: 450
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f460474750792220800000000000000
+      internalID: 2461622191494554869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DirtSprite_14
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 621
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0fe67ce526ff6d0800000000000000
+      internalID: -2954534671319371534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DirtSprite_39
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 0
+        width: 340
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f223d5f3bac3960800000000000000
+      internalID: 7583124161219931928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DirtSprite_43
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 23
+        width: 301
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4faa543f121616c80800000000000000
+      internalID: -8331271037215462668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DirtSprite_46
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 21
+        width: 276
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc40bfa55ca013980800000000000000
+      internalID: -8561049573903366964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a5ec6b690bec33e41b21435bb220409b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DirtSprite_0: 1269470416343198404
+      DirtSprite_1: -190329106660430624
+      DirtSprite_10: 28164711431716839
+      DirtSprite_11: 2461622191494554869
+      DirtSprite_12: -6515436266756797320
+      DirtSprite_13: 4446004642941803938
+      DirtSprite_14: -2954534671319371534
+      DirtSprite_15: 4166855340354620586
+      DirtSprite_16: -9169906266741567531
+      DirtSprite_17: -2069164872605803182
+      DirtSprite_18: 857542702340161928
+      DirtSprite_19: 8048426897433650845
+      DirtSprite_2: -354935517032328853
+      DirtSprite_20: -1654453905436071877
+      DirtSprite_21: -5122426804282394140
+      DirtSprite_22: 6285469062632150159
+      DirtSprite_23: -3327057111717605156
+      DirtSprite_24: 1656046328603902457
+      DirtSprite_25: -5290990361253817924
+      DirtSprite_26: 8514338449133956630
+      DirtSprite_27: 1980980857196505001
+      DirtSprite_28: -2130884590859561013
+      DirtSprite_29: 3930929838656070962
+      DirtSprite_3: -7304113299800125765
+      DirtSprite_30: 2346825258280570485
+      DirtSprite_31: -2926025519636366539
+      DirtSprite_32: 3216306452818878709
+      DirtSprite_33: 8819219048917614242
+      DirtSprite_34: -2031810690792430020
+      DirtSprite_35: 7433702130354979106
+      DirtSprite_36: 5104939936425437014
+      DirtSprite_37: -472731755186057540
+      DirtSprite_38: -2902350663146073645
+      DirtSprite_39: 7583124161219931928
+      DirtSprite_4: -6711526050168976377
+      DirtSprite_40: -714803256982272479
+      DirtSprite_41: 993618518017980838
+      DirtSprite_42: 304710608000649268
+      DirtSprite_43: -8331271037215462668
+      DirtSprite_44: -5984726187691823369
+      DirtSprite_45: 2368828254673308046
+      DirtSprite_46: -8561049573903366964
+      DirtSprite_47: -7720104700282439778
+      DirtSprite_48: -5008949055526609765
+      DirtSprite_49: -5827669700179873015
+      DirtSprite_5: 8434637011187615703
+      DirtSprite_50: 944735184520058471
+      DirtSprite_51: 7708521526582925517
+      DirtSprite_52: 8486202102649356044
+      DirtSprite_53: 7273141246436006939
+      DirtSprite_54: 7755843714335804665
+      DirtSprite_55: 211198167679873239
+      DirtSprite_56: 9218343953170152603
+      DirtSprite_57: -726201270328997072
+      DirtSprite_58: -1227243814217531933
+      DirtSprite_59: 3388189028008288980
+      DirtSprite_6: 5863117383326259097
+      DirtSprite_60: -3275966440234773826
+      DirtSprite_61: -1496881991182337860
+      DirtSprite_62: 1767077146606665949
+      DirtSprite_63: -3995800457290877278
+      DirtSprite_64: -6459431852921981192
+      DirtSprite_65: 7520343959060249139
+      DirtSprite_66: -2680795454737011618
+      DirtSprite_67: -3906449414865212653
+      DirtSprite_68: -7467342319438029757
+      DirtSprite_7: -4980606911862137230
+      DirtSprite_8: -653949796900478799
+      DirtSprite_9: -2669894859884475979
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

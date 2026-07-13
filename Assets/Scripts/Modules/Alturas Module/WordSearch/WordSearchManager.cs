@@ -9,6 +9,8 @@ public class WordSearchManager : MonoBehaviour
     [SerializeField] private TutorialPanel tutorialPopup;
     [SerializeField] private ProgressCounter progressCounter;
     [SerializeField] private InstructionsUI instructionsUI;
+    [SerializeField] private WordListUI wordListUI;
+
 
     [Header("Configuración del tablero")]
     [SerializeField] private int rows = 10;
@@ -67,6 +69,7 @@ public class WordSearchManager : MonoBehaviour
 
         FillEmptySpaces();
         RenderBoard();
+        wordListUI.Initialize(wordsToFind);
     }
 
     private void StartInspection()
@@ -168,9 +171,23 @@ public class WordSearchManager : MonoBehaviour
         return foundWords.Contains(found.ToUpper());
     }
 
-    public void RegisterFoundeWord(string word)
+    public void RegisterFoundWord(string word)
     {
-        foundWords.Add(word.ToUpper());
+        word = word.ToUpper();
+
+        if (foundWords.Contains(word))
+            return;
+
+        foundWords.Add(word);
+
+        wordListUI.MarkFound(word);
+
+        UpdateProgressCounter();
+
+        if (foundWords.Count >= requiredWords)
+        {
+            FinishModule();
+        }
     }
 
     public LetterCell GetCell(int row, int col)

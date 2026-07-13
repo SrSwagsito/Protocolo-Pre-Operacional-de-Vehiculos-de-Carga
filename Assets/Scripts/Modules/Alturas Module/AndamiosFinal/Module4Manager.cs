@@ -2,63 +2,89 @@ using UnityEngine;
 
 public class Module4Manager : MonoBehaviour
 {
-    private enum GameState
-    {
-        Stacking,
-        Rope,
-        Completed,
-        Failed
-    }
+    [Header("Phase 1")]
+    public StackTowerController towerController;
 
-    [SerializeField] private StackTowerController stackModule;
-    [SerializeField] private CrossRopeController ropeController;
+    [Header("Phase 2")]
+    public RopePlayerController ropePlayer;
+    public ObstacleSpawner obstacleSpawner;
+    public RopeGoal ropeGoal;
 
-    private GameState state;
+    [Header("Module Config")]
+    public string moduleName = "Module4_Andamio";
+
+    private int _score;
+    private int _mistakes;
+    private ModuleState _state;
+
+    private enum ModuleState { Idle, Stacking, Rope, Completed, Failed }
 
     private void Start()
     {
-        state = GameState.Stacking;
+        towerController.OnBlockPlaced += HandleBlockPlaced;
+        towerController.OnCompleted += HandleStackCompleted;
+        towerController.OnFail += HandleFail;
 
-        ropeController.gameObject.SetActive(true);
+        ropePlayer.OnSwingEnded += HandleSwingEnded;
+        ropePlayer.OnFail += HandleFail;
 
-        stackModule.OnFail += HandleFail;
-        stackModule.OnCompleted += HandleStackComplete;
+        ropeGoal.Initialize(ropePlayer);
 
-        ropeController.OnSwingEnded += HandleRopeComplete;
+        StartStacking();
     }
 
-    public void HandleFail()
+    private void StartStacking()
     {
-        if (state == GameState.Failed) return;
-
-        state = GameState.Failed;
-
-        stackModule.enabled = false;
-        ropeController.enabled = false;
-
-        Debug.Log("MODULE FAILED");
+        _state = ModuleState.Stacking;
+        towerController.StartPhase();
     }
 
-    private void HandleStackComplete()
+    private void StartRope()
     {
-        if (state != GameState.Stacking) return;
-
-        state = GameState.Rope;
-
-        Debug.Log("STACK COMPLETE → START ROPE");
-
-        ropeController.gameObject.SetActive(true);
-
-        ropeController.StartSwinging();
+        _state = ModuleState.Rope;
+        obstacleSpawner.StartSpawning();
+        ropePlayer.EnableMovement();
+        ropePlayer.SetDirection(1f);
     }
 
-
-    private void HandleRopeComplete()
+    private void HandleBlockPlaced(bool perfect)
     {
-        if (state != GameState.Rope) return;
+        if (perfect) _score += 10;
+        else _score += 5;
+    }
 
-        state = GameState.Completed;
+    private void HandleStackCompleted()
+    {
+        StartRope();
+    }
 
-        Debug.Log("MODULE COMPLETED");
+    private void HandleSwingEnded()
+    {
+        obstacleSpawner.StopSpawning();
+        _state = ModuleState.Completed;
+        RegisterResult(true, "Módulo completado exitosamente.");
+    }
+
+    private void HandleFail()
+    {
+        obstacleSpawner.StopSpawning();
+        ropePlayer.DisableMovement();
+        towerController.StopPhase();
+        _mistakes++;
+        _state = ModuleState.Failed;
+        RegisterResult(false, "El módulo ha fallado.");
+    }
+
+    private void RegisterResult(bool approved, string message)
+    {
+        var result = new ModuleResult
+        {
+            moduleName = moduleName,
+            approved = approved,
+            score = _score,
+            missedDamages = _mistakes,
+            message = message
+        };
+        GameManager.Instance.RegisterModuleResult(result);
     }
 }

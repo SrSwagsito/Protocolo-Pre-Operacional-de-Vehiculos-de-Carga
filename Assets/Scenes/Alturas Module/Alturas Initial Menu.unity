@@ -437,7 +437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &394481513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,8 +452,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UserRegistration
   levelName: IntroductionSceneAlturas
   avatarDisplay: {fileID: 559459828}
-  avatarOption1: {fileID: 21300000, guid: 4e6e49cbe20ea914ca44d570fc909caa, type: 3}
-  avatarOption2: {fileID: 21300000, guid: 976b4ff490ea1d441937b2e7eb42f223, type: 3}
+  avatarOption1: {fileID: -2682883663177689415, guid: 78d8297c817cfe540ae839fc74e7c81d, type: 3}
+  avatarOption2: {fileID: 4932851220920467604, guid: e7517e7603bc82b48914f4703ce8ee77, type: 3}
   selectAvatar1Button: {fileID: 1785159713}
   selectAvatar2Button: {fileID: 1613664032}
   nameInputField: {fileID: 2054108753}
@@ -952,13 +952,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559459826}
-  m_LocalRotation: {x: -0, y: -0, z: 0.07309322, w: 0.9973251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 394481516}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 8.383}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -553, y: -10}
@@ -984,7 +984,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -2682883663177689415, guid: 78d8297c817cfe540ae839fc74e7c81d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 0
@@ -2548,7 +2548,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -666.83984, y: -319.65363}
-  m_SizeDelta: {x: 149.4338, y: 85.3073}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1613664030
 MonoBehaviour:
@@ -2570,7 +2570,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -816158020447102622, guid: f801fd324e3b0074c9fb7d73d19e9e1e, type: 3}
+  m_Sprite: {fileID: -6903377138491756528, guid: 7604fb6452dc3ff469869a9564dedeac, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2637,7 +2637,7 @@ MonoBehaviour:
         m_MethodName: SelectAvatar
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 4e6e49cbe20ea914ca44d570fc909caa, type: 3}
+          m_ObjectArgument: {fileID: -2682883663177689415, guid: 78d8297c817cfe540ae839fc74e7c81d, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2886,17 +2886,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785159709}
-  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1488135519}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -830.2831, y: -319.65363}
-  m_SizeDelta: {x: 149.4338, y: 85.3073}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1785159711
 MonoBehaviour:
@@ -2918,7 +2918,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -816158020447102622, guid: f801fd324e3b0074c9fb7d73d19e9e1e, type: 3}
+  m_Sprite: {fileID: -2353855815696089488, guid: 7604fb6452dc3ff469869a9564dedeac, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2985,7 +2985,7 @@ MonoBehaviour:
         m_MethodName: SelectAvatar
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 976b4ff490ea1d441937b2e7eb42f223, type: 3}
+          m_ObjectArgument: {fileID: 4932851220920467604, guid: e7517e7603bc82b48914f4703ce8ee77, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

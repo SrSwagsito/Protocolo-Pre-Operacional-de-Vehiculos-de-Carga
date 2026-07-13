@@ -25,6 +25,9 @@ public class LifeSystem : MonoBehaviour
         {
             Debug.Log("Se quedo sin vidas");
             OnGameOver?.Invoke();
+
+           
+
         }
     }
 }

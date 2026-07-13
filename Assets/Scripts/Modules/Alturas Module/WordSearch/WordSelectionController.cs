@@ -128,7 +128,7 @@ public class WordSelectionController : MonoBehaviour
             {
                 if (!manager.IsWordFound(target))
                 {
-                    manager.RegisterFoundeWord(target);
+                    manager.RegisterFoundWord(target);
                 }
 
                 return true;
@@ -141,7 +141,7 @@ public class WordSelectionController : MonoBehaviour
             {
                 if (!manager.IsWordFound(target))
                 {
-                    manager.RegisterFoundeWord(target);
+                    manager.RegisterFoundWord(target);
                 }
 
                 return true;

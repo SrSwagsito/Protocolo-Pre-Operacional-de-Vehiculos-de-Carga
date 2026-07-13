@@ -1,44 +1,55 @@
-using System;
 using UnityEngine;
+using System;
 
 public class RopePlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 3f;
+    [Header("Movement")]
+    public float moveSpeed = 3f;
 
-    private bool canMove;
+    [Header("Respawn")]
+    public int maxHits = 3;
 
-    public event Action OnReachedGoal;
-    public event Action OnHitObstacle;
+    public event Action OnSwingEnded;
+    public event Action OnFail;
+
+    private float _direction;
+    private bool _canMove;
+    private Vector3 _checkpoint;
+    private int _hitCount;
 
     public void EnableMovement()
     {
-        canMove = true;
+        _checkpoint = transform.position;
+        _canMove = true;
     }
 
-    public void DisableMovement()
-    {
-        canMove = false;
-    }
+    public void DisableMovement() => _canMove = false;
 
-    public void SetDirection(float direction)
-    {
-        if (!canMove)
-            return;
+    public void SetDirection(float dir) => _direction = dir;
 
-        transform.Translate(
-            Vector3.right *
-            direction *
-            moveSpeed *
-            Time.deltaTime);
+    private void Update()
+    {
+        if (!_canMove) return;
+        transform.Translate(Vector3.right * (_direction * moveSpeed * Time.deltaTime));
     }
 
     public void ReachGoal()
     {
-        OnReachedGoal?.Invoke();
+        DisableMovement();
+        OnSwingEnded?.Invoke();
     }
 
     public void HitObstacle()
     {
-        OnHitObstacle?.Invoke();
+        _hitCount++;
+        if (_hitCount >= maxHits)
+        {
+            DisableMovement();
+            OnFail?.Invoke();
+            return;
+        }
+        Respawn();
     }
+
+    private void Respawn() => transform.position = _checkpoint;
 }
