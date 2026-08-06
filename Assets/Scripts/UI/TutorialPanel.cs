@@ -44,20 +44,19 @@ public class TutorialPanel : MonoBehaviour
 
     public void ShowTutorial()
     {
-        Debug.Log("TutorialPanel: ShowTutorial llamado");
+        popupPanel.SetActive(true);
 
-        if (popupPanel != null)
+        titleText.text = tutorialTitle;
+        instructionText.text = tutorialInstructions;
+
+        if (panelAnimator != null &&
+            !string.IsNullOrEmpty(animationTitle))
         {
-            popupPanel.SetActive(true);
-
-
-            if (titleText != null)
-                titleText.text = tutorialTitle;
-
-            if (instructionText != null)
-                instructionText.text = tutorialInstructions;
-            if (panelAnimator != null)
-            { StartCoroutine(PlayAnimation()); }
+            StartCoroutine(PlayAnimation());
+        }
+        else
+        {
+            isAnimating = false;
         }
     }
 
