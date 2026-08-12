@@ -94,6 +94,7 @@ public class TutorialPanel : MonoBehaviour
 
     public void CloseTutorial()
     {
+        
         if (isAnimating) return;
         Debug.Log("TutorialPanel: CloseTutorial llamado");
 
