@@ -23,10 +23,11 @@ public class TrashSpawner : MonoBehaviour
 
     public void spawnTrash()
     {
-        if(generatedTrash>=totalTrash)
+        if (generatedTrash >= totalTrash)
         {
             gameObject.SetActive(false);
             Debug.Log("se han spawneado todas las basuras");
+            TrashInspectionManager.Instance.FinishInspection();
             return;
         }
         if (currentTrash != null)
@@ -37,7 +38,8 @@ public class TrashSpawner : MonoBehaviour
     }
     public void TrashDestroyed()
     {
-        currentTrash  = null;
+        Destroy(currentTrash); // ✅ destruye la basura, no el spawner
+        currentTrash = null;
         spawnTrash();
     }
 

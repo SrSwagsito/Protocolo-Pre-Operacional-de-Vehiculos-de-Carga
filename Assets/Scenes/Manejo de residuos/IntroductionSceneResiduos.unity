@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3640a2cccade714388b6a33002292f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  sceneName: modulo residuos 1
+  sceneName: selection residuos
   reloadCurrent: 0
 --- !u!1 &390039844
 GameObject:

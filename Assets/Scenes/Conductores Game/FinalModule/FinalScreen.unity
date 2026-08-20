@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_text: Inicio
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49aebba26caabcd4f9de1c312ec521fa, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -6071293580017090705, guid: 49aebba26caabcd4f9de1c312ec521fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1448,7 +1448,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1998469039}
   m_HandleRect: {fileID: 1998469038}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1696,6 +1696,7 @@ MonoBehaviour:
   summaryText: {fileID: 1044302564}
   moduleResultsContainer: {fileID: 1128106544}
   moduleResultPrefab: {fileID: 8190494637083002884, guid: b63dfc7458c6e434b8a9364743924954, type: 3}
+  avatarImageUI: {fileID: 0}
   goldTrophy: {fileID: -6408607595667131307, guid: b210b5bbcbdebf248996ce6e03393a90, type: 3}
   silverTrophy: {fileID: 613200331267610255, guid: b210b5bbcbdebf248996ce6e03393a90, type: 3}
   bronzeTrophy: {fileID: 2148238276544435917, guid: b210b5bbcbdebf248996ce6e03393a90, type: 3}

@@ -60,11 +60,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Alturas Module/FinalScreenAlturas.unity
     guid: fc1b596a20ee9044f984a330bdd7bb91
   - enabled: 1
-    path: Assets/Scenes/Manejo de residuos/modulo residuos 1.unity
+    path: Assets/Scenes/Manejo de residuos/modulo residuos.unity
     guid: 3d1a6cf69f4e3b54891dd7c8072bf60c
   - enabled: 1
     path: Assets/Scenes/Manejo de residuos/IntroductionSceneResiduos.unity
     guid: 4a066a0ab6680604e8f77e5fe5dcaac1
+  - enabled: 1
+    path: Assets/Scenes/Manejo de residuos/modulo residuos aeropuerto.unity
+    guid: a385092e2b85c7f4bac0fd90a54c02c6
+  - enabled: 1
+    path: Assets/Scenes/Manejo de residuos/selection residuos.unity
+    guid: c9f76e18c8232c84e9dc11b56c02c676
+  - enabled: 1
+    path: Assets/Scenes/Manejo de residuos/FinalScreen residuos.unity
+    guid: 76a1a8a4ee844a0469e0d026c97ce37e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

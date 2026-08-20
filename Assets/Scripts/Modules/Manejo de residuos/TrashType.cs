@@ -2,12 +2,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TrashType : MonoBehaviour
-{
+{ 
+
     public enum TrashTypes
     {
         organico,
         aprovechable,
-        peligroso
+        peligroso,
+        ordinario,
+        sanitario   
     }
     public TrashTypes tipoCorrecto;
     private void OnTriggerEnter2D(Collider2D other)
@@ -23,23 +26,12 @@ public class TrashType : MonoBehaviour
             {
 
             if (bin.tipoCaneca == tipoCorrecto)
-
             {
-
-            Debug.Log("¡Correcto!");
-
-            Destroy(gameObject);
-
+                TrashInspectionManager.Instance.RegisterCorrectTrash(this);
             }
-
             else
-    
             {
-    
-            Debug.Log("No correcto amiguirs");
-    
-            Destroy(gameObject);
-    
+                TrashInspectionManager.Instance.RegisterWrongTrash(this);
             }
             TrashSpawner.Instance.TrashDestroyed();
             
