@@ -84,10 +84,10 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.781832, g: 0.90588236, b: 0.23529409, a: 1}
+  m_Sprite: {fileID: 2664257626211673315, guid: 375e76c1535af374f9a4f4706f6adf17, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -108,11 +108,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3231d3b5833f3b4b80e44b54a9b0d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashLauncher
-  lineRenderer: {fileID: 8333235081463479796}
-  trayectoriaPoints: 30
-  timeStep: 0.1
   maxDragDistance: 3
   launchForce: 10
+  lineRenderer: {fileID: 8333235081463479796}
+  trajectoryPoints: 30
+  timeStep: 0.1
 --- !u!50 &9101887957265438661
 Rigidbody2D:
   serializedVersion: 5

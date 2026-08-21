@@ -108,6 +108,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -120,7 +133,7 @@ TextureImporter:
         width: 518
         height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -142,7 +155,7 @@ TextureImporter:
         width: 406
         height: 407
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -159,12 +172,12 @@ TextureImporter:
       name: ChatGPT Image 21 ago 2026, 01_52_35 a.m._2
       rect:
         serializedVersion: 2
-        x: 1038
-        y: 582
-        width: 461
-        height: 428
+        x: 1039
+        y: 622
+        width: 404
+        height: 387
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -186,7 +199,7 @@ TextureImporter:
         width: 380
         height: 594
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -208,7 +221,7 @@ TextureImporter:
         width: 378
         height: 580
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -221,11 +234,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ChatGPT Image 21 ago 2026, 01_52_35 a.m._5
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 597
+        width: 404
+        height: 427
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2605f56ef244cc4f8ec801b354cc918
+      internalID: -552462163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e8ba70090ab5b2549b63282d2b58b4f3
     internalID: 0
     vertices: []
     indices: 
@@ -240,6 +275,7 @@ TextureImporter:
       ChatGPT Image 21 ago 2026, 01_52_35 a.m._2: -1754466928462992095
       ChatGPT Image 21 ago 2026, 01_52_35 a.m._3: -6180423942008276428
       ChatGPT Image 21 ago 2026, 01_52_35 a.m._4: 1974396763925739291
+      ChatGPT Image 21 ago 2026, 01_52_35 a.m._5: -552462163
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
