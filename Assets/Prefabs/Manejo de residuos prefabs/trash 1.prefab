@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8333235081463479796}
   m_Layer: 0
   m_Name: trash 1
-  m_TagString: Untagged
+  m_TagString: Basura
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3231d3b5833f3b4b80e44b54a9b0d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashLauncher
-  maxDragDistance: 3
-  launchForce: 10
+  maxDragDistance: 1.5
+  launchForce: 15
   lineRenderer: {fileID: 8333235081463479796}
   trajectoryPoints: 30
   timeStep: 0.1

@@ -10,7 +10,8 @@ public class TrashSpawner : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
 
     private GameObject currentTrash;
-    
+
+    public GameObject CurrentTrash { get => currentTrash; set => currentTrash = value; }
 
     private void Awake()
     {
@@ -30,16 +31,16 @@ public class TrashSpawner : MonoBehaviour
             TrashInspectionManager.Instance.FinishInspection();
             return;
         }
-        if (currentTrash != null)
+        if (CurrentTrash != null)
             return;
         int randomIndex = Random.Range(0, trashPrefabs.Length);
-        currentTrash = Instantiate(trashPrefabs[randomIndex], spawnPoint.position, Quaternion.identity);
+        CurrentTrash = Instantiate(trashPrefabs[randomIndex], spawnPoint.position, Quaternion.identity);
         generatedTrash++;
     }
     public void TrashDestroyed()
     {
-        Destroy(currentTrash); // ✅ destruye la basura, no el spawner
-        currentTrash = null;
+        Destroy(CurrentTrash); // ✅ destruye la basura, no el spawner
+        CurrentTrash = null;
         spawnTrash();
     }
 

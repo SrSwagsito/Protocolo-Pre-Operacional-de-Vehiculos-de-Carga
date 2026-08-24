@@ -258,8 +258,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -182, y: -23.5919}
-  m_SizeDelta: {x: 331.9213, y: -98.1931}
+  m_AnchoredPosition: {x: -211.4803, y: -9.615784}
+  m_SizeDelta: {x: 487.4009, y: -139.6391}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &525125024
 MonoBehaviour:
@@ -738,10 +738,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1881995899}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18, y: 117}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 5, y: 130}
+  m_SizeDelta: {x: -1094.1547, y: -188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1831175379
 MonoBehaviour:
@@ -880,8 +880,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 173, y: -23.59198}
-  m_SizeDelta: {x: 331.9213, y: -98.193}
+  m_AnchoredPosition: {x: 218, y: -9.6158}
+  m_SizeDelta: {x: 493.375, y: -139.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1881995900
 MonoBehaviour:
@@ -1023,10 +1023,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 525125023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.555199, y: 117}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -21, y: 17.000015}
+  m_SizeDelta: {x: -1093.9998, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2073746206
 MonoBehaviour:
@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0.0000000063120495, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

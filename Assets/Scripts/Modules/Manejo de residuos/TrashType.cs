@@ -19,11 +19,10 @@ public class TrashType : MonoBehaviour
 
         BinType bin = other.GetComponent<BinType>();
 
- 
 
-            if (bin != null)
-
-            {
+        if (bin != null)
+        {
+            bin.CambiarSpriteTemporal();
 
             if (bin.tipoCaneca == tipoCorrecto)
             {
@@ -33,12 +32,10 @@ public class TrashType : MonoBehaviour
             {
                 TrashInspectionManager.Instance.RegisterWrongTrash(this);
             }
-            TrashSpawner.Instance.TrashDestroyed();
-            
-          
 
+            TrashSpawner.Instance.TrashDestroyed();
         }
 
-}
+    }
  
 }
