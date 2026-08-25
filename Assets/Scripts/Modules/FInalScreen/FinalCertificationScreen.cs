@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Pantalla final de certificación que muestra:
@@ -319,13 +320,13 @@ public class FinalCertificationScreen : MonoBehaviour
         Debug.Log("Entrenamiento completado. Saliendo...");
 
         // Ejemplo: Cargar escena de menú principal
-        // SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Initial Menu game");
 
         // O cerrar la aplicación
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-        Application.Quit();
+        
 #endif
     }
 

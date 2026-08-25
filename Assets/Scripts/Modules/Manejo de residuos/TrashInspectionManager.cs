@@ -14,6 +14,7 @@ public class TrashInspectionManager : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private TutorialPanel tutorialPopup;
     [SerializeField] private InstructionsUI instructionsUI;
+    [SerializeField] private ProgressCounterTrash progressCounter; // NUEVO - Opcional
 
     [Header("Settings")]
     [SerializeField] private int maxLives = 3;
@@ -25,11 +26,12 @@ public class TrashInspectionManager : MonoBehaviour
 
     private List<TrashType> correctTrash = new List<TrashType>();
     private List<TrashType> wrongTrash = new List<TrashType>();
-    private int totalDamageParts;
+    private int totalDamageParts =20;
     private string resultMessage;
     private bool moduleApproved;
     private bool tutorialShown = false;
     private bool inspectionEnded = false;
+   [SerializeField] private bool ismodule2=false;
 
     private void Awake()
     {
@@ -55,6 +57,7 @@ public class TrashInspectionManager : MonoBehaviour
 
     private void Start()
     {
+
         lives = maxLives;
         score = 0;
 
@@ -79,6 +82,7 @@ public class TrashInspectionManager : MonoBehaviour
 
     private void StartInspection()
     {
+
         if (instructionsUI != null)
         {
             instructionsUI.ShowInstruction("Inspecciona el vehículo y reporta los daños que encuentres.");
@@ -90,6 +94,10 @@ public class TrashInspectionManager : MonoBehaviour
     public void SetTotalDamage(int value)
     {
         totalDamageParts = value;
+
+        Debug.Log("Total residuos = " + totalDamageParts);
+
+        UpdateProgressUI();
     }
 
     // Llamado cuando la basura cae en la caneca correcta
@@ -100,8 +108,9 @@ public class TrashInspectionManager : MonoBehaviour
         if (!correctTrash.Contains(trash))
         {
             correctTrash.Add(trash);
-
+            UpdateProgressUI();
             score += pointsPerCorrect;
+            
 
             AudioManager.Instance.Play("UI simple button");
 
@@ -204,9 +213,12 @@ public class TrashInspectionManager : MonoBehaviour
 
     private void SendResult()
     {
+        
+        
         ModuleResult result = new ModuleResult
         {
-            moduleName = "Inspección Externa",
+         
+            moduleName = ismodule2 ?"Clasificación de residuos aeropuerto":"Clasificación de residuoes",
             approved = moduleApproved,
             score = score,
             missedDamages = totalDamageParts - wrongTrash.Count,
@@ -214,5 +226,17 @@ public class TrashInspectionManager : MonoBehaviour
         };
 
         GameManager.Instance.RegisterModuleResult(result);
+    }
+    private void UpdateProgressUI()
+    {
+        Debug.Log($"Progreso: {correctTrash.Count}/{totalDamageParts}");
+
+        if (progressCounter != null)
+        {
+            progressCounter.UpdateProgress(
+                correctTrash.Count,
+                totalDamageParts
+            );
+        }
     }
 }

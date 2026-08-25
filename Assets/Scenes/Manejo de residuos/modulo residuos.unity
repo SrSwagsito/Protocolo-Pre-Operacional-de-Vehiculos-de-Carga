@@ -1667,7 +1667,7 @@ GameObject:
   - component: {fileID: 474097510}
   - component: {fileID: 474097513}
   - component: {fileID: 474097512}
-  - component: {fileID: 474097511}
+  - component: {fileID: 474097514}
   m_Layer: 5
   m_Name: ProgressText
   m_TagString: Untagged
@@ -1694,20 +1694,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 556.08203, y: 50}
   m_Pivot: {x: 1, y: 1}
---- !u!114 &474097511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474097509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a0ffda52d2dd3418463a8b59ba8cc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ProgressCounter
-  progressText: {fileID: 474097512}
-  progressFormat: 'residuos clasificados: {0}/{20}'
 --- !u!114 &474097512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1794,7 +1780,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 16.24646, y: 0, z: 0, w: -28.431007}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1808,6 +1794,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474097509}
   m_CullTransparentMesh: 1
+--- !u!114 &474097514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474097509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a347cafb8b5965c40a2ab3ece6911171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProgressCounterTrash
+  progressText: {fileID: 474097512}
 --- !u!1 &571337701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,9 +1853,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrashInspectionManager
   tutorialPopup: {fileID: 136004503}
   instructionsUI: {fileID: 136004504}
+  progressCounter: {fileID: 474097514}
   maxLives: 3
   pointsPerCorrect: 10
   approvalThreshold: 70
+  ismodule2: 0
 --- !u!1 &597268644
 GameObject:
   m_ObjectHideFlags: 0
@@ -6038,11 +6039,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebce1580a009dca44b1d88982ee64859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashSpawner
-  totalTrash: 15
+  totalTrash: 20
   trashPrefabs:
   - {fileID: 1364939194545006474, guid: 05ed53652cd72a0438af123ffdb6484a, type: 3}
   - {fileID: 8772591614451789865, guid: b4427542e1740454d95ff83f7f273cba, type: 3}
   - {fileID: 8698237285750030790, guid: ae03c019b1a1d5446802e22123932033, type: 3}
+  - {fileID: 8698237285750030790, guid: 457c5ad6d22f14f448a124af0eb4ede5, type: 3}
+  - {fileID: 8698237285750030790, guid: dff2c571a8542ee4781d0ea56115bdba, type: 3}
+  - {fileID: 8698237285750030790, guid: f663ee1a1831bdb41ae6381f9ff1ffa6, type: 3}
+  - {fileID: 8698237285750030790, guid: 36db10a36ece26b408417a2ecd758eb0, type: 3}
+  - {fileID: 8698237285750030790, guid: d1df5130eb35c98478f1e6c5f5c5997b, type: 3}
+  - {fileID: 8698237285750030790, guid: 95b12892f67e9244baae805aa55ef324, type: 3}
+  - {fileID: 8698237285750030790, guid: 99628b1570b57b44f97f57bcbf0a6f0c, type: 3}
+  - {fileID: 8698237285750030790, guid: f46915c85f3870f48aa02c39cae74ebd, type: 3}
+  - {fileID: 8698237285750030790, guid: 3b1ba27098694424c863af43aeb2c44c, type: 3}
+  - {fileID: 8698237285750030790, guid: 1564b9e1304711b43b0780326ea2396e, type: 3}
+  - {fileID: 8698237285750030790, guid: 0a0bd8830a94b8d4bb65d2c8c2a38611, type: 3}
+  - {fileID: 8698237285750030790, guid: 690879897869f624ab8939e47d51ee59, type: 3}
+  - {fileID: 8698237285750030790, guid: 0d3826afd348a3e40b2c9a5c06dcc8ec, type: 3}
+  - {fileID: 8698237285750030790, guid: eb32be9f9000b8a4ab2705dc27f038e0, type: 3}
+  - {fileID: 8698237285750030790, guid: c52048257a96ba545ba20b6c34a0c1f6, type: 3}
+  - {fileID: 8698237285750030790, guid: 62cec65b8d8f31b4784a136dad637f17, type: 3}
+  - {fileID: 8698237285750030790, guid: 9770b93079153fd4393070911ef8d1f6, type: 3}
+  - {fileID: 8698237285750030790, guid: b7ccc6d96818563478959d3279a9791f, type: 3}
+  - {fileID: 8698237285750030790, guid: 7a0aaa3a3e437734e8b42e80a57bdc76, type: 3}
+  - {fileID: 8698237285750030790, guid: faa6b6c2f7504be4cbc8a3604a9f8474, type: 3}
+  - {fileID: 1364939194545006474, guid: 93f98b5875701f04f969177389b996db, type: 3}
+  - {fileID: 1364939194545006474, guid: 521a40c48e325f54186268c85c5f3448, type: 3}
+  - {fileID: 1364939194545006474, guid: a0e3a4844aeb714408ce2efe1b6c4c7d, type: 3}
+  - {fileID: 1364939194545006474, guid: acadce9024837b04787640976786b3d8, type: 3}
+  - {fileID: 1364939194545006474, guid: a7bc656dfffafba4baab082083799cd2, type: 3}
+  - {fileID: 1364939194545006474, guid: d45ac79a37218ea4c94fdef6a3c416b8, type: 3}
+  - {fileID: 1364939194545006474, guid: 35d926643cff26a43810e91124676d83, type: 3}
+  - {fileID: 1364939194545006474, guid: 4ca19ec535cfe6f4cbc89242823f36a5, type: 3}
+  - {fileID: 1364939194545006474, guid: 992dcba36a01b3a4aa92cc5c5688b85c, type: 3}
+  - {fileID: 1364939194545006474, guid: aedc1163640ccc74396b737ff58081d8, type: 3}
+  - {fileID: 1364939194545006474, guid: 266219bfc9c1f554499925c901bdebf6, type: 3}
+  - {fileID: 1364939194545006474, guid: 097cef6507d3b114f9a7621b3e05a497, type: 3}
+  - {fileID: 1364939194545006474, guid: cb5fe4cc048f0eb4f8f2e66a1756f8df, type: 3}
+  - {fileID: 1364939194545006474, guid: 3085a9955c890874bad9248ef881cc5e, type: 3}
+  - {fileID: 1364939194545006474, guid: 97cd37710b1efef4dbf6cd2f5abefc29, type: 3}
+  - {fileID: 1364939194545006474, guid: dc3a1453068bd6649b68a55bcdb347fb, type: 3}
+  - {fileID: 1364939194545006474, guid: eb90a9931ced5a148b6b4b18bacff292, type: 3}
+  - {fileID: 1364939194545006474, guid: c28d8ea96ae397c448334dde944ab99c, type: 3}
+  - {fileID: 1364939194545006474, guid: 30dee608e5de08f4ea460f00282133c5, type: 3}
   spawnPoint: {fileID: 1633947386}
 --- !u!1 &1727426139
 GameObject:

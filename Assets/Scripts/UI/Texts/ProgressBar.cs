@@ -7,6 +7,7 @@ public class ProgressCounter : MonoBehaviour
     [SerializeField] private TMP_Text progressText;
     [SerializeField] private string progressFormat = "Líquidos verificados: {0}/{1}";
 
+
     public void UpdateProgress(int completed, int total)
     {
         if (progressText != null)
