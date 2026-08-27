@@ -320,14 +320,14 @@ public class FinalCertificationScreen : MonoBehaviour
         Debug.Log("Entrenamiento completado. Saliendo...");
 
         // Ejemplo: Cargar escena de menú principal
-        SceneManager.LoadScene("Initial Menu game");
+        SceneManager.LoadScene("Initial Splash image");
 
         // O cerrar la aplicación
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        
-#endif
+        //#if UNITY_EDITOR
+        //        UnityEditor.EditorApplication.isPlaying = false;
+        //#else
+
+        //#endif
     }
 
     /// <summary>

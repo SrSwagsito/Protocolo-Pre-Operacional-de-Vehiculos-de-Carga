@@ -39,7 +39,13 @@ public class GameManager : MonoBehaviour
 
     public void RegisterModuleResult(ModuleResult result)
     {
-        results.Add(result);
+        int index = results.FindIndex(r => r.moduleName == result.moduleName);
+        Debug.Log("Resultados guardados: " + results.Count);
+        if (index >= 0)
+            results[index] = result;
+        else
+            results.Add(result);
+
         OnModuleFinished?.Invoke(result);
     }
 
@@ -57,6 +63,7 @@ public class GameManager : MonoBehaviour
 
     public void StartEvaluation(string levelName)
     {
+        ClearAllResults();
         ChangeState(GameState.IntroductionScene);
 
         StartCoroutine(SceneLoader.Instance.LoadSceneCoroutine(levelName));

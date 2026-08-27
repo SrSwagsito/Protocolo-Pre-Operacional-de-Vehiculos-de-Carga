@@ -10,7 +10,8 @@ public class TrashType : MonoBehaviour
         aprovechable,
         peligroso,
         ordinario,
-        sanitario   
+        sanitario,
+        NoAprovechable
     }
     public TrashTypes tipoCorrecto;
     private void OnTriggerEnter2D(Collider2D other)
