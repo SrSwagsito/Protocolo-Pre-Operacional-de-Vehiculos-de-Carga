@@ -1,8 +1,10 @@
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TrashType : MonoBehaviour
-{ 
+{
+    [SerializeField] private string trashName;
+    [SerializeField] private TextMeshPro nombreTexto;
 
     public enum TrashTypes
     {
@@ -13,13 +15,20 @@ public class TrashType : MonoBehaviour
         sanitario,
         NoAprovechable
     }
+
     public TrashTypes tipoCorrecto;
-    private void OnTriggerEnter2D(Collider2D other)
 
+    private void Start()
     {
+        if (nombreTexto != null)
+        {
+            nombreTexto.text = trashName;
+        }
+    }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         BinType bin = other.GetComponent<BinType>();
-
 
         if (bin != null)
         {
@@ -36,7 +45,5 @@ public class TrashType : MonoBehaviour
 
             TrashSpawner.Instance.TrashDestroyed();
         }
-
     }
- 
 }

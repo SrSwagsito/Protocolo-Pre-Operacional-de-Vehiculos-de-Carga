@@ -1245,8 +1245,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1311607173}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+      - m_Target: {fileID: 1492220992}
+        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -5491,8 +5491,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1311607173}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+      - m_Target: {fileID: 1492220992}
+        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
