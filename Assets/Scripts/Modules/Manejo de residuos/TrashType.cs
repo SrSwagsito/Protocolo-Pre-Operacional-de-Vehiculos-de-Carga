@@ -9,7 +9,9 @@ public class TrashType : MonoBehaviour
     public enum TrashTypes
     {
         organico,
-        aprovechable,
+        aprovechableGris,
+        aprovechableBlanco,
+        aprovechableAzul,
         peligroso,
         ordinario,
         sanitario,
