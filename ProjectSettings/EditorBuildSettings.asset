@@ -74,6 +74,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Manejo de residuos/FinalScreen residuos.unity
     guid: 76a1a8a4ee844a0469e0d026c97ce37e
+  - enabled: 1
+    path: Assets/Scenes/Manejo de residuos/modulo recoleccion.unity
+    guid: 161d0502d32be364da843a948e368164
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 6ed7e93e8bced9242a4200d4b4965cef, type: 3}
   m_UseUCBPForAssetBundles: 0
