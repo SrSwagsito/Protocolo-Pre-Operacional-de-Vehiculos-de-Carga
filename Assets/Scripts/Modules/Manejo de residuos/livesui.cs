@@ -12,15 +12,15 @@ public class livesui : MonoBehaviour
 
     private void OnEnable()
     {
-        TrashInspectionManager.OnLivesChanged += UpdateLives;
+        ManagerRecolection.OnLivesChanged += UpdateLives;
     }
 
     private void OnDisable()
     {
-        TrashInspectionManager.OnLivesChanged -= UpdateLives;
+        ManagerRecolection.OnLivesChanged -= UpdateLives;
     }
 
-    private void UpdateLives(int currentLives)
+    public void UpdateLives(int currentLives)
     {
         for (int i = 0; i < lifeIcons.Length; i++)
         {

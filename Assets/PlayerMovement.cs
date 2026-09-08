@@ -3,14 +3,16 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private PlayerControl controls;
     private PlayerInput playerInput;
     private InputAction moveAction;
 
     private Vector2 movement;
+    private Vector2 buttonMovement;
+
     private Rigidbody2D rb;
 
     public float speed = 5f;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -18,11 +20,14 @@ public class PlayerMovement : MonoBehaviour
         moveAction = playerInput.actions["Move"];
     }
 
-    // Update is called once per frame
     void Update()
     {
-        movement = moveAction.ReadValue<Vector2>();
+        Vector2 inputMovement = moveAction.ReadValue<Vector2>();
 
+        // Si hay input físico úsalo, si no usa botones
+        movement = inputMovement != Vector2.zero
+            ? inputMovement
+            : buttonMovement;
     }
 
     private void FixedUpdate()
@@ -32,12 +37,16 @@ public class PlayerMovement : MonoBehaviour
 
     public void MoveRight()
     {
-        movement = Vector2.right;
+        buttonMovement = Vector2.right;
+    }
+
+    public void MoveLeft()
+    {
+        buttonMovement = Vector2.left;
     }
 
     public void StopMove()
     {
-        movement = Vector2.zero;
+        buttonMovement = Vector2.zero;
     }
-
 }

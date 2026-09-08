@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa283e8c993ef7a4798f65b2abdf5d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashType
-  trashName: rest. Banana
+  trashName: Envase de yogurt
   nombreTexto: {fileID: 773158215022763031}
   tipoCorrecto: 2
 --- !u!70 &4602747925868818370
@@ -372,7 +372,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.08729571, y: -0.09}
-  m_Size: {x: 0.7050825, y: 1.1591656}
+  m_Size: {x: 1.66, y: 2.68}
   m_Direction: 0
 --- !u!120 &241369119197317345
 LineRenderer:
