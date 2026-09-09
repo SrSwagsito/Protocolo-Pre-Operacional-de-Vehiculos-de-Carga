@@ -24,16 +24,15 @@ public class ObjectDrop : MonoBehaviour
 
     private IEnumerator WaitForTutorial()
     {
-        // Esperar mientras el TutorialPop esté activo
         while (tutorialPop != null && tutorialPop.activeInHierarchy)
         {
+            Debug.Log("Tutorial activo");
             yield return null;
         }
 
-        // El tutorial terminó
-        tutorialFinished = true;
+        Debug.Log("Tutorial terminado, inicia spawn");
 
-        // Comenzar a generar objetos
+        tutorialFinished = true;
         StartCoroutine(SpawnRain());
     }
 
@@ -43,7 +42,7 @@ public class ObjectDrop : MonoBehaviour
         {
             if (currentObjects < maxObjects)
             {
-                float randomX = Random.Range(-19f, 19f);
+                float randomX = Random.Range(-5.22f, 10.21f);
 
                 // Seleccionar un prefab aleatorio
                 int randomIndex = Random.Range(0, objectPrefabs.Length);
