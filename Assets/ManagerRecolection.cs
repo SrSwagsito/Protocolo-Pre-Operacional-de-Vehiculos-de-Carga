@@ -41,7 +41,7 @@ public class ManagerRecolection : MonoBehaviour
     [SerializeField] private int maxLives = 3;
     [SerializeField] private int pointsPerCorrect = 10;
     [SerializeField] private int approvalThreshold = 70;
-
+    [SerializeField] private CameraFollow cameraFollow;
 
     // =========================================================
     // SISTEMA DE RECOLECCIÓN
@@ -572,7 +572,9 @@ public class ManagerRecolection : MonoBehaviour
                 player.position.x,
                 2.855f,
                 player.position.z
+
             );
+            cameraFollow.SetLevelY(5.84f);
         }
 
         if (playerTwo != null)
@@ -606,6 +608,7 @@ public class ManagerRecolection : MonoBehaviour
                 15.377f,
                 player.position.z
             );
+            cameraFollow.SetLevelY(18.6f);
         }
 
         if (playerTwo != null)
