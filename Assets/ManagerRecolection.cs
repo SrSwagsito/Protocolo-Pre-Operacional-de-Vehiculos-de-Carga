@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
 
 public class ManagerRecolection : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class ManagerRecolection : MonoBehaviour
     [SerializeField] private InstructionsUI instructionsUI;
     [SerializeField] private ProgressCounterTrash progressCounter;
 
+    [SerializeField] private GameObject panelText;
+    [SerializeField] private TextMeshProUGUI textLevelPass;
+    [SerializeField] private string[] mensajes;
     public TextMeshProUGUI scoreText;
 
 
@@ -92,6 +96,7 @@ public class ManagerRecolection : MonoBehaviour
     private bool level2Unlocked;
     private bool level3Unlocked;
     private bool moduleCompleted;
+    private float contador = 5f;
 
     private void CheckProgress()
     {
@@ -211,7 +216,7 @@ public class ManagerRecolection : MonoBehaviour
         if (instructionsUI != null)
         {
             instructionsUI.ShowInstruction(
-                "Inspecciona el vehículo y reporta los daños que encuentres."
+                "Clasifica adecuadamente los residuos y usa las diferentes canecas para este."
             );
         }
 
@@ -428,7 +433,7 @@ public class ManagerRecolection : MonoBehaviour
             }
 
             resultMessage =
-                "El vehículo es demasiado peligroso para estar operativo. Te quedaste sin vidas.";
+                "No clasificaste correctamente los residuos. Te quedaste sin vidas.";
 
             OnGameOver?.Invoke();
         }
@@ -470,7 +475,7 @@ public class ManagerRecolection : MonoBehaviour
             }
 
             resultMessage =
-                "El vehículo es demasiado peligroso para estar operativo. No has realizado la inspección correctamente.";
+                "No has recogido suficientes residuos para poder aprobar el modulo.";
         }
 
 
@@ -568,6 +573,7 @@ public class ManagerRecolection : MonoBehaviour
     {
         if (player != null)
         {
+            ActivarPanelText(0);
             player.position = new Vector3(
                 player.position.x,
                 2.855f,
@@ -603,6 +609,7 @@ public class ManagerRecolection : MonoBehaviour
     {
         if (player != null)
         {
+            ActivarPanelText(1);
             player.position = new Vector3(
                 player.position.x,
                 15.377f,
@@ -636,6 +643,26 @@ public class ManagerRecolection : MonoBehaviour
     public void NextModule()
     {
         SceneManager.LoadScene("parttrhee");
+    }
+
+    public void ActivarPanelText(int nivel)
+    {
+        panelText.SetActive(true);
+        textLevelPass.text = mensajes[nivel - 0];
+        Time.timeScale = 0f;
+
+        StartCoroutine(DesactivarPanel());
+    }
+    IEnumerator DesactivarPanel()
+    {
+        Debug.Log("Empezó corrutina");
+
+        yield return new WaitForSecondsRealtime(5f);
+
+        Debug.Log("Pasaron 5 segundos");
+
+        panelText.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
 

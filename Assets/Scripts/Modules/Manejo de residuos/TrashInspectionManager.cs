@@ -24,6 +24,7 @@ public class TrashInspectionManager : MonoBehaviour
     public int score { get; private set; } = 0;
     public int lives { get; private set; }
 
+
     private List<TrashType> correctTrash = new List<TrashType>();
     private List<TrashType> wrongTrash = new List<TrashType>();
     private int totalDamageParts =20;
@@ -32,6 +33,7 @@ public class TrashInspectionManager : MonoBehaviour
     private bool tutorialShown = false;
     private bool inspectionEnded = false;
    [SerializeField] private bool ismodule2=false;
+
 
     private void Awake()
     {

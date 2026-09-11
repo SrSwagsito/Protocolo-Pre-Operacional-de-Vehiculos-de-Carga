@@ -9,6 +9,9 @@ TagManager:
   - Basura
   - aprovechableAzul
   - trash
+  - organico
+  - aprovechableGris
+  - ordinario
   layers:
   - Default
   - TransparentFX

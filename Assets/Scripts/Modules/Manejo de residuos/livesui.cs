@@ -13,11 +13,13 @@ public class livesui : MonoBehaviour
     private void OnEnable()
     {
         ManagerRecolection.OnLivesChanged += UpdateLives;
+        TrashInspectionManager.OnLivesChanged += UpdateLives;
     }
 
     private void OnDisable()
     {
         ManagerRecolection.OnLivesChanged -= UpdateLives;
+        TrashInspectionManager.OnLivesChanged-= UpdateLives;
     }
 
     public void UpdateLives(int currentLives)
