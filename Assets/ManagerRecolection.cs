@@ -117,15 +117,6 @@ public class ManagerRecolection : MonoBehaviour
 
             Level3();
         }
-
-        if (!moduleCompleted && Score >= 40)
-        {
-            moduleCompleted = true;
-
-            Debug.Log("Módulo completado");
-
-            NextModule();
-        }
     }
 
     // =========================================================
@@ -576,7 +567,7 @@ public class ManagerRecolection : MonoBehaviour
             ActivarPanelText(0);
             player.position = new Vector3(
                 player.position.x,
-                2.855f,
+                3.5f,
                 player.position.z
 
             );
@@ -612,7 +603,7 @@ public class ManagerRecolection : MonoBehaviour
             ActivarPanelText(1);
             player.position = new Vector3(
                 player.position.x,
-                15.377f,
+                16f,
                 player.position.z
             );
             cameraFollow.SetLevelY(18.6f);
@@ -642,7 +633,7 @@ public class ManagerRecolection : MonoBehaviour
 
     public void NextModule()
     {
-        SceneManager.LoadScene("parttrhee");
+        SceneManager.LoadScene("selection residuos");
     }
 
     public void ActivarPanelText(int nivel)

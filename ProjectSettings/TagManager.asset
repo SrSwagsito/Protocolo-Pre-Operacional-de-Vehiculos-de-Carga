@@ -12,6 +12,7 @@ TagManager:
   - organico
   - aprovechableGris
   - ordinario
+  - limit
   layers:
   - Default
   - TransparentFX

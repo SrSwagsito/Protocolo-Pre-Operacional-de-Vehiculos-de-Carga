@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa283e8c993ef7a4798f65b2abdf5d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashType
-  trashName: rest. Banana
+  trashName: "Tapa pl\xE1stica"
   nombreTexto: {fileID: 773158215022763031}
   tipoCorrecto: 2
 --- !u!70 &4602747925868818370

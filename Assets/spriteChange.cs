@@ -2,42 +2,61 @@ using UnityEngine;
 
 public class SpriteChange : MonoBehaviour
 {
+    [Header("Sprites de las canecas")]
+    public Sprite spriteOrganico;
+    public Sprite spriteNoAprovechable;
+    public Sprite spritePeligroso;
+    public Sprite spriteAprovechableAzul;
+    public Sprite spriteAprovechableGris;
+    public Sprite spriteOrdinario;
+
     public string currentType;
+
     public void SetColorSprite(GameObject target)
     {
-        ColorUtility.TryParseHtmlString("#F5BF7E", out Color color);
-        target.GetComponent<SpriteRenderer>().color = color;
-        target.tag = "organico";
+        SpriteRenderer sr = target.GetComponent<SpriteRenderer>();
 
+        if (sr != null)
+        {
+            sr.sprite = spriteOrganico;
+            target.tag = "organico";
+            currentType = "organico";
+        }
     }
-    public void SetColorSpriteBlack(GameObject target)
-    {
-        target.GetComponent<SpriteRenderer>().color = Color.black;
-        target.tag = "noAprovechable";
 
-    }
-    public void SetColorSpriteRed(GameObject target)
-    {
-        target.GetComponent<SpriteRenderer>().color = Color.red;
-        target.tag = "peligroso";
-
-    }
     public void SetColorSpriteBlue(GameObject target)
     {
-        target.GetComponent<SpriteRenderer>().color = Color.blue;
-        target.tag = "aprovechableAzul";
+        SpriteRenderer sr = target.GetComponent<SpriteRenderer>();
 
+        if (sr != null)
+        {
+            sr.sprite = spriteAprovechableAzul;
+            target.tag = "aprovechableAzul";
+            currentType = "aprovechableAzul";
+        }
     }
+
     public void SetColorSpriteGrey(GameObject target)
     {
-        target.GetComponent<SpriteRenderer>().color = Color.grey;
-        target.tag = "aprovechableGris";
+        SpriteRenderer sr = target.GetComponent<SpriteRenderer>();
 
+        if (sr != null)
+        {
+            sr.sprite = spriteAprovechableGris;
+            target.tag = "aprovechableGris";
+            currentType = "aprovechableGris";
+        }
     }
+
     public void SetColorSpriteGreen(GameObject target)
     {
-        target.GetComponent<SpriteRenderer>().color = Color.green;
-        target.tag = "ordinario";
+        SpriteRenderer sr = target.GetComponent<SpriteRenderer>();
 
+        if (sr != null)
+        {
+            sr.sprite = spriteOrdinario;
+            target.tag = "ordinario";
+            currentType = "ordinario";
+        }
     }
 }

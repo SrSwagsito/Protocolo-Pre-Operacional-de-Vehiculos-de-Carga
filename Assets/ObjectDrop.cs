@@ -30,14 +30,14 @@ public class ObjectDrop : MonoBehaviour
 
     private IEnumerator WaitForTutorial()
     {
+        yield return null;
+
         while (tutorialPop != null && tutorialPop.activeInHierarchy)
         {
             yield return null;
         }
 
         tutorialFinished = true;
-
-        Debug.Log("Tutorial terminado. Iniciando spawn.");
 
         StartCoroutine(SpawnRain());
     }
