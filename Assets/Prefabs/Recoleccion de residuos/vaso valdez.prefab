@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 2714344630506230087}
   m_Layer: 0
   m_Name: vaso valdez
-  m_TagString: aprovechableAzul
+  m_TagString: aprovechableGris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
