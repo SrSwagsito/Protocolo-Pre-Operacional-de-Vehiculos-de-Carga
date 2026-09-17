@@ -220,7 +220,7 @@ public class TrashInspectionManager : MonoBehaviour
         ModuleResult result = new ModuleResult
         {
          
-            moduleName = ismodule2 ?"Clasificación de residuos aeropuerto":"Clasificación de residuoes",
+            moduleName = ismodule2 ?"Clasificación de residuos aeropuerto":"Clasificación de residuos",
             approved = moduleApproved,
             score = score,
             missedDamages = totalDamageParts - wrongTrash.Count,

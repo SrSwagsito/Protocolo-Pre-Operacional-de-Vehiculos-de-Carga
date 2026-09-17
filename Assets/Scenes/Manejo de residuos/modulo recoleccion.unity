@@ -7008,7 +7008,7 @@ Transform:
   m_GameObject: {fileID: 1723046970}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 24.61, z: 0}
+  m_LocalPosition: {x: 1.84, y: -0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7042,8 +7042,7 @@ MonoBehaviour:
   - {fileID: 8698237285750030790, guid: 7f075e154e8c33841adbec45270836de, type: 3}
   - {fileID: 8698237285750030790, guid: 37d1eb661be36814f9d9639090ad3cca, type: 3}
   - {fileID: 8698237285750030790, guid: b12ed3168c2c87f4e86941866228fe88, type: 3}
-  spawnY: 24.76
-  spawnRate: 2.5
+  spawnRate: 2.6
   maxObjects: 3
   totalObjectsToSpawn: 20
   tutorialPop: {fileID: 136004501}
@@ -7346,6 +7345,7 @@ MonoBehaviour:
   approvalThreshold: 70
   cameraFollow: {fileID: 759705903}
   player: {fileID: 334800541}
+  dropObject: {fileID: 1723046971}
   playerTwo: {fileID: 0}
   triggers:
   - {fileID: 0}
@@ -7932,7 +7932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3640a2cccade714388b6a33002292f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  sceneName: selection residuos
+  sceneName: FinalScreen residuos
   reloadCurrent: 0
 --- !u!114 &2014186499
 MonoBehaviour:

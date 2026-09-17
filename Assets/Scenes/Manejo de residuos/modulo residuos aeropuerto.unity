@@ -7314,7 +7314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3640a2cccade714388b6a33002292f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  sceneName: FinalScreen residuos
+  sceneName: modulo recoleccion
   reloadCurrent: 0
 --- !u!114 &2014186499
 MonoBehaviour:

@@ -53,6 +53,7 @@ public class ManagerRecolection : MonoBehaviour
 
     [Header("Jugadores")]
     public Transform player;
+    public Transform dropObject;
     public Transform playerTwo;
 
     private Transform[] players;
@@ -503,7 +504,7 @@ public class ManagerRecolection : MonoBehaviour
         {
             moduleName = ismodule2
                 ? "Clasificación de residuos aeropuerto"
-                : "Clasificación de residuos",
+                : "Clasificación de residuos dentro del aeropuerto",
 
             approved = moduleApproved,
 
@@ -573,6 +574,14 @@ public class ManagerRecolection : MonoBehaviour
             );
             cameraFollow.SetLevelY(5.84f);
         }
+        if(dropObject != null)
+        {
+            dropObject.position = new Vector3(
+                dropObject.position.x,
+                10.19f,
+                dropObject.position.z
+                );
+        }
 
         if (playerTwo != null)
         {
@@ -608,7 +617,14 @@ public class ManagerRecolection : MonoBehaviour
             );
             cameraFollow.SetLevelY(18.6f);
         }
-
+        if(dropObject!= null)
+        {
+            dropObject.position = new Vector3(
+                dropObject.position.x,
+                23.29f,
+                dropObject.position.z
+                );
+        }
         if (playerTwo != null)
         {
             playerTwo.position = new Vector3(

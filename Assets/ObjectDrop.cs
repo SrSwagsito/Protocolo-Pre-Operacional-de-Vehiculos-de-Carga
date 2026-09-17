@@ -7,7 +7,6 @@ public class ObjectDrop : MonoBehaviour
     [SerializeField] private GameObject[] objectPrefabs;
 
     [Header("Configuración de spawn")]
-    [SerializeField] private float spawnY = 10f;
     [SerializeField] private float spawnRate = 0.5f;
 
     [Tooltip("Máximo de objetos vivos al mismo tiempo")]
@@ -53,9 +52,16 @@ public class ObjectDrop : MonoBehaviour
 
                 int randomIndex = Random.Range(0, objectPrefabs.Length);
 
+                // Usa la posición Y del objeto ObjectDrop
+                Vector3 spawnPosition = new Vector3(
+                    randomX,
+                    transform.position.y,
+                    transform.position.z
+                );
+
                 Instantiate(
                     objectPrefabs[randomIndex],
-                    new Vector3(randomX, spawnY, 0f),
+                    spawnPosition,
                     Quaternion.identity
                 );
 
