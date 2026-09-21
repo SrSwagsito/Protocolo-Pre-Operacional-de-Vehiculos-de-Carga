@@ -101,7 +101,7 @@ public class ManagerRecolection : MonoBehaviour
 
     private void CheckProgress()
     {
-        if (!level2Unlocked && Score >= 10)
+        if (!level2Unlocked && Score >= 35)
         {
             level2Unlocked = true;
 
@@ -110,7 +110,7 @@ public class ManagerRecolection : MonoBehaviour
             NextLevel();
         }
 
-        if (!level3Unlocked && Score >= 20)
+        if (!level3Unlocked && Score >= 60)
         {
             level3Unlocked = true;
 

@@ -67,7 +67,7 @@ EditorBuildSettings:
     guid: 4a066a0ab6680604e8f77e5fe5dcaac1
   - enabled: 1
     path: Assets/Scenes/Manejo de residuos/modulo residuos aeropuerto.unity
-    guid: a385092e2b85c7f4bac0fd90a54c02c6
+    guid: 8d14884bbbe50724fbaf4f43e3e3eed0
   - enabled: 1
     path: Assets/Scenes/Manejo de residuos/selection residuos.unity
     guid: c9f76e18c8232c84e9dc11b56c02c676

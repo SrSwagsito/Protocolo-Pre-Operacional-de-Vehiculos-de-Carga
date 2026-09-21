@@ -16,21 +16,26 @@ public class trashCount : MonoBehaviour
 
         if (other.gameObject.CompareTag(gameObject.tag))
         {
-            int scoreRandom = Random.Range(1, 10);
+            int scoreRandom = Random.Range(10, 15);
 
             gameManager.AddScore(scoreRandom);
+
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.Play("UI simple button");
+            }
 
             Debug.Log("Residuo correcto. +" + scoreRandom);
 
             Destroy(other.gameObject);
         }
-
-        // =====================================================
-        // RESIDUO INCORRECTO
-        // =====================================================
-
         else
         {
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.Play("Wrong choose check");
+            }
+
             Debug.Log("Residuo incorrecto. Pierde una vida");
 
             gameManager.LoseLife();
