@@ -1333,8 +1333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 23.056911, y: 139.95372}
+  m_SizeDelta: {x: 404.3858, y: 107.2318}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514230293
 MonoBehaviour:
@@ -1383,12 +1383,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -1523,9 +1523,9 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2707,9 +2707,9 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2844,9 +2844,9 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -4122,7 +4122,7 @@ MonoBehaviour:
   board: {fileID: 861557653}
   cardPrefab: {fileID: 433938249}
   pairs:
-  - sprite: {fileID: 5027519416312779477, guid: 57d2701320e41c941b4af1cc2d8f9f05, type: 3}
+  - sprite: {fileID: -4657374010633936310, guid: bd4d475814724724ca161c41b0ebd824, type: 3}
     questions:
     - questionType: 0
       question: "\xBFCu\xE1l es el color estipulado en el PGIRS para desechar los
@@ -4142,15 +4142,270 @@ MonoBehaviour:
       optionD: 
       correctAnswer: 2
       correctTrueFalse: 1
-  - sprite: {fileID: 5027519416312779477, guid: 57d2701320e41c941b4af1cc2d8f9f05, type: 3}
+    - questionType: 1
+      question: "El \xFAnico contenedor disponible en plataforma es el amarillo para
+        residuos FOD"
+      optionA: 
+      optionB: 
+      optionC: 
+      optionD: 
+      correctAnswer: 2
+      correctTrueFalse: 1
+  - sprite: {fileID: -1278522251861335589, guid: bd4d475814724724ca161c41b0ebd824, type: 3}
     questions:
-    - questionType: 0
-      question: "\xBFCu\xE1l es el color estipulado en el PGIRS para desechar los
-        residuos FOD?"
+    - questionType: 1
+      question: "Antes de la recolecci\xF3n deben romperse las estibas"
       optionA: "Caf\xE9"
       optionB: Verde
       optionC: Amarillo
       optionD: Naranja
+      correctAnswer: 2
+      correctTrueFalse: 0
+    - questionType: 0
+      question: "\xBFC\xF3mo es la correcta presentaci\xF3n de las estibas para su
+        recolecci\xF3n? "
+      optionA: Presente las estibas completas y apiladas (En lo posible zunchadas)
+      optionB: Deben romperse y presentarse en bolsa negra
+      optionC: Deben depositarse en las canecas FOD
+      optionD: Deben presentarse en bolsa verde o amarilla
+      correctAnswer: 0
+      correctTrueFalse: 0
+    - questionType: 1
+      question: Las Estibas deben entregarse en bolsas
+      optionA: Presente las estibas completas y apiladas (En lo posible zunchadas)
+      optionB: Deben romperse y presentarse en bolsa negra
+      optionC: Deben depositarse en las canecas FOD
+      optionD: Deben presentarse en bolsa verde o amarilla
+      correctAnswer: 0
+      correctTrueFalse: 0
+  - sprite: {fileID: 465896282693371245, guid: bd4d475814724724ca161c41b0ebd824, type: 3}
+    questions:
+    - questionType: 0
+      question: "\xBFEn qu\xE9 color de bolsa deben depositarse los residuos peligrosos?"
+      optionA: Negro
+      optionB: Gris
+      optionC: Rojo
+      optionD: Azul
+      correctAnswer: 2
+      correctTrueFalse: 0
+    - questionType: 1
+      question: "Los elementos cortopunzantes deben ser embalados en papel y posteriormente
+        depositarlo en una caja para su presentaci\xF3n"
+      optionA: Presente las estibas completas y apiladas (En lo posible zunchadas)
+      optionB: Deben romperse y presentarse en bolsa negra
+      optionC: Deben depositarse en las canecas FOD
+      optionD: Deben presentarse en bolsa verde o amarilla
+      correctAnswer: 0
+      correctTrueFalse: 1
+    - questionType: 0
+      question: "Para la presentaci\xF3n de residuos peligrosos, la etiqueta de rotulaci\xF3n
+        debe incluir los siguientes datos: "
+      optionA: "Fecha, empresa generadora, nombre del respel, estado, embalaje y
+        caracter\xEDsticas de los residuos peligrosos"
+      optionB: Fecha, Tenedor de espacio, nombre del respel, estado y color
+      optionC: Fecha, empresa generadora, nombre de la persona y estado
+      optionD: Empresa, fecha, estado y nombre del respel
+      correctAnswer: 0
+      correctTrueFalse: 0
+  - sprite: {fileID: 27939314, guid: bd4d475814724724ca161c41b0ebd824, type: 3}
+    questions:
+    - questionType: 0
+      question: "\xBFQu\xE9 colores corresponden a los contenedores designados para
+        depositar residuos aprovechables en los puntos ecol\xF3gicos?"
+      optionA: Gris y Negro
+      optionB: Azul y Gris
+      optionC: Naranja y Verde
+      optionD: Blanco y Verde
+      correctAnswer: 0
+      correctTrueFalse: 0
+    - questionType: 0
+      question: "\xBFQu\xE9 materiales deben depositarse en el contenedor gris?"
+      optionA: Madera y Vidrio
+      optionB: "Papel Hig\xEDenico"
+      optionC: "Papel y Cart\xF3n"
+      optionD: Vidrio y Servilletas
+      correctAnswer: 2
+      correctTrueFalse: 0
+    - questionType: 0
+      question: "\xBFQu\xE9 materiales deben depositarse en el contenedor azul?"
+      optionA: "Pl\xE1sticos, latas, vidrio y empaques metalizados"
+      optionB: Papel y Servilletas usadas
+      optionC: "Mugre de barrido y Pl\xE1stico"
+      optionD: Colillas de cigarrillo
+      correctAnswer: 0
+      correctTrueFalse: 0
+  - sprite: {fileID: -49717475, guid: bd4d475814724724ca161c41b0ebd824, type: 3}
+    questions:
+    - questionType: 0
+      question: "\xBFQu\xE9 contenedor se utiliza para los residuos reciclables como
+        pl\xE1sticos, vidrio, papel plastificado, latas e icopor?"
+      optionA: Azul
+      optionB: Verde
+      optionC: Gris
+      optionD: Negro
+      correctAnswer: 0
+      correctTrueFalse: 0
+    - questionType: 0
+      question: "\xBFQu\xE9 colores corresponden a los contenedores designados para
+        depositar residuos aprovechables en los puntos ecol\xF3gicos?"
+      optionA: Gris y Negro
+      optionB: Azul y Gris
+      optionC: Naranja y Verde
+      optionD: Blanco y Verde
+      correctAnswer: 0
+      correctTrueFalse: 0
+    - questionType: 0
+      question: "\xBFQu\xE9 materiales deben depositarse en el contenedor azul?"
+      optionA: "Pl\xE1sticos, latas, vidrio y empaques metalizados"
+      optionB: Papel y Servilletas usadas
+      optionC: "Mugre de barrido y Pl\xE1stico"
+      optionD: Colillas de cigarrillo
+      correctAnswer: 0
+      correctTrueFalse: 0
+  - sprite: {fileID: -60215412, guid: bd4d475814724724ca161c41b0ebd824, type: 3}
+    questions:
+    - questionType: 1
+      question: Las servilletas usadas son residuos ordinarios.
+      optionA: Azul
+      optionB: Verde
+      optionC: Gris
+      optionD: Negro
+      correctAnswer: 0
+      correctTrueFalse: 1
+    - questionType: 0
+      question: "\xBFCu\xE1l de estos es un residuo ordinario?"
+      optionA: "Botella pl\xE1stica"
+      optionB: "Caja de cart\xF3n"
+      optionC: Colilla de cigarrillo
+      optionD: Lata
+      correctAnswer: 2
+      correctTrueFalse: 0
+    - questionType: 0
+      question: "\xBFCu\xE1l es el color asignado para los residuos ordinarios como
+        servilletas y colillas?"
+      optionA: Verde
+      optionB: Azul
+      optionC: Rojo
+      optionD: Negro
+      correctAnswer: 0
+      correctTrueFalse: 0
+  - sprite: {fileID: -121802169, guid: bd4d475814724724ca161c41b0ebd824, type: 3}
+    questions:
+    - questionType: 0
+      question: "\xBFEn qu\xE9 contenedores puedes depositar residuos org\xE1nicos?"
+      optionA: Verde y Beige
+      optionB: Verde y blanco
+      optionC: Beige y Azul
+      optionD: Negro y Rojo
+      correctAnswer: 0
+      correctTrueFalse: 1
+    - questionType: 1
+      question: "Los residuos org\xE1nicos pueden depositarse en los contenedores
+        verde y beige."
+      optionA: "Botella pl\xE1stica"
+      optionB: "Caja de cart\xF3n"
+      optionC: Colilla de cigarrillo
+      optionD: Lata
+      correctAnswer: 2
+      correctTrueFalse: 1
+    - questionType: 0
+      question: "\xBFCu\xE1l es un residuo org\xE1nico?"
+      optionA: "C\xE1scara de fruta"
+      optionB: "Botella pl\xE1stica"
+      optionC: Lata
+      optionD: "Cart\xF3n"
+      correctAnswer: 0
+      correctTrueFalse: 0
+  - sprite: {fileID: -273967041, guid: bd4d475814724724ca161c41b0ebd824, type: 3}
+    questions:
+    - questionType: 1
+      question: Separar correctamente los residuos facilita su aprovechamiento.
+      optionA: Verde y Beige
+      optionB: Verde y blanco
+      optionC: Beige y Azul
+      optionD: Negro y Rojo
+      correctAnswer: 0
+      correctTrueFalse: 1
+    - questionType: 0
+      question: "\xBFQu\xE9 se logra con una correcta separaci\xF3n?"
+      optionA: Mayor mezcla de residuos
+      optionB: Aprovechamiento de materiales
+      optionC: "M\xE1s residuos en los rellenos"
+      optionD: Menor reciclaje
+      correctAnswer: 1
+      correctTrueFalse: 1
+    - questionType: 0
+      question: "\xBFPor qu\xE9 es importante separar correctamente los residuos
+        dentro del Aeropuerto El Dorado?"
+      optionA: Porque asi los residuos ocupan menos espacio
+      optionB: Porque la separacion de residuos evitan llenar mas rapido las canecas
+      optionC: "Porque la correcta separaci\xF3n de los residuos permite su aprovechamiento
+        mediante reciclaje y otros procesos de sostenibilidad, apoyando la econom\xEDa
+        circular y reduciendo la cantidad de desechos que llegan a rellenos sanitarios."
+      optionD: Porque los residuos se mezclan nuevamente
+      correctAnswer: 2
+      correctTrueFalse: 0
+  - sprite: {fileID: 639335860, guid: bd4d475814724724ca161c41b0ebd824, type: 3}
+    questions:
+    - questionType: 1
+      question: "El PGIRS orienta la gesti\xF3n de los residuos."
+      optionA: Verde y Beige
+      optionB: Verde y blanco
+      optionC: Beige y Azul
+      optionD: Negro y Rojo
+      correctAnswer: 0
+      correctTrueFalse: 1
+    - questionType: 0
+      question: 'Que significan las siglas PGIRS '
+      optionA: "Plan de gesti\xF3n integral de residuos solidos "
+      optionB: 'Plan de grandes intereses regionales sociales '
+      optionC: "Plan de gesti\xF3n integral de regi\xF3n sociocultural "
+      optionD: "Plan de gesti\xF3n interaseo"
+      correctAnswer: 0
+      correctTrueFalse: 1
+    - questionType: 1
+      question: "El PGIRS es el documento maestro, que orienta los lineamientos para
+        la gesti\xF3n de los residuos solidos dentro del Aeropuerto Internacional
+        el Dorado"
+      optionA: Porque asi los residuos ocupan menos espacio
+      optionB: Porque la separacion de residuos evitan llenar mas rapido las canecas
+      optionC: "Porque la correcta separaci\xF3n de los residuos permite su aprovechamiento
+        mediante reciclaje y otros procesos de sostenibilidad, apoyando la econom\xEDa
+        circular y reduciendo la cantidad de desechos que llegan a rellenos sanitarios."
+      optionD: Porque los residuos se mezclan nuevamente
+      correctAnswer: 2
+      correctTrueFalse: 1
+  - sprite: {fileID: -1585921598, guid: bd4d475814724724ca161c41b0ebd824, type: 3}
+    questions:
+    - questionType: 1
+      question: "Puedo cuidar a los operarios y operarias de Interaseo con buenas
+        pr\xE1cticas en el manejo de residuos, cuando separo y embalando adecuadamente
+        los elementos cortopunzantes "
+      optionA: Verde y Beige
+      optionB: Verde y blanco
+      optionC: Beige y Azul
+      optionD: Negro y Rojo
+      correctAnswer: 0
+      correctTrueFalse: 1
+    - questionType: 0
+      question: "Una actitud cordial, amable y solidaria hace la diferencia en el
+        trato con el personal que d\xEDa a d\xEDa gestiona los residuos en el Aeropuerto
+        Internacional el Dorado "
+      optionA: "Plan de gesti\xF3n integral de residuos solidos "
+      optionB: 'Plan de grandes intereses regionales sociales '
+      optionC: "Plan de gesti\xF3n integral de regi\xF3n sociocultural "
+      optionD: "Plan de gesti\xF3n interaseo"
+      correctAnswer: 0
+      correctTrueFalse: 1
+    - questionType: 1
+      question: "Una correcta separaci\xF3n de residuos ayuda a proteger al personal
+        de recolecci\xF3n."
+      optionA: Porque asi los residuos ocupan menos espacio
+      optionB: Porque la separacion de residuos evitan llenar mas rapido las canecas
+      optionC: "Porque la correcta separaci\xF3n de los residuos permite su aprovechamiento
+        mediante reciclaje y otros procesos de sostenibilidad, apoyando la econom\xEDa
+        circular y reduciendo la cantidad de desechos que llegan a rellenos sanitarios."
+      optionD: Porque los residuos se mezclan nuevamente
       correctAnswer: 2
       correctTrueFalse: 1
   rows: 4
@@ -6330,9 +6585,9 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -7027,6 +7282,14 @@ PrefabInstance:
     - target: {fileID: 548504876818929292, guid: befc1c32a455c9849af3251cdd86a157, type: 3}
       propertyPath: m_Name
       value: memory card
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686893924352006540, guid: befc1c32a455c9849af3251cdd86a157, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8100855671467526764, guid: f87bab124947a5d4d80f8479a652cb29, type: 3}
+    - target: {fileID: 3894837249773856966, guid: befc1c32a455c9849af3251cdd86a157, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4032046234044827841, guid: befc1c32a455c9849af3251cdd86a157, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
