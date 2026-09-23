@@ -288,26 +288,21 @@ public class MemoryGameManager : MonoBehaviour
         if (correct)
         {
             Debug.Log("Pregunta respondida correctamente.");
-
-            // Puntos extra por responder correctamente
-            if (managerRecolection != null)
-            {
-                managerRecolection.AddScore(5);
-            }
         }
         else
         {
             Debug.Log("Pregunta respondida incorrectamente.");
+
+            if (managerRecolection != null)
+            {
+                managerRecolection.LoseLife();
+            }
         }
 
-        // Limpiar selección de cartas
         firstCard = null;
         secondCard = null;
-
-        // Permitir seleccionar nuevamente
         checkingPair = false;
 
-        // Comprobar si ya encontró todas las parejas
         if (pairsFound >= totalPairs)
         {
             FinishGame();

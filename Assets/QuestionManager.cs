@@ -155,32 +155,56 @@ public class QuestionManager : MonoBehaviour
 
     private void CheckAnswer(int answer)
     {
-        if (!answering) return;
+        Debug.Log("🟢 RESPUESTA PRESIONADA: " + answer);
+
+        if (!answering)
+        {
+            Debug.LogWarning("⚠️ No se puede responder ahora.");
+            return;
+        }
 
         answering = false;
 
         bool correct = false;
 
+        // Pregunta A/B/C/D
         if (currentQuestion.questionType == QuestionType.MultipleChoice)
         {
-            // A = 0
-            // B = 1
-            // C = 2
-            // D = 3
-
             correct = answer == currentQuestion.correctAnswer;
         }
+        // Verdadero / Falso
         else
         {
-            // A = Verdadero
-            // B = Falso
-
             bool selectedTrue = answer == 0;
 
             correct = selectedTrue == currentQuestion.correctTrueFalse;
         }
 
-        Debug.Log(correct ? "Respuesta correcta" : "Respuesta incorrecta");
+        if (correct)
+        {
+            Debug.Log("✅ RESPUESTA CORRECTA");
+        }
+        else
+        {
+            Debug.Log("❌ RESPUESTA INCORRECTA");
+
+            // Buscar automáticamente el ManagerRecolection
+            if (ManagerRecolection.Instance != null)
+            {
+                ManagerRecolection.Instance.LoseLife();
+
+                Debug.Log(
+                    "❤️ VIDA PERDIDA. Vidas restantes: " +
+                    ManagerRecolection.Instance.Health
+                );
+            }
+            else
+            {
+                Debug.LogError(
+                    "❌ ManagerRecolection.Instance es NULL"
+                );
+            }
+        }
 
         StartCoroutine(CloseQuestion(correct));
     }

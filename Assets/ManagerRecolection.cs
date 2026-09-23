@@ -98,6 +98,7 @@ public class ManagerRecolection : MonoBehaviour
     private bool level3Unlocked;
     private bool moduleCompleted;
     private float contador = 5f;
+    [SerializeField] private bool isMemoryModule = false;
 
     private void CheckProgress()
     {
@@ -424,8 +425,16 @@ public class ManagerRecolection : MonoBehaviour
                 AudioManager.Instance.Play("Wrong choose check");
             }
 
-            resultMessage =
-                "No clasificaste correctamente los residuos. Te quedaste sin vidas.";
+            if (isMemoryModule)
+            {
+                resultMessage =
+                    "No completaste el juego de memoria. Te quedaste sin vidas.";
+            }
+            else
+            {
+                resultMessage =
+                    "No clasificaste correctamente los residuos. Te quedaste sin vidas.";
+            }
 
             OnGameOver?.Invoke();
         }
@@ -435,6 +444,18 @@ public class ManagerRecolection : MonoBehaviour
         // APROBÓ
         // =====================================================
 
+        else if (isMemoryModule)
+        {
+            moduleApproved = true;
+
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.Play("Great choose check");
+            }
+
+            resultMessage =
+                "¡Excelente! Has completado correctamente todas las parejas.";
+        }
         else if (Score >= approvalThreshold)
         {
             moduleApproved = true;
