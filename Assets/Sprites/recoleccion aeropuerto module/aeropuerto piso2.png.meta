@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 57d2701320e41c941b4af1cc2d8f9f05
+guid: fe5ef74138e311e4a9a94838f10696e6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5027519416312779477
-    second: ChatGPT Image 3 sept 2026, 10_38_16 a.m._0
+      213: -1350627931663208496
+    second: ChatGPT Image 9 sept 2026, 02_38_06 p.m._0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,11 +109,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image 3 sept 2026, 10_38_16 a.m._0
+      name: aeropuertopiso2
       rect:
         serializedVersion: 2
         x: 0
@@ -121,15 +134,15 @@ TextureImporter:
         width: 1536
         height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d2d3bea54655c540800000000000000
-      internalID: 5027519416312779477
+      spriteID: 0df6e755d0b914de0800000000000000
+      internalID: -1350627931663208496
       vertices: []
       indices: 
       edges: []
@@ -138,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a9a88b829d9a95d44a19ea029ef7ce53
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChatGPT Image 3 sept 2026, 10_38_16 a.m._0: 5027519416312779477
+      aeropuertopiso2: -1350627931663208496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,46 @@
 fileFormatVersion: 2
-guid: f87bab124947a5d4d80f8479a652cb29
+guid: 8eb0ded2372071d42a4386cf3a1a4704
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8100855671467526764
-    second: ChatGPT Image 22 sept 2026, 09_01_43 a.m._0
+      213: -3439462620217925563
+    second: ChatGPT Image 15 sept 2026, 08_33_01 a.m._0
+  - first:
+      213: 8787842708351671488
+    second: ChatGPT Image 15 sept 2026, 08_33_01 a.m._1
+  - first:
+      213: 84078941945513563
+    second: ChatGPT Image 15 sept 2026, 08_33_01 a.m._2
+  - first:
+      213: -4461799971956852543
+    second: ChatGPT Image 15 sept 2026, 08_33_01 a.m._3
+  - first:
+      213: 2651770427439201857
+    second: ChatGPT Image 15 sept 2026, 08_33_01 a.m._4
+  - first:
+      213: 4484890651806575893
+    second: ChatGPT Image 15 sept 2026, 08_33_01 a.m._5
+  - first:
+      213: -5811119258764919933
+    second: ChatGPT Image 15 sept 2026, 08_33_01 a.m._6
+  - first:
+      213: 8408850407231142152
+    second: ChatGPT Image 15 sept 2026, 08_33_01 a.m._7
+  - first:
+      213: 8872207177748995148
+    second: ChatGPT Image 15 sept 2026, 08_33_01 a.m._8
+  - first:
+      213: -4915763726419977359
+    second: ChatGPT Image 15 sept 2026, 08_33_01 a.m._9
+  - first:
+      213: -5830229423401673997
+    second: ChatGPT Image 15 sept 2026, 08_33_01 a.m._10
+  - first:
+      213: 778761360040106459
+    second: ChatGPT Image 15 sept 2026, 08_33_01 a.m._11
+  - first:
+      213: -3818056169832722572
+    second: ChatGPT Image 15 sept 2026, 08_33_01 a.m._12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +162,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image 22 sept 2026, 09_01_43 a.m._0
+      name: caneca verde ordinario
       rect:
         serializedVersion: 2
-        x: 61
-        y: 111
-        width: 902
-        height: 1315
+        x: 95
+        y: 128
+        width: 925
+        height: 1158
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +177,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c6ac78220550c6070800000000000000
-      internalID: 8100855671467526764
+      spriteID: 5402daf48f29440d0800000000000000
+      internalID: -3439462620217925563
       vertices: []
       indices: 
       edges: []
@@ -151,7 +187,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d0181d7635a7f154796f76e8212de3e7
+    spriteID: 88314c4d15b19ca449373b413916d60b
     internalID: 0
     vertices: []
     indices: 
@@ -159,9 +195,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1122.0,"y":1402.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ChatGPT Image 22 sept 2026, 09_01_43 a.m._0: 8100855671467526764
+      caneca verde ordinario: -3439462620217925563
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

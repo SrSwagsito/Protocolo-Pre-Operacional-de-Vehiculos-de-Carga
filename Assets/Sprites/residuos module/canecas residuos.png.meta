@@ -130,11 +130,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: canecas
+      name: caneca beige
       rect:
         serializedVersion: 2
         x: 1315
@@ -156,7 +169,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 8 sept 2026, 09_16_28_1
+      name: caneca negra
       rect:
         serializedVersion: 2
         x: 1095
@@ -178,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 8 sept 2026, 09_16_28_2
+      name: caneca roja
       rect:
         serializedVersion: 2
         x: 874
@@ -200,7 +213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 8 sept 2026, 09_16_28_3
+      name: caneca gris
       rect:
         serializedVersion: 2
         x: 647
@@ -222,7 +235,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 8 sept 2026, 09_16_28_4
+      name: caneca azul
       rect:
         serializedVersion: 2
         x: 426
@@ -244,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 8 sept 2026, 09_16_28_5
+      name: caneca verde
       rect:
         serializedVersion: 2
         x: 214
@@ -266,7 +279,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 8 sept 2026, 09_16_28_6
+      name: caneca blanca
       rect:
         serializedVersion: 2
         x: 9
@@ -288,7 +301,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 8 sept 2026, 09_16_28_7
+      name: Caneca blanca abierta
       rect:
         serializedVersion: 2
         x: 12
@@ -310,7 +323,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 8 sept 2026, 09_16_28_8
+      name: caneca verde abierta
       rect:
         serializedVersion: 2
         x: 221
@@ -332,7 +345,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 8 sept 2026, 09_16_28_9
+      name: caneca azul abierta
       rect:
         serializedVersion: 2
         x: 418
@@ -354,7 +367,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 8 sept 2026, 09_16_28_10
+      name: caneca gris abierta
       rect:
         serializedVersion: 2
         x: 609
@@ -376,11 +389,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 8 sept 2026, 09_16_28_11
+      name: caneca roja abierta
       rect:
         serializedVersion: 2
         x: 800
-        y: 225
+        y: 227
         width: 182
         height: 306
       alignment: 0
@@ -398,7 +411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 8 sept 2026, 09_16_28_12
+      name: caneca negra abierta
       rect:
         serializedVersion: 2
         x: 983
@@ -420,7 +433,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 8 sept 2026, 09_16_28_13
+      name: caneca beige abierta
       rect:
         serializedVersion: 2
         x: 1337
@@ -457,20 +470,20 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1536.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ChatGPT Image 8 sept 2026, 09_16_28_1: -55375373305738035
-      ChatGPT Image 8 sept 2026, 09_16_28_10: 596668305
-      ChatGPT Image 8 sept 2026, 09_16_28_11: 661132890
-      ChatGPT Image 8 sept 2026, 09_16_28_12: -291191383
-      ChatGPT Image 8 sept 2026, 09_16_28_13: -1614788961
-      ChatGPT Image 8 sept 2026, 09_16_28_2: -6755189947419639847
-      ChatGPT Image 8 sept 2026, 09_16_28_3: 6385585484008912791
-      ChatGPT Image 8 sept 2026, 09_16_28_4: 7480109481412997250
-      ChatGPT Image 8 sept 2026, 09_16_28_5: -6833025210773897457
-      ChatGPT Image 8 sept 2026, 09_16_28_6: 8797363061127794883
-      ChatGPT Image 8 sept 2026, 09_16_28_7: 821868236980970484
-      ChatGPT Image 8 sept 2026, 09_16_28_8: 617182372
-      ChatGPT Image 8 sept 2026, 09_16_28_9: 815004894
-      canecas: 3969329970714489411
+      Caneca blanca abierta: 821868236980970484
+      caneca azul: 7480109481412997250
+      caneca azul abierta: 815004894
+      caneca beige: 3969329970714489411
+      caneca beige abierta: -1614788961
+      caneca blanca: 8797363061127794883
+      caneca gris: 6385585484008912791
+      caneca gris abierta: 596668305
+      caneca negra: -55375373305738035
+      caneca negra abierta: -291191383
+      caneca roja: -6755189947419639847
+      caneca roja abierta: 661132890
+      caneca verde: -6833025210773897457
+      caneca verde abierta: 617182372
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

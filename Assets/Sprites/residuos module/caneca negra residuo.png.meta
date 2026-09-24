@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: fe5ef74138e311e4a9a94838f10696e6
+guid: 7c98f208bcad3554b8f3f400120fc08f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1350627931663208496
-    second: ChatGPT Image 9 sept 2026, 02_38_06 p.m._0
+      213: 6450025973438918373
+    second: ChatGPT Image 15 sept 2026, 10_07_30 a.m._0
+  - first:
+      213: 4436792166670303452
+    second: ChatGPT Image 15 sept 2026, 10_07_30 a.m._1
+  - first:
+      213: 8956106790415531854
+    second: ChatGPT Image 15 sept 2026, 10_07_30 a.m._2
+  - first:
+      213: 5330852764106381106
+    second: ChatGPT Image 15 sept 2026, 10_07_30 a.m._3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,27 +118,106 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image 9 sept 2026, 02_38_06 p.m._0
+      name: caneca negra sanitario
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1536
-        height: 1024
+        y: 18
+        width: 1111
+        height: 1384
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0df6e755d0b914de0800000000000000
-      internalID: -1350627931663208496
+      spriteID: 5eeaedaf278138950800000000000000
+      internalID: 6450025973438918373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT Image 15 sept 2026, 10_07_30 a.m._1
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1390
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd08e9ce7f6a29d30800000000000000
+      internalID: 4436792166670303452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT Image 15 sept 2026, 10_07_30 a.m._2
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 49
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f7e25acab7a4c70800000000000000
+      internalID: 8956106790415531854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChatGPT Image 15 sept 2026, 10_07_30 a.m._3
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 15
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 237587a485efaf940800000000000000
+      internalID: 5330852764106381106
       vertices: []
       indices: 
       edges: []
@@ -138,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0368ffd78001a0542958a4ef62354ad1
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +236,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChatGPT Image 9 sept 2026, 02_38_06 p.m._0: -1350627931663208496
+      ChatGPT Image 15 sept 2026, 10_07_30 a.m._1: 4436792166670303452
+      ChatGPT Image 15 sept 2026, 10_07_30 a.m._2: 8956106790415531854
+      ChatGPT Image 15 sept 2026, 10_07_30 a.m._3: 5330852764106381106
+      caneca negra sanitario: 6450025973438918373
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

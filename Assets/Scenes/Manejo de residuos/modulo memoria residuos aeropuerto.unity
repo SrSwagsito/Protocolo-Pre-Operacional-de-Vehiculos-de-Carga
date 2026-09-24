@@ -4476,7 +4476,7 @@ MonoBehaviour:
       optionB: Azul y Gris
       optionC: Naranja y Verde
       optionD: Blanco y Verde
-      correctAnswer: 0
+      correctAnswer: 1
       correctTrueFalse: 0
     - questionType: 0
       question: "\xBFQu\xE9 materiales deben depositarse en el contenedor azul?"
@@ -7756,11 +7756,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5204410659529939016, guid: befc1c32a455c9849af3251cdd86a157, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -6.2
+      value: -15.64
       objectReference: {fileID: 0}
     - target: {fileID: 5204410659529939016, guid: befc1c32a455c9849af3251cdd86a157, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5.505
+      value: -3.88
       objectReference: {fileID: 0}
     - target: {fileID: 5204410659529939016, guid: befc1c32a455c9849af3251cdd86a157, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

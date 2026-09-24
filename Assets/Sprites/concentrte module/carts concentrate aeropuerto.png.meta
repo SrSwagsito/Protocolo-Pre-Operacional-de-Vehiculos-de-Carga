@@ -132,7 +132,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image 22 sept 2026, 08_49_43 a.m._0
+      name: carta fod
       rect:
         serializedVersion: 2
         x: 32
@@ -140,7 +140,7 @@ TextureImporter:
         width: 277
         height: 404
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -154,7 +154,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 22 sept 2026, 08_49_43 a.m._1
+      name: carta estibas
       rect:
         serializedVersion: 2
         x: 319
@@ -162,7 +162,7 @@ TextureImporter:
         width: 291
         height: 404
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -176,7 +176,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 22 sept 2026, 08_49_43 a.m._2
+      name: carta residuos peligrosos
       rect:
         serializedVersion: 2
         x: 620
@@ -184,7 +184,7 @@ TextureImporter:
         width: 294
         height: 401
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -198,7 +198,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 22 sept 2026, 08_49_43 a.m._3
+      name: carta papel y carton
       rect:
         serializedVersion: 2
         x: 920
@@ -206,7 +206,7 @@ TextureImporter:
         width: 287
         height: 398
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -220,7 +220,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 22 sept 2026, 08_49_43 a.m._4
+      name: carta plasticos y aprovechables
       rect:
         serializedVersion: 2
         x: 1216
@@ -228,7 +228,7 @@ TextureImporter:
         width: 286
         height: 398
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -242,15 +242,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 22 sept 2026, 08_49_43 a.m._5
+      name: residuos ordinarios
       rect:
         serializedVersion: 2
-        x: 36
+        x: 35
         y: 115
         width: 279
         height: 399
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -264,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 22 sept 2026, 08_49_43 a.m._6
+      name: carta residuos organicos
       rect:
         serializedVersion: 2
         x: 328
@@ -272,7 +272,7 @@ TextureImporter:
         width: 279
         height: 399
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -286,7 +286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 22 sept 2026, 08_49_43 a.m._7
+      name: carta separacion de residuos
       rect:
         serializedVersion: 2
         x: 623
@@ -294,7 +294,7 @@ TextureImporter:
         width: 284
         height: 398
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -308,7 +308,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 22 sept 2026, 08_49_43 a.m._8
+      name: carta pgirs
       rect:
         serializedVersion: 2
         x: 920
@@ -316,7 +316,7 @@ TextureImporter:
         width: 283
         height: 402
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -330,7 +330,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 22 sept 2026, 08_49_43 a.m._9
+      name: carta buenas practicas
       rect:
         serializedVersion: 2
         x: 1216
@@ -338,7 +338,7 @@ TextureImporter:
         width: 288
         height: 403
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -367,16 +367,16 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1536.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ChatGPT Image 22 sept 2026, 08_49_43 a.m._0: -4657374010633936310
-      ChatGPT Image 22 sept 2026, 08_49_43 a.m._1: -1278522251861335589
-      ChatGPT Image 22 sept 2026, 08_49_43 a.m._2: 465896282693371245
-      ChatGPT Image 22 sept 2026, 08_49_43 a.m._3: 27939314
-      ChatGPT Image 22 sept 2026, 08_49_43 a.m._4: -49717475
-      ChatGPT Image 22 sept 2026, 08_49_43 a.m._5: -60215412
-      ChatGPT Image 22 sept 2026, 08_49_43 a.m._6: -121802169
-      ChatGPT Image 22 sept 2026, 08_49_43 a.m._7: -273967041
-      ChatGPT Image 22 sept 2026, 08_49_43 a.m._8: 639335860
-      ChatGPT Image 22 sept 2026, 08_49_43 a.m._9: -1585921598
+      carta buenas practicas: -1585921598
+      carta estibas: -1278522251861335589
+      carta fod: -4657374010633936310
+      carta papel y carton: 27939314
+      carta pgirs: 639335860
+      carta plasticos y aprovechables: -49717475
+      carta residuos organicos: -121802169
+      carta residuos peligrosos: 465896282693371245
+      carta separacion de residuos: -273967041
+      residuos ordinarios: -60215412
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
