@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using static System.Net.Mime.MediaTypeNames;
 
 public class QuestionManager : MonoBehaviour
 {
@@ -23,6 +24,21 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textB;
     [SerializeField] private TextMeshProUGUI textC;
     [SerializeField] private TextMeshProUGUI textD;
+    [Header("Sprites botones")]
+    [SerializeField] private Sprite spriteA;
+    [SerializeField] private Sprite spriteB;
+    [SerializeField] private Sprite spriteC;
+    [SerializeField] private Sprite spriteD;
+
+    [Header("Sprites Verdadero / Falso")]
+    [SerializeField] private Sprite spriteVerdadero;
+    [SerializeField] private Sprite spriteFalso;
+
+    [Header("Imagen de los botones")]
+    [SerializeField] private UnityEngine.UI.Image imageA;
+    [SerializeField] private UnityEngine.UI.Image imageB;
+    [SerializeField] private UnityEngine.UI.Image imageC;
+    [SerializeField] private UnityEngine.UI.Image imageD;
 
     [Header("Animación")]
     [SerializeField] private float animationDuration = 0.25f;
@@ -95,36 +111,63 @@ public class QuestionManager : MonoBehaviour
     {
         questionText.text = currentQuestion.question;
 
-        if (currentQuestion.questionType == QuestionType.MultipleChoice)
+        // ==========================================
+        // PREGUNTA VERDADERO / FALSO
+        // ==========================================
+
+        if (currentQuestion.questionType == QuestionType.TrueFalse)
         {
-            // Mostrar A, B, C y D
+            // Activar A y B
+            buttonA.gameObject.SetActive(true);
+            buttonB.gameObject.SetActive(true);
+
+            // Desactivar C y D
+            buttonC.gameObject.SetActive(false);
+            buttonD.gameObject.SetActive(false);
+
+            // Textos
+            textA.text = "Verdadero";
+            textB.text = "Falso";
+
+            // Sprites
+            imageA.sprite = spriteVerdadero;
+            imageB.sprite = spriteFalso;
+
+            // Interacción
+            buttonA.interactable = true;
+            buttonB.interactable = true;
+        }
+
+        // ==========================================
+        // PREGUNTA DE OPCIÓN MÚLTIPLE
+        // ==========================================
+
+        else
+        {
+            // Activar los cuatro
             buttonA.gameObject.SetActive(true);
             buttonB.gameObject.SetActive(true);
             buttonC.gameObject.SetActive(true);
             buttonD.gameObject.SetActive(true);
 
+            // Textos
             textA.text = currentQuestion.optionA;
             textB.text = currentQuestion.optionB;
             textC.text = currentQuestion.optionC;
             textD.text = currentQuestion.optionD;
+
+            // Sprites
+            imageA.sprite = spriteA;
+            imageB.sprite = spriteB;
+            imageC.sprite = spriteC;
+            imageD.sprite = spriteD;
+
+            // Interacción
+            buttonA.interactable = true;
+            buttonB.interactable = true;
+            buttonC.interactable = true;
+            buttonD.interactable = true;
         }
-        else
-        {
-            // Mostrar solamente Verdadero y Falso
-            buttonA.gameObject.SetActive(true);
-            buttonB.gameObject.SetActive(true);
-
-            buttonC.gameObject.SetActive(false);
-            buttonD.gameObject.SetActive(false);
-
-            textA.text = "Verdadero";
-            textB.text = "Falso";
-        }
-
-        buttonA.interactable = true;
-        buttonB.interactable = true;
-        buttonC.interactable = true;
-        buttonD.interactable = true;
     }
 
 

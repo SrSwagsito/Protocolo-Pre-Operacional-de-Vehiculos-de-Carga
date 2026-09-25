@@ -37,6 +37,7 @@ public class MemoryGameManager : MonoBehaviour
     private int totalPairs;
 
 
+
     private void Start()
     {
         totalPairs = pairs.Length;
