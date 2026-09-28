@@ -410,7 +410,7 @@ public class DrivingModuleManagerPhysical : MonoBehaviour
         // Mostrar destino (opcional)
         if (destinationMarker != null)
         {
-            destinationMarker.SetActive(true);
+            yield return StartCoroutine(ShowECACinematic());
         }
 
         // Esperar un momento en slow motion
@@ -488,5 +488,47 @@ public class DrivingModuleManagerPhysical : MonoBehaviour
         }
 
         return message;
+    }
+    private IEnumerator ShowECACinematic()
+    {
+        destinationMarker.SetActive(true);
+
+        Transform eca = destinationMarker.transform;
+
+        // Guardamos la posición actual
+        Vector3 startPosition = eca.localPosition;
+
+        // X inicial y final
+        startPosition.x = 15.64f;
+
+        Vector3 finalPosition = startPosition;
+        finalPosition.x = 5.24f;
+
+        // Colocamos la ECA en la posición inicial
+        eca.localPosition = startPosition;
+
+        float duration = 1.2f;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+
+            float t = elapsed / duration;
+
+            // Movimiento suave
+            t = Mathf.SmoothStep(0f, 1f, t);
+
+            eca.localPosition = Vector3.Lerp(
+                startPosition,
+                finalPosition,
+                t
+            );
+
+            yield return null;
+        }
+
+        // Nos aseguramos de terminar exactamente en X = 5.24
+        eca.localPosition = finalPosition;
     }
 }
