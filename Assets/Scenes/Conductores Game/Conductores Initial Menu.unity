@@ -203,7 +203,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.8
+  m_fontSize: 47.7
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1554,7 +1554,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.65
+  m_fontSize: 35.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1851,7 +1851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -53.125122, y: -59.5}
+  m_AnchoredPosition: {x: -53.125244, y: -59.5}
   m_SizeDelta: {x: -312.19995, y: -633}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1155605351
@@ -1901,7 +1901,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.55
+  m_fontSize: 35.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2038,7 +2038,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.8
+  m_fontSize: 47.7
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2269,7 +2269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -53.125122, y: -202}
+  m_AnchoredPosition: {x: -53.125244, y: -202.00002}
   m_SizeDelta: {x: -312.19995, y: -634}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1337678038
@@ -3009,9 +3009,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1718272903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -830.2831, y: -319.65363}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -344, y: 1.3463745}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1696812020
@@ -3101,7 +3101,7 @@ MonoBehaviour:
         m_MethodName: SelectAvatar
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4932851220920467604, guid: e7517e7603bc82b48914f4703ce8ee77, type: 3}
+          m_ObjectArgument: {fileID: 3801238385233057492, guid: 81814c4896899f349833827d59607189, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3362,8 +3362,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UserRegistration
   levelName: IntroductionSceneCamiones
   avatarDisplay: {fileID: 2033634406}
-  avatarOption1: {fileID: -2682883663177689415, guid: 78d8297c817cfe540ae839fc74e7c81d, type: 3}
-  avatarOption2: {fileID: 4932851220920467604, guid: e7517e7603bc82b48914f4703ce8ee77, type: 3}
+  avatarOption1: {fileID: 5965343434877022952, guid: 4be034df17975de489fbddaffcd7eb13, type: 3}
+  avatarOption2: {fileID: 3801238385233057492, guid: 81814c4896899f349833827d59607189, type: 3}
   selectAvatar1Button: {fileID: 1696812022}
   selectAvatar2Button: {fileID: 2040794894}
   nameInputField: {fileID: 355916520}
@@ -4090,7 +4090,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2682883663177689415, guid: 78d8297c817cfe540ae839fc74e7c81d, type: 3}
+  m_Sprite: {fileID: 5965343434877022952, guid: 4be034df17975de489fbddaffcd7eb13, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 0
@@ -4122,10 +4122,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1766621452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -553, y: -10}
-  m_SizeDelta: {x: -1207.0273, y: -444.9548}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 245.5, y: 35}
+  m_SizeDelta: {x: 306.854, y: 333.045}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2040794890
 GameObject:
@@ -4160,9 +4160,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1718272903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -666.83984, y: -319.65363}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -152, y: 1.3463745}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2040794892
@@ -4243,7 +4243,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1696812020}
+  m_TargetGraphic: {fileID: 2040794892}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -4252,7 +4252,7 @@ MonoBehaviour:
         m_MethodName: SelectAvatar
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: -2682883663177689415, guid: 78d8297c817cfe540ae839fc74e7c81d, type: 3}
+          m_ObjectArgument: {fileID: 5965343434877022952, guid: 4be034df17975de489fbddaffcd7eb13, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -4386,10 +4386,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2047190508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.14222917, y: 0.23376161}
-  m_AnchorMax: {x: 0.14222917, y: 0.23376161}
-  m_AnchoredPosition: {x: -122, y: 706}
-  m_SizeDelta: {x: 247.084, y: 196.123}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 158, y: -120}
+  m_SizeDelta: {x: 247.084, y: 196.12299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2084295847
 MonoBehaviour:
