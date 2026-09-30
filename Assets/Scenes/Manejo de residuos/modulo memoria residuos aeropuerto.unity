@@ -1297,7 +1297,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 418778232}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2952,7 +2952,7 @@ MonoBehaviour:
   buttonB: {fileID: 1839820427}
   buttonC: {fileID: 1016323057}
   buttonD: {fileID: 1973024223}
-  textA: {fileID: 0}
+  textA: {fileID: 432237186}
   textB: {fileID: 897824849}
   textC: {fileID: 910254049}
   textD: {fileID: 590027414}
@@ -2962,11 +2962,11 @@ MonoBehaviour:
   spriteD: {fileID: -6975346414449152257, guid: 87fe0473310a3604fabb9030d55c79ea, type: 3}
   spriteVerdadero: {fileID: 3572865208472945030, guid: 87fe0473310a3604fabb9030d55c79ea, type: 3}
   spriteFalso: {fileID: 3572865208472945030, guid: 87fe0473310a3604fabb9030d55c79ea, type: 3}
-  imageA: {fileID: 0}
+  imageA: {fileID: 418778232}
   imageB: {fileID: 1839820428}
   imageC: {fileID: 1016323058}
   imageD: {fileID: 1973024224}
-  animationDuration: 0.25
+  animationDuration: 10
 --- !u!1 &845589681
 GameObject:
   m_ObjectHideFlags: 0
@@ -4561,7 +4561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.056885, y: 139.95377}
+  m_AnchoredPosition: {x: 23.056885, y: 231}
   m_SizeDelta: {x: 2019.988, y: 535.6443}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1244370319
