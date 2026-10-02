@@ -22,8 +22,9 @@ public class MemoryGameManager : MonoBehaviour
 
     [Header("Manager principal")]
     [SerializeField] private ManagerRecolection managerRecolection;
+
     [Header("Pregunta")]
-    [SerializeField] private QuestionManager questionManager;   
+    [SerializeField] private QuestionManager questionManager;
 
 
     private List<MemoryCard> cards = new List<MemoryCard>();
@@ -33,14 +34,55 @@ public class MemoryGameManager : MonoBehaviour
 
     private bool checkingPair = false;
 
+    // Evita perder dos vidas por una misma pregunta
+    private bool questionResultProcessed = false;
+
     private int pairsFound = 0;
     private int totalPairs;
 
 
+    // =========================================================
+    // START
+    // =========================================================
 
     private void Start()
     {
         totalPairs = pairs.Length;
+
+        // Conectar QuestionManager con este MemoryGameManager
+        if (questionManager != null)
+        {
+            questionManager.SetMemoryGameManager(this);
+
+            Debug.Log(
+                "✅ QuestionManager conectado con MemoryGameManager."
+            );
+        }
+        else
+        {
+            Debug.LogError(
+                "❌ QuestionManager NO está asignado."
+            );
+        }
+
+        // Buscar automáticamente ManagerRecolection
+        if (managerRecolection == null)
+        {
+            managerRecolection = ManagerRecolection.Instance;
+        }
+
+        if (managerRecolection != null)
+        {
+            Debug.Log(
+                "✅ ManagerRecolection conectado."
+            );
+        }
+        else
+        {
+            Debug.LogError(
+                "❌ ManagerRecolection NO encontrado."
+            );
+        }
 
         CreateBoard();
     }
@@ -54,7 +96,10 @@ public class MemoryGameManager : MonoBehaviour
     {
         if (pairs == null || pairs.Length == 0)
         {
-            Debug.LogError("No hay imágenes configuradas para las parejas.");
+            Debug.LogError(
+                "No hay imágenes configuradas para las parejas."
+            );
+
             return;
         }
 
@@ -75,15 +120,19 @@ public class MemoryGameManager : MonoBehaviour
         // Crear dos cartas de cada pareja
         for (int i = 0; i < pairs.Length; i++)
         {
-            deck.Add(new CardData(
-                i,
-                pairs[i].sprite
-            ));
+            deck.Add(
+                new CardData(
+                    i,
+                    pairs[i].sprite
+                )
+            );
 
-            deck.Add(new CardData(
-                i,
-                pairs[i].sprite
-            ));
+            deck.Add(
+                new CardData(
+                    i,
+                    pairs[i].sprite
+                )
+            );
         }
 
         // Mezclar
@@ -160,6 +209,10 @@ public class MemoryGameManager : MonoBehaviour
         // Esperar a que ambas cartas terminen de girar
         yield return new WaitForSeconds(0.45f);
 
+        // =====================================================
+        // PAREJA CORRECTA
+        // =====================================================
+
         if (firstCard.PairID == secondCard.PairID)
         {
             Debug.Log("¡Pareja encontrada!");
@@ -169,12 +222,6 @@ public class MemoryGameManager : MonoBehaviour
 
             pairsFound++;
 
-            // Puntos por encontrar la pareja
-            if (managerRecolection != null)
-            {
-                managerRecolection.AddScore(pointsPerPair);
-            }
-
             Debug.Log(
                 "Parejas encontradas: " +
                 pairsFound +
@@ -182,41 +229,63 @@ public class MemoryGameManager : MonoBehaviour
                 totalPairs
             );
 
-            // Obtener los datos de esta pareja
+            // Puntos por encontrar pareja
+            if (managerRecolection != null)
+            {
+                managerRecolection.AddScore(pointsPerPair);
+            }
+
+            // Obtener datos de la pareja
             MemoryPairData pair = pairs[firstCard.PairID];
 
             // Mostrar pregunta
             if (questionManager != null)
             {
+                Debug.Log(
+                    "❓ Mostrando pregunta de la pareja."
+                );
+
+                // Reiniciar protección para esta nueva pregunta
+                questionResultProcessed = false;
+
                 questionManager.ShowQuestion(pair);
+
+                // Esperar a que QuestionManager
+                // llame a QuestionFinished()
+                yield break;
             }
             else
             {
-                Debug.LogWarning("QuestionManager no está asignado.");
+                Debug.LogError(
+                    "❌ QuestionManager no está asignado."
+                );
 
                 firstCard = null;
                 secondCard = null;
                 checkingPair = false;
             }
         }
+
+        // =====================================================
+        // PAREJA INCORRECTA
+        // =====================================================
+
         else
         {
-            // =============================================
-            // PAREJA INCORRECTA
-            // =============================================
+            Debug.Log("❌ No son pareja.");
 
-            Debug.Log("No son pareja.");
-
-            yield return new WaitForSeconds(timeToHide);
+            yield return new WaitForSeconds(
+                timeToHide
+            );
 
             firstCard.Hide();
             secondCard.Hide();
+
+            firstCard = null;
+            secondCard = null;
+
+            checkingPair = false;
         }
-
-        firstCard = null;
-        secondCard = null;
-
-        checkingPair = false;
     }
 
 
@@ -226,23 +295,46 @@ public class MemoryGameManager : MonoBehaviour
 
     private void FinishGame()
     {
-        Debug.Log("¡Todas las parejas encontradas!");
+        Debug.Log(
+            "================================="
+        );
 
-        // Bloquear las cartas
+        Debug.Log(
+            "🏆 ¡MEMORY GAME COMPLETADO!"
+        );
+
+        Debug.Log(
+            "🏆 Parejas: " +
+            pairsFound +
+            "/" +
+            totalPairs
+        );
+
+        // Bloquear cartas
         foreach (MemoryCard card in cards)
         {
             card.SetInteractable(false);
         }
 
-        // Finalizar utilizando TU ManagerRecolection
+        // Finalizar módulo
         if (managerRecolection != null)
         {
+            Debug.Log(
+                "📊 Puntaje final: " +
+                managerRecolection.Score
+            );
+
+            Debug.Log(
+                "📋 Finalizando módulo..."
+            );
+
             managerRecolection.FinishInspection();
         }
         else
         {
-            Debug.LogWarning(
-                "No hay ManagerRecolection asignado."
+            Debug.LogError(
+                "❌ No se puede finalizar el módulo porque " +
+                "ManagerRecolection es NULL."
             );
         }
     }
@@ -264,6 +356,7 @@ public class MemoryGameManager : MonoBehaviour
             CardData temp = list[i];
 
             list[i] = list[randomIndex];
+
             list[randomIndex] = temp;
         }
     }
@@ -284,28 +377,44 @@ public class MemoryGameManager : MonoBehaviour
             sprite = image;
         }
     }
+
+
+    // =========================================================
+    // PREGUNTA TERMINADA
+    // =========================================================
+
     public void QuestionFinished(bool correct)
     {
+        Debug.Log(
+            "📋 QuestionFinished recibido. Correcta: " + correct
+        );
+
         if (correct)
         {
-            Debug.Log("Pregunta respondida correctamente.");
+            Debug.Log("✅ Pregunta respondida correctamente.");
         }
         else
         {
-            Debug.Log("Pregunta respondida incorrectamente.");
-
-            if (managerRecolection != null)
-            {
-                managerRecolection.LoseLife();
-            }
+            Debug.Log("❌ Pregunta respondida incorrectamente.");
         }
 
+        // Preparar siguiente turno
         firstCard = null;
         secondCard = null;
         checkingPair = false;
 
+        Debug.Log(
+            "📊 Parejas encontradas: " +
+            pairsFound +
+            "/" +
+            totalPairs
+        );
+
+        // Comprobar si ya terminó el juego
         if (pairsFound >= totalPairs)
         {
+            Debug.Log("🏆 ¡TODAS LAS PAREJAS COMPLETADAS!");
+
             FinishGame();
         }
     }
