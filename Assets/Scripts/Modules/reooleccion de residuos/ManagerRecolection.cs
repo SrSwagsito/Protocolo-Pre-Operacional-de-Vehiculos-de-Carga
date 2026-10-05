@@ -66,7 +66,7 @@ public class ManagerRecolection : MonoBehaviour
     // ESTADO DEL JUEGO
     // =========================================================
 
-    public int Score { get; private set; }
+    public int Score { get; set; }
     public int Health { get; private set; }
 
     // Mantengo health como propiedad por compatibilidad

@@ -4189,10 +4189,6 @@ MonoBehaviour:
   - text: "Hola soy oscar, operario de interaseo, aqui aprenderas a hacer una debida
       clasificaci\xF3n de residuos"
     voiceClip: {fileID: 0}
-  - text: '
-
-      Aprender esto mejorara y tendre un un impacto positivo en el mundo'
-    voiceClip: {fileID: 0}
   loopeable: 0
   waitForAudioToFinish: 1
   skipIndicator: {fileID: 741358141}
