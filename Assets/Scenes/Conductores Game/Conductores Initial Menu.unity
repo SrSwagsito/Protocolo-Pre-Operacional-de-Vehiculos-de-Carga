@@ -203,7 +203,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.7
+  m_fontSize: 43.3
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1554,7 +1554,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.55
+  m_fontSize: 31.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1901,7 +1901,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.6
+  m_fontSize: 37.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2038,7 +2038,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.7
+  m_fontSize: 43.3
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3101,7 +3101,7 @@ MonoBehaviour:
         m_MethodName: SelectAvatar
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3801238385233057492, guid: 81814c4896899f349833827d59607189, type: 3}
+          m_ObjectArgument: {fileID: -5083514674360340974, guid: 02335355e55cc7e4e9a41b35b2502849, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3635,7 +3635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1856875112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4090,7 +4090,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5965343434877022952, guid: 4be034df17975de489fbddaffcd7eb13, type: 3}
+  m_Sprite: {fileID: -2137479360571138179, guid: 8c34751589a075a439bf3617e9be16c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 0
@@ -4252,7 +4252,7 @@ MonoBehaviour:
         m_MethodName: SelectAvatar
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 5965343434877022952, guid: 4be034df17975de489fbddaffcd7eb13, type: 3}
+          m_ObjectArgument: {fileID: -2137479360571138179, guid: 8c34751589a075a439bf3617e9be16c7, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

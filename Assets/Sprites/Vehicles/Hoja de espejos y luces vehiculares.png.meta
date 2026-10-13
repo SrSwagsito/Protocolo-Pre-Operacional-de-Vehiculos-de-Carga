@@ -1,0 +1,593 @@
+fileFormatVersion: 2
+guid: 2d4d28096fcf4c8408b545417c6aa70d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3849289295402117001
+    second: Hoja de espejos y luces vehiculares_0
+  - first:
+      213: -641380633566522766
+    second: Hoja de espejos y luces vehiculares_1
+  - first:
+      213: 2077842046035443274
+    second: Hoja de espejos y luces vehiculares_2
+  - first:
+      213: 1476198023169500160
+    second: Hoja de espejos y luces vehiculares_3
+  - first:
+      213: -7036795856630773867
+    second: Hoja de espejos y luces vehiculares_4
+  - first:
+      213: -8793832818554807341
+    second: Hoja de espejos y luces vehiculares_5
+  - first:
+      213: -6818141610450513377
+    second: Hoja de espejos y luces vehiculares_6
+  - first:
+      213: -3160391044598973462
+    second: Hoja de espejos y luces vehiculares_7
+  - first:
+      213: 8568872599437524597
+    second: Hoja de espejos y luces vehiculares_8
+  - first:
+      213: -5471473225473013975
+    second: Hoja de espejos y luces vehiculares_9
+  - first:
+      213: 4212588369241616318
+    second: Hoja de espejos y luces vehiculares_10
+  - first:
+      213: 3701565004186171931
+    second: Hoja de espejos y luces vehiculares_11
+  - first:
+      213: -3223781953390373822
+    second: Hoja de espejos y luces vehiculares_12
+  - first:
+      213: 7626914514893799632
+    second: Hoja de espejos y luces vehiculares_13
+  - first:
+      213: -4789547065124684330
+    second: Hoja de espejos y luces vehiculares_14
+  - first:
+      213: 8667703594522951152
+    second: Hoja de espejos y luces vehiculares_15
+  - first:
+      213: -1192076553333810255
+    second: Hoja de espejos y luces vehiculares_16
+  - first:
+      213: 7950548747050267120
+    second: Hoja de espejos y luces vehiculares_17
+  - first:
+      213: 8926482409214266595
+    second: Hoja de espejos y luces vehiculares_18
+  - first:
+      213: -6131332309584629575
+    second: Hoja de espejos y luces vehiculares_19
+  - first:
+      213: -779622918655661808
+    second: Hoja de espejos y luces vehiculares_20
+  - first:
+      213: -287285604992038565
+    second: Hoja de espejos y luces vehiculares_21
+  - first:
+      213: -738460167847093909
+    second: Hoja de espejos y luces vehiculares_22
+  - first:
+      213: -3079046693993577898
+    second: Hoja de espejos y luces vehiculares_23
+  - first:
+      213: 7787607315868420477
+    second: Hoja de espejos y luces vehiculares_24
+  - first:
+      213: -9045002944715695181
+    second: Hoja de espejos y luces vehiculares_25
+  - first:
+      213: 6364401235827977890
+    second: Hoja de espejos y luces vehiculares_26
+  - first:
+      213: 1588073150755397162
+    second: Hoja de espejos y luces vehiculares_27
+  - first:
+      213: -6641077081784796440
+    second: Hoja de espejos y luces vehiculares_28
+  - first:
+      213: 8989384444261253307
+    second: Hoja de espejos y luces vehiculares_29
+  - first:
+      213: 1632439406160797584
+    second: Hoja de espejos y luces vehiculares_30
+  - first:
+      213: 6814455532379778656
+    second: Hoja de espejos y luces vehiculares_31
+  - first:
+      213: 2070950843298099912
+    second: Hoja de espejos y luces vehiculares_32
+  - first:
+      213: 4264000589259211835
+    second: Hoja de espejos y luces vehiculares_33
+  - first:
+      213: 4279450317254995755
+    second: Hoja de espejos y luces vehiculares_34
+  - first:
+      213: -3342941593366047412
+    second: Hoja de espejos y luces vehiculares_35
+  - first:
+      213: -5070807779811860737
+    second: Hoja de espejos y luces vehiculares_36
+  - first:
+      213: 8373684323093265769
+    second: Hoja de espejos y luces vehiculares_37
+  - first:
+      213: -2785578290966378277
+    second: Hoja de espejos y luces vehiculares_38
+  - first:
+      213: 1647198584149642402
+    second: Hoja de espejos y luces vehiculares_39
+  - first:
+      213: 1557281967907169883
+    second: Hoja de espejos y luces vehiculares_40
+  - first:
+      213: -238997505080327066
+    second: Hoja de espejos y luces vehiculares_41
+  - first:
+      213: 1928236905751190084
+    second: Hoja de espejos y luces vehiculares_42
+  - first:
+      213: 2097113169278184255
+    second: Hoja de espejos y luces vehiculares_43
+  - first:
+      213: -6137868813544496137
+    second: Hoja de espejos y luces vehiculares_44
+  - first:
+      213: -5948731406425371356
+    second: Hoja de espejos y luces vehiculares_45
+  - first:
+      213: -1317898626718418301
+    second: Hoja de espejos y luces vehiculares_46
+  - first:
+      213: 4982509465367769511
+    second: Hoja de espejos y luces vehiculares_47
+  - first:
+      213: -1476192335417393424
+    second: Hoja de espejos y luces vehiculares_48
+  - first:
+      213: 6444694732927092021
+    second: Hoja de espejos y luces vehiculares_49
+  - first:
+      213: 1894639911503580596
+    second: Hoja de espejos y luces vehiculares_50
+  - first:
+      213: -865139894203636593
+    second: Hoja de espejos y luces vehiculares_51
+  - first:
+      213: -8518617064773570754
+    second: Hoja de espejos y luces vehiculares_52
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hoja de espejos y luces vehiculares_0
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 421
+        width: 247
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778d7ddb7c3949ac0800000000000000
+      internalID: -3849289295402117001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoja de espejos y luces vehiculares_1
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 423
+        width: 239
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c30b80d3a4081d479f17f4f833fda9c
+      internalID: -641380633566522766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoja de espejos y luces vehiculares_2
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 222
+        width: 244
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ceee8fedb3e9fd4aa83ae4a74803d48
+      internalID: 2077842046035443274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoja de espejos y luces vehiculares_3
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 235
+        width: 242
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d219ddec8ba967449d99278b31b2d5f
+      internalID: 1476198023169500160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoja de espejos y luces vehiculares_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 20
+        width: 291
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27628c77f7f98245a3c1823c1a6e376
+      internalID: -7036795856630773867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoja de espejos y luces vehiculares_5
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 18
+        width: 292
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bcc5a5070d3094da6a88368612e05e
+      internalID: -8793832818554807341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoja de espejos y luces vehiculares_6
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 417
+        width: 297
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93dcb5f15bd7b794bb9a25d0413c2416
+      internalID: -6818141610450513377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoja de espejos y luces vehiculares_7
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 409
+        width: 279
+        height: 374
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3dc388b1c2f7a2428c5b68f3bd1e084
+      internalID: -3160391044598973462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoja de espejos y luces vehiculares_8
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 228
+        width: 253
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9359e253321a9ae4b9e5473ed38e2daa
+      internalID: 8568872599437524597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoja de espejos y luces vehiculares_9
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 21
+        width: 323
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4af19248a9016448b0a74e3235ffaaa
+      internalID: 1516490272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoja de espejos y luces vehiculares_10
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 21
+        width: 337
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29565355db8e43b4db8d6a1e6e782833
+      internalID: 1717000248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hoja de espejos y luces vehiculares_11
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 231
+        width: 252
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153070a1cea6f8548a204dfa4295346a
+      internalID: 283687733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b4be27dfadc11ea448e0be49fd35799b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1983.0,"y":793.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Hoja de espejos y luces vehiculares_0: -3849289295402117001
+      Hoja de espejos y luces vehiculares_1: -641380633566522766
+      Hoja de espejos y luces vehiculares_10: 1717000248
+      Hoja de espejos y luces vehiculares_11: 283687733
+      Hoja de espejos y luces vehiculares_2: 2077842046035443274
+      Hoja de espejos y luces vehiculares_3: 1476198023169500160
+      Hoja de espejos y luces vehiculares_4: -7036795856630773867
+      Hoja de espejos y luces vehiculares_5: -8793832818554807341
+      Hoja de espejos y luces vehiculares_6: -6818141610450513377
+      Hoja de espejos y luces vehiculares_7: -3160391044598973462
+      Hoja de espejos y luces vehiculares_8: 8568872599437524597
+      Hoja de espejos y luces vehiculares_9: 1516490272
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
