@@ -4758,7 +4758,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4932851220920467604, guid: e7517e7603bc82b48914f4703ce8ee77, type: 3}
+  m_Sprite: {fileID: -2281968541387204853, guid: 6c62125c76a1f3b4dac9b7411b9c775d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5942,7 +5942,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.97789115, y: 0.9259259, z: 1}
+  m_LocalScale: {x: 1.1268497, y: 0.9259259, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

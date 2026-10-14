@@ -371,7 +371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &136004502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3369,7 +3369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 781051985101144152, guid: d2285bf09f59f514386e8da044f90413, type: 3}
+  m_Sprite: {fileID: -2030223647670713425, guid: b97df9d5b4d35474db69cb8f1e6a00e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5174,7 +5174,6 @@ MonoBehaviour:
       correctTrueFalse: 1
   rows: 4
   columns: 5
-  pointsPerPair: 10
   timeToHide: 0.8
   managerRecolection: {fileID: 828878621}
   questionManager: {fileID: 843334455}
