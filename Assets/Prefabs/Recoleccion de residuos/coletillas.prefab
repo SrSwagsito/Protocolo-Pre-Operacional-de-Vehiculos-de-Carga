@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4535316277739332411}
   - component: {fileID: 4068284489457481214}
   - component: {fileID: 7064565527929169996}
+  - component: {fileID: 3820225385036532712}
   m_Layer: 0
   m_Name: coletillas
   m_TagString: ordinario
@@ -110,7 +111,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDamping: 0
   m_AngularDamping: 2
-  m_GravityScale: 0.2
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -171,6 +172,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 696e05f6b0abca1478af62419fa9bded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallingObject
+--- !u!114 &3820225385036532712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364939194545006474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5f7d26093a17242be24622abf624f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashFall
+  fallSpeed: 4
 --- !u!1 &4752563641364806750
 GameObject:
   m_ObjectHideFlags: 0

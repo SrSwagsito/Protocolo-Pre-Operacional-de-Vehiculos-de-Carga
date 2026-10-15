@@ -312,22 +312,13 @@ public class FinalCertificationScreen : MonoBehaviour
     /// </summary>
     private void OnFinishClicked()
     {
-        // Aquí puedes:
-        // - Volver al menú principal
-        // - Guardar datos del usuario
-        // - Salir de la aplicación
-
         Debug.Log("Entrenamiento completado. Saliendo...");
 
-        // Ejemplo: Cargar escena de menú principal
-        SceneManager.LoadScene("Initial Splash image");
+        string sceneToLoad = Application.CanStreamedLevelBeLoaded("Initial Splash image")
+            ? "Initial Splash image"
+            : "Initial Menu game";
 
-        // O cerrar la aplicación
-        //#if UNITY_EDITOR
-        //        UnityEditor.EditorApplication.isPlaying = false;
-        //#else
-
-        //#endif
+        SceneManager.LoadScene(sceneToLoad);
     }
 
     /// <summary>

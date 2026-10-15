@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 637373834759295494}
   - component: {fileID: 4602747925868818370}
   - component: {fileID: -8874959193476514990}
+  - component: {fileID: -7264248355012709166}
   m_Layer: 0
   m_Name: bolsa de plastico
   m_TagString: aprovechableAzul
@@ -291,7 +292,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDamping: 0
   m_AngularDamping: 2
-  m_GravityScale: 0.2
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -352,3 +353,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 696e05f6b0abca1478af62419fa9bded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallingObject
+--- !u!114 &-7264248355012709166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698237285750030790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5f7d26093a17242be24622abf624f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashFall
+  fallSpeed: 4

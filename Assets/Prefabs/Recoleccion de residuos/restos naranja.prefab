@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6472195690642148596}
   - component: {fileID: 7992074365270061360}
   - component: {fileID: 2906813759858059908}
+  - component: {fileID: 383852159815751067}
   m_Layer: 0
   m_Name: restos naranja
   m_TagString: organico
@@ -110,7 +111,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDamping: 0
   m_AngularDamping: 2
-  m_GravityScale: 0.2
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -171,6 +172,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 696e05f6b0abca1478af62419fa9bded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallingObject
+--- !u!114 &383852159815751067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3008381638864183092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5f7d26093a17242be24622abf624f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashFall
+  fallSpeed: 4
 --- !u!1 &6802645946049311020
 GameObject:
   m_ObjectHideFlags: 0

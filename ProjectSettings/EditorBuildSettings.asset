@@ -69,7 +69,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Manejo de residuos/modulo residuos aeropuerto.unity
     guid: 8d14884bbbe50724fbaf4f43e3e3eed0
   - enabled: 1
-    path: Assets/Scenes/Manejo de residuos/selection residuos.unity
+    path: Assets/Scenes/Manejo de residuos/selection residuos memorias.unity
     guid: c9f76e18c8232c84e9dc11b56c02c676
   - enabled: 1
     path: Assets/Scenes/Manejo de residuos/FinalScreen residuos.unity
@@ -80,6 +80,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Manejo de residuos/IntroductionSceneRecolectionResiduos.unity
     guid: 56ad84386e9e33d4f81fcd0616dea1f5
+  - enabled: 1
+    path: Assets/Scenes/Manejo de residuos/selection residuos.unity
+    guid: 379f424d1024106439c4c58ce0d71ef3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 6ed7e93e8bced9242a4200d4b4965cef, type: 3}
   m_UseUCBPForAssetBundles: 0

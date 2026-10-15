@@ -26,7 +26,7 @@ public class ManagerRecolection : MonoBehaviour
     // UI REFERENCES
     // =========================================================
 
-    [Header("UI References")]
+    [Header("UI References")]    
     [SerializeField] private TutorialPanel tutorialPopup;
     [SerializeField] private InstructionsUI instructionsUI;
     [SerializeField] private ProgressCounterTrash progressCounter;
