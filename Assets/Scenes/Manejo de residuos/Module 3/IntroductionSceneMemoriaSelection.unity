@@ -451,8 +451,8 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: InspectionModule
-          m_BoolArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &334472367
 MonoBehaviour:
@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3640a2cccade714388b6a33002292f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  sceneName: modulo recoleccion
+  sceneName: selection residuos memorias
   reloadCurrent: 0
 --- !u!1 &390039844
 GameObject:
@@ -1154,7 +1154,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2030223647670713425, guid: b97df9d5b4d35474db69cb8f1e6a00e6, type: 3}
+  m_Sprite: {fileID: 9075426537400140512, guid: 058105176aa5d364cb3cd471057c26c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1793,8 +1793,8 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1905503973}
   dialoguetext: {fileID: 467483132}
   dialogueLines:
-  - text: "Hola soy oscar, operario de interaseo, aqui aprenderas a hacer una debida
-      recolecc\xEDon de residuos dentro del aeropuerto El Dorado"
+  - text: "Hola soy sara, operaria de interaseo, aqui usaras tu memoria y conocimientos
+      de la capacitaci\xF3n para poder aprobar el modulo de juego de memoria"
     voiceClip: {fileID: 0}
   - text: '
 

@@ -18,9 +18,6 @@ public class MemoryGameManager : MonoBehaviour
     [Header("Tiempo")]
     [SerializeField] private float timeToHide = 0.8f;
 
-    [Header("Manager principal")]
-    [SerializeField] private ManagerRecolection managerRecolection;
-
     [Header("Pregunta")]
     [SerializeField] private QuestionManager questionManager;
 
@@ -89,31 +86,6 @@ public class MemoryGameManager : MonoBehaviour
                 "❌ QuestionManager NO está asignado."
             );
         }
-
-
-        // -----------------------------------------------------
-        // Buscar ManagerRecolection automáticamente
-        // -----------------------------------------------------
-
-        if (managerRecolection == null)
-        {
-            managerRecolection = ManagerRecolection.Instance;
-        }
-
-
-        if (managerRecolection != null)
-        {
-            Debug.Log(
-                "✅ ManagerRecolection conectado."
-            );
-        }
-        else
-        {
-            Debug.LogError(
-                "❌ ManagerRecolection NO encontrado."
-            );
-        }
-
 
         // -----------------------------------------------------
         // Crear tablero

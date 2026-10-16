@@ -53,7 +53,6 @@ public class ManagerRecolection : MonoBehaviour
 
     [Header("Jugadores")]
     public Transform player;
-    public Transform dropObject;
     public Transform playerTwo;
 
     private Transform[] players;
@@ -98,6 +97,7 @@ public class ManagerRecolection : MonoBehaviour
     private bool level3Unlocked;
     private bool moduleCompleted;
     private float contador = 5f;
+    private bool forcedFailPending;
     [SerializeField] private bool isMemoryModule = false;
 
     private void CheckProgress()
@@ -361,33 +361,46 @@ public class ManagerRecolection : MonoBehaviour
     // PERDER VIDA
     // =========================================================
 
-    public void LoseLife()
+
+   
+public void LoseLife()
+{
+    if (inspectionEnded)
+        return;
+
+    Health = Mathf.Max(0, Health - 1);
+
+    OnLivesChanged?.Invoke(Health);
+
+    Debug.Log("Vida perdida. Vidas restantes: " + Health);
+
+    if (Health <= 0)
     {
-        Health = Mathf.Max(0, Health - 1);
+        forcedFailPending = true;
 
-        // Notificar a la UI
-        OnLivesChanged?.Invoke(Health);
+        Debug.Log("GAME OVER: se acabaron las vidas.");
 
-        Debug.Log(
-            "Vida perdida. Vidas restantes: " + Health
-        );
-
-        // Game Over
-        if (Health <= 0)
-        {
-            EndInspection(true);
-        }
+        // Finaliza inmediatamente y muestra el resultado de fracaso.
+        EndInspection(true);
     }
+}
+
+
 
 
     // =========================================================
     // FINALIZAR INSPECCIÓN
     // =========================================================
 
+
     public void FinishInspection()
     {
-        EndInspection(false);
+        if (inspectionEnded)
+            return;
+
+        EndInspection(forcedFailPending);
     }
+
 
 
     // =========================================================
@@ -595,15 +608,6 @@ public class ManagerRecolection : MonoBehaviour
             );
             cameraFollow.SetLevelY(5.84f);
         }
-        if(dropObject != null)
-        {
-            dropObject.position = new Vector3(
-                dropObject.position.x,
-                10.19f,
-                dropObject.position.z
-                );
-        }
-
         if (playerTwo != null)
         {
             playerTwo.position = new Vector3(
@@ -637,14 +641,6 @@ public class ManagerRecolection : MonoBehaviour
                 player.position.z
             );
             cameraFollow.SetLevelY(18.6f);
-        }
-        if(dropObject!= null)
-        {
-            dropObject.position = new Vector3(
-                dropObject.position.x,
-                23.29f,
-                dropObject.position.z
-                );
         }
         if (playerTwo != null)
         {

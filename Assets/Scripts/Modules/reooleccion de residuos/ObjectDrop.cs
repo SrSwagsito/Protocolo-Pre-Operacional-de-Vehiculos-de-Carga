@@ -24,11 +24,11 @@ public class ObjectDrop : MonoBehaviour
     private void Start()
     {
         StartCoroutine(WaitForTutorial());
-
     }
 
     private IEnumerator WaitForTutorial()
     {
+        // Esperar a que Unity actualice el estado de la UI.
         yield return null;
 
         while (tutorialPop != null &&
@@ -40,9 +40,14 @@ public class ObjectDrop : MonoBehaviour
         if (objectPrefabs == null || objectPrefabs.Length == 0)
         {
             Debug.LogError(
-                "ObjectDrop: No hay prefabs asignados.",
-                this
-            );
+                "ObjectDrop: No hay prefabs asignados.", this);
+            yield break;
+        }
+
+        if (maxObjects <= 0)
+        {
+            Debug.LogError(
+                "ObjectDrop: maxObjects debe ser mayor que cero.", this);
             yield break;
         }
 
@@ -62,12 +67,10 @@ public class ObjectDrop : MonoBehaviour
         {
             if (currentObjects < maxObjects)
             {
-                float randomX = Random.Range(-5.22f, 10.21f);
-
                 int randomIndex = Random.Range(
-                    0,
-                    objectPrefabs.Length
-                );
+                    0, objectPrefabs.Length);
+
+                float randomX = Random.Range(-5.22f, 10.21f);
 
                 Vector3 spawnPosition = new Vector3(
                     randomX,
@@ -75,32 +78,37 @@ public class ObjectDrop : MonoBehaviour
                     transform.position.z
                 );
 
-                Instantiate(
+                GameObject spawnedObject = Instantiate(
                     objectPrefabs[randomIndex],
                     spawnPosition,
                     Quaternion.identity
                 );
 
-                currentObjects++;
-                totalSpawned++;
+                if (spawnedObject != null)
+                {
+                    currentObjects++;
+                    totalSpawned++;
 
-                Debug.Log(
-                    $"Generados: {totalSpawned}/{totalObjectsToSpawn} | " +
-                    $"Objetos vivos: {currentObjects}"
-                );
+                    Debug.Log(
+                        $"Generados: {totalSpawned}/{totalObjectsToSpawn} | " +
+                        $"Basuras activas registradas: {currentObjects}"
+                    );
+                }
             }
 
-            yield return new WaitForSeconds(spawnRate);
+            yield return new WaitForSeconds(
+                Mathf.Max(0.01f, spawnRate));
         }
 
         spawningFinished = true;
 
-        Debug.Log("ObjectDrop: terminó la generación.");
+        Debug.Log(
+            "ObjectDrop: terminó la generación de residuos.");
 
         TryFinishInspection();
     }
 
-    // Este método debe llamarse una sola vez por cada residuo eliminado.
+    // Llamar una sola vez por cada residuo eliminado.
     public void RemoveObject()
     {
         if (inspectionFinished)
@@ -109,19 +117,16 @@ public class ObjectDrop : MonoBehaviour
         if (currentObjects <= 0)
         {
             Debug.LogWarning(
-                "ObjectDrop: se intentó eliminar un objeto " +
-                "cuando no hay objetos registrados.",
-                this
-            );
+                "ObjectDrop: el contador de residuos ya está en cero.",
+                this);
             return;
         }
 
         currentObjects--;
 
         Debug.Log(
-            $"Residuo eliminado. Quedan {currentObjects} | " +
-            $"Generados: {totalSpawned}/{totalObjectsToSpawn}"
-        );
+            $"Residuo eliminado. Quedan: {currentObjects} | " +
+            $"Generados: {totalSpawned}/{totalObjectsToSpawn}");
 
         TryFinishInspection();
     }
@@ -131,16 +136,15 @@ public class ObjectDrop : MonoBehaviour
         if (inspectionFinished)
             return;
 
-        // No termina hasta generar todos los residuos
-        // y registrar que ya no queda ninguno.
-        if (!spawningFinished || currentObjects != 0)
+        // Deben haberse generado todos los residuos
+        // y no debe quedar ninguno registrado como activo.
+        if (!spawningFinished || currentObjects > 0)
             return;
 
         inspectionFinished = true;
 
         Debug.Log(
-            "ObjectDrop: todos los residuos fueron procesados."
-        );
+            "ObjectDrop: todos los residuos fueron procesados.");
 
         if (ManagerRecolection.Instance != null)
         {
@@ -149,8 +153,7 @@ public class ObjectDrop : MonoBehaviour
         else
         {
             Debug.LogError(
-                "ObjectDrop: no existe ManagerRecolection en la escena."
-            );
+                "ObjectDrop: no existe ManagerRecolection en la escena.");
         }
     }
 }

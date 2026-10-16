@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.335608, y: -11.0405}
-  m_SizeDelta: {x: 104.0528, y: 109.5955}
+  m_AnchoredPosition: {x: -14.7487, y: -11.0405}
+  m_SizeDelta: {x: 68.4369, y: 109.5955}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &37621939
 MonoBehaviour:
@@ -1606,7 +1606,7 @@ GameObject:
   - component: {fileID: 538756295}
   m_Layer: 0
   m_Name: mmm (1)
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2965,7 +2965,7 @@ Transform:
   m_GameObject: {fileID: 759705898}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.02, y: -4.71, z: -10}
+  m_LocalPosition: {x: 1.9, y: -4.71, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3028,8 +3028,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   player: {fileID: 334800541}
-  minX: 0.74
-  maxX: 4.02
+  minX: -1.14
+  maxX: 5.87
 --- !u!1 &803353824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3470,8 +3470,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 1373, y: 0}
-  m_SizeDelta: {x: 2746, y: 1080}
+  m_AnchoredPosition: {x: 863.9999, y: 0}
+  m_SizeDelta: {x: 1728, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &969868362
 CanvasRenderer:
@@ -3556,7 +3556,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -3916,10 +3916,10 @@ RectTransform:
   - {fileID: 1441293825}
   m_Father: {fileID: 969868361}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 93.390076, y: 50.676758}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 10.4401, y: 0}
+  m_SizeDelta: {x: 1799.6118, y: 1130.6768}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1029347074
 MonoBehaviour:
@@ -4307,10 +4307,10 @@ RectTransform:
   - {fileID: 1666479785}
   m_Father: {fileID: 982286060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -436.33115}
-  m_SizeDelta: {x: 0, y: -872.6624}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 11, y: 157}
+  m_SizeDelta: {x: 1662, y: 232.5206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1174400961
 MonoBehaviour:
@@ -5115,7 +5115,7 @@ GameObject:
   - component: {fileID: 1384664868}
   m_Layer: 0
   m_Name: mmm
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6577,8 +6577,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.1285, y: 0.000080109}
-  m_SizeDelta: {x: 2286.8389, y: 207.34}
+  m_AnchoredPosition: {x: -4, y: -20}
+  m_SizeDelta: {x: 1570.241, y: 220.2934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1666479786
 MonoBehaviour:
@@ -7044,7 +7044,7 @@ MonoBehaviour:
   - {fileID: 8698237285750030790, guid: b12ed3168c2c87f4e86941866228fe88, type: 3}
   spawnRate: 2.6
   maxObjects: 3
-  totalObjectsToSpawn: 10
+  totalObjectsToSpawn: 20
   tutorialPop: {fileID: 136004501}
 --- !u!1 &1808785483
 GameObject:
@@ -7341,11 +7341,10 @@ MonoBehaviour:
   - Pasaste al piso 3, recuerda usar siempre los elemento de proteccion o EPP
   scoreText: {fileID: 474097512}
   maxLives: 3
-  pointsPerCorrect: 10
+  pointsPerCorrect: 100
   approvalThreshold: 70
   cameraFollow: {fileID: 759705903}
   player: {fileID: 334800541}
-  dropObject: {fileID: 1723046971}
   playerTwo: {fileID: 0}
   triggers:
   - {fileID: 0}
@@ -7933,7 +7932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3640a2cccade714388b6a33002292f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  sceneName: FinalScreen residuos
+  sceneName: IntroductionSceneMemoriaSelection
   reloadCurrent: 0
 --- !u!114 &2014186499
 MonoBehaviour:
@@ -8041,7 +8040,7 @@ GameObject:
   - component: {fileID: 2088895816}
   m_Layer: 0
   m_Name: mmm (2)
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,6 +13,7 @@ TagManager:
   - aprovechableGris
   - ordinario
   - limit
+  - floor
   layers:
   - Default
   - TransparentFX
