@@ -5111,8 +5111,9 @@ MonoBehaviour:
   rows: 4
   columns: 5
   timeToHide: 0.8
-  managerRecolection: {fileID: 828878621}
   questionManager: {fileID: 843334455}
+  moduleName: Juego de memoria Nacional
+  approvalThreshold: 70
 --- !u!114 &1303699290 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5871089662319788657, guid: befc1c32a455c9849af3251cdd86a157, type: 3}

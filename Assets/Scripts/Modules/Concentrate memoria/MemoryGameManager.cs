@@ -53,6 +53,13 @@ public class MemoryGameManager : MonoBehaviour
     // Evita finalizar el módulo dos veces
     private bool gameFinished = false;
 
+    [Header("Configuración del módulo")]
+    [SerializeField] private string moduleName = "Juego de memoria";
+    [SerializeField] private int approvalThreshold = 70;
+
+    private bool moduleApproved;
+    private string resultMessage;
+
 
     // =========================================================
     // START
@@ -539,36 +546,49 @@ public class MemoryGameManager : MonoBehaviour
 
 
         // =====================================================
-        // GUARDAR RESULTADO EN MANAGERRECOLECTION
+        // ENVIAR RESULTADO DEL MÓDULO
         // =====================================================
 
-        if (managerRecolection != null)
+        SendResult();
+    }
+
+
+    // =========================================================
+    // ENVIAR RESULTADO AL GAME MANAGER
+    // =========================================================
+
+    private void SendResult()
+    {
+        moduleApproved = finalScore >= approvalThreshold;
+
+        resultMessage = moduleApproved
+            ? "¡Excelente! Has completado correctamente el juego de memoria."
+            : "No alcanzaste el puntaje mínimo para aprobar el juego de memoria.";
+
+        ModuleResult result = new ModuleResult
         {
-            // IMPORTANTE:
-            // El Score ya NO representa puntos por parejas.
-            // Ahora representa el porcentaje de preguntas correctas.
+            moduleName = moduleName,
+            approved = moduleApproved,
+            score = finalScore,
+            missedDamages = questionsAnswered - correctAnswers,
+            message = resultMessage
+        };
 
-            managerRecolection.Score = finalScore;
-
-
-            Debug.Log(
-                "📊 Score enviado a ManagerRecolection: " +
-                managerRecolection.Score
-            );
-
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.RegisterModuleResult(result);
 
             Debug.Log(
-                "📋 Finalizando módulo..."
+                "Resultado enviado: " + moduleName +
+                " | Puntaje: " + finalScore +
+                " | Aprobado: " + moduleApproved
             );
-
-
-            managerRecolection.FinishInspection();
         }
         else
         {
             Debug.LogError(
-                "❌ No se puede finalizar el módulo porque " +
-                "ManagerRecolection es NULL."
+                "GameManager.Instance no existe. " +
+                "No se pudo registrar el resultado del juego de memoria."
             );
         }
     }
