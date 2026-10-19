@@ -10,141 +10,98 @@ public class ModuleDressUpEPPSManager : MonoBehaviour
     [SerializeField] private InstructionsUI instructionsUI;
 
     [Header("Configuración")]
-    [SerializeField] private int requiredCloths; // Prendas necesarias
+    [SerializeField] private int requiredCloths = 7;
 
-    private int correctClothsSubmitted = 0;
-    private int incorrectClothsSubmitted = 0;
-    private int score = 0;
-    private bool moduleFinished = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private int correctClothsSubmitted;
+    private int incorrectClothsSubmitted;
+    private int score;
+    private bool moduleFinished;
 
     private void OnEnable()
     {
-        if(tutorialPopUp != null)
-        tutorialPopUp.OnTutorialClosed += StartModule;
-
-
+        if (tutorialPopUp != null) tutorialPopUp.OnTutorialClosed += StartModule;
     }
 
     private void OnDisable()
     {
-        if(tutorialPopUp != null) 
-        tutorialPopUp.OnTutorialClosed -= StartModule;
-
+        if (tutorialPopUp != null) tutorialPopUp.OnTutorialClosed -= StartModule;
     }
-    void Start()
+
+    private void Start()
     {
-        if (tutorialPopUp != null)
-        {
-            tutorialPopUp.ShowTutorial();
-        }
-        else
-        {
-            StartModule();
-        }
+        if (tutorialPopUp != null) tutorialPopUp.ShowTutorial();
+        else StartModule();
     }
-
-    
 
     private void StartModule()
     {
-        instructionsUI.ShowInstruction("Arrastra los documentos necesarios a la zona de verificación.");
-        UpdateProgressCounter();
+        if (instructionsUI != null)
+            instructionsUI.ShowInstruction("Arrastra los elementos de protección personal a las zonas correspondientes.");
+        RefreshProgress();
+    }
+
+    public void RefreshProgress()
+    {
+        int correct = 0;
+        if (slotsAvailable != null)
+            foreach (ClothSlot slot in slotsAvailable)
+            {
+                DraggableCloth cloth = slot != null ? slot.GetCurrentCloth() : null;
+                if (cloth != null && cloth.IsCorrect) correct++;
+            }
+
+        if (progressCounter != null)
+            progressCounter.UpdateProgress(correct, Mathf.Max(1, requiredCloths));
     }
 
     public void FinishModule()
     {
         if (moduleFinished) return;
-
         correctClothsSubmitted = 0;
         incorrectClothsSubmitted = 0;
-        score = 0;
 
-        // Recorremos todos los slots
-        foreach (var slot in slotsAvailable)
-        {
-            DraggableCloth cloth = (DraggableCloth)slot.GetCurrentCloth();
-            if (cloth == null)
+        if (slotsAvailable != null)
+            foreach (ClothSlot slot in slotsAvailable)
             {
-                Debug.Log($"Slot {slot.name} no contiene una DraggableCloth válida.");
-                continue;
+                DraggableCloth cloth = slot != null ? slot.GetCurrentCloth() : null;
+                if (cloth == null) continue;
+                if (cloth.IsCorrect) correctClothsSubmitted++;
+                else incorrectClothsSubmitted++;
             }
 
-            // Verificamos si la prenda es la correcta
-            if (cloth.IsCorrect) // propiedad booleana en DraggableObject
-            {
-                correctClothsSubmitted++;
-                score += 20;
-                Debug.Log($"✓ Correcto: {cloth.name}");
-            }
-            else
-            {
-                incorrectClothsSubmitted++;
-                score -= 10;
-                Debug.Log($"✗ Incorrecto: {cloth.name}");
-            }
-        }
-
+        int required = Mathf.Max(1, requiredCloths);
+        score = Mathf.Clamp(Mathf.RoundToInt(correctClothsSubmitted * 100f / required
+                                             - incorrectClothsSubmitted * 50f / required), 0, 100);
         moduleFinished = true;
-
-        // Ocultar instrucciones
-        if (instructionsUI != null)
-            instructionsUI.gameObject.SetActive(false);
-
-        // Asegurar que el score no sea negativo
-        if (score < 0)
-            score = 0;
-
+        if (instructionsUI != null) instructionsUI.gameObject.SetActive(false);
         SendResult();
     }
 
-    private void UpdateProgressCounter()
-    {
-        if (progressCounter != null)
-        {
-            progressCounter.UpdateProgress(correctClothsSubmitted, requiredCloths);
-        }
-    }
-
-    
-
     private void SendResult()
     {
-        string detailMessage = GenerateDetailMessage();
-
         ModuleResult result = new ModuleResult
         {
-            moduleName = "Vestimenta de EPPS",
+            moduleName = "Vestimenta de EPP",
             approved = correctClothsSubmitted >= requiredCloths && incorrectClothsSubmitted == 0,
             score = score,
-            missedDamages = requiredCloths - correctClothsSubmitted + incorrectClothsSubmitted,
-            message = detailMessage
+            missedDamages = Mathf.Max(0, requiredCloths - correctClothsSubmitted) + incorrectClothsSubmitted,
+            message = GenerateDetailMessage()
         };
 
-        GameManager.Instance.RegisterModuleResult(result);
+        if (GameManager.Instance != null) GameManager.Instance.RegisterModuleResult(result);
+        else Debug.LogError("No se encontró GameManager.Instance al finalizar Vestimenta de EPP.");
     }
 
     private string GenerateDetailMessage()
     {
-        string message = $"Documentos correctos: {correctClothsSubmitted}/{requiredCloths}\n";
-        message += $"Documentos incorrectos añadidos: {incorrectClothsSubmitted}\n\n";
-
+        string message = $"Elementos correctos: {correctClothsSubmitted}/{requiredCloths}\n";
+        message += $"Elementos incorrectos: {incorrectClothsSubmitted}\n\n";
         if (correctClothsSubmitted >= requiredCloths && incorrectClothsSubmitted == 0)
-        {
-            message += "¡Perfecto! Identificaste todos los documentos necesarios sin errores.";
-        }
+            message += "¡Perfecto! Identificaste todos los elementos de protección personal sin errores.";
         else if (correctClothsSubmitted >= requiredCloths)
-        {
-            message += "Identificaste todos los documentos, pero incluiste algunos innecesarios.";
-        }
+            message += "Identificaste todos los elementos requeridos, pero incluiste algunos incorrectos.";
         else
-        {
-            int missing = requiredCloths - correctClothsSubmitted;
-            message += $"Te faltaron {missing} documento(s) necesario(s). Revisa la lista de documentación requerida.";
-        }
-
+            message += $"Te faltaron {requiredCloths - correctClothsSubmitted} elemento(s) correcto(s). Revisa el equipo de protección personal requerido.";
         return message;
     }
 }
-
-
