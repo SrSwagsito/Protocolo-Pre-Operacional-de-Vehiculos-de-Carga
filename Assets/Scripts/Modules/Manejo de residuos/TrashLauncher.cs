@@ -30,16 +30,25 @@ public class TrashLauncher : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Kinematic;
     }
 
+
     private void Update()
     {
-        Debug.Log("Update corriendo");
-
-#if UNITY_ANDROID || UNITY_IOS
-        HandleTouch();
-#else
-    HandleMouse();
-#endif
+        if (Touchscreen.current != null &&
+            Touchscreen.current.primaryTouch.press.isPressed)
+        {
+            HandleTouch();
+        }
+        else if (Touchscreen.current != null &&
+                 Touchscreen.current.primaryTouch.press.wasReleasedThisFrame)
+        {
+            HandleTouch();
+        }
+        else
+        {
+            HandleMouse();
+        }
     }
+
 
     private void Launch()
     {
