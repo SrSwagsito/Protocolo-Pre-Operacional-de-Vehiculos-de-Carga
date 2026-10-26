@@ -1,0 +1,636 @@
+fileFormatVersion: 2
+guid: 4850f921c9ba546408dbe6278ccdeed6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1000000
+    second: Bota negra
+  - first:
+      213: -1007919
+    second: Bota marron
+  - first:
+      213: -1015838
+    second: Bota azul
+  - first:
+      213: -1023757
+    second: Bota amarilla
+  - first:
+      213: -1031676
+    second: Chancla verde
+  - first:
+      213: -1039595
+    second: Chancla rosa
+  - first:
+      213: -1047514
+    second: Chancla azul
+  - first:
+      213: -1055433
+    second: Chancla morada
+  - first:
+      213: -1063352
+    second: Guante azul
+  - first:
+      213: -1071271
+    second: Guante negro
+  - first:
+      213: -1079190
+    second: Guante gris
+  - first:
+      213: -1087109
+    second: Guante verde
+  - first:
+      213: -1095028
+    second: Reloj marron
+  - first:
+      213: -1102947
+    second: Reloj negro
+  - first:
+      213: -1110866
+    second: Reloj verde
+  - first:
+      213: -1118785
+    second: Reloj gris
+  - first:
+      213: -1126704
+    second: Aretes dorados
+  - first:
+      213: -1134623
+    second: Aretes azules
+  - first:
+      213: -1142542
+    second: Aretes estrellas
+  - first:
+      213: -1150461
+    second: Aretes verdes
+  - first:
+      213: -1158380
+    second: Gafas transparentes
+  - first:
+      213: -1166299
+    second: Gafas amarillas
+  - first:
+      213: -1174218
+    second: Gafas azules
+  - first:
+      213: -1182137
+    second: Gafas oscuras
+  - first:
+      213: -1190056
+    second: Casco blanco
+  - first:
+      213: -1197975
+    second: Casco amarillo
+  - first:
+      213: -1205894
+    second: Casco azul
+  - first:
+      213: -1213813
+    second: Casco verde
+  - first:
+      213: -1221732
+    second: Arnes amarillo
+  - first:
+      213: -1229651
+    second: Arnes rojo
+  - first:
+      213: -1237570
+    second: Arnes azul
+  - first:
+      213: -1245489
+    second: Arnes verde
+  - first:
+      213: -1253408
+    second: Chaleco verde
+  - first:
+      213: -1261327
+    second: Chaleco naranja
+  - first:
+      213: -1269246
+    second: Chaleco azul
+  - first:
+      213: -1277165
+    second: Chaleco azul marino
+  - first:
+      213: -1285084
+    second: Pantalon azul
+  - first:
+      213: -1293003
+    second: Pantalon caqui
+  - first:
+      213: -1300922
+    second: Pantalon gris
+  - first:
+      213: -1308841
+    second: Pantalon oliva
+  - first:
+      213: -1316760
+    second: Pantalon EPP verde
+  - first:
+      213: -1324679
+    second: Pantalon EPP azul
+  - first:
+      213: -1332598
+    second: Pantalon EPP naranja
+  - first:
+      213: -1340517
+    second: Pantalon EPP azul marino
+  - first:
+      213: -1348436
+    second: Camisa blanca
+  - first:
+      213: -1356355
+    second: Camisa negra
+  - first:
+      213: -1364274
+    second: Camisa azul
+  - first:
+      213: -1372193
+    second: Camisa amarilla
+  - first:
+      213: -1380112
+    second: Camisa EPP verde
+  - first:
+      213: -1388031
+    second: Camisa EPP azul
+  - first:
+      213: -1395950
+    second: Camisa EPP naranja
+  - first:
+      213: -1403869
+    second: Camisa EPP azul marino
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_0"
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 513
+        width: 167
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70bbebec420902548a3444bd75a09014
+      internalID: -1725204948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_1"
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 517
+        width: 165
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2a37d0b7463b646bd730d98aa163a0
+      internalID: -1863428212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_2"
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 516
+        width: 169
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4d00c90bdaba04a8ca862785d7accd
+      internalID: -140334645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_3"
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 515
+        width: 163
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043d70e0aff5d504ab3684ca8503a762
+      internalID: 541925488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_4"
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 163
+        width: 104
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68b4309158bc6b4eb6784bc121a93be
+      internalID: 128743338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_5"
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 161
+        width: 108
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd68c80edb5fa041af363a789a77380
+      internalID: -342240119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_6"
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 163
+        width: 140
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ed49beacae48243bf0a22b483f272e
+      internalID: -481870510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_7"
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 160
+        width: 133
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe315c2487a2c3409af7d4a6896a6c3
+      internalID: 1740302443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_8"
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 152
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9fc9d9bcdf9ff4db3c9420c596c3cf
+      internalID: 1824631566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_9"
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 153
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f3ef1ffae67954daa5189f2277d320
+      internalID: 1986263270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_10"
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 314
+        width: 171
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8e31efaa348aa44af862d513068f9a
+      internalID: 57448019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_11"
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 311
+        width: 164
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4369b9325c3504f438adb87ad8bd3a2f
+      internalID: -1159317093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_12"
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 315
+        width: 160
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18d562f5cb2d2640863cf1473d71e5f
+      internalID: 879491313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_13"
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 315
+        width: 162
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e0ab33cf6bc574e82a4f4fb32a5b2d
+      internalID: 987685517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8c71478836458b549bf134986b0a6fc8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1717.0,"y":916.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      "Cat\xE1logo de ropa y equipo de seguridad_0": -1725204948
+      "Cat\xE1logo de ropa y equipo de seguridad_1": -1863428212
+      "Cat\xE1logo de ropa y equipo de seguridad_10": 57448019
+      "Cat\xE1logo de ropa y equipo de seguridad_11": -1159317093
+      "Cat\xE1logo de ropa y equipo de seguridad_12": 879491313
+      "Cat\xE1logo de ropa y equipo de seguridad_13": 987685517
+      "Cat\xE1logo de ropa y equipo de seguridad_2": -140334645
+      "Cat\xE1logo de ropa y equipo de seguridad_3": 541925488
+      "Cat\xE1logo de ropa y equipo de seguridad_4": 128743338
+      "Cat\xE1logo de ropa y equipo de seguridad_5": -342240119
+      "Cat\xE1logo de ropa y equipo de seguridad_6": -481870510
+      "Cat\xE1logo de ropa y equipo de seguridad_7": 1740302443
+      "Cat\xE1logo de ropa y equipo de seguridad_8": 1824631566
+      "Cat\xE1logo de ropa y equipo de seguridad_9": 1986263270
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

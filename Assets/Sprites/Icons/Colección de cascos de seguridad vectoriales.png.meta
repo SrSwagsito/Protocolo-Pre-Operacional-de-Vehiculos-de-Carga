@@ -1,0 +1,438 @@
+fileFormatVersion: 2
+guid: e51a16b66b6df8e4fb6eb0c3a5baa9c8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 164444090126367713
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_0"
+  - first:
+      213: 7557189625413839825
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_1"
+  - first:
+      213: 3433282365011379702
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_2"
+  - first:
+      213: 3607762093094955406
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_3"
+  - first:
+      213: 1585534341452712113
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_4"
+  - first:
+      213: 8859822529898917296
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_5"
+  - first:
+      213: 3490846209947139226
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_6"
+  - first:
+      213: 5413898795330829968
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_7"
+  - first:
+      213: -496704460718432590
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_8"
+  - first:
+      213: -6847084443561391273
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_9"
+  - first:
+      213: -2429760485004474970
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_10"
+  - first:
+      213: -3085105657522064022
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_11"
+  - first:
+      213: 7169493470911846034
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_12"
+  - first:
+      213: 1509180194757061773
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_13"
+  - first:
+      213: 6064029219014916826
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_14"
+  - first:
+      213: -1017054894100277288
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_15"
+  - first:
+      213: -6348890153381693429
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_16"
+  - first:
+      213: -812936878836784602
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_17"
+  - first:
+      213: 7764766821813421430
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_18"
+  - first:
+      213: 8935995904652738161
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_19"
+  - first:
+      213: -2851655163496523895
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_20"
+  - first:
+      213: -2208352196034476572
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_21"
+  - first:
+      213: -20803534422948227
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_22"
+  - first:
+      213: -3095708105784265534
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_23"
+  - first:
+      213: 4069444121978926908
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_24"
+  - first:
+      213: -5459330515626423248
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_25"
+  - first:
+      213: 8706092657404086346
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_26"
+  - first:
+      213: -2685108557526955606
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_27"
+  - first:
+      213: -7722847661482680260
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_28"
+  - first:
+      213: 1415075191273795949
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_29"
+  - first:
+      213: 5619934251763837197
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_30"
+  - first:
+      213: 1247832908026304369
+    second: "Colecci\xF3n de cascos de seguridad vectoriales_31"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Colecci\xF3n de cascos de seguridad vectoriales_0"
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 377
+        width: 486
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ebf4695709384200800000000000000
+      internalID: 164444090126367713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Colecci\xF3n de cascos de seguridad vectoriales_1"
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 374
+        width: 508
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f577d219baca67b4aae076211507c071
+      internalID: 7557189625413839825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Colecci\xF3n de cascos de seguridad vectoriales_2"
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 364
+        width: 483
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84fe423837697a845ab3910da48f2217
+      internalID: 3433282365011379702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Colecci\xF3n de cascos de seguridad vectoriales_3"
+      rect:
+        serializedVersion: 2
+        x: 1641
+        y: 394
+        width: 497
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1ff2be0d06aab4db1d8e50adc88452
+      internalID: 3607762093094955406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Colecci\xF3n de cascos de seguridad vectoriales_4"
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 61
+        width: 477
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe6fbefab61a2942b5b0a8ce645a41e
+      internalID: 1585534341452712113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Colecci\xF3n de cascos de seguridad vectoriales_5"
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 42
+        width: 492
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0d73bf829cf194cada590c651bfd71
+      internalID: 8859822529898917296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Colecci\xF3n de cascos de seguridad vectoriales_6"
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 56
+        width: 496
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5704160988d95d4996463579a3596f2
+      internalID: 3490846209947139226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Colecci\xF3n de cascos de seguridad vectoriales_7"
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 38
+        width: 483
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec69e63b7730094cb9698f56a411c4d
+      internalID: 5413898795330829968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e02a5717ecde2814a897a9b0083c7910
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":2172.0,"y":724.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      "Colecci\xF3n de cascos de seguridad vectoriales_0": 164444090126367713
+      "Colecci\xF3n de cascos de seguridad vectoriales_1": 7557189625413839825
+      "Colecci\xF3n de cascos de seguridad vectoriales_2": 3433282365011379702
+      "Colecci\xF3n de cascos de seguridad vectoriales_3": 3607762093094955406
+      "Colecci\xF3n de cascos de seguridad vectoriales_4": 1585534341452712113
+      "Colecci\xF3n de cascos de seguridad vectoriales_5": 8859822529898917296
+      "Colecci\xF3n de cascos de seguridad vectoriales_6": 3490846209947139226
+      "Colecci\xF3n de cascos de seguridad vectoriales_7": 5413898795330829968
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

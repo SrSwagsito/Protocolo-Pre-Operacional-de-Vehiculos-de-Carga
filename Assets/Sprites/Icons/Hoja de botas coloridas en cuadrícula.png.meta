@@ -1,0 +1,530 @@
+fileFormatVersion: 2
+guid: 04d86b073050dc0409fe772199eca611
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -745437757513063923
+    second: "Hoja de botas coloridas en cuadr\xEDcula_0"
+  - first:
+      213: -6171570997194833932
+    second: "Hoja de botas coloridas en cuadr\xEDcula_1"
+  - first:
+      213: -3632142889436279160
+    second: "Hoja de botas coloridas en cuadr\xEDcula_2"
+  - first:
+      213: -2395898377163669838
+    second: "Hoja de botas coloridas en cuadr\xEDcula_3"
+  - first:
+      213: 7545105593334474975
+    second: "Hoja de botas coloridas en cuadr\xEDcula_4"
+  - first:
+      213: -4187517207102447666
+    second: "Hoja de botas coloridas en cuadr\xEDcula_5"
+  - first:
+      213: 5116356324386124349
+    second: "Hoja de botas coloridas en cuadr\xEDcula_6"
+  - first:
+      213: 3490320450101277549
+    second: "Hoja de botas coloridas en cuadr\xEDcula_7"
+  - first:
+      213: 635021312166525525
+    second: "Hoja de botas coloridas en cuadr\xEDcula_8"
+  - first:
+      213: -1124653690783196436
+    second: "Hoja de botas coloridas en cuadr\xEDcula_9"
+  - first:
+      213: 5327623317481084167
+    second: "Hoja de botas coloridas en cuadr\xEDcula_10"
+  - first:
+      213: -8123038011755093
+    second: "Hoja de botas coloridas en cuadr\xEDcula_11"
+  - first:
+      213: 2922821659236753613
+    second: "Hoja de botas coloridas en cuadr\xEDcula_12"
+  - first:
+      213: -5176151086432592016
+    second: "Hoja de botas coloridas en cuadr\xEDcula_13"
+  - first:
+      213: -423428312492160669
+    second: "Hoja de botas coloridas en cuadr\xEDcula_14"
+  - first:
+      213: 4839666373472158743
+    second: "Hoja de botas coloridas en cuadr\xEDcula_15"
+  - first:
+      213: -1084941980596163382
+    second: "Hoja de botas coloridas en cuadr\xEDcula_16"
+  - first:
+      213: -7492359892943608429
+    second: "Hoja de botas coloridas en cuadr\xEDcula_17"
+  - first:
+      213: -2095100049866394028
+    second: "Hoja de botas coloridas en cuadr\xEDcula_18"
+  - first:
+      213: -5787289363605842413
+    second: "Hoja de botas coloridas en cuadr\xEDcula_19"
+  - first:
+      213: -253310473925941530
+    second: "Hoja de botas coloridas en cuadr\xEDcula_20"
+  - first:
+      213: -8289422274801048629
+    second: "Hoja de botas coloridas en cuadr\xEDcula_21"
+  - first:
+      213: -2881682376621338065
+    second: "Hoja de botas coloridas en cuadr\xEDcula_22"
+  - first:
+      213: 4789014979627306678
+    second: "Hoja de botas coloridas en cuadr\xEDcula_23"
+  - first:
+      213: -348588540112925210
+    second: "Hoja de botas coloridas en cuadr\xEDcula_24"
+  - first:
+      213: -5068847128176529769
+    second: "Hoja de botas coloridas en cuadr\xEDcula_25"
+  - first:
+      213: -8069351393983106581
+    second: "Hoja de botas coloridas en cuadr\xEDcula_26"
+  - first:
+      213: 4156734880045615746
+    second: "Hoja de botas coloridas en cuadr\xEDcula_27"
+  - first:
+      213: 3194588742920471378
+    second: "Hoja de botas coloridas en cuadr\xEDcula_28"
+  - first:
+      213: 8243417812769198942
+    second: "Hoja de botas coloridas en cuadr\xEDcula_29"
+  - first:
+      213: -7435285996458337907
+    second: "Hoja de botas coloridas en cuadr\xEDcula_30"
+  - first:
+      213: 3587378392763183251
+    second: "Hoja de botas coloridas en cuadr\xEDcula_31"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Hoja de botas coloridas en cuadr\xEDcula_0"
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 499
+        width: 467
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d02254d1f4ca7a5f0800000000000000
+      internalID: -745437757513063923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hoja de botas coloridas en cuadr\xEDcula_1"
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 499
+        width: 470
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c9aaf021e3cd046a83b66860caafaf
+      internalID: -6171570997194833932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hoja de botas coloridas en cuadr\xEDcula_2"
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 499
+        width: 461
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacfe5c547274804b87a39f9e916b6a4
+      internalID: -3632142889436279160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hoja de botas coloridas en cuadr\xEDcula_3"
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 513
+        width: 478
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b795f7ddec36a4ca06491d4638b99e
+      internalID: -2395898377163669838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hoja de botas coloridas en cuadr\xEDcula_4"
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 286
+        width: 471
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64bc0451cfed552429dd8b4d743731c4
+      internalID: 7545105593334474975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hoja de botas coloridas en cuadr\xEDcula_5"
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 275
+        width: 480
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be987a54d62387f47abc48b45cdb59f3
+      internalID: -4187517207102447666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hoja de botas coloridas en cuadr\xEDcula_6"
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 287
+        width: 471
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b062924b38b08d4a9112829a8d2707a
+      internalID: 5116356324386124349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hoja de botas coloridas en cuadr\xEDcula_7"
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 290
+        width: 472
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d27600834411245b22d0bdd819d6ce
+      internalID: 3490320450101277549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hoja de botas coloridas en cuadr\xEDcula_8"
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 60
+        width: 478
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62657937973b42a4a8138726e4611374
+      internalID: 635021312166525525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hoja de botas coloridas en cuadr\xEDcula_9"
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 58
+        width: 482
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f2b7079232a244385822fbf1c36426
+      internalID: -1124653690783196436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hoja de botas coloridas en cuadr\xEDcula_10"
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 60
+        width: 467
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de653d6e7fa8774419d3e31c3c2faed5
+      internalID: 5327623317481084167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Hoja de botas coloridas en cuadr\xEDcula_11"
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 60
+        width: 472
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb3aa36c3a0d1e40b39f827e6b829ac
+      internalID: -8123038011755093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9f288e3c706d01d49ba72bdba07d6b19
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":2172.0,"y":724.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      "Hoja de botas coloridas en cuadr\xEDcula_0": -745437757513063923
+      "Hoja de botas coloridas en cuadr\xEDcula_1": -6171570997194833932
+      "Hoja de botas coloridas en cuadr\xEDcula_10": 5327623317481084167
+      "Hoja de botas coloridas en cuadr\xEDcula_11": -8123038011755093
+      "Hoja de botas coloridas en cuadr\xEDcula_2": -3632142889436279160
+      "Hoja de botas coloridas en cuadr\xEDcula_3": -2395898377163669838
+      "Hoja de botas coloridas en cuadr\xEDcula_4": 7545105593334474975
+      "Hoja de botas coloridas en cuadr\xEDcula_5": -4187517207102447666
+      "Hoja de botas coloridas en cuadr\xEDcula_6": 5116356324386124349
+      "Hoja de botas coloridas en cuadr\xEDcula_7": 3490320450101277549
+      "Hoja de botas coloridas en cuadr\xEDcula_8": 635021312166525525
+      "Hoja de botas coloridas en cuadr\xEDcula_9": -1124653690783196436
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

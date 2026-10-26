@@ -1,0 +1,1508 @@
+fileFormatVersion: 2
+guid: 4850f921c9ba546408dbe6278ccdeed6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1000000
+    second: "Bota negra"
+  - first:
+      213: -1007919
+    second: "Bota marron"
+  - first:
+      213: -1015838
+    second: "Bota azul"
+  - first:
+      213: -1023757
+    second: "Bota amarilla"
+  - first:
+      213: -1031676
+    second: "Chancla verde"
+  - first:
+      213: -1039595
+    second: "Chancla rosa"
+  - first:
+      213: -1047514
+    second: "Chancla azul"
+  - first:
+      213: -1055433
+    second: "Chancla morada"
+  - first:
+      213: -1063352
+    second: "Guante azul"
+  - first:
+      213: -1071271
+    second: "Guante negro"
+  - first:
+      213: -1079190
+    second: "Guante gris"
+  - first:
+      213: -1087109
+    second: "Guante verde"
+  - first:
+      213: -1095028
+    second: "Reloj marron"
+  - first:
+      213: -1102947
+    second: "Reloj negro"
+  - first:
+      213: -1110866
+    second: "Reloj verde"
+  - first:
+      213: -1118785
+    second: "Reloj gris"
+  - first:
+      213: -1126704
+    second: "Aretes dorados"
+  - first:
+      213: -1134623
+    second: "Aretes azules"
+  - first:
+      213: -1142542
+    second: "Aretes estrellas"
+  - first:
+      213: -1150461
+    second: "Aretes verdes"
+  - first:
+      213: -1158380
+    second: "Gafas transparentes"
+  - first:
+      213: -1166299
+    second: "Gafas amarillas"
+  - first:
+      213: -1174218
+    second: "Gafas azules"
+  - first:
+      213: -1182137
+    second: "Gafas oscuras"
+  - first:
+      213: -1190056
+    second: "Casco blanco"
+  - first:
+      213: -1197975
+    second: "Casco amarillo"
+  - first:
+      213: -1205894
+    second: "Casco azul"
+  - first:
+      213: -1213813
+    second: "Casco verde"
+  - first:
+      213: -1221732
+    second: "Arnes amarillo"
+  - first:
+      213: -1229651
+    second: "Arnes rojo"
+  - first:
+      213: -1237570
+    second: "Arnes azul"
+  - first:
+      213: -1245489
+    second: "Arnes verde"
+  - first:
+      213: -1253408
+    second: "Chaleco verde"
+  - first:
+      213: -1261327
+    second: "Chaleco naranja"
+  - first:
+      213: -1269246
+    second: "Chaleco azul"
+  - first:
+      213: -1277165
+    second: "Chaleco azul marino"
+  - first:
+      213: -1285084
+    second: "Pantalon azul"
+  - first:
+      213: -1293003
+    second: "Pantalon caqui"
+  - first:
+      213: -1300922
+    second: "Pantalon gris"
+  - first:
+      213: -1308841
+    second: "Pantalon oliva"
+  - first:
+      213: -1316760
+    second: "Pantalon EPP verde"
+  - first:
+      213: -1324679
+    second: "Pantalon EPP azul"
+  - first:
+      213: -1332598
+    second: "Pantalon EPP naranja"
+  - first:
+      213: -1340517
+    second: "Pantalon EPP azul marino"
+  - first:
+      213: -1348436
+    second: "Camisa blanca"
+  - first:
+      213: -1356355
+    second: "Camisa negra"
+  - first:
+      213: -1364274
+    second: "Camisa azul"
+  - first:
+      213: -1372193
+    second: "Camisa amarilla"
+  - first:
+      213: -1380112
+    second: "Camisa EPP verde"
+  - first:
+      213: -1388031
+    second: "Camisa EPP azul"
+  - first:
+      213: -1395950
+    second: "Camisa EPP naranja"
+  - first:
+      213: -1403869
+    second: "Camisa EPP azul marino"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Bota negra"
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 30
+        width: 135
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c5bfbf50b740fb93497429b30ec76f
+      internalID: -1000000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bota marron"
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 30
+        width: 122
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4ba6eac6e04315a63bd0c720319941
+      internalID: -1007919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bota azul"
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 30
+        width: 122
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a32d721eca478bb8d1bc83e0901c9a
+      internalID: -1015838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bota amarilla"
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 29
+        width: 138
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f320c45f99324c1aa65781e45880c63e
+      internalID: -1023757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Chancla verde"
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 21
+        width: 138
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25158e54665b4e5a8d6994e68b76e86f
+      internalID: -1031676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Chancla rosa"
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 21
+        width: 139
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f95f631c1eb4410b46884d0f9108071
+      internalID: -1039595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Chancla azul"
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 21
+        width: 130
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f32e3c904f2042cca50c57609303b646
+      internalID: -1047514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Chancla morada"
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 21
+        width: 127
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc7aaf8a360245e5b1a5e19da101aec1
+      internalID: -1055433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Guante azul"
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 27
+        width: 138
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a9e3520b32b4005a57736489b353e6f
+      internalID: -1063352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Guante negro"
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 27
+        width: 138
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a9571b572754f22929b10a19d0430e6
+      internalID: -1071271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Guante gris"
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 27
+        width: 139
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 005c0198f70243dab47afbb07f78e728
+      internalID: -1079190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Guante verde"
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 26
+        width: 138
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b356d75704c48bfbe149893f3dee967
+      internalID: -1087109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Reloj marron"
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 168
+        width: 96
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a7ba98e1194ef28c75e3ce20d8da97
+      internalID: -1095028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Reloj negro"
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 164
+        width: 99
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fac6be5195a4356b60cb0c635e988f0
+      internalID: -1102947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Reloj verde"
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 168
+        width: 132
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ea84e4d37b415c8531de7e3f9f8901
+      internalID: -1110866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Reloj gris"
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 158
+        width: 123
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba47b07872f4e16a489cbf571c6efaf
+      internalID: -1118785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Aretes dorados"
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 155
+        width: 89
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a592eb4bea0845dc8e1ef9eecb3287f4
+      internalID: -1126704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Aretes azules"
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 168
+        width: 83
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90784334426d4ce08b1f7c21a6a188d3
+      internalID: -1134623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Aretes estrellas"
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 155
+        width: 94
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34991e14f95b4496abcb0c4178d251a0
+      internalID: -1142542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Aretes verdes"
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 155
+        width: 95
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53c795b7ced94fdcb0d1154da9484379
+      internalID: -1150461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Gafas transparentes"
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 238
+        width: 176
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b0ee0cb0df4d30b83bb2e0ca98d04e
+      internalID: -1158380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Gafas amarillas"
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 239
+        width: 201
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b7603f7ec1420ea2b87dc42698a492
+      internalID: -1166299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Gafas azules"
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 238
+        width: 175
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 946c21b938094d409f6da7d36e62260b
+      internalID: -1174218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Gafas oscuras"
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 238
+        width: 174
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c3e37c4fd94a63b04b68733b113620
+      internalID: -1182137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Casco blanco"
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 222
+        width: 141
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0885a0de5aea47b2a219057b1b9d4262
+      internalID: -1190056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Casco amarillo"
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 223
+        width: 145
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7954386784e449548b32ec82029fe6b3
+      internalID: -1197975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Casco azul"
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 223
+        width: 145
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5643d9d7b6574e07b2f0026066a78c56
+      internalID: -1205894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Casco verde"
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 222
+        width: 146
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e353f9c889f84f2fb6f7052f8e9b8175
+      internalID: -1213813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Arnes amarillo"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 340
+        width: 203
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a80c0a705043adbb8e5afc63078d6d
+      internalID: -1221732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Arnes rojo"
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 340
+        width: 204
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b038270376d74e10b55ec7cc9b88b525
+      internalID: -1229651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Arnes azul"
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 340
+        width: 155
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56161bc89c7b4d74983e950f4ac32b94
+      internalID: -1237570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Arnes verde"
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 340
+        width: 157
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194b36c71edc4d80b07300838c9459b2
+      internalID: -1245489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Chaleco verde"
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 341
+        width: 154
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3ef5cf5045429c8a4ba4bd1aa1d917
+      internalID: -1253408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Chaleco naranja"
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 344
+        width: 155
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3c271ec1804ab2bbf12e519a689b1a
+      internalID: -1261327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Chaleco azul"
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 343
+        width: 154
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e4ca45e568a43bf9c6729fe8c526c85
+      internalID: -1269246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Chaleco azul marino"
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 343
+        width: 155
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a3fadfff9d4be1ac57320eeab9cbca
+      internalID: -1277165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Pantalon azul"
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 526
+        width: 203
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01b733def16b4e9c8f37306a08372b36
+      internalID: -1285084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Pantalon caqui"
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 527
+        width: 203
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8608efb8d2f48fcad662128620421e5
+      internalID: -1293003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Pantalon gris"
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 526
+        width: 204
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f3d187911d74c3ab26d47ae6d70b18c
+      internalID: -1300922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Pantalon oliva"
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 526
+        width: 157
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f629a7e777f4104ab12aa9c0b7c29f1
+      internalID: -1308841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Pantalon EPP verde"
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 522
+        width: 159
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f55f37de974abaa3db4a481a53f698
+      internalID: -1316760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Pantalon EPP azul"
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 524
+        width: 157
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8e8711e3644bbdbbc0321ef09b3e75
+      internalID: -1324679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Pantalon EPP naranja"
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 523
+        width: 157
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b258c5828514818a05eb85d91427f4a
+      internalID: -1332598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Pantalon EPP azul marino"
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 523
+        width: 159
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2167661fc3254338aca6076a3638a386
+      internalID: -1340517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Camisa blanca"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 734
+        width: 209
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab72a6dd08741c5adebe59c5c0038e0
+      internalID: -1348436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Camisa negra"
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 734
+        width: 209
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec08f0fb5114a7d8ec33b2bd3e547d5
+      internalID: -1356355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Camisa azul"
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 734
+        width: 209
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e20bb478cf84644b118ed1f8552a656
+      internalID: -1364274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Camisa amarilla"
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 735
+        width: 174
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e98f588964f14a12936f6f4ecbec3eb2
+      internalID: -1372193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Camisa EPP verde"
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 730
+        width: 208
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f131a7c1bc714695ac6e18138f3b815e
+      internalID: -1380112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Camisa EPP azul"
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 730
+        width: 209
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e792d322d0b54ea39b154c7517711d7f
+      internalID: -1388031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Camisa EPP naranja"
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 731
+        width: 209
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef47d24574da4f5698eb8091dc6b4c5a
+      internalID: -1395950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Camisa EPP azul marino"
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 731
+        width: 209
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720f328f68654e818e3187066e678791
+      internalID: -1403869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Bota negra": -1000000
+      "Bota marron": -1007919
+      "Bota azul": -1015838
+      "Bota amarilla": -1023757
+      "Chancla verde": -1031676
+      "Chancla rosa": -1039595
+      "Chancla azul": -1047514
+      "Chancla morada": -1055433
+      "Guante azul": -1063352
+      "Guante negro": -1071271
+      "Guante gris": -1079190
+      "Guante verde": -1087109
+      "Reloj marron": -1095028
+      "Reloj negro": -1102947
+      "Reloj verde": -1110866
+      "Reloj gris": -1118785
+      "Aretes dorados": -1126704
+      "Aretes azules": -1134623
+      "Aretes estrellas": -1142542
+      "Aretes verdes": -1150461
+      "Gafas transparentes": -1158380
+      "Gafas amarillas": -1166299
+      "Gafas azules": -1174218
+      "Gafas oscuras": -1182137
+      "Casco blanco": -1190056
+      "Casco amarillo": -1197975
+      "Casco azul": -1205894
+      "Casco verde": -1213813
+      "Arnes amarillo": -1221732
+      "Arnes rojo": -1229651
+      "Arnes azul": -1237570
+      "Arnes verde": -1245489
+      "Chaleco verde": -1253408
+      "Chaleco naranja": -1261327
+      "Chaleco azul": -1269246
+      "Chaleco azul marino": -1277165
+      "Pantalon azul": -1285084
+      "Pantalon caqui": -1293003
+      "Pantalon gris": -1300922
+      "Pantalon oliva": -1308841
+      "Pantalon EPP verde": -1316760
+      "Pantalon EPP azul": -1324679
+      "Pantalon EPP naranja": -1332598
+      "Pantalon EPP azul marino": -1340517
+      "Camisa blanca": -1348436
+      "Camisa negra": -1356355
+      "Camisa azul": -1364274
+      "Camisa amarilla": -1372193
+      "Camisa EPP verde": -1380112
+      "Camisa EPP azul": -1388031
+      "Camisa EPP naranja": -1395950
+      "Camisa EPP azul marino": -1403869
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
