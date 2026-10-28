@@ -18,7 +18,7 @@ public class trashCount : MonoBehaviour
         // Residuo correcto.
         if (other.gameObject.CompareTag(gameObject.tag))
         {
-            int scoreRandom = Random.Range(10, 15);
+            int scoreRandom = 10;
 
             if (gameManager != null)
                 gameManager.AddScore(scoreRandom);

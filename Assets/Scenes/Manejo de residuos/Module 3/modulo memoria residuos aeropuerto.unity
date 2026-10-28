@@ -4950,9 +4950,8 @@ MonoBehaviour:
         dentro del Aeropuerto El Dorado?"
       optionA: Porque asi los residuos ocupan menos espacio
       optionB: Porque la separacion de residuos evitan llenar mas rapido las canecas
-      optionC: "Porque la correcta separaci\xF3n de los residuos permite su aprovechamiento
-        mediante reciclaje y otros procesos de sostenibilidad, apoyando la econom\xEDa
-        circular y reduciendo la cantidad de desechos que llegan a rellenos sanitarios."
+      optionC: "Porque facilita el reciclaje, promueve la econom\xEDa circular y
+        reduce los residuos que llegan a los rellenos sanitarios."
       optionD: Porque los residuos se mezclan nuevamente
       correctAnswer: 2
       correctTrueFalse: 0
@@ -4980,9 +4979,8 @@ MonoBehaviour:
         el Dorado"
       optionA: Porque asi los residuos ocupan menos espacio
       optionB: Porque la separacion de residuos evitan llenar mas rapido las canecas
-      optionC: "Porque la correcta separaci\xF3n de los residuos permite su aprovechamiento
-        mediante reciclaje y otros procesos de sostenibilidad, apoyando la econom\xEDa
-        circular y reduciendo la cantidad de desechos que llegan a rellenos sanitarios."
+      optionC: "Porque facilita el reciclaje, promueve la econom\xEDa circular y
+        reduce los residuos que llegan a los rellenos sanitarios."
       optionD: Porque los residuos se mezclan nuevamente
       correctAnswer: 2
       correctTrueFalse: 1

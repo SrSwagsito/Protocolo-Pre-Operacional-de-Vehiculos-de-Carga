@@ -12,7 +12,7 @@ public class InterAseoApi : MonoBehaviour
     [Header("Configuración de la API")]
     [SerializeField]
     private string apiUrl =
-        "https://ninteraseowebgl.vercel.app/api/registrar-resultado";
+    "https://ninteraseowebgl.vercel.app/api/registrar-resultado";
 
     [Serializable]
     private class ResultadoRequest
@@ -60,7 +60,7 @@ public class InterAseoApi : MonoBehaviour
             return;
         }
 
-        if (puntaje < 0 || puntaje > 100)
+        if (puntaje < 0 || puntaje > 300)
         {
             Debug.LogError(
                 "InterAseo: el puntaje debe estar entre 0 y 100.");

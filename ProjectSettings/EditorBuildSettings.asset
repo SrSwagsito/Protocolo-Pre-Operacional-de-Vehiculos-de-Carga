@@ -86,6 +86,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Manejo de residuos/Module 3/modulo memoria residuos aeropuerto.unity
     guid: b3dec444b2519a04eaa9cb40ca899204
+  - enabled: 1
+    path: Assets/Scenes/Manejo de residuos/Module 3/modulo memoria residuos nacional.unity
+    guid: 7c3b18bb90648004baf7cd671b2cb519
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 6ed7e93e8bced9242a4200d4b4965cef, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -2581,7 +2581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72162f25780f4a41b614cf2e3769588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ManagerRecolection
-  tutorialPopup: {fileID: 0}
+  tutorialPopup: {fileID: 1597328479}
   instructionsUI: {fileID: 0}
   progressCounter: {fileID: 0}
   panelText: {fileID: 0}
@@ -5511,7 +5511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1497143131
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7395,7 +7395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3640a2cccade714388b6a33002292f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  sceneName: modulo memoria residuos aeropuerto
+  sceneName: FinalScreen residuos
   reloadCurrent: 0
 --- !u!114 &2014186499
 MonoBehaviour:
