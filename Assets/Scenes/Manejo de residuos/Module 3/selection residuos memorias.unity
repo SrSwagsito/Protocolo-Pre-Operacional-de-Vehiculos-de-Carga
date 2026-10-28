@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3640a2cccade714388b6a33002292f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  sceneName: modulo residuos
+  sceneName: modulo memoria residuos nacional
   reloadCurrent: 0
 --- !u!1 &660966131
 GameObject:

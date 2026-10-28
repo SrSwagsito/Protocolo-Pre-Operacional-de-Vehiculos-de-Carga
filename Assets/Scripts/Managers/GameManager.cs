@@ -37,17 +37,49 @@ public class GameManager : MonoBehaviour
         ChangeState(GameState.InitialMenu);
     }
 
+
     public void RegisterModuleResult(ModuleResult result)
     {
-        int index = results.FindIndex(r => r.moduleName == result.moduleName);
-        Debug.Log("Resultados guardados: " + results.Count);
+        if (result == null)
+        {
+            Debug.LogError("No se puede registrar un resultado nulo.");
+            return;
+        }
+
+        int index = results.FindIndex(
+            r => r.moduleName == result.moduleName
+        );
+
         if (index >= 0)
             results[index] = result;
         else
             results.Add(result);
 
+        Debug.Log("Resultados guardados: " + results.Count);
+
+        // Enviar el resultado a la API de Vercel.
+        if (InterAseoApi.Instance != null)
+        {
+            InterAseoApi.Instance.EnviarResultado(
+                UserName,
+                UserID,
+                result.moduleName,
+                result.score,
+                result.approved
+            );
+        }
+        else
+        {
+            Debug.LogWarning(
+                "InterAseoApi no está disponible. " +
+                "El resultado se conserva en memoria, pero no se envió al servidor."
+            );
+        }
+
+        // Mantener el comportamiento actual de la interfaz.
         OnModuleFinished?.Invoke(result);
     }
+
 
     public void ChangeState(GameState newState)
     {
