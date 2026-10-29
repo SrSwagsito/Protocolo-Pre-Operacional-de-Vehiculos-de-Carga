@@ -203,7 +203,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 58.25
+  m_fontSize: 43.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.95
+  m_fontSize: 24.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1736,7 +1736,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.8
+  m_fontSize: 47.85
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1840,10 +1840,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1789477172}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -553, y: -10}
-  m_SizeDelta: {x: -1207.0273, y: -444.9548}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 238, y: -10}
+  m_SizeDelta: {x: 374.97266, y: 375.0452}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &898493724
 MonoBehaviour:
@@ -1865,7 +1865,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2682883663177689415, guid: 78d8297c817cfe540ae839fc74e7c81d, type: 3}
+  m_Sprite: {fileID: -3413475756807353204, guid: 5740610aa7cf8f243b193ae70443f8e0, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 0
@@ -1916,9 +1916,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1405703502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -666.83984, y: -319.65363}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -146.83984, y: 22.346375}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905592920
@@ -1961,7 +1961,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1283602634}
+  m_TargetGraphic: {fileID: 905592921}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1970,7 +1970,7 @@ MonoBehaviour:
         m_MethodName: SelectAvatar
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: -2682883663177689415, guid: 78d8297c817cfe540ae839fc74e7c81d, type: 3}
+          m_ObjectArgument: {fileID: -3413475756807353204, guid: 5740610aa7cf8f243b193ae70443f8e0, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2391,7 +2391,7 @@ MonoBehaviour:
         m_MethodName: SelectAvatar
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4932851220920467604, guid: e7517e7603bc82b48914f4703ce8ee77, type: 3}
+          m_ObjectArgument: {fileID: -7002227068394923837, guid: f1dde5b332674ce419d9f23faa18d48b, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2450,9 +2450,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1405703502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -830.2831, y: -319.65363}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -310.28308, y: 22.346375}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1372989704
@@ -2633,10 +2633,10 @@ RectTransform:
   - {fileID: 905592919}
   m_Father: {fileID: 1789477172}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 203.52032, y: -0.020385742}
-  m_SizeDelta: {x: -542.95935, y: -135.95926}
+  m_SizeDelta: {x: 1039.0406, y: 684.0408}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1405703503
 MonoBehaviour:
@@ -3013,7 +3013,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.65
+  m_fontSize: 35.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3210,7 +3210,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.8
+  m_fontSize: 47.85
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3336,8 +3336,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UserRegistration
   levelName: selection residuos
   avatarDisplay: {fileID: 898493724}
-  avatarOption1: {fileID: -2682883663177689415, guid: 78d8297c817cfe540ae839fc74e7c81d, type: 3}
-  avatarOption2: {fileID: 4932851220920467604, guid: e7517e7603bc82b48914f4703ce8ee77, type: 3}
+  avatarOption1: {fileID: -3413475756807353204, guid: 5740610aa7cf8f243b193ae70443f8e0, type: 3}
+  avatarOption2: {fileID: -7002227068394923837, guid: f1dde5b332674ce419d9f23faa18d48b, type: 3}
   selectAvatar1Button: {fileID: 1283602632}
   selectAvatar2Button: {fileID: 905592920}
   nameInputField: {fileID: 1914039311}
