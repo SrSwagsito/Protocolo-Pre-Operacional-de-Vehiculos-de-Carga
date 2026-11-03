@@ -111,7 +111,7 @@ public class ManagerRecolection : MonoBehaviour
             NextLevel();
         }
 
-        if (!level3Unlocked && Score >= 14)
+        if (!level3Unlocked && Score >= 140)
         {
             level3Unlocked = true;
 
