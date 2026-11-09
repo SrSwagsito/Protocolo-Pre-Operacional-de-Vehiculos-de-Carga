@@ -520,7 +520,7 @@ TextureImporter:
         width: 171
         height: 213
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -542,7 +542,7 @@ TextureImporter:
         width: 164
         height: 216
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -564,7 +564,7 @@ TextureImporter:
         width: 160
         height: 210
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -586,7 +586,7 @@ TextureImporter:
         width: 162
         height: 212
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -595,6 +595,72 @@ TextureImporter:
       bones: []
       spriteID: c6e0ab33cf6bc574e82a4f4fb32a5b2d
       internalID: 987685517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_14"
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 728
+        width: 218
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793273de681e7404bb13eb79aee5f236
+      internalID: 1108385440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_15"
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 728
+        width: 199
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2744828d06c154290afa7f3e563e70
+      internalID: -20483350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cat\xE1logo de ropa y equipo de seguridad_16"
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 731
+        width: 211
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641043e64e68bee41a405636ef637d40
+      internalID: 1476137881
       vertices: []
       indices: 
       edges: []
@@ -621,6 +687,9 @@ TextureImporter:
       "Cat\xE1logo de ropa y equipo de seguridad_11": -1159317093
       "Cat\xE1logo de ropa y equipo de seguridad_12": 879491313
       "Cat\xE1logo de ropa y equipo de seguridad_13": 987685517
+      "Cat\xE1logo de ropa y equipo de seguridad_14": 1108385440
+      "Cat\xE1logo de ropa y equipo de seguridad_15": -20483350
+      "Cat\xE1logo de ropa y equipo de seguridad_16": 1476137881
       "Cat\xE1logo de ropa y equipo de seguridad_2": -140334645
       "Cat\xE1logo de ropa y equipo de seguridad_3": 541925488
       "Cat\xE1logo de ropa y equipo de seguridad_4": 128743338
