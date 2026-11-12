@@ -1,0 +1,298 @@
+fileFormatVersion: 2
+guid: 070211cf07a120d4e811fe53c79949d2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1007360343450763228
+    second: "Bot\xF3n verde lima brillante_0"
+  - first:
+      213: -110460339420928845
+    second: "Bot\xF3n verde lima brillante_1"
+  - first:
+      213: -5662673173381752585
+    second: "Bot\xF3n verde lima brillante_2"
+  - first:
+      213: -708335433579522690
+    second: "Bot\xF3n verde lima brillante_3"
+  - first:
+      213: 7745143306843788960
+    second: "Bot\xF3n verde lima brillante_4"
+  - first:
+      213: 8501694396205594631
+    second: "Bot\xF3n verde lima brillante_5"
+  - first:
+      213: -3630781191965516906
+    second: "Bot\xF3n verde lima brillante_6"
+  - first:
+      213: 7503725464378315619
+    second: "Bot\xF3n verde lima brillante_7"
+  - first:
+      213: 4602419787027845202
+    second: "Bot\xF3n verde lima brillante_8"
+  - first:
+      213: 5422063205214190235
+    second: "Bot\xF3n verde lima brillante_9"
+  - first:
+      213: -5864967185534893852
+    second: "Bot\xF3n verde lima brillante_10"
+  - first:
+      213: 8289938443364762038
+    second: "Bot\xF3n verde lima brillante_11"
+  - first:
+      213: 8958336603220519806
+    second: "Bot\xF3n verde lima brillante_12"
+  - first:
+      213: -1984854952070490897
+    second: "Bot\xF3n verde lima brillante_13"
+  - first:
+      213: 918912213843066738
+    second: "Bot\xF3n verde lima brillante_14"
+  - first:
+      213: 2238410388846911628
+    second: "Bot\xF3n verde lima brillante_15"
+  - first:
+      213: 8904854269646111252
+    second: "Bot\xF3n verde lima brillante_16"
+  - first:
+      213: -7002033992738192694
+    second: "Bot\xF3n verde lima brillante_17"
+  - first:
+      213: -2599642430663713824
+    second: "Bot\xF3n verde lima brillante_18"
+  - first:
+      213: 7568692148532332730
+    second: "Bot\xF3n verde lima brillante_19"
+  - first:
+      213: -8633300878404821780
+    second: "Bot\xF3n verde lima brillante_20"
+  - first:
+      213: -4533218125026329877
+    second: "Bot\xF3n verde lima brillante_21"
+  - first:
+      213: 70650261428962242
+    second: "Bot\xF3n verde lima brillante_22"
+  - first:
+      213: 326607057104347124
+    second: "Bot\xF3n verde lima brillante_23"
+  - first:
+      213: -7328906879398847845
+    second: "Bot\xF3n verde lima brillante_24"
+  - first:
+      213: -6384312300630801431
+    second: "Bot\xF3n verde lima brillante_25"
+  - first:
+      213: -7692020214270083597
+    second: "Bot\xF3n verde lima brillante_26"
+  - first:
+      213: 6078741943982220529
+    second: "Bot\xF3n verde lima brillante_27"
+  - first:
+      213: 8802978561705536228
+    second: "Bot\xF3n verde lima brillante_28"
+  - first:
+      213: -5714093787593621641
+    second: "Bot\xF3n verde lima brillante_29"
+  - first:
+      213: -8196423031356620
+    second: "Bot\xF3n verde lima brillante_30"
+  - first:
+      213: 7180056560667714348
+    second: "Bot\xF3n verde lima brillante_31"
+  - first:
+      213: 827334762151309501
+    second: "Bot\xF3n verde lima brillante_32"
+  - first:
+      213: -5170793921434877663
+    second: "Bot\xF3n verde lima brillante_33"
+  - first:
+      213: 2516057994088632429
+    second: "Bot\xF3n verde lima brillante_34"
+  - first:
+      213: -2436590692604173164
+    second: "Bot\xF3n verde lima brillante_35"
+  - first:
+      213: -5974004955878172040
+    second: "Bot\xF3n verde lima brillante_36"
+  - first:
+      213: -8894311812180375684
+    second: "Bot\xF3n verde lima brillante_37"
+  - first:
+      213: -5472440086074301583
+    second: "Bot\xF3n verde lima brillante_38"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Bot\xF3n verde lima brillante_0"
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 102
+        width: 1975
+        height: 501
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdfb23825ecdafd00800000000000000
+      internalID: 1007360343450763228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 544f5e8a6213ac747a6e471ec2d99dd6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":2172.0,"y":724.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      "Bot\xF3n verde lima brillante_0": 1007360343450763228
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
