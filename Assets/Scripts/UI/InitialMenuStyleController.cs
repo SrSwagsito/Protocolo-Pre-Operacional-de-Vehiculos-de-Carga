@@ -1,7 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem.UI;
+#endif
 
 /// <summary>
 /// Restyles the "Initial Menu game" scene (start screen + Game selection) to the
@@ -29,6 +33,20 @@ public sealed class InitialMenuStyleController : MonoBehaviour
     private Transform canvas;
     private TMP_FontAsset font;
     private Sprite background, leaf, iconBook, iconTrophy, iconGear;
+    private const string MasterVolumeKey = "Ninteraseo_MasterVolume";
+    private const string MutedKey = "Ninteraseo_Muted";
+    private bool isMuted;
+    private float savedVolume = 1f;
+    private TMP_Text volumeValueLabel;
+    private TMP_Text muteButtonLabel;
+    private RectTransform settingsOverlay;
+    private RectTransform settingsCard;
+    private Slider masterVolumeSlider;
+    private Button muteButton;
+    private Button closeSettingsButton;
+    private GameObject previousSelection;
+    private bool audioSettingsDirty;
+    private static readonly Vector2 SettingsCardSize = new Vector2(900f, 600f);
 
     // ------------------------------------------------------------------ install
 
@@ -82,6 +100,8 @@ public sealed class InitialMenuStyleController : MonoBehaviour
         Transform initialPanel = canvas.Find("InitialPanel");
         Transform gameSelection = canvas.Find("Game selection");
 
+        EnsureUIInput();
+        ApplySavedAudioSettings();
         if (initialPanel != null) StyleInitialPanel(initialPanel, gameSelection);
         if (gameSelection != null) StyleGameSelection(gameSelection);
     }
@@ -190,6 +210,8 @@ public sealed class InitialMenuStyleController : MonoBehaviour
         Spark(panel, position + new Vector2(-395f, -26f), -30f);
         Spark(panel, position + new Vector2(395f, 26f), -30f);
         Spark(panel, position + new Vector2(395f, -26f), 30f);
+        Button playButton = start.GetComponent<Button>();
+        if (playButton != null) MakeControlInteractive(playButton);
     }
 
     private void BuildSecondaryRow(Transform panel, Transform gameSelection)
@@ -202,7 +224,299 @@ public sealed class InitialMenuStyleController : MonoBehaviour
             modules.onClick.AddListener(() => gameSelection.gameObject.SetActive(true));
 
         SecondaryButton(panel, "LogrosButton", new Vector2(98f, y), new Vector2(306f, 104f), iconTrophy, "LOGROS");
-        SecondaryButton(panel, "AjustesButton", new Vector2(342f, y), new Vector2(122f, 104f), iconGear, null);
+        Button settings = SecondaryButton(panel, "AjustesButton", new Vector2(342f, y), new Vector2(122f, 104f), iconGear, null);
+        settings.onClick.AddListener(ToggleSettingsPanel);
+    }
+
+    // --------------------------------------------------------------- settings
+
+    private void ApplySavedAudioSettings()
+    {
+        savedVolume = Mathf.Clamp01(PlayerPrefs.GetFloat(MasterVolumeKey, 1f));
+        isMuted = PlayerPrefs.GetInt(MutedKey, 0) == 1;
+        ApplyMasterAudio();
+    }
+
+    // AudioListener.volume is Unity's master output level. It affects AudioSources
+    // routed through AudioMixerGroups too, including AudioManager's music and SFX.
+    private void ApplyMasterAudio()
+    {
+        AudioListener.volume = isMuted ? 0f : Mathf.Clamp01(savedVolume);
+    }
+
+    private void EnsureUIInput()
+    {
+        GraphicRaycaster raycaster = canvas.GetComponent<GraphicRaycaster>();
+        if (raycaster == null) raycaster = canvas.gameObject.AddComponent<GraphicRaycaster>();
+        raycaster.enabled = true;
+
+        EventSystem system = EventSystem.current;
+        if (system == null) system = new GameObject("EventSystem", typeof(EventSystem)).GetComponent<EventSystem>();
+
+#if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
+        // A legacy module cannot read input when the project enables only the new system.
+        foreach (StandaloneInputModule legacy in system.GetComponents<StandaloneInputModule>())
+            legacy.enabled = false;
+#endif
+        // Keep an existing, enabled UI input module and its authored bindings.
+        foreach (BaseInputModule existing in system.GetComponents<BaseInputModule>())
+            if (existing.isActiveAndEnabled) return;
+
+#if ENABLE_INPUT_SYSTEM
+        InputSystemUIInputModule module = system.GetComponent<InputSystemUIInputModule>();
+        if (module == null) module = system.gameObject.AddComponent<InputSystemUIInputModule>();
+        module.enabled = true;
+        if (module.actionsAsset == null) module.AssignDefaultActions();
+#else
+        StandaloneInputModule module = system.GetComponent<StandaloneInputModule>();
+        if (module == null) module = system.gameObject.AddComponent<StandaloneInputModule>();
+        module.enabled = true;
+#endif
+        system.UpdateModules();
+    }
+
+    private void ToggleSettingsPanel()
+    {
+        if (settingsOverlay == null) BuildSettingsPanel();
+        // Show the newly built panel on the very first click too.
+        SetSettingsVisible(!settingsOverlay.gameObject.activeSelf);
+    }
+
+    private void SetSettingsVisible(bool visible)
+    {
+        if (settingsOverlay == null) return;
+
+        if (visible)
+        {
+            EnsureUIInput();
+            previousSelection = EventSystem.current.currentSelectedGameObject;
+            ApplySavedAudioSettings();
+            RefreshAudioControls();
+            settingsOverlay.SetAsLastSibling();
+            settingsOverlay.gameObject.SetActive(true);
+            Canvas.ForceUpdateCanvases();
+            FitSettingsPanel();
+            masterVolumeSlider.Select();
+        }
+        else
+        {
+            SaveAudioSettings();
+            settingsOverlay.gameObject.SetActive(false);
+            if (EventSystem.current != null)
+                EventSystem.current.SetSelectedGameObject(
+                    previousSelection != null && previousSelection.activeInHierarchy ? previousSelection : null);
+        }
+    }
+
+    private void BuildSettingsPanel()
+    {
+        // Parent to the Canvas itself: InitialPanel can be offset or scaled.
+        settingsOverlay = EPPStyleKit.NewRect(canvas, "SettingsOverlay", Vector2.zero, Vector2.zero);
+        settingsOverlay.gameObject.SetActive(false);
+        Stretch(settingsOverlay);
+        settingsOverlay.localScale = Vector3.one;
+        settingsOverlay.localRotation = Quaternion.identity;
+
+        Canvas menuCanvas = canvas.GetComponent<Canvas>();
+        Canvas modalCanvas = settingsOverlay.gameObject.AddComponent<Canvas>();
+        modalCanvas.overrideSorting = true;
+        modalCanvas.sortingLayerID = menuCanvas.sortingLayerID;
+        modalCanvas.sortingOrder = menuCanvas.sortingOrder + 1;
+        modalCanvas.additionalShaderChannels = menuCanvas.additionalShaderChannels;
+        settingsOverlay.gameObject.AddComponent<GraphicRaycaster>();
+        CanvasGroup modalGroup = settingsOverlay.gameObject.AddComponent<CanvasGroup>();
+        modalGroup.interactable = true;
+        modalGroup.blocksRaycasts = true;
+        modalGroup.ignoreParentGroups = true;
+
+        Image dim = EPPStyleKit.NewImage(settingsOverlay, "Dim", Vector2.zero, Vector2.zero, null,
+            new Color32(2, 10, 25, 220), false, false);
+        Stretch(dim.rectTransform);
+        Button dimButton = dim.gameObject.AddComponent<Button>();
+        dimButton.targetGraphic = dim;
+        dimButton.transition = Selectable.Transition.None;
+        Navigation noNavigation = dimButton.navigation;
+        noNavigation.mode = Navigation.Mode.None;
+        dimButton.navigation = noNavigation;
+        dimButton.onClick.AddListener(() => SetSettingsVisible(false));
+        MakeControlInteractive(dimButton);
+
+        Image frame = EPPStyleKit.NewImage(settingsOverlay, "SettingsCard", Vector2.zero, SettingsCardSize,
+            EPPStyleKit.Rounded(34), BlueEdge, true, false);
+        settingsCard = Place(frame.transform, Vector2.zero, SettingsCardSize);
+        // The frame catches clicks in empty card space so they cannot reach Dim.
+        frame.raycastTarget = true;
+        Image surface = EPPStyleKit.NewImage(settingsCard, "Surface", Vector2.zero,
+            SettingsCardSize - new Vector2(6f, 6f), EPPStyleKit.Rounded(32), new Color32(11, 30, 58, 255), true, false);
+        surface.raycastTarget = false;
+
+        Label(settingsCard, "SettingsTitle", "AJUSTES", new Vector2(0f, 220f), new Vector2(740f, 72f),
+            54f, Color.white, FontStyles.Bold);
+        Label(settingsCard, "SettingsSubtitle", "Controla el sonido del juego", new Vector2(0f, 162f),
+            new Vector2(740f, 40f), 28f, SubText, FontStyles.Normal);
+        Image rule = EPPStyleKit.NewImage(settingsCard, "TitleRule", new Vector2(0f, 126f), new Vector2(772f, 4f),
+            EPPStyleKit.Rounded(2), GreenLine, true, false);
+        rule.raycastTarget = false;
+
+        Label(settingsCard, "VolumeLabel", "VOLUMEN GENERAL", new Vector2(-114f, 76f),
+            new Vector2(544f, 48f), 32f, SubText, FontStyles.Bold).alignment = TextAlignmentOptions.Left;
+        volumeValueLabel = Label(settingsCard, "VolumeValue", "100%", new Vector2(326f, 76f),
+            new Vector2(120f, 48f), 32f, LimeEdge, FontStyles.Bold);
+        volumeValueLabel.alignment = TextAlignmentOptions.Right;
+
+        BuildVolumeSlider(settingsCard);
+        Label(settingsCard, "MuteLabel", "SONIDO", new Vector2(-226f, -90f), new Vector2(320f, 64f),
+            32f, SubText, FontStyles.Bold).alignment = TextAlignmentOptions.Left;
+        BuildMuteButton(settingsCard);
+
+        closeSettingsButton = BuildPanelButton(settingsCard, "CloseSettings", "VOLVER", new Vector2(0f, -220f),
+            new Vector2(300f, 76f), Lime, Navy);
+        closeSettingsButton.onClick.AddListener(() => SetSettingsVisible(false));
+
+        // Keep keyboard/controller focus inside the modal as well.
+        SetVerticalNavigation(masterVolumeSlider, closeSettingsButton, muteButton);
+        SetVerticalNavigation(muteButton, masterVolumeSlider, closeSettingsButton);
+        SetVerticalNavigation(closeSettingsButton, muteButton, masterVolumeSlider);
+        RefreshAudioControls();
+    }
+
+    private void BuildVolumeSlider(Transform parent)
+    {
+        RectTransform sliderRect = EPPStyleKit.NewRect(parent, "MasterVolumeSlider", new Vector2(0f, 8f),
+            new Vector2(772f, 76f));
+        // A full-width hit area makes both track clicks and dragging reliable.
+        Image hitArea = sliderRect.gameObject.AddComponent<Image>();
+        hitArea.color = Color.clear;
+
+        EPPStyleKit.NewImage(sliderRect, "Track", Vector2.zero, new Vector2(772f, 24f),
+            EPPStyleKit.Rounded(12), new Color32(5, 17, 38, 255), true, false);
+
+        RectTransform fillArea = EPPStyleKit.NewRect(sliderRect, "Fill Area", Vector2.zero, Vector2.zero);
+        fillArea.anchorMin = new Vector2(0f, 0.5f);
+        fillArea.anchorMax = new Vector2(1f, 0.5f);
+        fillArea.offsetMin = new Vector2(24f, -8f);
+        fillArea.offsetMax = new Vector2(-24f, 8f);
+        Image fill = EPPStyleKit.NewImage(fillArea, "Fill", Vector2.zero, Vector2.zero,
+            EPPStyleKit.Rounded(8), Lime, true, false);
+        fill.rectTransform.anchorMin = Vector2.zero;
+        fill.rectTransform.anchorMax = Vector2.one;
+        fill.rectTransform.offsetMin = fill.rectTransform.offsetMax = Vector2.zero;
+
+        RectTransform handleArea = EPPStyleKit.NewRect(sliderRect, "Handle Slide Area", Vector2.zero, Vector2.zero);
+        handleArea.anchorMin = new Vector2(0f, 0.5f);
+        handleArea.anchorMax = new Vector2(1f, 0.5f);
+        handleArea.offsetMin = new Vector2(24f, -22f);
+        handleArea.offsetMax = new Vector2(-24f, 22f);
+        Image handle = EPPStyleKit.NewImage(handleArea, "Handle", Vector2.zero, new Vector2(44f, 0f),
+            EPPStyleKit.Rounded(22), LimeEdge, true, false);
+        // Slider drives the anchors. Zero height delta + 44-high parent = a round handle.
+        handle.rectTransform.sizeDelta = new Vector2(44f, 0f);
+        handle.rectTransform.anchoredPosition = Vector2.zero;
+
+        Slider slider = sliderRect.gameObject.AddComponent<Slider>();
+        masterVolumeSlider = slider;
+        slider.fillRect = fill.rectTransform;
+        slider.handleRect = handle.rectTransform;
+        slider.targetGraphic = handle;
+        slider.direction = Slider.Direction.LeftToRight;
+        slider.minValue = 0f;
+        slider.maxValue = 1f;
+        slider.wholeNumbers = false;
+        slider.SetValueWithoutNotify(savedVolume);
+        MakeControlInteractive(slider);
+        slider.onValueChanged.AddListener(SetMasterVolume);
+    }
+
+    private void BuildMuteButton(Transform parent)
+    {
+        muteButton = BuildPanelButton(parent, "MuteButton", "ACTIVADO",
+            new Vector2(254f, -90f), new Vector2(264f, 64f), Lime, Navy);
+        muteButtonLabel = muteButton.GetComponentInChildren<TMP_Text>();
+        muteButton.onClick.AddListener(() =>
+        {
+            isMuted = !isMuted;
+            ApplyMasterAudio();
+            PlayerPrefs.SetInt(MutedKey, isMuted ? 1 : 0);
+            audioSettingsDirty = true;
+            RefreshAudioControls();
+        });
+    }
+
+    private void SetMasterVolume(float value)
+    {
+        savedVolume = Mathf.Clamp01(value);
+        PlayerPrefs.SetFloat(MasterVolumeKey, savedVolume);
+        audioSettingsDirty = true;
+        ApplyMasterAudio();
+        RefreshAudioControls();
+    }
+
+    private void RefreshAudioControls()
+    {
+        if (masterVolumeSlider != null) masterVolumeSlider.SetValueWithoutNotify(savedVolume);
+        if (volumeValueLabel != null) volumeValueLabel.text = Mathf.RoundToInt(savedVolume * 100f) + "%";
+        if (muteButton != null) muteButton.GetComponent<Image>().color = isMuted ? BlueEdge : Lime;
+        if (muteButtonLabel != null)
+        {
+            muteButtonLabel.text = isMuted ? "SILENCIADO" : "ACTIVADO";
+            muteButtonLabel.color = isMuted ? Color.white : Navy;
+        }
+    }
+
+    private void SaveAudioSettings()
+    {
+        if (!audioSettingsDirty) return;
+        PlayerPrefs.Save();
+        audioSettingsDirty = false;
+    }
+
+    private void OnDisable()
+    {
+        if (settingsOverlay != null) settingsOverlay.gameObject.SetActive(false);
+        SaveAudioSettings();
+    }
+
+    private void OnApplicationPause(bool paused)
+    {
+        if (paused) SaveAudioSettings();
+    }
+
+    private void OnApplicationQuit() => SaveAudioSettings();
+
+    private void LateUpdate()
+    {
+        if (settingsOverlay != null && settingsOverlay.gameObject.activeInHierarchy) FitSettingsPanel();
+    }
+
+    private void FitSettingsPanel()
+    {
+        // Uniform scaling keeps the typography, margins and handle proportional.
+        Vector2 available = settingsOverlay.rect.size - new Vector2(96f, 96f);
+        if (available.x <= 0f || available.y <= 0f) return;
+        float scale = Mathf.Min(1f, available.x / SettingsCardSize.x, available.y / SettingsCardSize.y);
+        settingsCard.localScale = Vector3.one * scale;
+        settingsCard.anchoredPosition = Vector2.zero;
+    }
+
+    private Button BuildPanelButton(Transform parent, string name, string caption, Vector2 position, Vector2 size,
+        Color fillColor, Color textColor)
+    {
+        Image image = EPPStyleKit.NewImage(parent, name, position, size, EPPStyleKit.Rounded(22), fillColor, true,
+            false);
+        EPPStyleKit.NewImage(image.transform, "Rim", Vector2.zero, size + new Vector2(5f, 5f),
+            EPPStyleKit.Rounded(24, 3), LimeEdge, true, false);
+        TMP_Text captionText = Label(image.transform, "Text", caption, Vector2.zero,
+            size - new Vector2(28f, 8f), 30f, textColor, FontStyles.Bold);
+        captionText.transform.SetAsLastSibling();
+        Button button = image.gameObject.AddComponent<Button>();
+        button.targetGraphic = image;
+        ColorBlock colors = button.colors;
+        colors.highlightedColor = new Color(0.86f, 0.96f, 1f, 1f);
+        colors.pressedColor = new Color(0.72f, 0.88f, 0.98f, 1f);
+        colors.fadeDuration = 0.08f;
+        button.colors = colors;
+        MakeControlInteractive(button);
+        return button;
     }
 
     private Button SecondaryButton(Transform parent, string name, Vector2 position, Vector2 size, Sprite icon,
@@ -210,7 +524,12 @@ public sealed class InitialMenuStyleController : MonoBehaviour
     {
         Image fill = EPPStyleKit.Card(parent, name, position, size, 24, NavyPanel, BlueEdge, true, true);
         Transform rim = parent.Find(name + "_Border");
-        if (rim != null) ((RectTransform)rim).sizeDelta = size + new Vector2(6f, 6f);
+        if (rim != null)
+        {
+            ((RectTransform)rim).sizeDelta = size + new Vector2(6f, 6f);
+            foreach (Graphic graphic in rim.GetComponentsInChildren<Graphic>(true))
+                graphic.raycastTarget = false;
+        }
 
         Button button = fill.gameObject.AddComponent<Button>();
         button.targetGraphic = fill;
@@ -234,6 +553,7 @@ public sealed class InitialMenuStyleController : MonoBehaviour
                 Color.white, FontStyles.Bold);
         }
 
+        MakeControlInteractive(button);
         return button;
     }
 
@@ -357,9 +677,37 @@ public sealed class InitialMenuStyleController : MonoBehaviour
             BlueEdge, true, false);
         Leaf((RectTransform)card, new Vector2(-196f, -246f), 64f, 200f, 0.9f);
         Leaf((RectTransform)card, new Vector2(196f, -246f), 64f, -20f, 0.9f);
+        if (button != null) MakeControlInteractive(button);
     }
 
     // ------------------------------------------------------------------ helpers
+
+    private static void Stretch(RectTransform rect)
+    {
+        rect.anchorMin = Vector2.zero;
+        rect.anchorMax = Vector2.one;
+        rect.pivot = new Vector2(0.5f, 0.5f);
+        rect.offsetMin = rect.offsetMax = Vector2.zero;
+    }
+
+    private static void MakeControlInteractive(Selectable control)
+    {
+        // EPPStyleKit also creates decorative graphics. Only the control's own
+        // graphic should be hit; a sibling border or child label must not intercept it.
+        foreach (Graphic graphic in control.GetComponentsInChildren<Graphic>(true))
+            graphic.raycastTarget = false;
+        Graphic target = control.GetComponent<Graphic>();
+        if (target != null) target.raycastTarget = true;
+        control.interactable = true;
+    }
+
+    private static void SetVerticalNavigation(Selectable control, Selectable up, Selectable down)
+    {
+        Navigation navigation = new Navigation { mode = Navigation.Mode.Explicit };
+        navigation.selectOnUp = up;
+        navigation.selectOnDown = down;
+        control.navigation = navigation;
+    }
 
     private void AddBackdrop(Transform parent, Vector2 position, Vector2? size = null)
     {
@@ -382,6 +730,7 @@ public sealed class InitialMenuStyleController : MonoBehaviour
 
         Image image = EPPStyleKit.NewImage(frame, "Art", Vector2.zero, Vector2.zero, background, Color.white, false,
             true);
+        image.raycastTarget = false;
         AspectRatioFitter fitter = image.gameObject.AddComponent<AspectRatioFitter>();
         fitter.aspectMode = AspectRatioFitter.AspectMode.EnvelopeParent;
         fitter.aspectRatio = background.rect.width / background.rect.height;
@@ -424,6 +773,7 @@ public sealed class InitialMenuStyleController : MonoBehaviour
         if (font != null) text.font = font;
         text.fontStyle = style;
         text.textWrappingMode = TextWrappingModes.NoWrap;
+        text.raycastTarget = false;
         return text;
     }
 }

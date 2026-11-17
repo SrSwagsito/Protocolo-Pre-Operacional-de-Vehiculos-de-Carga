@@ -2986,6 +2986,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScreenFader
   fadeImage: {fileID: 2074783039}
   fadeDuration: 0.35
+  topColor: {r: 0.043137256, g: 0.11764706, b: 0.22745098, a: 1}
+  bottomColor: {r: 0.08235294, g: 0.34117648, b: 0.49411765, a: 1}
+  wipeDuration: 0.45
 --- !u!114 &1351165925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5004,6 +5007,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScreenFader
   fadeImage: {fileID: 1337678039}
   fadeDuration: 0.35
+  topColor: {r: 0.043137256, g: 0.11764706, b: 0.22745098, a: 1}
+  bottomColor: {r: 0.08235294, g: 0.34117648, b: 0.49411765, a: 1}
+  wipeDuration: 0.45
 --- !u!1 &1894424902
 GameObject:
   m_ObjectHideFlags: 0
