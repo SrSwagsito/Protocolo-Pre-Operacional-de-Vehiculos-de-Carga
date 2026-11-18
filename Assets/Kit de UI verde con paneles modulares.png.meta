@@ -1,0 +1,378 @@
+fileFormatVersion: 2
+guid: 2f596325a4afb284c8dd4f4d7db57c08
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6836395223927574383
+    second: Kit de UI verde con paneles modulares_0
+  - first:
+      213: -5497432465182044912
+    second: Kit de UI verde con paneles modulares_1
+  - first:
+      213: -113679957087721781
+    second: Kit de UI verde con paneles modulares_2
+  - first:
+      213: 3219194466747943900
+    second: Kit de UI verde con paneles modulares_3
+  - first:
+      213: -1873814672833209563
+    second: Kit de UI verde con paneles modulares_4
+  - first:
+      213: -2653572846234022844
+    second: Kit de UI verde con paneles modulares_5
+  - first:
+      213: -2416033379446826112
+    second: Kit de UI verde con paneles modulares_6
+  - first:
+      213: -4016597288342430595
+    second: Kit de UI verde con paneles modulares_7
+  - first:
+      213: -1372299391523483872
+    second: Kit de UI verde con paneles modulares_8
+  - first:
+      213: 3192638229589440337
+    second: Kit de UI verde con paneles modulares_9
+  - first:
+      213: -3812109017263607321
+    second: Kit de UI verde con paneles modulares_10
+  - first:
+      213: -4659965712209092006
+    second: Kit de UI verde con paneles modulares_11
+  - first:
+      213: -7240214276711060856
+    second: Kit de UI verde con paneles modulares_12
+  - first:
+      213: 3240076347219558541
+    second: Kit de UI verde con paneles modulares_13
+  - first:
+      213: 3836246635962864131
+    second: Kit de UI verde con paneles modulares_14
+  - first:
+      213: -6802370996723406356
+    second: Kit de UI verde con paneles modulares_15
+  - first:
+      213: -3676846397104235276
+    second: Kit de UI verde con paneles modulares_16
+  - first:
+      213: -1740966043182582163
+    second: Kit de UI verde con paneles modulares_17
+  - first:
+      213: -8313292349432607874
+    second: Kit de UI verde con paneles modulares_18
+  - first:
+      213: -3077612387469327937
+    second: Kit de UI verde con paneles modulares_19
+  - first:
+      213: 4779056656242281070
+    second: Kit de UI verde con paneles modulares_20
+  - first:
+      213: -2171422916253445448
+    second: Kit de UI verde con paneles modulares_21
+  - first:
+      213: -3312776991502520820
+    second: Kit de UI verde con paneles modulares_22
+  - first:
+      213: 8656866211755786466
+    second: Kit de UI verde con paneles modulares_23
+  - first:
+      213: 4274888351559743251
+    second: Kit de UI verde con paneles modulares_24
+  - first:
+      213: 2063173624674654995
+    second: Kit de UI verde con paneles modulares_25
+  - first:
+      213: 4657941512846771157
+    second: Kit de UI verde con paneles modulares_26
+  - first:
+      213: -8788233136057077953
+    second: Kit de UI verde con paneles modulares_27
+  - first:
+      213: -4278288469070309441
+    second: Kit de UI verde con paneles modulares_28
+  - first:
+      213: 1192376756969957026
+    second: Kit de UI verde con paneles modulares_29
+  - first:
+      213: 5806118102488948081
+    second: Kit de UI verde con paneles modulares_30
+  - first:
+      213: -5084453399257001650
+    second: Kit de UI verde con paneles modulares_31
+  - first:
+      213: -7262578866262919825
+    second: Kit de UI verde con paneles modulares_32
+  - first:
+      213: -6644818360806224413
+    second: Kit de UI verde con paneles modulares_33
+  - first:
+      213: -8929157397704586166
+    second: Kit de UI verde con paneles modulares_34
+  - first:
+      213: 4743114689658874705
+    second: Kit de UI verde con paneles modulares_35
+  - first:
+      213: 7449229371316830629
+    second: Kit de UI verde con paneles modulares_36
+  - first:
+      213: -1384211026469208620
+    second: Kit de UI verde con paneles modulares_37
+  - first:
+      213: 4165495278646520845
+    second: Kit de UI verde con paneles modulares_38
+  - first:
+      213: 6918974168453609514
+    second: Kit de UI verde con paneles modulares_39
+  - first:
+      213: 7999175781876048488
+    second: Kit de UI verde con paneles modulares_40
+  - first:
+      213: 8137412706131430017
+    second: Kit de UI verde con paneles modulares_41
+  - first:
+      213: -2717536962677160223
+    second: Kit de UI verde con paneles modulares_42
+  - first:
+      213: -127494770433165910
+    second: Kit de UI verde con paneles modulares_43
+  - first:
+      213: -5809153659191078074
+    second: Kit de UI verde con paneles modulares_44
+  - first:
+      213: 9115651352205661859
+    second: Kit de UI verde con paneles modulares_45
+  - first:
+      213: -4940844201815311140
+    second: Kit de UI verde con paneles modulares_46
+  - first:
+      213: 360451326790450583
+    second: Kit de UI verde con paneles modulares_47
+  - first:
+      213: 4090053314858931135
+    second: Kit de UI verde con paneles modulares_48
+  - first:
+      213: 5270853060874605095
+    second: Kit de UI verde con paneles modulares_49
+  - first:
+      213: -2042947593054600316
+    second: Kit de UI verde con paneles modulares_50
+  - first:
+      213: -5121807056388409536
+    second: Kit de UI verde con paneles modulares_51
+  - first:
+      213: 6762364500762452253
+    second: Kit de UI verde con paneles modulares_52
+  - first:
+      213: -8237347567398252808
+    second: Kit de UI verde con paneles modulares_53
+  - first:
+      213: 7772585865035626196
+    second: Kit de UI verde con paneles modulares_54
+  - first:
+      213: -1512289897512140616
+    second: Kit de UI verde con paneles modulares_55
+  - first:
+      213: -9220609675723409844
+    second: Kit de UI verde con paneles modulares_56
+  - first:
+      213: -4437965210103118445
+    second: Kit de UI verde con paneles modulares_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kit de UI verde con paneles modulares_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 66
+        width: 150
+        height: 751
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 190be9db3ce3021a0800000000000000
+      internalID: -6836395223927574383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kit de UI verde con paneles modulares_1
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 514
+        width: 1372
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3988bcd2173b4b4686c06ff76f94a00
+      internalID: -5497432465182044912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cde4722130b0ba647b3b611338498e19
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1774.0,"y":887.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Kit de UI verde con paneles modulares_0: -6836395223927574383
+      Kit de UI verde con paneles modulares_1: -5497432465182044912
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
